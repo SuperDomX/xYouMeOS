@@ -4,162 +4,162 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : '"Welcome to YouMeOS, your 4-D OS."'
-    //"callback": highlightMilkyWay
+    "message"    : 'Hello World; I am "You Me OS"'
+    //"callback" : highlightMilkyWay
 }, {
     "rx"         : 2.12216429754294249,
     "ry"         : 4.1189722678912,
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : '"This Blue Matrix is your Web"',
-    "callback": highlightMilkyWay
+    "message"    : 'This Web represents your 4th Dimensional Intergalatic Internet',
+    "callback"   : highlightMilkyWay
 },{
-    "rx": 0.5522785678088462,
-    "ry": 1.324151395815386,
-    "z": 3000.4214873346518,
-    "travelTime": 3500,
-    "restTime": 4000,
-    "message": "Your A.O.I. or Area of Interest, is located in this Triangle."
+    "rx"         : 0.5522785678088462,
+    "ry"         : 1.324151395815386,
+    "z"          : 3000.4214873346518,
+    "travelTime" : 5000,
+    "restTime"   : 4000,
+    "message"    : "Each Triangle governs an Area of Interest; Here is your A.O.I."
 },
 {
-    "rx": 0.5522785678088462,
-    "ry": 1.324151395815386,
-    "z": 1333.4214873346518,
-    "travelTime": 2400,
-    "restTime": 2000,
-    "message": "Here you can see your Gravity Field"
-},  {
-    "rx": -0.18605511827781787,
-    "ry": -2.464222597755626,
-    "z": 1.1,
-    "travelTime": 7777,
-    "restTime": 3000,
-    "message": '"I Am Your Sun"'
-}, {
-    "rx": -0.18605511827781787,
-    "ry": -2.464222597755626,
-    "z": 0.57,
-    "travelTime": 5777,
-    "restTime": 7777,
-    "message": '"Take a moment and Center in on your Magnificence!"'
-}, {
-    "rx": -0.18605511827781787,
-    "ry": -2.464222597755626,
-    "z": 0.97,
-    "travelTime": 5777,
-    "restTime": 5777,
-    "message": '"This Galactic Center is YOU."'
-}, {
-    "rx": 1.4395420537811414,
-    "ry": 6.281532559509658,
-    "z": 1.148607771018531,
-    "travelTime": 2000,
-    "restTime": 3000,
-    "message": '"Your Magnificence shines to the ends of the Multiverse!"',
-    "callback": displaySunEarthDiagram
-},  {
-    "rx": 1.4395420537811414,
-    "ry": 6.281532559509658,
-    "z": 5.148607771018531,
-    "travelTime": 4000,
-    "restTime": 4000,
-    "message": '"This is your Orbiting System, it consists of recent bits of Media & Applications."',
-    "callback": displaySunEarthDiagram
+    "rx"         : 0.5522785678088462,
+    "ry"         : 1.324151395815386,
+    "z"          : 1333.4214873346518,
+    "travelTime" : 2400,
+    "restTime"   : 4000,
+    "message"    : "Zoom in to see your immidiate Gravity Field of Influence"
 },{
-    "rx": 1.4395420537811414,
-    "ry": 6.281532559509658,
-    "z": 13.778607771018531,
-    "travelTime": 4000,
-    "restTime": 4000,
-    "message": '"Your bits travel at the speed of light away from your Galactic Center..."',
-    "callback": displaySunEarthDiagram
-}, {
-    "rx": 0.8369933670834534,
-    "ry": 1.837770087331788,
-    "z": 20.937978822676058,
-    "travelTime": 3000,
-    "restTime": 2000,
-    "message": "... creating a Virtual Timeline, naturally."
-}, {
-    "rx": 0.6424544063335803,
-    "ry": -0.0031800804774647718,
-    "z": 277.23179619362583,
-    "travelTime": 3000,
-    "restTime": 4000,
-    "message": "This is your 'Oort Cloud' at 1 Light year away; Made up the this Year's images, links, etc."
-}, {
-    "rx": 0.503337952515914,
-    "ry": -0.9904961225532652,
-    "z": 500.34847195438465,
-    "travelTime": 4000,
-    "restTime": 4000,
-    "message": "You are able to go and visit the Solar Systems of other Stars."
-}, {
-    "rx": 0.0019755752638865747,
-    "ry": 0.23341774437325485,
-    "z": 1210.7034532510997,
-    "travelTime": 4000,
-    "restTime": 4000,
-    "message": "The more someone sees your light, the brighter their Star becomes to You too."
+    "rx"         : -0.18605511827781787,
+    "ry"         : -2.464222597755626,
+    "z"          : 0.97,
+    "travelTime" : 5777,
+    "restTime"   : 5777,
+    "message"    : 'This Sun is your Galactic Center.'
 },{
-    "rx": 0.15,
-    "ry": 2.25,
-    "z": 1377,
-    "travelTime": 3000,
-    "restTime": 4000,
-    "message": "All Stars are Geometrically placed using the Gigantic Birth-Year Calendar"
-},{
-    "rx": 1,
-    "ry": 2.25,
-    "z": 1277,
-    "travelTime": 3000,
-    "restTime": 4000,
-    "message": "Creating a Unique 'Sociological Constellation'"
-}, {
-    "rx": 0.5522785678088462,
-    "ry": 1.324151395815386,
-    "z": 1444.4214873346518,
-    "travelTime": 5000,
-    "restTime": 5000,
-    "message": "This shows You + 99,999 other Stars!"
+    "rx"         : -0.18605511827781787,
+    "ry"         : -2.464222597755626,
+    "z"          : 1.1,
+    "travelTime" : 3000,
+    "restTime"   : 3000,
+    "message"    : '"I Am You."'
 },  {
-    "rx": -0.4155179986306899,
-    "ry": 2.5204046098483026,
-    "z": 31782.290495394205,
-    "travelTime": 5000,
-    "restTime": 5000,
-    "message": "The 'Heat' of the Star represents the activity of the stellar body.",
-    "callback": highlightStarHeat
+    "rx"         : -0.18605511827781787,
+    "ry"         : -2.464222597755626,
+    "z"          : 0.57,
+    "travelTime" : 5777,
+    "restTime"   : 7777,
+    "message"    : 'Take a moment; Center yourself on your Magnificence.'
 }, {
-    "rx": -0.12216429754294249,
-    "ry": 1.9989722678912,
-    "z": 79999.99999999994,
-    "travelTime": 5000,
-    "restTime": 5000,
-    "message": "...this is just one Universe; Multiplied I create a multiverse..." 
+    "rx"         : 1.4395420537811414,
+    "ry"         : 6.281532559509658,
+    "z"          : 1.148607771018531,
+    "travelTime" : 2000,
+    "restTime"   : 3000,
+    "message"    : 'Your Magnificence Forever Shines unto Eternity.',
+    "callback"   : displaySunEarthDiagram
+},  {
+    "rx"         : 1.4395420537811414,
+    "ry"         : 6.281532559509658,
+    "z"          : 5.148607771018531,
+    "travelTime" : 4000,
+    "restTime"   : 6000,
+    "message"    : 'What you spend your Time on gravitates into your Orbiting System.',
+    "callback"   : displaySunEarthDiagram
+},{
+    "rx"         : 1.4395420537811414,
+    "ry"         : 6.281532559509658,
+    "z"          : 13.778607771018531,
+    "travelTime" : 4000,
+    "restTime"   : 4000,
+    "message"    : 'Every day your light moves away from your Galactic Center...',
+    "callback"   : displaySunEarthDiagram
 }, {
-    "rx": -4.12216429754294249,
-    "ry": 1.9989722678912,
-    "z": 999999.99999999994,
-    "travelTime": 5000,
-    "restTime": 5000,
-    "message": "Download Me & Create a Universe on any Domain." 
+    "rx"         : 0.8369933670834534,
+    "ry"         : 1.837770087331788,
+    "z"          : 20.937978822676058,
+    "travelTime" : 3000,
+    "restTime"   : 2000,
+    "message"    : "...creating a Virtual Timeline, Naturally."
 }, {
-    "rx": 1,
-    "ry": 0,
-    "z": 4999999.99999999994,
-    "travelTime": 3000,
-    "restTime": 5000,
-    "message": "Imagine the Possibilities, we can make the Internet's 5Dimensional OS!" 
+    "rx"         : 0.6424544063335803,
+    "ry"         : -0.0031800804774647718,
+    "z"          : 277.23179619362583,
+    "travelTime" : 3000,
+    "restTime"   : 4000,
+    "message"    : "@ 1 Light year away; your 'Oort Cloud' represents your past Year's images, links, etc."
+}, {
+    "rx"         : 0.503337952515914,
+    "ry"         : -0.9904961225532652,
+    "z"          : 500.34847195438465,
+    "travelTime" : 4000,
+    "restTime"   : 4000,
+    "message"    : "Zoom Out to here and visit the Solar Systems of your contacts."
+}, {
+    "rx"         : 0.0019755752638865747,
+    "ry"         : 0.23341774437325485,
+    "z"          : 1210.7034532510997,
+    "travelTime" : 4000,
+    "restTime"   : 4000,
+    "message"    : "The more someone sees your light, the brighter their Star becomes to You too."
+},{
+    "rx"         : 0.15,
+    "ry"         : 2.25,
+    "z"          : 1377,
+    "travelTime" : 3000,
+    "restTime"   : 4000,
+    "message"    : "Everyone is organized on the Galactic Birth Year Calendar..."
+},{
+    "rx"         : 1,
+    "ry"         : 2.25,
+    "z"          : 1277,
+    "travelTime" : 3000,
+    "restTime"   : 4000,
+    "message"    : "...creating a Unique 4D Constellation, Sociologically."
+}, {
+    "rx"         : 0.5522785678088462,
+    "ry"         : 1.324151395815386,
+    "z"          : 1444.4214873346518,
+    "travelTime" : 5000,
+    "restTime"   : 5000,
+    "message"    : "Right now you are viewing You + 99,999 Stars!"
+},  {
+    "rx"         : -0.4155179986306899,
+    "ry"         : 1.5204046098483026,
+    "z"          : 31782.290495394205,
+    "travelTime" : 5000,
+    "restTime"   : 5000,
+    "message"    : "View the heat of the star to see the activity of the stellar body.",
+    "callback"   : highlightStarHeat
+}, {
+    "rx"         : -0.12216429754294249,
+    "ry"         : 1.9989722678912,
+    "z"          : 79999.99999999994,
+    "travelTime" : 5000,
+    "restTime"   : 5000,
+    "message"    : "This is just one Universe; Multiplied I create a multiverse..." 
+}, {
+    "rx"         : -4.12216429754294249,
+    "ry"         : 1.9989722678912,
+    "z"          : 999999.99999999994,
+    "travelTime" : 5000,
+    "restTime"   : 5000,
+    "message"    : "I can be installed on any Domain, creating Universes everywhere." 
+}, {
+    "rx"         : 1,
+    "ry"         : 0,
+    "z"          : 4999999.99999999994,
+    "travelTime" : 3000,
+    "restTime"   : 5000,
+    "message"    : "Together we can make the Internet's 5th Dimensional OS, Imagine the Possibilities!" 
 },   {
-    "rx": -0.12216429754294249,
-    "ry": 1.9989722678912,
-    "z": 79999.99999999994,
-    "travelTime": 5000,
-    "restTime": 5000,
-    "message": "Only 99,999 accounts available during Pre-Release!",
-    "callback": fadeInLoginForm
+    "rx"         : -0.12216429754294249,
+    "ry"         : 1.9989722678912,
+    "z"          : 79999.99999999994,
+    "travelTime" : 5000,
+    "restTime"   : 5000,
+    "message"    : "Create your Universe Now; Only a limited number of accounts during Delta-Release.",
+    "callback"   : fadeInLoginForm
 }];
 var cinematic_width = 35;
 

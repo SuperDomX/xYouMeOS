@@ -75,8 +75,7 @@ function start( e ){
 	  if ( Detector.Chrome ) {
 	    Detector.addGetWebGLMessage([
          'Your graphics card does not support WebGL. Please try again on a different Windows, Mac, or Linux computer using <a href="http://www.google.com/chrome/" style="color:#ffffff; text-decoration:underline; text-transform:capitalize">Google Chrome</a><br>',
-         'or another <a href="http://www.khronos.org/webgl/wiki_1_15/index.php/Getting_a_WebGL_Implementation" style="color:#ffffff; text-decoration:underline; text-transform:none"> WebGL-Compatible browser</a>. You can watch a video preview of the experiment below:',
-         '<p><iframe id="trailer" width="100%" height="100%" src="http://www.youtube.com/embed/TU6RAjABX40" frameborder="0" allowfullscreen></iframe></p>',
+         'or another <a href="http://www.khronos.org/webgl/wiki_1_15/index.php/Getting_a_WebGL_Implementation" style="color:#ffffff; text-decoration:underline; text-transform:none"> WebGL-Compatible browser</a>'
        ].join( '\n' ));
 	    return;
 	  }

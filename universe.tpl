@@ -59,13 +59,13 @@
 		<div id="spectral-graph">
 			<!-- <img src="images/spectral_color_index.png" border="0"> -->
 			<div id="heat-map"></div>
-			<p class="left">3,840&deg;K (cooler)</p>
+			<!-- <p class="left">3,840&deg;K (cooler)</p>
 			<p class="center">7,300&deg;K</p>
 			<p class="right">42,000&deg;K (hotter)</p>
 			<h5>
 				B-V Stellar Color Index <br />
 				Temperatures in Kelvin
-			</h5>
+			</h5> -->
 		</div>
 
 			<div id="detailContainer" style="padding-top: 0;">
