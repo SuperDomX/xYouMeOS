@@ -3,7 +3,7 @@
 	</script>
 		{$_DIR="/{$toBackDoor}/x{$Xtra|ucfirst}/"}
 
-		<meta name="google" value="notranslate">
+		<!-- <meta name="google" value="notranslate">
 		<meta name="description" content="An interactive 3D visualization of the stellar neighborhood, including over 100,000 nearby stars. Created for the Google Chrome web browser.">
 
 		<link rel="image_src" href="images/thumbnail.png">
@@ -23,7 +23,7 @@
 		}
 
 		</style>
-		
+		 -->
 <!-- Svg Filters -->
 		<filter id="svg-glow">
 			<feGaussianBlur in="SourceAlpha" stdDeviation="3" />

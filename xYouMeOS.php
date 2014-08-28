@@ -13,12 +13,12 @@
  */
 class xYouMeOS extends Xengine {
 	/**
-		@name index
+		@name universe
 		@blox You-In-Verse
 		@desc Center Your Web
 		@icon ge
 	**/
-	function index(){
+	function universe(){
 		// Also available through $this->Q;		
 		$q = $this->q();
 
