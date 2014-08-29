@@ -4,7 +4,7 @@
 
 		<link rel="image_src" href="images/thumbnail.png">
 		<link rel="shortcut icon" href="images/favicon.gif" type="image/gif">
-		<title>Center the Web</title>
+		<title>The Center of your Web</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
 		
@@ -59,10 +59,10 @@
 		<div id="spectral-graph">
 			<!-- <img src="images/spectral_color_index.png" border="0"> -->
 			<div id="heat-map"></div>
-			<!-- <p class="left">3,840&deg;K (cooler)</p>
-			<p class="center">7,300&deg;K</p>
-			<p class="right">42,000&deg;K (hotter)</p>
-			<h5>
+			<p class="left">HOT (Lots of Activity)</p>
+			<p class="center"></p>
+			<p class="right">COOL (Least Activity)</p>
+			<!-- <h5>
 				B-V Stellar Color Index <br />
 				Temperatures in Kelvin
 			</h5> -->
@@ -159,7 +159,9 @@
 		<script type="text/javascript" src="{$_DIR}js/Detector.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/THREEx.KeyboardState.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/THREEx.WindowResize.js"></script>
+
 		<script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>
+		
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.preventMacBackScroll.js"></script>
@@ -188,7 +190,6 @@
 
 		<script type="text/javascript" src="{$_DIR}js/jquery-ui.min.js"></script> <!-- jQuery UI -->
         
-
 		<script type="text/javascript" src="{$_DIR}js/director.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/infocallout.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/starsystems.js" ></script>
@@ -214,6 +215,8 @@
 		<!-- Post main loading scripts -->
 		<script type="text/javascript" src="{$_DIR}js/jquery.tooltip.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
+
+		<script type="text/javascript" src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
 
 		 
 

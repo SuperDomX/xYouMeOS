@@ -25,9 +25,10 @@
 
             <section id="login" class="block-area">
             <header>
+                <br/><br/>
                 <h1>You Me OS</h1>
                 <p>
-                   The Center of the Web
+                   The Center of your Web
 
                 </p>
             </header>
@@ -35,20 +36,53 @@
             <div class="clearfix"></div>
             
             <!-- Login -->
-            <form class="box tile animated active " id="box-login" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Login</h2>
-                <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
+            <form class="box tile animated active " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
+                <h2 id="tour-head" class="m-t-0 m-b-15">Welcome</h2>
+                <!-- <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
                 <input type="password" class="login-control" placeholder="Password" name="login[password]">
                 <div class="checkbox m-b-20">
                     <label>
                         <input class="checkbox m-b-20" type="checkbox">
                         Remember Me
                     </label>
-                </div>
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Go</button>
+                </div> -->
+
+                <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Go for a Ride</button>
+                <br/><br/>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#icon-nav').hide();
+                        setTimeout(function  () {
+
+                            // $('#tour-head').append($('#icon-nav'));
+                            // $('#icon-nav').css({ position: 'relative'});
+                            // $('#icon-nav svg').css({ display: 'none'});
+                            // $($('#icon-nav svg')[0]).css({ display: 'block'});
+                            
+                        },2000);
+                    });
+                </script>
+                <small>
+                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-login" href="#">Login to Universe</a>
+                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="#">Create Universe</a>
+                </small>
+            </form>
+
+            <form class="box tile animated " id="box-login" action="/.json" >
+                <h2 class="m-t-0 m-b-15">Enter Universe</h2>
+                <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
+                <input type="password" class="login-control" placeholder="Key" name="login[password]">
+                <!-- <div class="checkbox m-b-20">
+                    <label>
+                        <input class="checkbox m-b-20" type="checkbox">
+                        Remember Me
+                    </label>
+                </div> -->
+                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Go</button>
 
                 <br/>
                 <small>
+                     <a class="box-switcher" data-switch="box-tour" href="#">Welcome Tour</a> |
                     <a class="box-switcher" data-switch="box-register" href="#">Create Universe</a> |
                     <a class="box-switcher" data-switch="box-reset" href="#">Forgot Key</a>
                 </small>
@@ -110,15 +144,20 @@
                 success  : function(data, textStatus, jqXHR) 
                 {
                     //data: return data from server
-                    DATA = data;
+                    window.user = data.data;
+
 
                     if(data.success){
-                        $.pjax({ 
-                            container : '.content',
-                            fragment  : '.content',
-                            timeout   : 5000,
-                            url       : window.location.pathname + window.location.search + window.location.hash
-                        });  
+                        $('#ex-out').click();
+                        $('#about').click();
+
+                        // $.pjax({ 
+                        //     container : '#detailBody',
+                        //     fragment  : '#detailBody',
+                        //     timeout   : 5000,
+                        //     url       : "/" + data.data.username
+                        //     //window.location.pathname + window.location.search + window.location.hash
+                        // });  
                     }else{
                         alert(data.error);
                     }
@@ -158,6 +197,8 @@
 
         $('#box-login').submit(window.login);
         $('#box-register').submit(window.login);
+
+         
 
         </script>
     </body>

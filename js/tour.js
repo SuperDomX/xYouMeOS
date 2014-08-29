@@ -1,7 +1,7 @@
 var GALAXY_TOUR = [{
-    "rx"         : 0.12216429754294249,
-    "ry"         : 1.1189722678912,
-    "z"          : 79999.99999999994,
+    "rx"         : 1,
+    "ry"         : 1,
+    "z"          : 80000,
     "travelTime" : 3000,
     "restTime"   : 5000,
     "message"    : 'Hello World; I am "You Me OS"'
@@ -12,7 +12,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : 'This Web represents your 4th Dimensional Intergalatic Internet',
+    "message"    : 'Our Intergalatic Web; Represented in 4 Dimensions: Light, Gravity, Space & Time',
     "callback"   : highlightMilkyWay
 },{
     "rx"         : 0.5522785678088462,
@@ -94,7 +94,7 @@ var GALAXY_TOUR = [{
     "z"          : 500.34847195438465,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : "Zoom Out to here and visit the Solar Systems of your contacts."
+    "message"    : "Zoom Out to here and visit the Solar Systems of other contacts."
 }, {
     "rx"         : 0.0019755752638865747,
     "ry"         : 0.23341774437325485,
@@ -122,14 +122,14 @@ var GALAXY_TOUR = [{
     "z"          : 1444.4214873346518,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Right now you are viewing You + 99,999 Stars!"
+    "message"    : "Right now this view shows 100,000 Stars!"
 },  {
     "rx"         : -0.4155179986306899,
     "ry"         : 1.5204046098483026,
     "z"          : 31782.290495394205,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "View the heat of the star to see the activity of the stellar body.",
+    "message"    : "View the heat of the star to see the activity of the stellar body, Chronologically.",
     "callback"   : highlightStarHeat
 }, {
     "rx"         : -0.12216429754294249,
@@ -266,6 +266,8 @@ Tour.prototype = {
 
     toggleHeatVision( false );
 
+    $('#minimap').fadeOut()
+
     return this;
 
   },
@@ -280,6 +282,7 @@ Tour.prototype = {
     rotateX = rotating.rotation.x;
     rotateY = rotating.rotation.y;
     TWEEN.removeAll();
+    $('#minimap').fadeIn()
 
     return this;
 

@@ -98,6 +98,7 @@ function fadeInLoginForm(reg){
         }
 
       });
+	  $('#minimap').fadeIn()
 
       $('#detailTitle').find('span').html('');
 
