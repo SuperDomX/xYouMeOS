@@ -49,8 +49,8 @@
 }
 
 * {
-    border-radius: 0 !important;
-    box-shadow: none;
+    /*border-radius: 0 !important;*/
+    /*box-shadow: none;*/
     -ms-touch-action: manipulation; 
     touch-action: manipulation;    
 }
@@ -615,6 +615,7 @@ hr {
 .tile {
     position: relative;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .tile-title {

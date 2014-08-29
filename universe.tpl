@@ -179,7 +179,10 @@
 
             $(window).on('hashchange', function() { 
                 $.get('.'+window.location.hash.replace('#',''), function(data) {
-                    $('section #content').html(data);        
+                    $('section #content').html(data);  
+                    // alert( "Load was performed." );      
+                    
+                    $('#content').html($('#content #content').html())
                 });
             });
 

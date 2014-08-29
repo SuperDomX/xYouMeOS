@@ -137,21 +137,21 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "This is just one Universe; Multiplied I create a multiverse..." 
+    "message"    : "I can be installed on any Domain, creating Universes anywhere." 
 }, {
     "rx"         : -4.12216429754294249,
     "ry"         : 1.9989722678912,
     "z"          : 999999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "I can be installed on any Domain, creating Universes everywhere." 
+    "message"    : "Multiply me to create the Multi~Verse..." 
 }, {
     "rx"         : 1,
     "ry"         : 0,
     "z"          : 4999999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : "Together we can make the Internet's 5th Dimensional OS, Imagine the Possibilities!" 
+    "message"    : "Together we can make the Internet's 5th Dimensional OS; Imagine the Possibilities!" 
 },   {
     "rx"         : -0.12216429754294249,
     "ry"         : 1.9989722678912,
