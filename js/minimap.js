@@ -188,7 +188,7 @@
       //var line_height = 20;
       e.preventDefault();
 
-      $detailContainer.addClass('about');
+      $detailContainer.addClass('about').hide();
 
       $('#css-container').css('display', 'none');
 
