@@ -78,6 +78,25 @@
 						<p id="ex-out">
 							&times;
 						</p>
+						<p id="orbit">
+							<div class="pull-left tm-icon">
+		                        <a data-drawer="notifications" class="drawer-toggle" href="javascript:" onclick="zoomOut(.577)">
+		                            <i class="sa-top-updates"></i>
+		                            <!-- <i class="n-count animated">9</i> -->
+		                            <span>Orbits</span>
+		                        </a>
+		                    </div>
+						</p>
+						<p id="gravity"> 
+		                    <div class="pull-left tm-icon">
+		                        <a data-drawer="notifications" class="drawer-toggle" href="javascript:" onclick="zoomOut(1000)">
+		                            <i class="sa-top-updates"></i>
+		                            <!-- <i class="n-count animated">9</i> -->
+		                            <span>Gravity</span>
+		                        </a>
+		                    </div>
+						</p>
+
 					</div>
 				</div>
 				<div id="detailBody">
@@ -163,8 +182,8 @@
 		<script type="text/javascript" src="{$_DIR}js/THREEx.KeyboardState.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/THREEx.WindowResize.js"></script>
 
-		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script> -->
-		 <script type="text/javascript" src="{$_DIR}js/jquery.min.js"></script>
+		<script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>
+		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery.min.js"></script> -->
 		
 		  <script type="text/javascript">
 			
@@ -179,7 +198,7 @@
             	var go = window.location.hash.replace('#','');
             	if(go != '')
                 $.get('.'+go, function(data) {
-                    $('section #content').html(data);  
+                    $('#detailBody').html(data);  
                     
                     $('#content').html( $('#content #content').html() );
                 });

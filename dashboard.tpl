@@ -30,13 +30,15 @@
 
     <body id="skin-blur-violate">
 
-        <header id="header" class="media">
+        <header id="header" class="media" style="margin:0">
             <a href="#/" id="menu-toggle"></a> 
-            <a class="logo pull-left" href="#/index.html">
+            <a class="logo pull-left" href="#/{$Xtra}/version/">
             <strong>You Me OS </strong>{$PHP.version}</a>
             
             <div class="media-body">
                 <div class="media" id="top-menu">
+
+                    
                     <div class="pull-left tm-icon">
                         <a data-drawer="messages" class="drawer-toggle" href="#/">
                             <i class="sa-top-message"></i>
@@ -445,8 +447,12 @@
                                     <img src="img/cover-bg.jpg" class="w-100" alt="">
                                     <img class="profile-pic" src="images/g1.jpg" alt="">
                                     <div class="profile-btn">
-                                        <button class="btn btn-alt btn-sm"><i class="icon-bubble"></i> <span>Message</span></button>
-                                        <button class="btn btn-alt btn-sm"><i class="icon-user-2"></i> <span>Friend</span></button>
+
+                                        {if $user.username != $params[2]}
+                                            <button class="btn btn-alt btn-sm"><i class="icon-bubble"></i> <span>Message</span></button>
+                                            <button class="btn btn-alt btn-sm"><i class="icon-user-2"></i> <span>Friend</span></button>
+                                        {/if}
+                                        
                                     </div>
                                 </div>
                                 <div class="p-5 m-t-15">
@@ -900,7 +906,7 @@
         <script type="text/javascript" src="js/functions.js"></script>
 
         <script type="text/javascript">
-            // zoomOut(.750);
+
 
              $(window).on('hashchange', function() { 
 
@@ -912,6 +918,11 @@
                     $('#content').html( $('#content #content').html() );
                 });
             });
+
+             $(document).ready(function  () {
+                 
+                zoomOut(.750);
+             })
 
         </script>
 

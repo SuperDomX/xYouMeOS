@@ -12,6 +12,10 @@
  * @alpha true
  */
 class xYouMeOS extends Xengine {
+	public function version( )					
+	{
+		# code...
+	}
 	/**
 		@name universe
 		@blox You-In-Verse

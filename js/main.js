@@ -289,7 +289,6 @@ function initScene() {
 	buildGUI();
 
 	sceneSetup();
-
 	initCSS3D();
 
 	// Close Button
@@ -567,9 +566,10 @@ function unmuteSound(){
 
 function displayIntroMessage(){
 	Tour.meta.fadeIn();
-	tour.showMessage('Hello World; Welcome to You Me OS!', 5000 )
-	.showMessage('I am a Visual "4D" version of Your Intergalatic Web.', 5000 )
-	.showMessage('Take the Tour to learn More.', 4000, function(){
+	tour.showMessage('"Dedicated to My Children: Krislynn Night, Khronus Infinidee, & Gaia Rhae."', 5000 )
+	.showMessage('Hello World; Welcome to You Me OS!', 5000 )
+	.showMessage('I am a "4D" visualization of the Intergalatic Web.', 5000 )
+	.showMessage('Take the Tour to learn More!', 4000, function(){
 		firstTime = false;
 		$(window).trigger('resize');
 		$iconNav.find('#tour-button').trigger('mouseover');

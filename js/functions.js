@@ -62,7 +62,10 @@ $(document).ready(function(){
 			    '</div>' +
 			'</div>' +
 		    '</div>';
-    $('#main').prepend(settings);
+
+
+    if(!$("#settings"))
+        $('#main').prepend(settings);
             
     $('body').on('click', '.template-skins > a', function(e){
 	e.preventDefault();
@@ -233,7 +236,7 @@ $(document).ready(function(){
     (function(){
 	
         //Sidebar
-        if ($('#calendar-widget')[0] ) {
+        if ($('#sidebar-calendar')[0] && $('#sidebar-calendar table').length < 1 ) {
             var date = new Date();
             var d = date.getDate();
             var m = date.getMonth();
@@ -251,7 +254,7 @@ $(document).ready(function(){
         }
 
         //Content widget
-        if ($('#calendar-widget')[0]) {
+        if ($('#calendar-widget')[0] && $('#calendar-widget table').length < 1) {
             $('#calendar-widget').fullCalendar({
                 header: {
                     left: 'title',
