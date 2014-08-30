@@ -163,8 +163,8 @@
 		<script type="text/javascript" src="{$_DIR}js/THREEx.KeyboardState.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/THREEx.WindowResize.js"></script>
 
-		<script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>
-		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery.min.js"></script> -->
+		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script> -->
+		 <script type="text/javascript" src="{$_DIR}js/jquery.min.js"></script>
 		
 		  <script type="text/javascript">
 			

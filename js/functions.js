@@ -233,11 +233,14 @@ $(document).ready(function(){
     (function(){
 	
         //Sidebar
-        if ($('#sidebar-calendar table').length < 1) {
+        if ($('#calendar-widget')[0] ) {
             var date = new Date();
             var d = date.getDate();
             var m = date.getMonth();
             var y = date.getFullYear();
+
+            // if($('#sidebar-calendar table').length < 1)
+
             $('#sidebar-calendar').fullCalendar({
                 editable: false,
                 events: [],
