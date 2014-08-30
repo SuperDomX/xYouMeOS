@@ -192,7 +192,7 @@
 
       $('#css-container').css('display', 'none');
 
-      $.get('detail/about.html', function(data) {
+      $.get('/youMeOS/dashboard/'+window.user.name, function(data) {
         $('#detailBody').html(data);        
       });
 

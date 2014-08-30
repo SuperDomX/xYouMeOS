@@ -12,7 +12,15 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : 'This is our Intergalatic web; Represented in 4 Dimensions: Light, Gravity, Space & Time',
+    "message"    : 'You & Me Oribit Symmetrically in this Intergalatic Web...',
+    "callback"   : highlightMilkyWay
+}, {
+    "rx"         : 5.12216429754294249,
+    "ry"         : 7.1189722678912,
+    "z"          : 69999.99999999994,
+    "travelTime" : 5000,
+    "restTime"   : 8000,
+    "message"    : '... represented here in 4 Dimensions; Light, Gravity, Space, & Time.',
     "callback"   : highlightMilkyWay
 },{
     "rx"         : 0.5522785678088462,

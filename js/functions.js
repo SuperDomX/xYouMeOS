@@ -233,7 +233,7 @@ $(document).ready(function(){
     (function(){
 	
         //Sidebar
-        if ($('#sidebar-calendar')[0]) {
+        if ($('#sidebar-calendar table').length < 1) {
             var date = new Date();
             var d = date.getDate();
             var m = date.getMonth();

@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Internet Operating System
- * @version v0.0.7
+ * @version v0.0.9
  * @icon  
  * @link  youMeOS
  * @see community 
@@ -49,6 +49,10 @@ class xYouMeOS extends Xengine {
 		}
 		
 		return $r;
+	}
+
+	function dashboard(){
+
 	}
 
 	function fileManager(){
