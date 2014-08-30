@@ -72,15 +72,20 @@ var antialias = gup('antialias') == 1 ? true : false;
 function start( e ){
 	// detect for webgl and reject everything else
 	if ( ! Detector.webgl ) {
-	  if ( Detector.Chrome ) {
-	    Detector.addGetWebGLMessage([
-         'Your graphics card does not support WebGL. Please try again on a different Windows, Mac, or Linux computer using <a href="http://www.google.com/chrome/" style="color:#ffffff; text-decoration:underline; text-transform:capitalize">Google Chrome</a><br>',
-         'or another <a href="http://www.khronos.org/webgl/wiki_1_15/index.php/Getting_a_WebGL_Implementation" style="color:#ffffff; text-decoration:underline; text-transform:none"> WebGL-Compatible browser</a>'
-       ].join( '\n' ));
-	    return;
-	  }
-		Detector.addGetWebGLMessage();
-		return;
+	 //  if ( Detector.Chrome ) {
+	 //    Detector.addGetWebGLMessage([
+  //        'Your graphics card does not support WebGL. Please try again on a different Windows, Mac, or Linux computer using <a href="http://www.google.com/chrome/" style="color:#ffffff; text-decoration:underline; text-transform:capitalize">Google Chrome</a><br>',
+  //        'or another <a href="http://www.khronos.org/webgl/wiki_1_15/index.php/Getting_a_WebGL_Implementation" style="color:#ffffff; text-decoration:underline; text-transform:none"> WebGL-Compatible browser</a>'
+  //      ].join( '\n' ));
+	 //    return;
+	 //  }
+		// Detector.addGetWebGLMessage();
+		// return;
+		 $.get('youMeOS/dashboard', function(data) {
+            $('body').html(data);  
+            alert('yeah');
+            // $('#content').html( $('#content #content').html() );
+        });
 	}
 
 	gradientImage = document.createElement('img');

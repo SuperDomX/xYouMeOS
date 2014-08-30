@@ -62,10 +62,8 @@ $(document).ready(function(){
 			    '</div>' +
 			'</div>' +
 		    '</div>';
-
-
-    if(!$("#settings"))
-        $('#main').prepend(settings);
+            
+    $('#main').prepend(settings);
             
     $('body').on('click', '.template-skins > a', function(e){
 	e.preventDefault();

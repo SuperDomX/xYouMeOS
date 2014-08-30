@@ -9,17 +9,17 @@
         
    
         <!-- CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/form.css" rel="stylesheet">
         <link href="css/calendar.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/icons.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet"> 
+        <link href="css/generics.css" rel="stylesheet">  -->
     </head>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/form.css" rel="stylesheet">
