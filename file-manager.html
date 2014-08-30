@@ -16,38 +16,39 @@
         
         <!-- Breadcrumb -->
         <ol class="breadcrumb hidden-xs">
-            <li ><a href="#">Home</a></li>
+            <li ><a href="">Home</a></li>
             <li class="active"><a href="#/">File Manager</a></li>
             <!-- <li>Data</li> -->
         </ol>
         
-        <h4 class="page-title">Infinite Space File Manager</h4>
-                        
-        <div id="fileManager"></div>
+        <h4 class="page-title">Infinite Space File Manager (Chronus Infinity)</h4>
         
+        <div id="fileManager"></div>
         <!-- Javascript Libraries -->
         <!-- jQuery -->
         <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
         <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
         
-         <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
-        
+        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
         
         <!-- All JS functions -->
         <script src="js/functions.js"></script>
 
         <script type="text/javascript">
             $('#fileManager').elfinder({
-                      resizable: false,
-                      url : 'php/connector.minimal.php',  // connector URL (REQUIRED)
+                      resizable : false,
+                      requestType : 'post',
+                      url       : '/youMeOS/fileManager/',  // connector URL (REQUIRED)
+                      // url       : '/x/X/xYouMeOS/php/connector.minimal.php',  // connector URL (REQUIRED)
                       uiOptions : {
-                      toolbar : [
-                              ['back', 'forward', 'home', 'reload'],
-                              ['mkdir', 'mkfile', 'upload'],
-                              ['view', 'sort'],
-                              ['search']
-                      ]},
-                      height: 500
+                        toolbar   : [
+                                ['back', 'forward', 'home', 'reload'],
+                                ['mkdir', 'mkfile', 'upload'],
+                                ['view', 'sort'],
+                                ['search']
+                        ]
+                      },
+                      height  : $(window).height() - $('#content').parent().offset().top - 100
                  });
                  
                  $('.elfinder-cwd-wrapper, .elfinder-navbar').niceScroll();

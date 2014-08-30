@@ -54,7 +54,8 @@
 				</div>
 			</div>
 
-		<div id="icon-nav"></div>
+		<div id="icon-nav" style="display: none;" 
+		></div>
 
 		<div id="spectral-graph">
 			<!-- <img src="images/spectral_color_index.png" border="0"> -->
@@ -148,10 +149,12 @@
 			</div>
 		</div>
 
-		<audio id="bgmusicA" src="{$_DIR}audio/bgmusic.ogg">
+		<audio id="bgmusicA" src="{$_DIR}audio/01_-_Carl_Sagans_Ghost_-_Travelers_Welcome.ogg">
 		</audio>
-		<audio id="bgmusicB" src="{$_DIR}audio/bgmusic.ogg">netfli
+		<audio id="bgmusicB" src="{$_DIR}audio/bgmusic.ogg"> 
 		</audio>
+
+
 
 		<script type="text/javascript" src="{$_DIR}js/dat.gui.min.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/three.min.js"></script>
@@ -161,7 +164,35 @@
 		<script type="text/javascript" src="{$_DIR}js/THREEx.WindowResize.js"></script>
 
 		<script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>
+		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery.min.js"></script> -->
 		
+		  <script type="text/javascript">
+			
+			function setLoadMessage(msg){
+				var $loadText = $('#loadtext');
+				$loadText.html(msg+"&hellip;");	
+			}
+
+
+            $(window).on('hashchange', function() { 
+
+            	var go = window.location.hash.replace('#','');
+            	if(go != '')
+                $.get('.'+go, function(data) {
+                    $('section #content').html(data);  
+                    
+                    $('#content').html( $('#content #content').html() );
+                });
+            });
+
+            $(document).ready(function(){
+            	start(); // Load You Me OS
+            });
+		</script>
+
+
+		<script src="js/jquery.min.js"></script>
+
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.preventMacBackScroll.js"></script>
@@ -170,26 +201,7 @@
 		<script type="text/javascript" src="{$_DIR}js/mousekeyboard.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/urlArgs.js"></script>
 
-		<script>
-			var $loadText = $('#loadtext');
-			function setLoadMessage(msg){
-				$loadText.html(msg+"&hellip;");	
-			}
-
-
-            $(window).on('hashchange', function() { 
-                $.get('.'+window.location.hash.replace('#',''), function(data) {
-                    $('section #content').html(data);  
-                    // alert( "Load was performed." );      
-                    
-                    $('#content').html($('#content #content').html())
-                });
-            });
-
-            $(document).ready(function(){
-            	start();
-            });
-		</script>
+		
 
 		<script type="text/javascript" src="{$_DIR}js/jquery-ui.min.js"></script> <!-- jQuery UI -->
         
@@ -219,8 +231,7 @@
 		<script type="text/javascript" src="{$_DIR}js/jquery.tooltip.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
 
-		<script type="text/javascript" src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
-
+		 
 		 
 
 		<!-- Modal Default -->	
@@ -241,3 +252,4 @@
                 </div>
             </div>
         </div>
+

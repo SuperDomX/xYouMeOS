@@ -5,9 +5,6 @@
         <meta name="format-detection" content="telephone=no">
         <meta charset="UTF-8">
 
-        
-        
-
         <title>You Me OS Login</title>
             
         <!-- CSS -->
@@ -25,11 +22,10 @@
 
             <section id="login" class="block-area">
             <header>
-                <br/><br/>
+                <br/><br/><br/><br/>
                 <h1>You Me OS</h1>
                 <p>
-                   The Center of your Web
-
+                   Center the Web
                 </p>
             </header>
         
@@ -49,27 +45,15 @@
 
                 <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Take the Tour</button>
                 <br/><br/>
-                <script type="text/javascript">
-                    $(document).ready(function(){
-                        $('#icon-nav').hide();
-                        setTimeout(function  () {
-
-                            // $('#tour-head').append($('#icon-nav'));
-                            // $('#icon-nav').css({ position: 'relative'});
-                            // $('#icon-nav svg').css({ display: 'none'});
-                            // $($('#icon-nav svg')[0]).css({ display: 'block'});
-                            
-                        },2000);
-                    });
-                </script>
+                 
                 <small>
-                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-login" href="#">Login to Universe</a>
-                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="#">Create Universe</a>
+                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-login" href="">Login to Universe</a>
+                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Create Universe</a>
                 </small>
             </form>
 
             <form class="box tile animated " id="box-login" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Enter Universe</h2>
+                <h2 class="m-t-0 m-b-15">Enter "You-in-Verse"</h2>
                 <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
                 <input type="password" class="login-control" placeholder="Key" name="login[password]">
                 <!-- <div class="checkbox m-b-20">
@@ -77,14 +61,14 @@
                         <input class="checkbox m-b-20" type="checkbox">
                         Remember Me
                     </label>
-                </div> -->
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Go</button>
+                </div> --><br/><br/>
+                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Travel</button>
 
-                <br/>
+                <br/><br/>
                 <small>
-                     <a class="box-switcher" data-switch="box-tour" href="#">Welcome Tour</a> |
-                    <a class="box-switcher" data-switch="box-register" href="#">Create Universe</a> |
-                    <a class="box-switcher" data-switch="box-reset" href="#">Forgot Key</a>
+                     <a class="box-switcher" data-switch="box-tour" href="">Welcome Tour</a> |
+                    <a class="box-switcher" data-switch="box-register" href="">Create Universe</a> |
+                    <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a>
                 </small>
             </form>
             
@@ -100,7 +84,7 @@
 
                 <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Create Universe</button>
 <br/>
-                <small><a class="box-switcher" data-switch="box-login" href="#">Already have a Universe?</a></small>
+                <small><a class="box-switcher" data-switch="box-login" href="">Already have a Universe?</a></small>
             </form>
             
             <!-- Forgot Password -->
@@ -111,30 +95,31 @@
 
                 <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Reset Key</button>
                 <br/>
-                <small><a class="box-switcher" data-switch="box-login" href="#">Remembered Your Key?</a></small>
+                <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
             </form>
         </section>         
 
         </center>             
         
-        <!-- Javascript Libraries -->
-        <!-- jQuery -->
-        <!-- jQuery Library -->
+         
         
         <!-- Bootstrap -->
-        <script src="./js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         
         <!--  Form Related -->
-        <script src="./js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
         
         <!-- All JS functions -->
-        <script src="./js/functions.js"></script>
+        <script src="js/functions.js"></script>
 
         <script type="text/javascript">
-
+        $(document).ready(function  () {
+            $('#icon-nav').hide();
+        });
         window.login = function(e){ 
             var postData = $(this).serializeArray();
             var formURL = $(this).attr("action");
+            
             $.ajax(
             {
                 url      : formURL,
@@ -203,3 +188,5 @@
         </script>
     </body>
 </html>
+
+

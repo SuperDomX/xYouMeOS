@@ -4,7 +4,7 @@ var GALAXY_TOUR = [{
     "z"          : 80000,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : 'Hello World; I am "You Me OS"'
+    "message"    : 'I am "You Me OS"'
     //"callback" : highlightMilkyWay
 }, {
     "rx"         : 2.12216429754294249,
@@ -12,7 +12,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : 'Our Intergalatic Web; Represented in 4 Dimensions: Light, Gravity, Space & Time',
+    "message"    : 'This is our Intergalatic web; Represented in 4 Dimensions: Light, Gravity, Space & Time',
     "callback"   : highlightMilkyWay
 },{
     "rx"         : 0.5522785678088462,
@@ -20,7 +20,7 @@ var GALAXY_TOUR = [{
     "z"          : 3000.4214873346518,
     "travelTime" : 5000,
     "restTime"   : 4000,
-    "message"    : "Each Triangle governs an Area of Interest; Here is your A.O.I."
+    "message"    : "Your Area of Interest (A.o.I.) is in this Triangle."
 },
 {
     "rx"         : 0.5522785678088462,
@@ -28,14 +28,14 @@ var GALAXY_TOUR = [{
     "z"          : 1333.4214873346518,
     "travelTime" : 2400,
     "restTime"   : 4000,
-    "message"    : "Zoom in to see your immidiate Gravity Field of Influence"
+    "message"    : "Here is your Gravity Field of Influence, Visually."
 },{
     "rx"         : -0.18605511827781787,
     "ry"         : -2.464222597755626,
     "z"          : 0.97,
     "travelTime" : 5777,
     "restTime"   : 5777,
-    "message"    : 'This Sun is your Galactic Center.'
+    "message"    : 'Cosmically, you are the Galactic Center of this Sun.'
 },{
     "rx"         : -0.18605511827781787,
     "ry"         : -2.464222597755626,
@@ -49,14 +49,14 @@ var GALAXY_TOUR = [{
     "z"          : 0.57,
     "travelTime" : 5777,
     "restTime"   : 7777,
-    "message"    : 'Take a moment; Center yourself on your Magnificence.'
+    "message"    : 'Take a moment; Bathe yourself in the Center of your Magnificence.'
 }, {
     "rx"         : 1.4395420537811414,
     "ry"         : 6.281532559509658,
     "z"          : 1.148607771018531,
     "travelTime" : 2000,
-    "restTime"   : 3000,
-    "message"    : 'Your Magnificence Forever Shines unto Eternity.',
+    "restTime"   : 4444,
+    "message"    : 'Your magnificence forever shines unto Eternity.',
     "callback"   : displaySunEarthDiagram
 },  {
     "rx"         : 1.4395420537811414,
@@ -64,7 +64,7 @@ var GALAXY_TOUR = [{
     "z"          : 5.148607771018531,
     "travelTime" : 4000,
     "restTime"   : 6000,
-    "message"    : 'What you spend your Time on gravitates into your Orbiting System.',
+    "message"    : 'How you spend your Time determines what graviates into your Orbiting System',
     "callback"   : displaySunEarthDiagram
 },{
     "rx"         : 1.4395420537811414,
@@ -72,7 +72,7 @@ var GALAXY_TOUR = [{
     "z"          : 13.778607771018531,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : 'Every day your light moves away from your Galactic Center...',
+    "message"    : 'Every day you Shine & Light travels away from your Galactic Center...',
     "callback"   : displaySunEarthDiagram
 }, {
     "rx"         : 0.8369933670834534,
@@ -87,21 +87,21 @@ var GALAXY_TOUR = [{
     "z"          : 277.23179619362583,
     "travelTime" : 3000,
     "restTime"   : 4000,
-    "message"    : "@ 1 Light year away; your 'Oort Cloud' represents your past Year's images, links, etc."
+    "message"    : 'The "Oort Cloud", 1 Light year, is made up your light a Year ago; Literally.'
 }, {
     "rx"         : 0.503337952515914,
     "ry"         : -0.9904961225532652,
     "z"          : 500.34847195438465,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : "Zoom Out to here and visit the Solar Systems of other contacts."
+    "message"    : "Zoom Out here & click to visit the Solar Systems of your connections."
 }, {
     "rx"         : 0.0019755752638865747,
     "ry"         : 0.23341774437325485,
     "z"          : 1210.7034532510997,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : "The more someone sees your light, the brighter their Star becomes to You too."
+    "message"    : "The more someone sees your Light, the brighter their Star becomes to You too."
 },{
     "rx"         : 0.15,
     "ry"         : 2.25,
@@ -116,14 +116,16 @@ var GALAXY_TOUR = [{
     "travelTime" : 3000,
     "restTime"   : 4000,
     "message"    : "...creating a Unique 4D Constellation, Sociologically."
-}, {
-    "rx"         : 0.5522785678088462,
-    "ry"         : 1.324151395815386,
-    "z"          : 1444.4214873346518,
-    "travelTime" : 5000,
-    "restTime"   : 5000,
-    "message"    : "Right now this view shows 100,000 Stars!"
-},  {
+},
+//  {
+//     "rx"         : 0.5522785678088462,
+//     "ry"         : 1.324151395815386,
+//     "z"          : 1444.4214873346518,
+//     "travelTime" : 5000,
+//     "restTime"   : 5000,
+//     "message"    : "Right now this view shows 100,000 Stars!"
+// },
+  {
     "rx"         : -0.4155179986306899,
     "ry"         : 1.5204046098483026,
     "z"          : 31782.290495394205,
@@ -144,7 +146,7 @@ var GALAXY_TOUR = [{
     "z"          : 999999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Multiply me to create the Multi~Verse..." 
+    "message"    : "Multiply me and we'll create the Multi~Verse..." 
 }, {
     "rx"         : 1,
     "ry"         : 0,
@@ -161,7 +163,7 @@ var GALAXY_TOUR = [{
     "message"    : "Create your Universe Now; Only a limited number of accounts during Delta-Release.",
     "callback"   : fadeInLoginForm
 }];
-var cinematic_width = 35;
+var cinematic_width = 15;
 
 var Tour = function(stops) {
 
@@ -226,7 +228,7 @@ Tour.prototype = {
   start: function() {
     var _this = this, next;
     if( _this.current == 0 ){
-      next = $('<a href="#" />')
+      next = $('<a href="" />')
       .html('Stop')
       .click(function(e) {
         e.preventDefault();
@@ -360,7 +362,7 @@ Tour.prototype = {
       _this.content.html('<p><span>' + message + '</span></p>');
       _this.content.fadeIn();
 
-      var next = $('<a href="#" />')
+      var next = $('<a href="" />')
       .html('Skip')
       .click(function(e) {
         e.preventDefault();

@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(0); // Set E_ALL for debuging
+error_reporting(E_ALL); // Set E_ALL for debuging
 
 include_once dirname(__FILE__).DIRECTORY_SEPARATOR.'elFinderConnector.class.php';
 include_once dirname(__FILE__).DIRECTORY_SEPARATOR.'elFinder.class.php';
@@ -25,20 +25,3 @@ function access($attr, $path, $data, $volume) {
 		? !($attr == 'read' || $attr == 'write')    // set read+write to false, other (locked+hidden) set to true
 		:  null;                                    // else elFinder decide it itself
 }
-
-$opts = array(
-	// 'debug' => true,
-	'roots' => array(
-		array(
-			'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
-			'path'          => '../files/',         // path to files (REQUIRED)
-			'URL'           => dirname($_SERVER['PHP_SELF']) . '/../files/', // URL to files (REQUIRED)
-			'accessControl' => 'access'             // disable and hide dot starting files (OPTIONAL)
-		)
-	)
-);
-
-// run elFinder
-$connector = new elFinderConnector(new elFinder($opts));
-$connector->run();
-

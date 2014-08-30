@@ -26,19 +26,20 @@ function access($attr, $path, $data, $volume) {
 		:  null;                                    // else elFinder decide it itself
 }
 
-$opts = array(
-	// 'debug' => true,
-	'roots' => array(
-		array(
-			'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
-			'path'          => '../files/',         // path to files (REQUIRED)
-			'URL'           => dirname($_SERVER['PHP_SELF']) . '/../files/', // URL to files (REQUIRED)
-			'accessControl' => 'access'             // disable and hide dot starting files (OPTIONAL)
+
+if(!$opts)
+	$opts = array(
+		// 'debug' => true,
+		'roots' => array(
+			array(
+				'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
+				'path'          => '../files/',         // path to files (REQUIRED)
+				'URL'           => dirname($_SERVER['PHP_SELF']) . '/../files/', // URL to files (REQUIRED)
+				'accessControl' => 'access'             // disable and hide dot starting files (OPTIONAL)
+			)
 		)
-	)
-);
+	);
 
 // run elFinder
 $connector = new elFinderConnector(new elFinder($opts));
 $connector->run();
-

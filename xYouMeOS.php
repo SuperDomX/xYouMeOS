@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Internet Operating System
- * @version v0.0.5
+ * @version v0.0.6
  * @icon  
  * @link  youMeOS
  * @see community 
@@ -40,15 +40,66 @@ class xYouMeOS extends Xengine {
 
 		} else {		
 			$r = array(
-				// 'data' => null,		
-				'success' => false,
-				'error'	  => 'Not Logged In',
-				'action'  => 'login',
-				//'method'  => 'login' 
+				// 'data'  => null,		
+				'success'  => false,
+				'error'    => 'Not Logged In',
+				'action'   => 'login',
+				//'method' => 'login' 
 			);
 		}
 		
 		return $r;
 	}
+
+	function fileManager(){
+		
+		error_reporting(1); // Set E_ALL for debuging
+		
+
+		if($this->Key['is']['user']){
+			$user_dir = SVR_FILES.'/files/'.$_SESSION['user']['username'].'/';
+			
+			if( !is_dir($user_dir) ){
+				mkdir(SVR_FILES.'/files/');
+				mkdir($user_dir);
+			}
+
+			// echo fileperms($user_dir);
+
+			// exit;
+
+			$url_dir = str_replace($_SERVER['DOCUMENT_ROOT'], "", $user_dir);
+			
+
+			$opts = array(
+				'debug' => true,
+				'roots' => array(
+					array(
+						'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
+						'path'          => $user_dir,			//$user_dir,         	// path to files (REQUIRED)
+						'URL'           => $url_dir , // URL to files (REQUIRED)
+						'accessControl' => 'access'             // disable and hide dot starting files (OPTIONAL)
+					)
+				)
+			);
+
+			require("php/connector.php");
+			exit;
+			// // run elFinder
+			// $connector = new elFinderConnector(new elFinder($opts));
+			// $connector->run();
+			// exit;
+		}
+
+
+		return array(
+			'success' => true,
+
+			'data'    => array(
+				'opts'	=> $opts,
+				'files' => 'hello'
+			)
+		);
+	}	
 }
 ?>

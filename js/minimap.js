@@ -196,7 +196,7 @@
         $('#detailBody').html(data);        
       });
 
-      $('#detailTitle').find('span').html('  Example Control Panel');
+      $('#detailTitle').find('span').html(window.user.name);
 
       $detailContainer.css({
         paddingTop: 0

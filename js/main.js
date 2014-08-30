@@ -92,12 +92,12 @@ function start( e ){
 
 }
 
-var postStarGradientLoaded = function(){
-	gradientCanvas = document.createElement('canvas');
-	gradientCanvas.width = gradientImage.width;
-	gradientCanvas.height = gradientImage.height;
-	gradientCanvas.getContext('2d').drawImage( gradientImage, 0, 0, gradientImage.width, gradientImage.height );
-	gradientCanvas.getColor = function( percentage ){
+	var postStarGradientLoaded = function(){
+		gradientCanvas          = document.createElement('canvas');
+		gradientCanvas.width    = gradientImage.width;
+		gradientCanvas.height   = gradientImage.height;
+		gradientCanvas.getContext('2d').drawImage( gradientImage, 0, 0, gradientImage.width, gradientImage.height );
+		gradientCanvas.getColor = function( percentage ){
 		return this.getContext('2d').getImageData(0,percentage * gradientImage.height, 1, 1).data;
 	}
 
@@ -378,12 +378,12 @@ function initScene() {
 function sceneSetup(){
 
 	if( enableStarModel ){
-    // console.time("make star models");
+    	console.time("make star models");
 		starModel = makeStarModels();		
 		starModel.setSpectralIndex(0.9);
 		starModel.setScale(1.0);		
 		translating.add(starModel);
-		// console.timeEnd("make star models");
+		console.timeEnd("make star models");
 	}
 	
 
@@ -567,9 +567,9 @@ function unmuteSound(){
 
 function displayIntroMessage(){
 	Tour.meta.fadeIn();
-	tour.showMessage('Welcome to the stellar neighborhood.', 5000 )
-	.showMessage('This is a visualization of over 100,000 nearby stars.', 5000 )
-	.showMessage('Scroll and zoom to explore.', 4000, function(){
+	tour.showMessage('Hello World; Welcome to You Me OS!', 5000 )
+	.showMessage('I am a Visual "4D" version of Your Intergalatic Web.', 5000 )
+	.showMessage('Take the Tour to learn More.', 4000, function(){
 		firstTime = false;
 		$(window).trigger('resize');
 		$iconNav.find('#tour-button').trigger('mouseover');
