@@ -130,15 +130,15 @@
                     success  : function(data, textStatus, jqXHR) 
                     {
                         //data: return data from server
-                        window.user = data.data;
-                        var user    = window.user;
+                        // window.user = data.data;
+                        // var user    = window.user;
 
 
                         if(data.success){
                             // $('#ex-out').click();
                             // $('#about').click();
                             
-                            $.get("/youMeOS/dashboard/"+user.username , function(data) {
+                            $.get("/youMeOS/dashboard/", function(data) {
                                 $('#detailBody').html(data);        
                             });
 
