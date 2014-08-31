@@ -13,7 +13,8 @@
 		      <div class="container">
 		           <h1>Welcome to You Me OS,</h1>
 		           <p>Make yourself at home, we have a lot of ground to cover. Well, infinite space really...</p>
-		           {if !$masterKey.is.user}<p><a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">Enter</a></p>{/if}
+		           {if !$masterKey.is.user}{/if}
+               <p><a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">Enter</a></p>
 		      </div>
 		 </div>
          <div class="row">

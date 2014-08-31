@@ -33,7 +33,7 @@
             
             <!-- Login -->
             <form class="box tile animated active " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
-                <h2 id="tour-head" class="m-t-0 m-b-15">Welcome</h2>
+                <!-- <h2 id="tour-head" class="m-t-0 m-b-15">Welcome</h2> -->
                 <!-- <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
                 <input type="password" class="login-control" placeholder="Password" name="login[password]">
                 <div class="checkbox m-b-20">
@@ -43,17 +43,18 @@
                     </label>
                 </div> -->
 
-                <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Take the Tour</button>
+                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Enter Portal</a>
                 <br/><br/>
-                 
+                
+                <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Galaxy Tour</button>
+                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Weave Universe</a>
                 <small>
-                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Login to Universe</a>
-                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Create Universe</a>
+                    
                 </small>
             </form>
 
             <form class="box tile animated " id="box-login" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Enter "You-in-Verse"</h2>
+                <h2 class="m-t-0 m-b-15">Enter "You-in-Verse" Portal</h2>
                 <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
                 <input type="password" class="login-control" placeholder="Key" name="login[password]">
                 <!-- <div class="checkbox m-b-20">
@@ -66,8 +67,8 @@
 
                 <br/><br/>
                 <small>
-                     <a class="box-switcher" data-switch="box-tour" href="">Welcome Tour</a> |
-                    <a class="box-switcher" data-switch="box-register" href="">Create Universe</a> |
+                     <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> |
+                    <a class="box-switcher" data-switch="box-register" href="">Weave Universe</a> |
                     <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a>
                 </small>
             </form>
@@ -110,7 +111,7 @@
         <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
         
         <!-- All JS functions -->
-        <script src="js/functions.js"></script>
+        <!-- // <script src="js/functions.js"></script> -->
 
         <script type="text/javascript">
             $(document).ready(function  () {

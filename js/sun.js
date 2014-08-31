@@ -148,17 +148,17 @@ var solarflareGeometry = new THREE.TorusGeometry( 0.00000003, 0.000000001 + 0.00
 function makeSolarflare( uniforms ){
 	var solarflareMaterial = new THREE.ShaderMaterial(
 		{
-			uniforms: 		uniforms,
-			vertexShader:   shaderList.starflare.vertex,
-			fragmentShader: shaderList.starflare.fragment,
-			blending: THREE.AdditiveBlending,
-			color: 0xffffff,
-			transparent: true,
-			depthTest: true,
-			depthWrite: false,
-			polygonOffset: true,
-			polygonOffsetFactor: -100,
-			polygonOffsetUnits: 1000,
+			uniforms            : 		uniforms,
+			vertexShader        :   shaderList.starflare.vertex,
+			fragmentShader      : shaderList.starflare.fragment,
+			blending            : THREE.AdditiveBlending,
+			color               : 0xffffff,
+			transparent         : true,
+			depthTest           : true,
+			depthWrite          : false,
+			polygonOffset       : true,
+			polygonOffsetFactor : -100,
+			polygonOffsetUnits  : 1000,
 		}
 	);
 
@@ -264,13 +264,13 @@ function makeSun( options ){
 
 
 	var latticeMaterial = new THREE.MeshBasicMaterial({
-		map: glowSpanTexture,
-		blending: THREE.AdditiveBlending,
-		transparent: true,
-		depthTest: true,
-		depthWrite: true,		
-		wireframe: true,
-		opacity: 0.8,
+		map         : glowSpanTexture,
+		blending    : THREE.AdditiveBlending,
+		transparent : true,
+		depthTest   : true,
+		depthWrite  : true,		
+		wireframe   : true,
+		opacity     : 0.8,
 	});
 
 	var lattice = new THREE.Mesh( new THREE.IcosahedronGeometry( radius * 1.25, 2), latticeMaterial );

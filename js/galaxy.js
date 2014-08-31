@@ -159,13 +159,13 @@ function generateGalaxy(){
 
 	//	a heat-vision skeleton of the galactic plane
 	var cylinderMaterial = new THREE.MeshBasicMaterial({
-		map: glowSpanTexture,
-		blending: THREE.AdditiveBlending,
-		transparent: true,
-		depthTest: false,
-		depthWrite: false,		
-		wireframe: true,
-		opacity: 1.0,
+		map         : glowSpanTexture,
+		blending    : THREE.AdditiveBlending,
+		transparent : true,
+		depthTest   : false,
+		depthWrite  : false,		
+		wireframe   : true,
+		opacity     : 1.0,
 	})	
 	var isogeo = new THREE.IcosahedronGeometry( 40000, 4 );	
 	var matrix = new THREE.Matrix4();

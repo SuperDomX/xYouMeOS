@@ -1,7 +1,7 @@
 var textureFlare0 = THREE.ImageUtils.loadTexture( "images/lensflare/lensflare0.png" );
 var textureFlare1 = THREE.ImageUtils.loadTexture( "images/lensflare/lensflare1.png" );
 var textureFlare2 = THREE.ImageUtils.loadTexture( "images/lensflare/lensflare2.png" );
-var textureFlare3 = THREE.ImageUtils.loadTexture( "images/lensflare/lensflare3.png", null, setLoadMessage("Krislynn Night, Khronus Infinidee, Gaia Rhae, Sol & Luna") );
+var textureFlare3 = THREE.ImageUtils.loadTexture( "images/lensflare/lensflare3.png", null, setLoadMessage("2") );
 
 //	just used in galactic core
 function addLensFlare(x,y,z, size, overrideImage){

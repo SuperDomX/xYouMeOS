@@ -569,10 +569,12 @@ function unmuteSound(){
 
 function displayIntroMessage(){
 	Tour.meta.fadeIn();
-	tour.showMessage('<small>To my children: Krislynn Night, Khronus Infinidee, Gaia Rhæ, Sol & Luna</small>', 6000 )
-	.showMessage('Hello World, I am: "You Me OS"', 4000 )
-	.showMessage('Visualize the Intergalatic Web, seen from the back your head, in 4d...', 6000 )
-	.showMessage('Do you see it...?', 4000, function(){
+	tour.showMessage('"To my children: Krislynn Night, Khronus Infinidee, Gaia Rhæ, Sol & Luna"', 6000
+	//  )
+	// .showMessage('Hello, I am: "You Me OS"', 4000 )
+	// .showMessage('Visualize, from the back your head, the Intergalatic Web in multiple dimensions...', 6000 )
+	// .showMessage('Can you see it...?', 4000
+	, function(){
 		firstTime = false;
 		$(window).trigger('resize');
 		$iconNav.find('#tour-button').trigger('mouseover');

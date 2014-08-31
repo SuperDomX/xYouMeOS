@@ -43,7 +43,7 @@ var starSystems = {
                 "radius": 0.65
             },
             {
-                "c": 1.52, 
+                "c": 0, 
                 "offset": 66, 
                 "radius": 0.6
             }                        
