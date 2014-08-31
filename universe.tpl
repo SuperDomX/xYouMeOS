@@ -8,15 +8,24 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
 		
+
 		<link href='http://fonts.googleapis.com/css?family=Lekton|Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="{$_DIR}css/font-awesome.min.css"> 
 		<link rel="stylesheet" type="text/css" href="{$_DIR}styles/style.css">
 
+		<link href="css/bootstrap.css" rel="stylesheet">
+
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
+
 		<style type="text/css">
 
-		.modal-dialog {
+		/*.modal-dialog {
 			z-index: 9999999999999999999999999 !important;
-		}
+		}*/
 
 		</style>
 		
@@ -77,26 +86,7 @@
 						</p>
 						<p id="ex-out">
 							&times;
-						</p>
-						<p id="orbit">
-							<div class="pull-left tm-icon">
-		                        <a data-drawer="notifications" class="drawer-toggle" href="javascript:" onclick="zoomOut(.577)">
-		                            <i class="sa-top-updates"></i>
-		                            <!-- <i class="n-count animated">9</i> -->
-		                            <span>Orbits</span>
-		                        </a>
-		                    </div>
-						</p>
-						<p id="gravity"> 
-		                    <div class="pull-left tm-icon">
-		                        <a data-drawer="notifications" class="drawer-toggle" href="javascript:" onclick="zoomOut(1000)">
-		                            <i class="sa-top-updates"></i>
-		                            <!-- <i class="n-count animated">9</i> -->
-		                            <span>Gravity</span>
-		                        </a>
-		                    </div>
-						</p>
-
+						</p> 
 					</div>
 				</div>
 				<div id="detailBody">
@@ -168,10 +158,11 @@
 			</div>
 		</div>
 
-		<audio id="bgmusicA" src="{$_DIR}audio/01_-_Carl_Sagans_Ghost_-_Travelers_Welcome.ogg">
+		<audio id="bgmusicA" src="{$_DIR}audio/bgmusic.ogg"> 
 		</audio>
-		<audio id="bgmusicB" src="{$_DIR}audio/bgmusic.ogg"> 
+		<audio id="bgmusicB" src="{$_DIR}audio/01_-_Carl_Sagans_Ghost_-_Travelers_Welcome.ogg">
 		</audio>
+		
 
 
 
@@ -197,11 +188,11 @@
 
             	var go = window.location.hash.replace('#','');
             	if(go != '')
-                $.get('.'+go, function(data) {
-                    $('#detailBody').html(data);  
-                    
-                    $('#content').html( $('#content #content').html() );
-                });
+	                $.get('.'+go, function(data) {
+	                    $('section #content').html(data);  
+	                    
+	                    $('section #content').html( $('#content #content').html() );
+	                });
             });
 
             $(document).ready(function(){

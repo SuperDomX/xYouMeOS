@@ -12,7 +12,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : 'You & Me Oribit Symmetrically in this Intergalatic Web...',
+    "message"    : 'You and Me Oribit in this Intergalatic Web, Symmetrically...',
     "callback"   : highlightMilkyWay
 }, {
     "rx"         : 5.12216429754294249,
@@ -28,7 +28,7 @@ var GALAXY_TOUR = [{
     "z"          : 3000.4214873346518,
     "travelTime" : 5000,
     "restTime"   : 4000,
-    "message"    : "Your Area of Interest (A.o.I.) is in this Triangle."
+    "message"    : "In this Triangle you can Zoom In to your Area of Interest (A.o.I.)"
 },
 {
     "rx"         : 0.5522785678088462,
@@ -36,35 +36,35 @@ var GALAXY_TOUR = [{
     "z"          : 1333.4214873346518,
     "travelTime" : 2400,
     "restTime"   : 4000,
-    "message"    : "Here is your Gravity Field of Influence, Visually."
+    "message"    : "This is your Gravity Field of Influence, Visually."
 },{
     "rx"         : -0.18605511827781787,
     "ry"         : -2.464222597755626,
     "z"          : 0.97,
     "travelTime" : 5777,
     "restTime"   : 5777,
-    "message"    : 'Cosmically, you are the Galactic Center of this Sun.'
+    "message"    : 'You are Here. The Galactic Center of this Sun, Cosmically.'
 },{
     "rx"         : -0.18605511827781787,
     "ry"         : -2.464222597755626,
     "z"          : 1.1,
     "travelTime" : 3000,
     "restTime"   : 3000,
-    "message"    : '"I Am You."'
+    "message"    : '"I am You."'
 },  {
     "rx"         : -0.18605511827781787,
     "ry"         : -2.464222597755626,
     "z"          : 0.57,
     "travelTime" : 5777,
     "restTime"   : 7777,
-    "message"    : 'Take a moment; Bathe yourself in the Center of your Magnificence.'
+    "message"    : 'Take a moment and Bathe yourself in the Center of your Magnificence.'
 }, {
     "rx"         : 1.4395420537811414,
     "ry"         : 6.281532559509658,
     "z"          : 1.148607771018531,
     "travelTime" : 2000,
     "restTime"   : 4444,
-    "message"    : 'Your magnificence forever shines unto Eternity.',
+    "message"    : '"Did you Know?" Your magnificence forever shines unto Eternity.',
     "callback"   : displaySunEarthDiagram
 },  {
     "rx"         : 1.4395420537811414,
@@ -72,7 +72,7 @@ var GALAXY_TOUR = [{
     "z"          : 5.148607771018531,
     "travelTime" : 4000,
     "restTime"   : 6000,
-    "message"    : 'How you spend your Time determines what graviates into your Orbiting System',
+    "message"    : 'Stuff you spend your Time on will graviate into your Orbiting System',
     "callback"   : displaySunEarthDiagram
 },{
     "rx"         : 1.4395420537811414,
@@ -80,7 +80,7 @@ var GALAXY_TOUR = [{
     "z"          : 13.778607771018531,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : 'Every day you Shine & Light travels away from your Galactic Center...',
+    "message"    : 'As your light travels away from your Galactic Center...',
     "callback"   : displaySunEarthDiagram
 }, {
     "rx"         : 0.8369933670834534,
@@ -88,21 +88,21 @@ var GALAXY_TOUR = [{
     "z"          : 20.937978822676058,
     "travelTime" : 3000,
     "restTime"   : 2000,
-    "message"    : "...creating a Virtual Timeline, Naturally."
+    "message"    : "... it creates a Virtual Timeline, Naturally."
 }, {
     "rx"         : 0.6424544063335803,
     "ry"         : -0.0031800804774647718,
     "z"          : 277.23179619362583,
     "travelTime" : 3000,
     "restTime"   : 4000,
-    "message"    : 'The "Oort Cloud", 1 Light year, is made up your light a Year ago; Literally.'
+    "message"    : 'An "Oort Cloud" can bee seen 1 Light year away, hence represeting a Year of Time.'
 }, {
     "rx"         : 0.503337952515914,
     "ry"         : -0.9904961225532652,
     "z"          : 500.34847195438465,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : "Zoom Out here & click to visit the Solar Systems of your connections."
+    "message"    : "Zoom Out to your connections where you can visit their Solar Systems."
 }, {
     "rx"         : 0.0019755752638865747,
     "ry"         : 0.23341774437325485,
@@ -123,7 +123,7 @@ var GALAXY_TOUR = [{
     "z"          : 1277,
     "travelTime" : 3000,
     "restTime"   : 4000,
-    "message"    : "...creating a Unique 4D Constellation, Sociologically."
+    "message"    : "...thus creating a Unique 4D Constellation, Sociologically."
 },
 //  {
 //     "rx"         : 0.5522785678088462,
@@ -147,28 +147,28 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "I can be installed on any Domain, creating Universes anywhere." 
+    "message"    : "Create Universes anywhere and everywhere by installing Me on any Domain." 
 }, {
     "rx"         : -4.12216429754294249,
     "ry"         : 1.9989722678912,
     "z"          : 999999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Multiply me and we'll create the Multi~Verse..." 
+    "message"    : "Multiple Universes can communicate to eachother, creating the Multi~Verse..." 
 }, {
     "rx"         : 1,
     "ry"         : 0,
     "z"          : 4999999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : "Together we can make the Internet's 5th Dimensional OS; Imagine the Possibilities!" 
+    "message"    : "Together we can make the Internet's Next Dimensional OS!" 
 },   {
     "rx"         : -0.12216429754294249,
     "ry"         : 1.9989722678912,
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Create your Universe Now; Only a limited number of accounts during Delta-Release.",
+    "message"    : "Create your Universe Now, and begin to see the Internet from the Back of Your Head :)",
     "callback"   : fadeInLoginForm
 }];
 var cinematic_width = 15;

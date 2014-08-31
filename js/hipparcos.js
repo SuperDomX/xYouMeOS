@@ -15,13 +15,13 @@ function loadStarData( dataFile, callback ){
 
 
 //	points in the sky in HIPPARCOS star cluster
-var datastarTexture0 = THREE.ImageUtils.loadTexture( "images/p_0.png" );
-var datastarTexture1 = THREE.ImageUtils.loadTexture( "images/p_2.png" );
+var datastarTexture0          = THREE.ImageUtils.loadTexture( "images/p_0.png" );
+var datastarTexture1          = THREE.ImageUtils.loadTexture( "images/p_2.png" );
 var datastarHeatVisionTexture = THREE.ImageUtils.loadTexture( "images/sharppoint.png" );
 
 //	bright flashy named stars graphic
-var starPreviewTexture = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("3")	);
-var starColorGraph = THREE.ImageUtils.loadTexture( 'images/star_color_modified.png' );
+var starPreviewTexture        = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("Welcome")	);
+var starColorGraph            = THREE.ImageUtils.loadTexture( 'images/star_color_modified.png' );
 
 var datastarUniforms = {
 	color             :     { type: "c", value: new THREE.Color( 0xffffff ) },

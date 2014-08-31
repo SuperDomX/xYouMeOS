@@ -389,18 +389,18 @@ body {
 
 #star-name,
 #detailTitle {
-  color: #fff;
-  font-size: 22px;
-  line-height: 60px;
-  margin: 0 0 20px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
-  position: relative;
-  display: block;
-  font-style: italic;
-  text-shadow: 0 0 3px #2c47dc, 0 0 10px #eeeeff;
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
+  color               : #fff;
+  font-size           : 22px;
+  line-height         : 60px;
+  margin              : 0 0 0px 20px;
+  /*border-bottom     : 1px solid rgba(255, 255, 255, 0.75);*/
+  position            : relative;
+  display             : block;
+  font-style          : bold;
+  text-shadow         : 0 0 3px #2c47dc, 0 0 10px #eeeeff;
+  -moz-user-select    : -moz-none;
+  -khtml-user-select  : none;
+  -webkit-user-select : none;
   /*
    Introduced in IE 10.
    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/

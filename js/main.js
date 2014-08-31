@@ -90,10 +90,7 @@ function start( e ){
 
 	gradientImage = document.createElement('img');
 	gradientImage.onload = postStarGradientLoaded;
-	gradientImage.src = 'images/star_color_modified.png';	
-
-
-	setTimeout(fadeInLoginForm,3333);
+	gradientImage.src = 'images/star_color_modified.png';	 
 
 }
 
@@ -342,6 +339,7 @@ function initScene() {
 		} else {
 			_.delay(function() {
 				$iconNav.find('#tour-button').trigger('mouseover');
+				fadeInLoginForm();
 			}, 500);
 		}
 
@@ -571,13 +569,16 @@ function unmuteSound(){
 
 function displayIntroMessage(){
 	Tour.meta.fadeIn();
-	tour.showMessage('"Dedicated to My Children: Krislynn Night, Khronus Infinidee, & Gaia Rhae."', 5000 )
-	.showMessage('Hello World; Welcome to You Me OS!', 5000 )
-	.showMessage('I am a "4D" visualization of the Intergalatic Web.', 5000 )
-	.showMessage('Take the Tour to learn More!', 4000, function(){
+	tour.showMessage('<small>To my children: Krislynn Night, Khronus Infinidee, Gaia Rhæ, Sol & Luna</small>', 6000 )
+	.showMessage('Hello World, I am: "You Me OS"', 4000 )
+	.showMessage('Visualize the Intergalatic Web, seen from the back your head, in 4d...', 6000 )
+	.showMessage('Do you see it...?', 4000, function(){
 		firstTime = false;
 		$(window).trigger('resize');
 		$iconNav.find('#tour-button').trigger('mouseover');
+		fadeInLoginForm();
 	} )
 	.endMessages();	
 }
+
+

@@ -8,9 +8,9 @@
   var padding = 30;
 
   // Loading variables
-  var ready = false;
-  var count = 0;
-  var timer = null
+  var ready   = false;
+  var count   = 0;
+  var timer   = null
   var dragged = false;
 
   // SVG loadables
@@ -18,9 +18,9 @@
 
   // jQuery elements
   var $domElement = $('#minimap');
-  var $minimap = $domElement.find('#zoom-levels');
-  var $volume = $domElement.find('#volume').load(updateCount);
-  var $about = $domElement.find('#about').load(updateCount);
+  var $minimap    = $domElement.find('#zoom-levels');
+  var $volume     = $domElement.find('#volume').load(updateCount);
+  var $about      = $domElement.find('#about').load(updateCount);
   // var $tour = $domElement.find('#tour').load(updateCount);
   // var $heatvision = $domElement.find('#heatvision').load(updateCount);
   // var $sound = $domElement.find('#sound').load(updateCount);
@@ -180,7 +180,7 @@
   //   .click(function(e) {
   //     // markers[0].$.trigger('click');
   //     unfocus(true);
-  //   });
+  //   });f
 
   $about
     .click(function(e) {
@@ -192,11 +192,11 @@
 
       $('#css-container').css('display', 'none');
 
-      $.get('/youMeOS/dashboard/'+window.user.name, function(data) {
+      $.get('/youMeOS/version/' , function(data) {
         $('#detailBody').html(data);        
       });
 
-      $('#detailTitle').find('span').html(window.user.name);
+      $('#detailTitle').find('span').html("About You Me OS");
 
       $detailContainer.css({
         paddingTop: 0
