@@ -105,10 +105,12 @@
          
         
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
+        <!-- // <script src="js/bootstrap.min.js"></script> -->
         
         <!--  Form Related -->
-        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+        <!-- // <script src="js/icheck.js"></script> 
+        -->
+        <!-- Custom Checkbox + Radio --> 
         
         <!-- All JS functions -->
         <!-- // <script src="js/functions.js"></script> -->
@@ -133,7 +135,7 @@
                         // window.user = data.data;
                         // var user    = window.user;
 
-
+                        zoomOut(.750);
                         if(data.success){
                             // $('#ex-out').click();
                             // $('#about').click();
@@ -176,12 +178,12 @@
                     {
                         //if fails      
                         $( "#modalDefault" ).dialog({
-                          modal: true,
-                          buttons: {
-                            Ok: function() {
-                              $( this ).dialog( "close" );
+                        modal: true,
+                            buttons: {
+                                Ok: function() {
+                                  $( this ).dialog( "close" );
+                                }
                             }
-                          }
                         });
                     }
                 });

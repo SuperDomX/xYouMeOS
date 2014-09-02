@@ -4,20 +4,20 @@ var GALAXY_TOUR = [{
     "z"          : 80000,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : 'Welcome to "You Me OS"'
+    "message"    : 'Hello world; Welcome to "You Me OS"'
     //"callback" : highlightMilkyWay
 }, {
     "rx"         : 2.12216429754294249,
     "ry"         : 4.1189722678912,
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
-    "restTime"   : 8000,
+    "restTime"   : 6000,
     "message"    : 'You and Me Operate in this Intergalatic Web, Symmetrically...',
     "callback"   : highlightMilkyWay
 }, {
-    "rx"         : 3.12216429754294249,
-    "ry"         : 3.1189722678912,
-    "z"          : 69999.99999999994,
+    "rx"         : 4.12216429754294249,
+    "ry"         : 2.1189722678912,
+    "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
     "message"    : '... represented here in 4 Dimensions; Light, Gravity, Space, & Time.',
@@ -25,7 +25,7 @@ var GALAXY_TOUR = [{
 },{
     "rx"         : 0.5522785678088462,
     "ry"         : 1.324151395815386,
-    "z"          : 3000.4214873346518,
+    "z"          : 2500.4214873346518,
     "travelTime" : 5000,
     "restTime"   : 4000,
     "message"    : "In this Triangle you can Zoom In to your Area of Interest (A.o.I.)"
@@ -57,7 +57,7 @@ var GALAXY_TOUR = [{
     "z"          : 0.57,
     "travelTime" : 5777,
     "restTime"   : 7777,
-    "message"    : 'Take a moment and Bathe yourself in the Center of your Magnificence.'
+    "message"    : 'Take a moment to bathe yourself in the center of your Magnificence.'
 }, {
     "rx"         : 1.4395420537811414,
     "ry"         : 6.281532559509658,

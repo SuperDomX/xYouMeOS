@@ -42,14 +42,14 @@
                     <div class="pull-left tm-icon">
                         <a data-drawer="messages" class="drawer-toggle" href="#/">
                             <i class="sa-top-message"></i>
-                            <i class="n-count animated">5</i>
+                            <i class="n-count animated">0</i>
                             <span>Messages</span>
                         </a>
                     </div>
                     <div class="pull-left tm-icon">
                         <a data-drawer="notifications" class="drawer-toggle" href="#/">
                             <i class="sa-top-updates"></i>
-                            <i class="n-count animated">9</i>
+                            <i class="n-count animated">0</i>
                             <span>Updates</span>
                         </a>
                     </div>
@@ -870,7 +870,7 @@
         
         <!-- Javascript Libraries -->
         <!-- jQuery -->
-        <script type="text/javascript" src="js/jquery.min.js"></script> <!-- jQuery Library -->
+        <script type="text/javascript" src="js/jquery.min.js"></script> 
         <script type="text/javascript" src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
 
@@ -901,28 +901,24 @@
         <script type="text/javascript" src="js/calendar.min.js"></script> <!-- Calendar -->
         <script type="text/javascript" src="js/feeds.min.js"></script> <!-- News Feeds -->
         
-
         <!-- All JS functions -->
-        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script> 
 
         <script type="text/javascript">
 
 
-            //  $(window).on('hashchange', function() { 
+             $(window).on('hashchange', function() { 
 
-            //     var go = window.location.hash.replace('#','');
-            //     if(go != '')
-            //     $.get(go, function(data) {
-            //         $('section #content').html(data);  
+                var go = window.location.hash.replace('#','');
+                if(go != '')
+                $.get(go, function(data) {
+                    $('section #content').html(data);  
                     
-            //         $('#content').html( $('#content #content').html() );
-            //     });
-            // });
+                    $('#content').html( $('#content #content').html() );
+                });
+            });
 
-             $(document).ready(function  () {
-                 
-                zoomOut(.750);
-             })
+            
 
         </script>
 

@@ -188,16 +188,16 @@
 			}
 
 
-            $(window).on('hashchange', function() { 
+            // $(window).on('hashchange', function() { 
 
-            	var go = window.location.hash.replace('#','');
-            	if(go != '')
-                $.get('.'+go, function(data) {
-                    $('section #content').html(data);  
+            // 	var go = window.location.hash.replace('#','');
+            // 	if(go != '')
+            //     $.get('.'+go, function(data) {
+            //         $('section #content').html(data);  
                     
-                    $('section #content').html( $('#content #content').html() );
-                });
-            });
+            //         $('section #content').html( $('#content #content').html() );
+            //     });
+            // });
 
             $(document).ready(function(){
             	start(); // Load You Me OS
@@ -245,48 +245,10 @@
 		<script type="text/javascript" src="{$_DIR}js/jquery.tooltip.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
 
-		 
-		<!-- // <script type="text/javascript" src="js/jquery.min.js"></script> 
-		-->
-
 		<script type="text/javascript" src="/bin/js/jq/jquery.cookie.js"></script> <!-- jQuery Library -->
-        <script type="text/javascript" src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-
-        <!-- Bootstrap -->
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-        <!-- Charts -->
-        <script type="text/javascript" src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
-        <script type="text/javascript" src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
-        <script type="text/javascript" src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
-        <script type="text/javascript" src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
-
-        <script type="text/javascript" src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
-        <script type="text/javascript" src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
-        <script type="text/javascript" src="js/charts.js"></script> <!-- All the above chart related functions -->
-
-        <!-- Map -->
-        <script type="text/javascript" src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
-        <script type="text/javascript" src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
-
-        <!--  Form Related -->
-        <script type="text/javascript" src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
-
-        <!-- UX -->
-        <script type="text/javascript" src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
-
-        <!-- Other -->
-        <script type="text/javascript" src="js/calendar.min.js"></script> <!-- Calendar -->
-        <script type="text/javascript" src="js/feeds.min.js"></script> <!-- News Feeds -->
-        
-
-        <!-- All JS functions -->
-        <script type="text/javascript" src="js/functions.js"></script>
-
-
-		<!-- Modal Default -->	
-      <!--   <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
+       
+		<!-- Modal Default -->
+		<!--   <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -303,5 +265,4 @@
                 </div>
             </div>
         </div>
-
- -->
+        -->
