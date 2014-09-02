@@ -386,20 +386,20 @@ blockquote small {
 }
 
 .n-count {
-    background: #F00000;
-    font-size: 11px;
-    position: absolute;
-    text-align: center;
-    padding: 2px 3px 3px;
-    border-radius: 2px !important;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
-    margin: 7px 0 0 -13px;
-    font-style: normal;
-    line-height: 100%;
-    -webkit-animation-name: bounceIn;
-    animation-name: bounceIn;
-    font-family: open-sans-regular;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background             : #F00000;
+    font-size              : 11px;
+    position               : absolute;
+    text-align             : center;
+    padding                : 2px 3px 3px;
+    border-radius          : 2px !important;
+    box-shadow             : 0 0 5px rgba(0, 0, 0, 0.06);
+    margin                 : 7px 0 0 -13px;
+    font-style             : normal;
+    line-height            : 100%;
+    -webkit-animation-name : bounceIn;
+    animation-name         : bounceIn;
+    font-family            : open-sans-regular;
+    box-shadow             : 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 #content {

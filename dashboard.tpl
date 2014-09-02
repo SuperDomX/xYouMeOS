@@ -86,7 +86,7 @@
                             <img class="profile-pic animated" src="images/g1.jpg" alt="">
                         </a>
                         <ul class="dropdown-menu profile-menu">
-                            <li><a href="#/{$Xtra}/{$method}/{$user.username}">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="#/{$Xtra}/{$method}">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/{$Xtra}/settings">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
@@ -165,7 +165,7 @@
                 <!-- Side Menu -->
                 <ul class="list-unstyled side-menu">
                     <li class="active">
-                        <a class="sa-side-home" href="#/{$Xtra}/{$method}/{$user.username}">
+                        <a class="sa-side-home" href="#/{$Xtra}/{$method}" > <!-- /{$user.username} -->
                             <span class="menu-item">Dashboard</span>
                         </a>
                     </li>
@@ -454,6 +454,7 @@
                                         {/if}
                                         
                                     </div>
+
                                 </div>
                                 <div class="p-5 m-t-15">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget risus rhoncus, cursus purus vitae, venenatis eros. Phasellus at tincidunt risus. Integer sed massa fermentum, feugiat arcu quis, ultrices nisi. Quisque commodo nisi scelerisque, tempus diam ac, dignissim tellus. Mauris adipiscing elit tortor, dignissim auctor diam mollis sed. Nulla eu dui non velit accumsan scelerisque eget et felis.
@@ -870,57 +871,73 @@
         
         <!-- Javascript Libraries -->
         <!-- jQuery -->
-        <script type="text/javascript" src="js/jquery.min.js"></script> 
-        <script type="text/javascript" src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+        <script src="js/jquery.min.js"></script> 
+        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
 
         <!-- Bootstrap -->
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
         <!-- Charts -->
-        <script type="text/javascript" src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
-        <script type="text/javascript" src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
-        <script type="text/javascript" src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
-        <script type="text/javascript" src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
 
-        <script type="text/javascript" src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
-        <script type="text/javascript" src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
-        <script type="text/javascript" src="js/charts.js"></script> <!-- All the above chart related functions -->
+        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
 
         <!-- Map -->
-        <script type="text/javascript" src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
-        <script type="text/javascript" src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
 
         <!--  Form Related -->
-        <script type="text/javascript" src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
 
         <!-- UX -->
-        <script type="text/javascript" src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
 
         <!-- Other -->
-        <script type="text/javascript" src="js/calendar.min.js"></script> <!-- Calendar -->
-        <script type="text/javascript" src="js/feeds.min.js"></script> <!-- News Feeds -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
         
+        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
+        
+
         <!-- All JS functions -->
-        <script type="text/javascript" src="js/functions.js"></script> 
+        <script src="js/functions.js"></script> 
+
+
+        <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
 
         <script type="text/javascript">
 
-
-             $(window).on('hashchange', function() { 
+            $(window).on('hashchange', function() { 
 
                 var go = window.location.hash.replace('#','');
                 if(go != '')
-                $.get(go, function(data) {
-                    $('section #content').html(data);  
+                // $.get(go, function(data) {
+                //     $('section #content').html(data);  
                     
-                    $('#content').html( $('#content #content').html() );
-                });
+                //     $('#content').html( $('#content #content').html() );
+                // });
+                console.log('Loading'+go);
+
+                $.pjax({ 
+                    container : '#content',
+                    fragment  : '#content',
+                    timeout   : 5000,
+                    url       : go
+                });  
+
             });
 
-            
-
         </script>
-
+        <script type='text/javascript'>
+            // $('.side-menu > li > a').attr({
+            //     href : '#'+$('.side-menu > li > a').attr('href')
+            // });
+        </script>
     </body>
 </html>

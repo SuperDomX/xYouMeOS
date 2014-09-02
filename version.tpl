@@ -11,10 +11,21 @@
                     
 		<div class="jumbotron tile-light">
 		      <div class="container">
-		           <h1>Welcome to You Me OS,</h1>
+		           <h1>You Me OS <small>{$PHP.version}</small></h1>
 		           <p>Make yourself at home, we have a lot of ground to cover. Well, infinite space really...</p>
-		           {if !$masterKey.is.user}{/if}
-               <p><a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">Enter</a></p>
+		           
+               <p>
+                {if $masterKey.is.user}
+              <a class="btn btn-alt btn-lg" href="javascript: $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');">
+                Dashboard
+              </a>
+              {/if}
+               <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">
+                {if $masterKey.is.user}Logout{else}Login{/if}
+              </a>
+
+
+              </p>
 		      </div>
 		 </div>
          <div class="row">

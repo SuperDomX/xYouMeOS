@@ -199,11 +199,12 @@
             //     });
             // });
 
+			
+
             $(document).ready(function(){
             	start(); // Load You Me OS
             });
 		</script>
-
 
 		<script src="js/jquery.min.js"></script>
 

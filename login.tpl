@@ -43,19 +43,19 @@
                     </label>
                 </div> -->
 
-                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Enter Portal</a>
+                 <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Tour</button>
                 <br/><br/>
                 
-                <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Galaxy Tour</button>
-                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Weave Universe</a>
+               <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Enter</a>
+                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Create</a>
                 <small>
                     
                 </small>
             </form>
 
             <form class="box tile animated " id="box-login" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Enter "You-in-Verse" Portal</h2>
-                <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
+                <h2 class="m-t-0 m-b-15">Travel to your Universe</h2>
+                <input type="text" class="login-control m-b-10" placeholder="Username" name="login[username]">
                 <input type="password" class="login-control" placeholder="Key" name="login[password]">
                 <!-- <div class="checkbox m-b-20">
                     <label>
@@ -63,7 +63,7 @@
                         Remember Me
                     </label>
                 </div> --><br/><br/>
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Travel</button>
+                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Enter</button>
 
                 <br/><br/>
                 <small>
@@ -75,7 +75,7 @@
             
             <!-- Register -->
             <form class="box animated tile" id="box-register" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Create Your Universe</h2>
+                <h2 class="m-t-0 m-b-15">Weave Your Universe</h2>
                 <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="Full Name">
                 <input required name="login[username]" type="text" class="login-control m-b-10" placeholder="Username">
                 <input required name="login[email]" type="email" class="login-control m-b-10" placeholder="Email Address">    
@@ -83,7 +83,7 @@
                 <input required name="login[confirm]" type="password" class="login-control m-b-20" placeholder="Confirm Password">
                 <input type="hidden" name="login[action]" value="register" >
 
-                <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Create Universe</button>
+                <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Weave Universe</button>
 <br/>
                 <small><a class="box-switcher" data-switch="box-login" href="">Already have a Universe?</a></small>
             </form>
@@ -135,18 +135,28 @@
                         // window.user = data.data;
                         // var user    = window.user;
 
-                        zoomOut(.750);
+
                         if(data.success){
+                            zoomOut(.750);
                             // $('#ex-out').click();
                             // $('#about').click();
                                 
-                            var go = "/youMeOS/dashboard/"+$.cookie('user[username]');
+                            var go = "/youMeOS/version/";
 
                             window.location.hash= "#"+go;
 
-                            $.get('/html'+go, function(data) {
-                                $('#detailBody').html(data);        
-                            });
+                           $('#detailBody').load('/html'+go); 
+
+                            // $(window).on('hashchange', function() {  
+                            //     var go = window.location.hash.replace('#','');
+                            //     if(go != '')
+                            //     $.get(go, function(data) {
+                            //         $('section #content').html(data);  
+                                    
+                            //         $('#content').html( $('#content #content').html() );
+                            //     });
+                            // });
+
 
                             // $.pjax({ 
                             //     container : '#detailBody',
