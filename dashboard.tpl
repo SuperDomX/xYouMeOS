@@ -86,7 +86,7 @@
                             <img class="profile-pic animated" src="images/g1.jpg" alt="">
                         </a>
                         <ul class="dropdown-menu profile-menu">
-                            <li><a href="#/profile-page.html">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="#/{$Xtra}/{$method}/{$user.username}">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/{$Xtra}/settings">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
@@ -908,16 +908,16 @@
         <script type="text/javascript">
 
 
-             $(window).on('hashchange', function() { 
+            //  $(window).on('hashchange', function() { 
 
-                var go = window.location.hash.replace('#','');
-                if(go != '')
-                $.get(go, function(data) {
-                    $('section #content').html(data);  
+            //     var go = window.location.hash.replace('#','');
+            //     if(go != '')
+            //     $.get(go, function(data) {
+            //         $('section #content').html(data);  
                     
-                    $('#content').html( $('#content #content').html() );
-                });
-            });
+            //         $('#content').html( $('#content #content').html() );
+            //     });
+            // });
 
              $(document).ready(function  () {
                  

@@ -16,6 +16,13 @@ class xYouMeOS extends Xengine {
 	{
 		# code...
 	}
+
+	public function login()
+	{
+		# code...
+	}
+
+
 	/**
 		@name universe
 		@blox You-In-Verse

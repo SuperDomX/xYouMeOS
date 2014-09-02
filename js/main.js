@@ -569,7 +569,7 @@ function unmuteSound(){
 
 function displayIntroMessage(){
 	Tour.meta.fadeIn();
-	tour.showMessage('"To my children: Krislynn Night, Khronus Infinidee, Gaia Rhæ, Sol & Luna"', 6000
+	tour.showMessage('"To my children. Krislynn Night, Khronus Infinidee, & Gaia Rhæ."', 6000
 	//  )
 	// .showMessage('Hello, I am: "You Me OS"', 4000 )
 	// .showMessage('Visualize, from the back your head, the Intergalatic Web in multiple dimensions...', 6000 )

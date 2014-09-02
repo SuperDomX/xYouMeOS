@@ -4,7 +4,7 @@ var GALAXY_TOUR = [{
     "z"          : 80000,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : 'I am "You Me OS"'
+    "message"    : 'Welcome to "You Me OS"'
     //"callback" : highlightMilkyWay
 }, {
     "rx"         : 2.12216429754294249,
@@ -12,11 +12,11 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : 'You and Me Oribit in this Intergalatic Web, Symmetrically...',
+    "message"    : 'You and Me Operate in this Intergalatic Web, Symmetrically...',
     "callback"   : highlightMilkyWay
 }, {
-    "rx"         : 5.12216429754294249,
-    "ry"         : 7.1189722678912,
+    "rx"         : 3.12216429754294249,
+    "ry"         : 3.1189722678912,
     "z"          : 69999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,

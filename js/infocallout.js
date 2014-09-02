@@ -74,7 +74,7 @@ function fadeInLoginForm(reg){
 
       $detailContainer.show();
 
-      $.get('login.html', function(data) {
+      $.get('/html/youMeOS/login', function(data) {
       	$detailContainer.hide();
 
         $('#detailBody').html(data);        

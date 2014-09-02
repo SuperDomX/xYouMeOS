@@ -112,7 +112,7 @@
 
 		<div id="minimap">
 			<div id="volume">
-<!-- 				<img src="images/icons/sound-on.svg" alt="" /> -->
+				<!-- <img src="/images/icons/sound-on.svg" alt="" /> -->
 			</div>
 			<div id="zoom-levels">
 				<div id="zoom-backdrop"></div>
@@ -137,7 +137,7 @@
 			    to { background-position: -2500px; }
 			}
 
-			.loader {
+			.atom {
 			    width: 100px;
 			    height: 100px; 
 
@@ -145,16 +145,20 @@
 			    -webkit-animation: loaderSprite 1s steps(25, end) infinite;
 			    -moz-animation: loaderSprite 1s steps(25, end) infinite;
 			    animation: loaderSprite 1s steps(25, end) infinite;
+			    display: block;
+				position   : relative;
+				margin     : auto;
+				top        : 0;
+				left       : 0;
+				text-align : center;
 			}
 		</style>
 		<div id="loader">
-			<div> 
-				
-				
-			
+			<div>   
+				<span class="atom" /></span>
 				<p id="loadtext" >
 				YouMeOS&hellip;</p> 
-				<div class="loader" /></div>
+				
 			</div>
 		</div>
 
@@ -188,11 +192,11 @@
 
             	var go = window.location.hash.replace('#','');
             	if(go != '')
-	                $.get('.'+go, function(data) {
-	                    $('section #content').html(data);  
-	                    
-	                    $('section #content').html( $('#content #content').html() );
-	                });
+                $.get('.'+go, function(data) {
+                    $('section #content').html(data);  
+                    
+                    $('section #content').html( $('#content #content').html() );
+                });
             });
 
             $(document).ready(function(){
@@ -242,7 +246,10 @@
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
 
 		 
-		 <script type="text/javascript" src="js/jquery.min.js"></script> <!-- jQuery Library -->
+		<!-- // <script type="text/javascript" src="js/jquery.min.js"></script> 
+		-->
+
+		<script type="text/javascript" src="/bin/js/jq/jquery.cookie.js"></script> <!-- jQuery Library -->
         <script type="text/javascript" src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
 

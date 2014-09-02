@@ -21,12 +21,12 @@
   var $minimap    = $domElement.find('#zoom-levels');
   var $volume     = $domElement.find('#volume').load(updateCount);
   var $about      = $domElement.find('#about').load(updateCount);
-  // var $tour = $domElement.find('#tour').load(updateCount);
-  // var $heatvision = $domElement.find('#heatvision').load(updateCount);
-  // var $sound = $domElement.find('#sound').load(updateCount);
-  // var $soundoff = $domElement.find('#soundoff').load(updateCount);
-  // var $backdrop = $domElement.find("#zoom-backdrop");
-  var $cursor = $domElement.find('#zoom-cursor');
+  var $tour       = $domElement.find('#tour').load(updateCount);
+  var $heatvision = $domElement.find('#heatvision').load(updateCount);
+  var $sound      = $domElement.find('#sound').load(updateCount);
+  var $soundoff   = $domElement.find('#soundoff').load(updateCount);
+  var $backdrop   = $domElement.find("#zoom-backdrop");
+  var $cursor     = $domElement.find('#zoom-cursor');
 
   // Calculation variables
   var POWER = 3;
