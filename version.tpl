@@ -8,34 +8,52 @@
 <link href="css/generics.css" rel="stylesheet"> 
 
 <!-- Content -->
-<section id="content" class="container" style="margin: 0;"> 
-  <div class="row">
-    <div class="jumbotron tile-light">
-      <div class="container">
-           <h1>You Me OS <small>{$PHP.version}</small></h1>
-           <p>Make yourself at home, there is a lot of ground to cover. Well, infinite space really...</p>
-           
-           <p class="pull-right">
-           {if $masterKey.is.user}
-          <a class="btn btn-alt btn-lg" href="javascript: $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');">
-            You Me Portal
-          </a>
-          {/if}
-           <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">
-            {if $masterKey.is.user}Logout{else}Login{/if}
-          </a> 
-          </p>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
+<section id="content" class="container" style="margin: 0;">
+    <div class="row">
+
+    {capture first_slide assign="first_slide"} {* short-hand *}
+        <div class="jumbotron tile-light">
+            <div class="container">
+                
+               <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Hello {$user.username|ucfirst}</h1>
+               <p>Welcome to YouMeOS <small class="badge badge-success">{$PHP.version}</small>, Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
+                 
+               {if $masterKey.is.user}
+                <a class="btn btn-alt btn-lg" href="javascript: zoomOut(.577); $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');">
+                     You <i class="fa fa-dashboard"></i> Me Portal
+                    
+                </a>
+               {/if}
+
+                <a class="btn btn-alt btn-lg" onclick="zoomOut(7)">
+                   <i class="fa fa-sun-o"></i>rbiting System
+                </a> 
+                <a class="btn btn-alt btn-lg" onclick="zoomOut(1000)">
+                     St<i class="fa fa-star"></i>r Field
+                </a> 
+
+                <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                   <i class="fa fa-ge"></i>  Galaxy
+                </a>  -->
+
+               
+
+               <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">
+                <i class="fa fa-rocket"></i> {if $masterKey.is.user}Logout{else}Login{/if}
+               </a> 
+            </div>
+        </div> 
+    {/capture}
+    {include file="../../html/~blox/carousel.tpl" first_slide=$first_slide}
+    <!-- <div class="col-sm-6 col-md-4">
          <div class="thumbnail tile">
               <img src="img/gallery/1.jpg" alt="">
               <div class="p-15">
                   <h4>Weave your Web around You!</h4>
-                  <p>Nullam congue mauris at auctor pharetra. Phasellus dictum accumsan justo, sit amet mattis odio semper in. Nulla consectetur quam in dolor faucibus, ac facilisis nunc luctus. Etiam sapien arcu, scelerisque at mollis a, placerat non eros.</p>
+                  <p>View the internet from the back of your head. You Me OS </p>
                   <p>
                       <a href="" class="btn btn-info btn-sm btn-block">Documentation</a>
-                      <!-- <a href="" class="btn btn-info btn-sm">Button</a> -->
+                      <a href="" class="btn btn-info btn-sm">Button</a>
                   </p>
               </div>
          </div>
@@ -49,7 +67,7 @@
                   <p>Nullam congue mauris at auctor pharetra. Phasellus dictum accumsan justo, sit amet mattis odio semper in. Nulla consectetur quam in dolor faucibus, ac facilisis nunc luctus. Etiam sapien arcu, scelerisque at mollis a, placerat non eros.</p>
                   <p>
                       <a href="" class="btn btn-info btn-sm btn-block">Learn More</a>
-                      <!-- <a href="" class="btn btn-info btn-sm">Button</a> -->
+                      <a href="" class="btn btn-info btn-sm">Button</a>
                   </p>
               </div>
          </div>
@@ -63,10 +81,10 @@
                   <p>Nullam congue mauris at auctor pharetra. Phasellus dictum accumsan justo, sit amet mattis odio semper in. Nulla consectetur quam in dolor faucibus, ac facilisis nunc luctus. Etiam sapien arcu, scelerisque at mollis a, placerat non eros.</p>
                   <p>
                       <a href="" class="btn btn-info btn-sm btn-block">Learn More</a>
-                      <!-- <a href="" class="btn btn-info btn-sm">Download</a> -->
+                      <a href="" class="btn btn-info btn-sm">Download</a>
                   </p>
               </div>
          </div>
-    </div>
+    </div> -->
   </div>
 </section>

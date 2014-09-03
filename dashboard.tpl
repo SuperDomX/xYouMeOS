@@ -871,12 +871,9 @@
         
         <!-- Javascript Libraries -->
         <!-- jQuery -->
-        <script src="js/jquery.min.js"></script> 
-        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-
+        
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
+        <!-- // <script src="js/bootstrap.min.js"></script> -->
 
         <!-- Charts -->
         <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->

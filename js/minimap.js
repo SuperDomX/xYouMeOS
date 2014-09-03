@@ -196,7 +196,7 @@
         $('#detailBody').html(data);        
       });
 
-      $('#detailTitle').find('span').html("About You Me OS");
+      $('#detailTitle').find('span').html("Welcome");
 
       $detailContainer.css({
         paddingTop: 0
