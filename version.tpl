@@ -17,7 +17,7 @@
                <p>
                 {if $masterKey.is.user}
               <a class="btn btn-alt btn-lg" href="javascript: $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');">
-                Dashboard
+                Load Portal
               </a>
               {/if}
                <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">

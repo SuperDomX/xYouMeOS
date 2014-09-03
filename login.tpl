@@ -8,6 +8,9 @@
         <title>You Me OS Login</title>
             
         <!-- CSS -->
+        
+    </head>
+    <body id="skin-blur-violate">
         <link href="css/bootstrap.css" rel="stylesheet">
 
         <link href="css/animate.min.css" rel="stylesheet">
@@ -15,8 +18,7 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/generics.css" rel="stylesheet"> 
-    </head>
-    <body id="skin-blur-violate">
+        
         <center>
             
 
