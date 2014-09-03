@@ -81,8 +81,7 @@ function start( e ){
 		//  }
 		// Detector.addGetWebGLMessage();
 		// return;
-		$('body').load('/login.html');  
-		return;
+		window.location.href = '/login.html';
 	}
 
 	gradientImage = document.createElement('img');
