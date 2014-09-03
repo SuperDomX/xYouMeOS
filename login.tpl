@@ -18,13 +18,13 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/generics.css" rel="stylesheet"> 
-        
+
         <center>
             
 
             <section id="login" class="block-area">
             <header>
-                <br/><br/><br/><br/>
+                <br/><br/>
                 <h1>You Me OS</h1>
                 <p>
                    Center the Web

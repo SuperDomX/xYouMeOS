@@ -26,7 +26,7 @@
         <link href="css/calendar.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/icons.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet"> 
+        <link href="css/generics.css" rel="stylesheet">
 
     <body id="skin-blur-violate">
 
@@ -928,7 +928,10 @@
                     container : '#content',
                     fragment  : '#content',
                     timeout   : 5000,
-                    url       : go
+                    url       : go,
+                    success     : function  () {
+                        alert('Hello');
+                    }
                 });  
 
             });
