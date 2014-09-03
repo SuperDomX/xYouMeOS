@@ -19,91 +19,93 @@
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/generics.css" rel="stylesheet"> 
         
-        <center id="detailBody">
-            
-
-            <section id="login" class="block-area">
-            <header>
-                <br/><br/><br/><br/>
-                <h1>You Me OS</h1>
-                <p>
-                   Center the Web
-                </p>
-            </header>
         
-            <div class="clearfix"></div>
+            <section id="detailBody">
+              
+            <center >
+                <section id="login" class="block-area">
+                <header>
+                    <br/><br/><br/><br/>
+                    <h1>You Me OS</h1>
+                    <p>
+                       Center the Web
+                    </p>
+                </header>
             
-            <!-- Login -->
-            <form class="box tile animated active " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
-                <!-- <h2 id="tour-head" class="m-t-0 m-b-15">Welcome</h2> -->
-                <!-- <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
-                <input type="password" class="login-control" placeholder="Password" name="login[password]">
-                <div class="checkbox m-b-20">
-                    <label>
-                        <input class="checkbox m-b-20" type="checkbox">
-                        Remember Me
-                    </label>
-                </div> -->
-
-                 <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Tour</button>
-                <br/><br/>
+                <div class="clearfix"></div>
                 
-               <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Enter</a>
-                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Create</a>
-                <small>
+                <!-- Login -->
+                <form class="box tile animated active " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
+                    <!-- <h2 id="tour-head" class="m-t-0 m-b-15">Welcome</h2> -->
+                    <!-- <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
+                    <input type="password" class="login-control" placeholder="Password" name="login[password]">
+                    <div class="checkbox m-b-20">
+                        <label>
+                            <input class="checkbox m-b-20" type="checkbox">
+                            Remember Me
+                        </label>
+                    </div> -->
+
+                    <!--  <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Tour</button>
+                    <br/><br/> -->
                     
-                </small>
-            </form>
+                   <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Enter</a>
+                    <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Create</a>
+                    <small>
+                        
+                    </small>
+                </form>
 
-            <form class="box tile animated " id="box-login" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Travel to your Universe</h2>
-                <input type="text" class="login-control m-b-10" placeholder="Username" name="login[username]">
-                <input type="password" class="login-control" placeholder="Key" name="login[password]">
-                <!-- <div class="checkbox m-b-20">
-                    <label>
-                        <input class="checkbox m-b-20" type="checkbox">
-                        Remember Me
-                    </label>
-                </div> --><br/><br/>
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Enter</button>
+                <form class="box tile animated " id="box-login" action="/.json" >
+                    <h2 class="m-t-0 m-b-15">Travel to your Universe</h2>
+                    <input type="text" class="login-control m-b-10" placeholder="Username" name="login[username]">
+                    <input type="password" class="login-control" placeholder="Key" name="login[password]">
+                    <!-- <div class="checkbox m-b-20">
+                        <label>
+                            <input class="checkbox m-b-20" type="checkbox">
+                            Remember Me
+                        </label>
+                    </div> --><br/><br/>
+                    <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Enter</button>
 
-                <br/><br/>
-                <small>
-                     <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> |
-                    <a class="box-switcher" data-switch="box-register" href="">Weave Universe</a> |
-                    <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a>
-                </small>
-            </form>
-            
-            <!-- Register -->
-            <form class="box animated tile" id="box-register" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Weave Your Universe</h2>
-                <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="Full Name">
-                <input required name="login[username]" type="text" class="login-control m-b-10" placeholder="Username">
-                <input required name="login[email]" type="email" class="login-control m-b-10" placeholder="Email Address">    
-                <input required name="login[password]" type="password" class="login-control m-b-10" placeholder="Password">
-                <input required name="login[confirm]" type="password" class="login-control m-b-20" placeholder="Confirm Password">
-                <input type="hidden" name="login[action]" value="register" >
+                    <br/><br/>
+                    <small>
+                         <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> |
+                        <a class="box-switcher" data-switch="box-register" href="">Weave Universe</a> |
+                        <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a>
+                    </small>
+                </form>
+                
+                <!-- Register -->
+                <form class="box animated tile" id="box-register" action="/.json" >
+                    <h2 class="m-t-0 m-b-15">Weave Your Universe</h2>
+                    <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="Full Name">
+                    <input required name="login[username]" type="text" class="login-control m-b-10" placeholder="Username">
+                    <input required name="login[email]" type="email" class="login-control m-b-10" placeholder="Email Address">    
+                    <input required name="login[password]" type="password" class="login-control m-b-10" placeholder="Password">
+                    <input required name="login[confirm]" type="password" class="login-control m-b-20" placeholder="Confirm Password">
+                    <input type="hidden" name="login[action]" value="register" >
 
-                <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Weave Universe</button>
-<br/>
-                <small><a class="box-switcher" data-switch="box-login" href="">Already have a Universe?</a></small>
-            </form>
-            
-            <!-- Forgot Password -->
-            <form class="box animated tile" id="box-reset" action="/.json">
-                <h2 class="m-t-0 m-b-15">Reset Key</h2>
-                <p>A new Key will be sent to your email address.</p>
-                <input type="email" class="login-control m-b-20" placeholder="Email Address">    
+                    <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Weave Universe</button>
+    <br/>
+                    <small><a class="box-switcher" data-switch="box-login" href="">Already have a Universe?</a></small>
+                </form>
+                
+                <!-- Forgot Password -->
+                <form class="box animated tile" id="box-reset" action="/.json">
+                    <h2 class="m-t-0 m-b-15">Reset Key</h2>
+                    <p>A new Key will be sent to your email address.</p>
+                    <input type="email" class="login-control m-b-20" placeholder="Email Address">    
 
-                <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Reset Key</button>
-                <br/>
-                <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
-            </form>
-        </section>         
+                    <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Reset Key</button>
+                    <br/>
+                    <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
+                </form>
+            </section>         
 
-        </center>             
-        
+            </center>             
+          
+        </section>
          
         <!-- jQuery -->
         <script src="js/jquery.min.js"></script> 

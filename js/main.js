@@ -82,6 +82,7 @@ function start( e ){
 		// Detector.addGetWebGLMessage();
 		// return;
 		$('body').load('/login.html');  
+		return;
 	}
 
 	gradientImage = document.createElement('img');
