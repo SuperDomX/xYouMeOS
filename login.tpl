@@ -131,13 +131,8 @@
                     type     : "POST",
                     data     : postData,
                     dataType : 'json',
-                    success  : function(data, textStatus, jqXHR) 
-                    {
-                        //data: return data from server
-                        // window.user = data.data;
-                        // var user    = window.user;
-
-
+                    success  : function(data, textStatus, jqXHR){
+                        
                         if(data.success){
                             zoomOut(.750);
                             // $('#ex-out').click();
@@ -145,7 +140,7 @@
                                 
                             var go = "/youMeOS/version/";
 
-                            window.location.hash= "#"+go;
+                            window.location.hash = "#"+go;
 
                            $('#detailBody').load('/html'+go); 
 

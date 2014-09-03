@@ -18,7 +18,7 @@
            <p class="pull-right">
            {if $masterKey.is.user}
           <a class="btn btn-alt btn-lg" href="javascript: $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');">
-            Load Portal
+            You Me Portal
           </a>
           {/if}
            <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">

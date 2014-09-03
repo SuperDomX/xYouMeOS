@@ -1186,7 +1186,7 @@ hr {
 
 /* Modal + Dialog + Dark UI */
 .modal {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.55);
     overflow-y: auto;
 }
 
@@ -2029,12 +2029,7 @@ a.list-group-item.active > .badge,
     .profile-summary .btn.hidden-xs {
         display: inline-block !important;
     }
-}
 
-@media (max-width: 1024px) {
-    /* --------------------------------------------------------
-        Template Skins for Mobile
-    -----------------------------------------------------------*/
     #skin-blur-violate {
         background: #581528;
     }
@@ -2082,6 +2077,13 @@ a.list-group-item.active > .badge,
     #skin-blur-kiwi {
         background: #0f4731;
     }
+}
+
+@media (max-width: 1024px) {
+    /* --------------------------------------------------------
+        Template Skins for Mobile
+    -----------------------------------------------------------*/
+    
     
 
     /* Shortcut icons */
