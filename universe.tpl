@@ -137,27 +137,26 @@
 			}
 
 			.atom {
-			    width: 100px;
-			    height: 100px; 
-
-			    background-image: url("{$_DIR}images/loading.png");
-			    -webkit-animation: loaderSprite 1s steps(25, end) infinite;
-			    -moz-animation: loaderSprite 1s steps(25, end) infinite;
-			    animation: loaderSprite 1s steps(25, end) infinite;
-			    display: block;
-				position   : relative;
-				margin     : auto;
-				top        : 0;
-				left       : 0;
-				text-align : center;
+				width             : 100px;
+				height            : 100px;  
+				background-image  : url("{$_DIR}images/loading.png");
+				-webkit-animation : loaderSprite 1s steps(25, end) infinite;
+				-moz-animation    : loaderSprite 1s steps(25, end) infinite;
+				animation         : loaderSprite 1s steps(25, end) infinite;
+				display           : block;
+				position          : relative;
+				margin            : auto;
+				top               : 0;
+				left              : 0;
+				text-align        : center;
 			}
 		</style>
 		<div id="loader">
 			<div>   
 				<span class="atom" /></span>
 				<p id="loadtext" >
-				YouMeOS&hellip;</p> 
-				
+					YouMeOS&hellip;
+				</p>  
 			</div>
 		</div>
 
@@ -165,9 +164,6 @@
 		</audio>
 		<audio id="bgmusicB" src="{$_DIR}audio/01_-_Carl_Sagans_Ghost_-_Travelers_Welcome.ogg">
 		</audio>
-		
-
-
 
 		<script type="text/javascript" src="{$_DIR}js/dat.gui.min.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/three.min.js"></script>
@@ -176,53 +172,27 @@
 		<script type="text/javascript" src="{$_DIR}js/THREEx.KeyboardState.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/THREEx.WindowResize.js"></script>
 
-		<script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>
-		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery.min.js"></script> -->
+		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>  -->
 		
-		  <script type="text/javascript">
-			
+		<script src="js/jquery.min.js"></script> 
+		<script type="text/javascript">			
 			function setLoadMessage(msg){
 				var $loadText = $('#loadtext');
 				$loadText.html(msg+"&hellip;");	
 			}
-
-
-            // $(window).on('hashchange', function() { 
-
-            // 	var go = window.location.hash.replace('#','');
-            // 	if(go != '')
-            //     $.get('.'+go, function(data) {
-            //         $('section #content').html(data);  
-                    
-            //         $('section #content').html( $('#content #content').html() );
-            //     });
-            // });
-
-
 
             $(document).ready(function(){
             	start(); // Load You Me OS
             });
 		</script>
 
-		<script src="js/jquery.min.js"></script>
-
-		
 
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.preventMacBackScroll.js"></script>
-
 		<script type="text/javascript" src="{$_DIR}js/util.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/mousekeyboard.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/urlArgs.js"></script>
-
-		
-
-		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-ui.min.js"></script>  -->
-		<!-- jQuery UI -->
-		
-
 		<script type="text/javascript" src="{$_DIR}js/director.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/infocallout.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/starsystems.js" ></script>
@@ -250,25 +220,3 @@
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
 
 		<script type="text/javascript" src="/bin/js/jq/jquery.cookie.js"></script> <!-- jQuery Library -->
-       
-		
-
-		<!-- Modal Default -->
-		<!--   <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm">Save changes</button>
-                        <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->

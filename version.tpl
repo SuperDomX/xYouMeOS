@@ -19,7 +19,7 @@
                <p>Welcome to YouMeOS <small class="badge badge-success">{$PHP.version}</small>, Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                  
                {if $masterKey.is.user}
-                <a class="btn btn-alt btn-lg" href="javascript: $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');  ">
+                <a class="btn btn-alt btn-lg" href="#" onclick="$('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}'); ">
                 <!-- <a class="btn btn-alt btn-lg" href="#/{$Xtra}/dashboard"> -->
                
                      You <i class="fa fa-dashboard"></i> Me Portal

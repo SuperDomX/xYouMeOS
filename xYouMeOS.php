@@ -14,14 +14,19 @@
 class xYouMeOS extends Xengine {
 	public function version( )					
 	{
-		# code...
+		 
 	}
 
 	public function login()
 	{
-		# code...
+		 
 	}
 
+
+	public function chronus()
+	{
+		 
+	}
 
 	/**
 		@name universe
@@ -66,17 +71,13 @@ class xYouMeOS extends Xengine {
 
 	}
 
-	function settings()
-	{
-		# code...
+	function settings(){ 
+
 	}
 
-	function fileManager(){
-		
-		error_reporting(1); // Set E_ALL for debuging
-		
-
+	function fileManager(){ 
 		if($this->Key['is']['user']){
+			
 			$user_dir = SVR_FILES.'/files/'.$_SESSION['user']['username'].'/';
 			
 			if( !is_dir($user_dir) ){
@@ -84,39 +85,30 @@ class xYouMeOS extends Xengine {
 				mkdir($user_dir);
 			}
 
-			// echo fileperms($user_dir);
+			$url_dir = '/'.str_replace($_SERVER['DOCUMENT_ROOT'], "", $user_dir);
 
-			// exit;
-
-			$url_dir = str_replace($_SERVER['DOCUMENT_ROOT'], "", $user_dir);
-			
 
 			$opts = array(
 				'debug' => true,
 				'roots' => array(
 					array(
 						'driver'        => 'LocalFileSystem',   // driver for accessing file system (REQUIRED)
-						'path'          => $user_dir,			//$user_dir,         	// path to files (REQUIRED)
-						'URL'           => $url_dir , // URL to files (REQUIRED)
+						'path'          => $user_dir,			// $user_dir,         	// path to files (REQUIRED)
+						'URL'           => $url_dir , 			// URL to files (REQUIRED)
 						'accessControl' => 'access'             // disable and hide dot starting files (OPTIONAL)
 					)
 				)
 			);
 
 			require("php/connector.php");
-			exit;
-			// // run elFinder
-			// $connector = new elFinderConnector(new elFinder($opts));
-			// $connector->run();
-			// exit;
+			exit; 
 		}
 
 
 		return array(
-			'success' => true,
-
+			'success' => true, 
 			'data'    => array(
-				'opts'	=> $opts,
+				'opts'  => $opts,
 				'files' => 'hello'
 			)
 		);

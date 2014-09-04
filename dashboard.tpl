@@ -170,7 +170,7 @@
                         </a>
                     </li>
                      <li  >
-                        <a class="sa-side-folder" href="#/file-manager.html">
+                        <a class="sa-side-folder" href="#/{$Xtra}/chronus">
                             <span class="menu-item">INFINITE SPACE FILE MANAGER</span>
                         </a>
                         <!-- <ul class="list-unstyled menu-item">
