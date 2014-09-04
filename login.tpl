@@ -43,17 +43,15 @@
                         Remember Me
                     </label>
                 </div> -->
-
-                 <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
-
-                    Tour</button>
+                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">cEnter</a>
+                 
                 <br/><br/>
                 
-               <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Enter</a>
-                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Create</a>
-                <small>
-                    
-                </small>
+               <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
+
+                    tOur</button>
+                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">We'ave</a>
+                
             </form>
 
             <form class="box tile animated " id="box-login" action="/.json" >
@@ -66,7 +64,7 @@
                         Remember Me
                     </label>
                 </div> --><br/><br/>
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Enter</button>
+                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Center</button>
 
                 <br/><br/>
                 <small>
@@ -78,7 +76,7 @@
             
             <!-- Register -->
             <form class="box animated tile" id="box-register" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Weave Your Universe</h2>
+                <h2 class="m-t-0 m-b-15">We'ave yOur YouInVerse</h2>
                 <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="Full Name">
                 <input required name="login[username]" type="text" class="login-control m-b-10" placeholder="Username">
                 <input required name="login[email]" type="email" class="login-control m-b-10" placeholder="Email Address">    
@@ -164,6 +162,8 @@
                     data     : postData,
                     dataType : 'json',
                     success  : function(data, textStatus, jqXHR){
+
+
 
                         if(data.success){
                             zoomOut(.750);

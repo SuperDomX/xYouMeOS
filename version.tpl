@@ -9,6 +9,7 @@
 
 <!-- Content -->
 <section id="content" class="container" style="margin: 0;">
+    {include file="./notice.tpl"}
     <div class="row">
 
     {capture first_slide assign="first_slide"} {* short-hand *}
