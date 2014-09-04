@@ -20,8 +20,7 @@
         <link href="css/generics.css" rel="stylesheet"> 
 
         <center>
-            
-
+             
             <section id="login" class="block-area">
             <header>
                 <br/><br/>
@@ -118,6 +117,37 @@
         
         <!-- All JS functions -->
         <!-- // <script src="js/functions.js"></script> -->
+
+            <script src="js/jquery.min.js"></script> 
+
+            <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
+            <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+            
+
+            <script src="js/bootstrap.min.js"></script>
+            <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
+
+            <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
+        
+
+
+            <script type="text/javascript">
+                $(window).on('hashchange', function() { 
+                    var go = window.location.hash.replace('#','');
+                    if(go != ''){
+                        console.log('Loading'+go);
+                        $.pjax({ 
+                            container : '#content',
+                            fragment  : '#content',
+                            timeout   : 5000,
+                            url       : go,
+                            success     : function  () {
+                                alert('Hello');
+                            }
+                        });      
+                    }
+                });
+            </script>
 
         <script type="text/javascript">
             $(document).ready(function  () {

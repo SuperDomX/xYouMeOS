@@ -179,7 +179,6 @@
                             <span class=" ">Chronus Infinity</span>
                         </a></li>
                         </ul> -->
-                       
                     </li>
                     <li>
                         <a class="sa-side-calendar" href="#/calendar/full">
@@ -187,9 +186,7 @@
                         </a>
                     </li>
                    
-
-
-                    <!-- <li class="dropdown">
+                    <li class="dropdown">
                         <a class="sa-side-photos" href="">
                             <span class="menu-item">PHOTO GALLERY</span>
                         </a>
@@ -255,7 +252,7 @@
                             <li><a href="#/login.html">Login</a></li>
                             <li><a href="#/404.html">404 Error</a></li>
                         </ul>
-                    </li> -->
+                    </li>
                 </ul>
 
             </aside>
@@ -742,7 +739,7 @@
                                             <a href="#/"><small class="text-muted">Unfriend</small></a>
                                         </div>
                                     </div>
-                                    <div class="media" p-l-5">
+                                    <div class="media p-l-5">
                                         <div class="pull-left">
                                             <img width="37" src="img/profile-pics/4.jpg" alt="">
                                         </div>
@@ -752,7 +749,7 @@
                                             <a href="#/"><small class="text-muted">Unfriend</small></a>
                                         </div>
                                     </div>
-                                    <div class="media" p-l-5">
+                                    <div class="media p-l-5">
                                         <div class="pull-left">
                                             <img width="37" src="img/profile-pics/5.jpg" alt="">
                                         </div>
@@ -867,41 +864,7 @@
                     <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
                 </div>   
             <![endif]-->
-            <!-- // <script src="js/jquery.min.js"></script>  -->
-            <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-            <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-            <!-- Bootstrap -->
-            <script src="js/bootstrap.min.js"></script>
-            <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
-
-
-        
-            <script type="text/javascript">
-
-                $(window).on('hashchange', function() { 
-
-                    var go = window.location.hash.replace('#','');
-                    if(go != '')
-                    // $.get(go, function(data) {
-                    //     $('section #content').html(data);  
-                        
-                    //     $('#content').html( $('#content #content').html() );
-                    // });
-                    console.log('Loading'+go);
-
-                    $.pjax({ 
-                        container : '#content',
-                        fragment  : '#content',
-                        timeout   : 5000,
-                        url       : go,
-                        success     : function  () {
-                            alert('Hello');
-                        }
-                    });  
-
-                });
-
-            </script>
+           
         </section>
         
         <!-- Javascript Libraries -->
@@ -934,14 +897,7 @@
         <script src="js/calendar.min.js"></script> <!-- Calendar -->
         <script src="js/feeds.min.js"></script> <!-- News Feeds -->
         
-        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
-        
-
         <!-- All JS functions -->
-        <script src="js/functions.js"></script> 
-
-
-        
-        
+        <script src="js/functions.js"></script>  
     </body>
 </html>

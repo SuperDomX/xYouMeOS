@@ -4,8 +4,8 @@
  * @name You Me OS
  * @desc A 4D Internet Operating System
  * @version v0.2.1
- * @icon  
- * @link  youMeOS
+ * @icon  dashboard
+ * @link youMeOS
  * @see community 
  * @mini ge
  * @release alpha
