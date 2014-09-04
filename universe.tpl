@@ -1,6 +1,6 @@
 		{$_DIR="/{$toBackDoor}/{$suite}/x{$action|ucfirst}/"}
 		<meta name="google" value="notranslate">
-		<meta name="description" content="An interactive 3D visualization of the stellar neighborhood, including over 100,000 nearby stars. Created for the Google Chrome web browser.">
+		<meta name="description" content="You Me OS is an 4d Interactive Operating System for your Web.">
 
 		<link rel="image_src" href="images/thumbnail.png">
 		<link rel="shortcut icon" href="images/favicon.gif" type="image/gif">
