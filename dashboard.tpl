@@ -436,7 +436,6 @@
                     <!-- <li>Data</li> -->
                 </ol>
                 
-                
                 <h4 class="page-title">Profile of {$user.name}</h4>
                 
                 <div class="block-area">
@@ -742,7 +741,7 @@
                                             <a href="#/"><small class="text-muted">Unfriend</small></a>
                                         </div>
                                     </div>
-                                    <div class="media" p-l-5">
+                                    <div class="media p-l-5">
                                         <div class="pull-left">
                                             <img width="37" src="img/profile-pics/4.jpg" alt="">
                                         </div>
@@ -752,7 +751,7 @@
                                             <a href="#/"><small class="text-muted">Unfriend</small></a>
                                         </div>
                                     </div>
-                                    <div class="media" p-l-5">
+                                    <div class="media p-l-5">
                                         <div class="pull-left">
                                             <img width="37" src="img/profile-pics/5.jpg" alt="">
                                         </div>
@@ -868,40 +867,7 @@
                 </div>   
             <![endif]-->
             <!-- // <script src="js/jquery.min.js"></script>  -->
-            <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-            <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-            <!-- Bootstrap -->
-            <script src="js/bootstrap.min.js"></script>
-            <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
-
-
-        
-            <script type="text/javascript">
-
-                $(window).on('hashchange', function() { 
-
-                    var go = window.location.hash.replace('#','');
-                    if(go != '')
-                    // $.get(go, function(data) {
-                    //     $('section #content').html(data);  
-                        
-                    //     $('#content').html( $('#content #content').html() );
-                    // });
-                    console.log('Loading'+go);
-
-                    $.pjax({ 
-                        container : '#content',
-                        fragment  : '#content',
-                        timeout   : 5000,
-                        url       : go,
-                        success     : function  () {
-                            alert('Hello');
-                        }
-                    });  
-
-                });
-
-            </script>
+           
         </section>
         
         <!-- Javascript Libraries -->

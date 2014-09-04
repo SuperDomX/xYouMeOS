@@ -221,7 +221,29 @@
 
 		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-ui.min.js"></script>  -->
 		<!-- jQuery UI -->
-		
+		 <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+            <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+            <!-- Bootstrap -->
+            <script src="js/bootstrap.min.js"></script>
+            <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
+ 
+            <script type="text/javascript">
+
+                $(window).on('hashchange', function() { 
+
+                    var go = window.location.hash.replace('#','');
+                    if(go != '') {
+                        console.log('Loading'+go);
+                        $.pjax({ 
+                            container : '#content',
+                            fragment  : '#content',
+                            timeout   : 5000,
+                            url       : go
+                        });  
+                    }
+                });
+
+            </script>
 
 		<script type="text/javascript" src="{$_DIR}js/director.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/infocallout.js" ></script>
