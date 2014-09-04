@@ -102,7 +102,7 @@ var GALAXY_TOUR = [{
     "z"          : 500.34847195438465,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : "In your Star field, you can browse the Solar Systems of your connections."
+    "message"    : "You can also browse the other Solar Systems of your connections."
 }, {
     "rx"         : 0.0019755752638865747,
     "ry"         : 0.23341774437325485,
@@ -139,7 +139,7 @@ var GALAXY_TOUR = [{
     "z"          : 31782.290495394205,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Turn on Heat vision to see the activity of the stellar bodies, Chronologically.",
+    "message"    : "Turn on Heat vision to see the activity of stellar bodies, Chronologically.",
     "callback"   : highlightStarHeat
 }, {
     "rx"         : -0.12216429754294249,
@@ -168,7 +168,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Weave your Universe now and see the Internet from the back of your head :)",
+    "message"    : "Center the Web and Weave your Universe Internet as seen from the back of your head :)",
     "callback"   : fadeInLoginForm
 }];
 var cinematic_width = 15;
