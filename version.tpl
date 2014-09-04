@@ -19,9 +19,11 @@
                <p>Welcome to YouMeOS <small class="badge badge-success">{$PHP.version}</small>, Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                  
                {if $masterKey.is.user}
-                <a class="btn btn-alt btn-lg" href="javascript: zoomOut(.577); $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');">
+                <a class="btn btn-alt btn-lg" href="javascript: $('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}');  ">
+                <!-- <a class="btn btn-alt btn-lg" href="#/{$Xtra}/dashboard"> -->
+               
                      You <i class="fa fa-dashboard"></i> Me Portal
-                    
+
                 </a>
                {/if}
 
@@ -44,7 +46,8 @@
             </div>
         </div> 
     {/capture}
-    {include file="../../html/~blox/carousel.tpl" first_slide=$first_slide}
+    {$first_slide}
+    {* include file="../../html/~blox/carousel.tpl" first_slide=$first_slide *}
     <!-- <div class="col-sm-6 col-md-4">
          <div class="thumbnail tile">
               <img src="img/gallery/1.jpg" alt="">

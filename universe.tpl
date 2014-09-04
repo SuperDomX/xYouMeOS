@@ -27,6 +27,10 @@
 			z-index: 9999999999999999999999999 !important;
 		}*/
 
+		.modal-backdrop{
+			position: relative !important;
+		}
+
 		</style>
 		
 <!-- Svg Filters -->
@@ -203,10 +207,7 @@
 
 		<script src="js/jquery.min.js"></script>
 
-		<!-- // <script src="js/jquery.min.js"></script>  -->
-        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-
+		
 
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.mousewheel.js"></script>
@@ -220,8 +221,7 @@
 
 		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-ui.min.js"></script>  -->
 		<!-- jQuery UI -->
-		<!-- Bootstrap -->
-		<script src="js/bootstrap.min.js"></script>
+		
 
 		<script type="text/javascript" src="{$_DIR}js/director.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/infocallout.js" ></script>
@@ -251,6 +251,8 @@
 
 		<script type="text/javascript" src="/bin/js/jq/jquery.cookie.js"></script> <!-- jQuery Library -->
        
+		
+
 		<!-- Modal Default -->
 		<!--   <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">

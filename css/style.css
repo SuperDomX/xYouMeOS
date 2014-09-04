@@ -2030,6 +2030,58 @@ a.list-group-item.active > .badge,
         display: inline-block !important;
     }
 
+    
+    #skin-blur-violate {
+        background-image: url(../img/body/violate.jpg);
+    }
+
+    #skin-blur-lights {
+        background-image: url(../img/body/lights.jpg);
+    }
+
+    #skin-blur-city {
+        background-image: url(../img/body/city.jpg);
+    }
+
+    #skin-blur-greenish {
+        background-image: url(../img/body/greenish.jpg);
+    }
+
+    #skin-blur-night {
+        background-image: url(../img/body/night.jpg);
+    }
+    
+    #skin-blur-sunny {
+        background-image: url(../img/body/sunny.jpg);
+    }
+    
+    #skin-blur-blue {
+        background-image: url(../img/body/blue.jpg);
+    }
+    
+    #skin-blur-chrome {
+        background-image: url(../img/body/chrome.jpg);
+    }
+    
+    #skin-blur-ocean {
+        background-image: url(../img/body/ocean.jpg);
+    }
+    
+    #skin-blur-sunset {
+        background-image: url(../img/body/sunset.jpg);
+    }
+    
+    #skin-blur-yellow {
+        background-image: url(../img/body/yellow.jpg);
+    }
+
+    #skin-blur-kiwi {
+        background-image: url(../img/body/kiwi.jpg);
+    }
+}
+
+
+@media (max-width: 480px) {
     #skin-blur-violate {
         background: #581528;
     }

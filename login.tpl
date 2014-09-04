@@ -45,7 +45,9 @@
                     </label>
                 </div> -->
 
-                 <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >Tour</button>
+                 <button id="tour-btn" class="btn m-r-5 btn btn-lg btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
+
+                    Tour</button>
                 <br/><br/>
                 
                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused " data-switch="box-login" href="">Enter</a>
@@ -132,7 +134,7 @@
                     data     : postData,
                     dataType : 'json',
                     success  : function(data, textStatus, jqXHR){
-                        
+
                         if(data.success){
                             zoomOut(.750);
                             // $('#ex-out').click();
@@ -142,7 +144,7 @@
 
                             window.location.hash = "#"+go;
 
-                           $('#detailBody').load('/html'+go); 
+                            $('#detailBody').load('/html'+go); 
 
                             // $(window).on('hashchange', function() {  
                             //     var go = window.location.hash.replace('#','');

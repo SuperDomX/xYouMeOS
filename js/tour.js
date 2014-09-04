@@ -20,7 +20,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : '... presented here in 4 Dimensions Light, Gravity, Space, & Time.',
+    "message"    : '... presented here in 4 Dimensions: Light, Gravity, Space, & Time.',
     "callback"   : highlightMilkyWay
 },{
     "rx"         : 0.5522785678088462,
@@ -88,7 +88,7 @@ var GALAXY_TOUR = [{
     "z"          : 20.937978822676058,
     "travelTime" : 3000,
     "restTime"   : 2000,
-    "message"    : "While at the same time, naturally, creating a Virtual Timeline."
+    "message"    : "While at the same time creating a Virtual Timeline, naturally."
 }, {
     "rx"         : 0.6424544063335803,
     "ry"         : -0.0031800804774647718,
@@ -123,7 +123,7 @@ var GALAXY_TOUR = [{
     "z"          : 1277,
     "travelTime" : 3000,
     "restTime"   : 4000,
-    "message"    : "... creating a Unique 4D Constellation, Sociologically."
+    "message"    : "... creating a Unique 4D Constellation."
 },
 //  {
 //     "rx"         : 0.5522785678088462,
@@ -139,7 +139,7 @@ var GALAXY_TOUR = [{
     "z"          : 31782.290495394205,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Heatvision gives you the ability to see the activity of the stellar body, Chronologically.",
+    "message"    : "Turn on Heat vision to see the activity of the stellar bodies, Chronologically.",
     "callback"   : highlightStarHeat
 }, {
     "rx"         : -0.12216429754294249,
@@ -161,14 +161,14 @@ var GALAXY_TOUR = [{
     "z"          : 4999999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : "Together we can thread together the Internet's Multi~Dimensional OS!" 
+    "message"    : "Together we can thread the Internet's Multi~Dimensional OS!" 
 },   {
     "rx"         : -0.12216429754294249,
     "ry"         : 1.9989722678912,
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Create your Universe Now, and begin to see the Internet from the Back of Your Head :)",
+    "message"    : "Weave your Universe now and see the Internet from the back of your head :)",
     "callback"   : fadeInLoginForm
 }];
 var cinematic_width = 15;

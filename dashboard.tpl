@@ -88,7 +88,7 @@
                         <ul class="dropdown-menu profile-menu">
                             <li><a href="#/{$Xtra}/{$method}">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="#/{$Xtra}/settings">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="#/login/profile">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                         </ul>
                         <h4 class="m-0">{$user.username}</h4> 
@@ -867,6 +867,41 @@
                     <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
                 </div>   
             <![endif]-->
+            <!-- // <script src="js/jquery.min.js"></script>  -->
+            <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+            <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+            <!-- Bootstrap -->
+            <script src="js/bootstrap.min.js"></script>
+            <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
+
+
+        
+            <script type="text/javascript">
+
+                $(window).on('hashchange', function() { 
+
+                    var go = window.location.hash.replace('#','');
+                    if(go != '')
+                    // $.get(go, function(data) {
+                    //     $('section #content').html(data);  
+                        
+                    //     $('#content').html( $('#content #content').html() );
+                    // });
+                    console.log('Loading'+go);
+
+                    $.pjax({ 
+                        container : '#content',
+                        fragment  : '#content',
+                        timeout   : 5000,
+                        url       : go,
+                        success     : function  () {
+                            alert('Hello');
+                        }
+                    });  
+
+                });
+
+            </script>
         </section>
         
         <!-- Javascript Libraries -->
@@ -906,38 +941,7 @@
         <script src="js/functions.js"></script> 
 
 
-        <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
-
-        <script type="text/javascript">
-
-            $(window).on('hashchange', function() { 
-
-                var go = window.location.hash.replace('#','');
-                if(go != '')
-                // $.get(go, function(data) {
-                //     $('section #content').html(data);  
-                    
-                //     $('#content').html( $('#content #content').html() );
-                // });
-                console.log('Loading'+go);
-
-                $.pjax({ 
-                    container : '#content',
-                    fragment  : '#content',
-                    timeout   : 5000,
-                    url       : go,
-                    success     : function  () {
-                        alert('Hello');
-                    }
-                });  
-
-            });
-
-        </script>
-        <script type='text/javascript'>
-            // $('.side-menu > li > a').attr({
-            //     href : '#'+$('.side-menu > li > a').attr('href')
-            // });
-        </script>
+        
+        
     </body>
 </html>
