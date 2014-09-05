@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.2.5
+ * @version v0.2.6
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -12,9 +12,22 @@
  * @alpha true
  */
 class xYouMeOS extends Xengine {
-	public function version( )					
+	public function version($feed=false)					
 	{
-		 
+		if($feed){
+			$feed  = implode(file('http://github.com/SuperDomX/xYouMeOS/commits/master.atom'));
+			$xml   = simplexml_load_string($feed);
+
+			// var_dump($xml);
+			// exit();
+
+			$json  = json_encode($xml);
+			$array = json_decode($json,TRUE);		
+			return array(
+				'success' => true,
+				'data'    => $array
+			);
+		}
 	}
 
 	public function login()
@@ -27,6 +40,8 @@ class xYouMeOS extends Xengine {
 	{
 		 
 	}
+
+
 
 	/**
 		@name universe

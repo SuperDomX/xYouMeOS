@@ -31,6 +31,7 @@
                 <h4>
                     Welcome to the Future
                 </h4>
+
             </header>
         
             <div class="clearfix"></div>
@@ -46,9 +47,7 @@
                         Remember Me
                     </label>
                 </div> --> 
-                <small class="label" style="position: absolute; bottom: 5px; right: 5px;">
-                    {$PHP.version}
-                </small>
+               
                 <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused btn-lg " data-switch="box-login" href="">You are Here</a>
                  
                 <br/><br/>
@@ -106,6 +105,8 @@
                 <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
             </form>
         </section>         
+        <small class="label label-sm " >super powered by<br/>  
+        <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/></small>
 
         </center>             
         
@@ -121,37 +122,6 @@
         
         <!-- All JS functions -->
         <!-- // <script src="js/functions.js"></script> -->
-
-            <script src="js/jquery.min.js"></script> 
-
-            <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
-            <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-            
-
-            <script src="js/bootstrap.min.js"></script>
-            <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
-
-            <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
-        
-
-
-            <script type="text/javascript">
-                $(window).on('hashchange', function() { 
-                    var go = window.location.hash.replace('#','');
-                    if(go != ''){
-                        console.log('Loading'+go);
-                        $.pjax({ 
-                            container : '#content',
-                            fragment  : '#content',
-                            timeout   : 5000,
-                            url       : go,
-                            success     : function  () {
-                                alert('Hello');
-                            }
-                        });      
-                    }
-                });
-            </script>
 
         <script type="text/javascript">
             
@@ -174,7 +144,7 @@
                             // $('#ex-out').click();
                             // $('#about').click();
                                 
-                            var go = "/youMeOS/version/";
+                            var go = "/youMeOS/dashboard/";
 
                             window.location.hash = "#"+go;
 

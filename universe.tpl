@@ -120,6 +120,11 @@
 			<div id="about">?</div>
 		</div>
 
+		<small class="label" style="position: absolute; bottom: 3px; right: 10px;">
+            {$PHP.version}
+        </small>
+
+        
 		<style type="text/css">
 			@-webkit-keyframes loaderSprite {
 			    from { background-position: 0px; }
@@ -185,6 +190,37 @@
             	start(); // Load You Me OS
             });
 		</script>
+
+		<script src="js/jquery.min.js"></script> 
+
+        <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+        
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
+
+        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
+    
+
+
+        <script type="text/javascript">
+            $(window).on('hashchange', function() { 
+                var go = window.location.hash.replace('#','');
+                if(go != ''){
+                    console.log('Loading'+go);
+                    $.pjax({ 
+                        container : '#content',
+                        fragment  : '#content',
+                        timeout   : 5000,
+                        url       : go,
+                        success     : function  () {
+                            alert('Hello');
+                        }
+                    });      
+                }
+            });
+        </script>
 
 
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>

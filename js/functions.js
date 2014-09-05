@@ -296,11 +296,11 @@ $(document).ready(function(){
     (function(){
 	if($('#news-feed')[0]){
 	    $('#news-feed').FeedEk({
-		FeedUrl: 'http://rss.cnn.com/rss/edition.rss',
-		MaxCount: 5,
-		ShowDesc: false,
-		ShowPubDate: true,
-		DescCharacterLimit: 0
+            FeedUrl            : 'https://github.com/SuperDomX/xYouMeOS/commits/master.atom',
+            MaxCount           : 7,
+            ShowDesc           : false,
+            ShowPubDate        : true,
+            DescCharacterLimit : 0
 	    });
 	}
     })();

@@ -82,6 +82,7 @@ function start( e ){
 		// Detector.addGetWebGLMessage();
 		// return;
 		window.location.href = '/login.html';
+		// fadeInLoginForm();
 	}else{
 		gradientImage = document.createElement('img');
 		gradientImage.onload = postStarGradientLoaded;
@@ -314,17 +315,17 @@ function initScene() {
 		var s = 'scale(1.0)';
 
 		$('#layout').css({
-			webkitTransform: s,
-			mozTransform: s,
-			msTransform: s,
-			oTransform: s,
-			transform: s
+			webkitTransform : s,
+			mozTransform    : s,
+			msTransform     : s,
+			oTransform      : s,
+			transform       : s
 		});
 
 		$('#loader')
 			.fadeOut(250);
 
-		$iconNav.fadeIn();
+		// $iconNav.fadeIn();
 		$iconNav.isReady = true;
 
 		if ( firstTime ) {
@@ -341,7 +342,7 @@ function initScene() {
 		if( markers.length > 0 )
 			markers[0].select();
 
-	}, 500);
+	}, 1000);
 
 	document.getElementById('bgmusicA').addEventListener('ended', function(){
 		this.currentTime = 0;

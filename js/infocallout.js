@@ -78,9 +78,9 @@ function fadeInLoginForm(reg){
       	$detailContainer.hide();
 
         $('#detailBody').html(data);        
-        $detailContainer.fadeIn();
+        $detailContainer.show();
 
-        $('#icon-nav').hide();//appendTo('#login');
+        // $('#icon-nav').hide();//appendTo('#login');
 
         $('.box-switcher').parent().on('click touchstart', '.box-switcher', function(e){
 		    e.preventDefault();
@@ -91,14 +91,15 @@ function fadeInLoginForm(reg){
 
         if(reg){
 
- 			box =  $('.box-switcher').parent().attr('data-switch');
-		    $('.box-switcher').parent().closest('.box').toggleClass('active');
-		    $('#'+box).closest('.box').addClass('active'); 
+ 			// box =  $('.box-switcher').parent().attr('data-switch');
+		  //   $('.box-switcher').parent().closest('.box').toggleClass('active');
+		  //   $('#'+box).closest('.box').addClass('active'); 
 
         }
 
       });
-	  $('#minimap').fadeIn()
+
+	  // $('#minimap').fadeIn()
 
       $('#detailTitle').find('span').html('');
 
@@ -106,6 +107,6 @@ function fadeInLoginForm(reg){
         paddingTop: 0
       });
 
-	  zoomOut(57777);
+	  // zoomOut(57777);
       $detailContainer.hide();
 }

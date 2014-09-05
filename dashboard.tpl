@@ -32,8 +32,9 @@
 
         <header id="header" class="media" style="margin:0">
             <a href="#/" id="menu-toggle"></a> 
-            <a class="logo pull-left" href="#/{$Xtra}/version/">
-            <strong>You Me OS </strong>{$PHP.version}</a>
+            <a class="logo pull-left" href="#/{$Xtra}/version">
+                <strong>Open</strong> Shuttle
+            </a>
             
             <div class="media-body">
                 <div class="media" id="top-menu">
@@ -103,7 +104,7 @@
                     <!-- Feeds -->
                     <div class="s-widget m-b-25">
                         <h2 class="tile-title">
-                           News Feeds
+                           <strong>You Me OS </strong>{$PHP.version}
                         </h2>
                         
                         <div class="s-widget-body">
@@ -166,7 +167,7 @@
                 <ul class="list-unstyled side-menu">
                     <li class="active">
                         <a class="sa-side-home" href="#/{$Xtra}/{$method}" > <!-- /{$user.username} -->
-                            <span class="menu-item">Dashboard</span>
+                            <i class="fa fa-pencil"></i><span class="menu-item">Dashboard</span>
                         </a>
                     </li>
                      <li  >
@@ -183,6 +184,11 @@
                     <li>
                         <a class="sa-side-calendar" href="#/calendar/full">
                             <span class="menu-item">Calendar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-widget" href="#/content-widgets.html">
+                            <span class="menu-item">Widgets</span>
                         </a>
                     </li>
                    <!-- 
@@ -657,7 +663,8 @@
                     </div>
                     
                     <br/><br/><br/>
-                </div> 
+                </div>
+                <script src="/x/html/layout/watchtower/js/jquery.masonry.min.js"></script>    
             </section>
 
             <!-- Older IE Message -->
@@ -702,13 +709,38 @@
             <![endif]-->
            
         </section>
-        
+        <script>
+          $(function() {
+            $('div[class^="col-"]').sortable({
+                connectWith          : 'div[class^="col-"]',
+                items                : '.tile',
+                handle               : '.tile-title',
+                forcePlaceholderSize : true,
+                forceHelperSize      : true,
+                revert               : true,
+                dropOnEmpty          : true,
+                placeholder          : '.tile-title'
+            });
+
+         
+            // $( ".portlet" )
+            //   .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+            //   .find( ".portlet-header" )
+            //     .addClass( "ui-widget-header ui-corner-all" )
+            //     .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+         
+            // $( ".portlet-toggle" ).click(function() {
+            //   var icon = $( this );
+            //   icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+            //   icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+            // });
+          });
+          </script>
         <!-- Javascript Libraries -->
         <!-- jQuery -->
         
         <!-- Bootstrap -->
         <!-- // <script src="js/bootstrap.min.js"></script> -->
-
         <!-- Charts -->
         <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
         <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
@@ -732,6 +764,7 @@
         <!-- Other -->
         <script src="js/calendar.min.js"></script> <!-- Calendar -->
         <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+        
         
         <!-- All JS functions -->
         <script src="js/functions.js"></script>  
