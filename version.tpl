@@ -61,14 +61,14 @@
                <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                   
                {if $masterKey.is.user}
-                <a class="btn btn-alt btn-lg" href="#" onclick="$('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}'); ">
-                <!-- <a class="btn btn-alt btn-lg" href="#/{$Xtra}/dashboard"> -->
+                <!-- <a class="btn btn-alt btn-lg" href="#" onclick="$('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}'); ">
+                
                      You <i class="fa fa-dashboard"></i> Me Portal
-                </a>
+                </a> -->
                {/if}
 
                 <a class="btn btn-alt btn-lg" onclick="zoomOut(7)">
-                   S<i class="fa fa-sun-o"></i>lar System
+                   Or<i class="fa fa-sun-o"></i>Biting System
                 </a> 
                 <a class="btn btn-alt btn-lg" onclick="zoomOut(1000)">
                      St<i class="fa fa-star"></i>rs

@@ -707,11 +707,9 @@
                     <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
                 </div>   
             <![endif]-->
-           
-        </section>
-        <script>
+           <script type="text/javascript">
           $(function() {
-            $('div[class^="col-"]').sortable({
+            console.log($('div[class^="col-"]').sortable({
                 connectWith          : 'div[class^="col-"]',
                 items                : '.tile',
                 handle               : '.tile-title',
@@ -719,8 +717,8 @@
                 forceHelperSize      : true,
                 revert               : true,
                 dropOnEmpty          : true,
-                placeholder          : '.tile-title'
-            });
+                placeholder          : 'div[class^="col-"] .tile'
+            }))
 
          
             // $( ".portlet" )
@@ -736,6 +734,8 @@
             // });
           });
           </script>
+        </section>
+        
         <!-- Javascript Libraries -->
         <!-- jQuery -->
         
