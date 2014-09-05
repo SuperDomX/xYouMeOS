@@ -192,7 +192,7 @@
 
       $('#css-container').css('display', 'none');
 
-      $.get('/youMeOS/version/' , function(data) {
+      $.get('/html/youMeOS/version/' , function(data) {
         $('#detailBody').html(data);        
       });
 

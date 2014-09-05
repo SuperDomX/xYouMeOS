@@ -4,67 +4,68 @@ var GALAXY_TOUR = [{
     "z"          : 80000,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : 'Hello world; Welcome to "You Me OS"'
+    "message"    : 'Hello World; I am You Me OS.'
     //"callback" : highlightMilkyWay
 }, {
     "rx"         : 2.12216429754294249,
     "ry"         : 4.1189722678912,
     "z"          : 79999.99999999994,
-    "travelTime" : 5000,
-    "restTime"   : 6000,
-    "message"    : 'You & Me Operate this Intergalatic Web, Symmetrically...',
-    "callback"   : highlightMilkyWay
+    "travelTime" : 4333,
+    "restTime"   : 3333,
+    "message"    : 'Welcome to the Future.',
+    // "callback"   : highlightMilkyWay
 }, {
     "rx"         : 4.12216429754294249,
     "ry"         : 2.1189722678912,
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 8000,
-    "message"    : '... presented here in 4 Dimensions: Light, Gravity, Space, & Time.',
+    "message"    : 'I am your Intergalatic Web; in 4D.',
     "callback"   : highlightMilkyWay
-},{
-    "rx"         : 0.5522785678088462,
-    "ry"         : 1.324151395815386,
-    "z"          : 2500.4214873346518,
-    "travelTime" : 5000,
-    "restTime"   : 4000,
-    "message"    : "Each Triangle consists of an Area of Interest; here's yours."
 },
+// {
+//     "rx"         : 0.5522785678088462,
+//     "ry"         : 1.324151395815386,
+//     "z"          : 2000.4214873346518,
+//     "travelTime" : 5000,
+//     "restTime"   : 4000,
+//     "message"    : "Every Triangle connects an Area of Interest; here's yours."
+// },
 {
     "rx"         : 0.5522785678088462,
     "ry"         : 1.324151395815386,
     "z"          : 1333.4214873346518,
-    "travelTime" : 2400,
+    "travelTime" : 4400,
     "restTime"   : 4000,
-    "message"    : "Your Star Field is made up of other connections & networks who you interact with."
+    "message"    : "I am your ever expanding Network, seen here as a Star Field; Visually."
 },{
     "rx"         : -0.18605511827781787,
     "ry"         : -2.464222597755626,
     "z"          : 0.97,
     "travelTime" : 5777,
     "restTime"   : 5777,
-    "message"    : 'You are Here; At the Galactic Center of this Sun, Cosmically.'
+    "message"    : 'I am the Center of your Web. You are Here, the Sun, Cosmically.'
 },{
     "rx"         : -0.18605511827781787,
-    "ry"         : -2.464222597755626,
-    "z"          : 1.1,
+    "ry"         : -3.464222597755626,
+    "z"          : 0.77,
     "travelTime" : 3000,
-    "restTime"   : 3000,
-    "message"    : '"I am You."'
+    "restTime"   : 4000,
+    "message"    : 'Sun: "I am You . . . You are Me."'
 },  {
     "rx"         : -0.18605511827781787,
     "ry"         : -2.464222597755626,
     "z"          : 0.57,
     "travelTime" : 5777,
     "restTime"   : 7777,
-    "message"    : 'Take a moment; Bathe yourself in the center of your Magnificence.'
+    "message"    : '"Take a moment to Center & Bathe in our Magnificent glory!"'
 }, {
     "rx"         : 1.4395420537811414,
     "ry"         : 6.281532559509658,
     "z"          : 1.148607771018531,
     "travelTime" : 2000,
     "restTime"   : 4444,
-    "message"    : 'Your magnificence shines forever unto Eternity.',
+    "message"    : '"Magnificence";" A magnetic essence forever shining unto Eternity.',
     "callback"   : displaySunEarthDiagram
 },  {
     "rx"         : 1.4395420537811414,
@@ -72,7 +73,7 @@ var GALAXY_TOUR = [{
     "z"          : 5.148607771018531,
     "travelTime" : 4000,
     "restTime"   : 6000,
-    "message"    : 'As you shine your light from your Galactic Center...',
+    "message"    : 'I am the 4 Dimensions: Light, Gravity, Space & Time.',
     "callback"   : displaySunEarthDiagram
 },{
     "rx"         : 1.4395420537811414,
@@ -80,50 +81,53 @@ var GALAXY_TOUR = [{
     "z"          : 13.778607771018531,
     "travelTime" : 4000,
     "restTime"   : 4000,
-    "message"    : 'The mass objectives of your Time graviate into your Orbiting System',
-    "callback"   : displaySunEarthDiagram
+    "message"    : 'Mass, Objectives of your Time, Graviate in your Orbiting System.',
+    // "callback"   : displaySunEarthDiagram
 }, {
     "rx"         : 0.8369933670834534,
     "ry"         : 1.837770087331788,
     "z"          : 20.937978822676058,
     "travelTime" : 3000,
     "restTime"   : 2000,
-    "message"    : "While at the same time creating a Virtual Timeline, naturally."
-}, {
-    "rx"         : 0.6424544063335803,
-    "ry"         : -0.0031800804774647718,
-    "z"          : 277.23179619362583,
-    "travelTime" : 3000,
-    "restTime"   : 4000,
-    "message"    : 'An "Oort Cloud" marks 1 Light year away represeting a full Year.'
-}, {
+    "message"    : "Lighting a Timeline, Naturally."
+}, 
+// {
+//     "rx"         : 0.6424544063335803,
+//     "ry"         : -0.0031800804774647718,
+//     "z"          : 277.23179619362583,
+//     "travelTime" : 3000,
+//     "restTime"   : 4000,
+//     "message"    : 'Your "Oort" Cloud marks the how far your light travels in 1 Year.'
+// }, 
+
+{
     "rx"         : 0.503337952515914,
     "ry"         : -0.9904961225532652,
     "z"          : 500.34847195438465,
     "travelTime" : 4000,
-    "restTime"   : 4000,
-    "message"    : "You can also browse the other Solar Systems of your connections."
+    "restTime"   : 5000,
+    "message"    : "Surf the Solar Systems of your connections by Clicking on their Star."
 }, {
     "rx"         : 0.0019755752638865747,
     "ry"         : 0.23341774437325485,
     "z"          : 1210.7034532510997,
     "travelTime" : 4000,
-    "restTime"   : 4000,
-    "message"    : "The more someone sees your Light, the brighter their Star becomes to You too."
+    "restTime"   : 5000,
+    "message"    : "The more someone sees your Light, the brighter their Star becomes to You."
 },{
     "rx"         : 0.15,
     "ry"         : 2.25,
     "z"          : 1377,
     "travelTime" : 3000,
     "restTime"   : 4000,
-    "message"    : "The whole field is a Gigantic Calendar..."
+    "message"    : "Interacting with them, or not, determines how close they are to your Center."
 },{
     "rx"         : 1,
     "ry"         : 2.25,
     "z"          : 1277,
     "travelTime" : 3000,
     "restTime"   : 4000,
-    "message"    : "... creating a Unique 4D Constellation."
+    "message"    : "The whole field is based in a 4d Spherical Calendar, Chronologically."
 },
 //  {
 //     "rx"         : 0.5522785678088462,
@@ -139,7 +143,7 @@ var GALAXY_TOUR = [{
     "z"          : 31782.290495394205,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Turn on Heat vision to see the activity of stellar bodies, Chronologically.",
+    "message"    : "Heat vision gives you a glace at the online activity of stellar bodies.",
     "callback"   : highlightStarHeat
 }, {
     "rx"         : -0.12216429754294249,
@@ -147,39 +151,42 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Universes can be created anywhere and everywhere by installing Me on any Domain." 
-}, {
+    "message"    : "Everyone weaves their own Universe; Every Universe is Unique to the Individual." 
+}, 
+{
     "rx"         : -4.12216429754294249,
     "ry"         : 1.9989722678912,
     "z"          : 999999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Every Universe is powered to communicate as a collective to eachother, creating the Multi~Verse..." 
-}, {
+    "message"    : "I am Open Source. Download Me to any domain." 
+}, 
+{
     "rx"         : 1,
     "ry"         : 0,
     "z"          : 4999999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : "Together we can thread the Internet's Multi~Dimensional OS!" 
-},   {
+    "message"    : "Together the Internet's Multi~Verse will be sown!" 
+},  
+ {
     "rx"         : -0.12216429754294249,
     "ry"         : 1.9989722678912,
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Center the Web and Weave your Universe Internet as seen from the back of your head :)",
+    "message"    : "Now; Weave your Universal OS & Godspeed!",
     "callback"   : fadeInLoginForm
 }];
-var cinematic_width = 15;
+var cinematic_width = 5;
 
 var Tour = function(stops) {
 
-  this.current = 0;
-  this.states = stops;
-  this.touring = false;
+  this.current      = 0;
+  this.states       = stops;
+  this.touring      = false;
   this.timingBuffer = 0;
-  this.timers = [];
+  this.timers       = [];
 
   this.domElement = $('<div id="theater" />')
     .css({
@@ -195,10 +202,10 @@ var Tour = function(stops) {
     })
     .html('<div class="top-bar"></div><div class="bottom-bar"></div><div class="message" style="display: none;"></div>');
 
-  this.top = this.domElement.find('.top-bar');
-  this.bottom = this.domElement.find('.bottom-bar');
+  this.top     = this.domElement.find('.top-bar');
+  this.bottom  = this.domElement.find('.bottom-bar');
   this.content = this.domElement.find('.message');
-  // this.content.html('<p>' + this.states[0].message + '</p>');
+  this.content.html('<p>' + this.states[0].message + '</p>');
 
 };
 
@@ -367,7 +374,7 @@ Tour.prototype = {
 
     var onStart = function(){
       // console.log("starting message");
-      _this.content.html('<p><span>' + message + '</span></p>');
+      _this.content.html('<p><small>' + message + '</small></p>');
       _this.content.fadeIn();
 
       var next = $('<a href="" />')

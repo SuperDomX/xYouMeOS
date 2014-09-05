@@ -1,6 +1,6 @@
 function loadStarData( dataFile, callback ){
 	var xhr = new XMLHttpRequest();
-	setLoadMessage("2");	
+	setLoadMessage("am");	
 	xhr.addEventListener( 'load', function ( event ) {
 		var parsed = JSON.parse( xhr.responseText );
 		// console.log(parsed);
@@ -20,7 +20,7 @@ var datastarTexture1          = THREE.ImageUtils.loadTexture( "images/p_2.png" )
 var datastarHeatVisionTexture = THREE.ImageUtils.loadTexture( "images/sharppoint.png" );
 
 //	bright flashy named stars graphic
-var starPreviewTexture        = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("Welcome")	);
+var starPreviewTexture        = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("I")	);
 var starColorGraph            = THREE.ImageUtils.loadTexture( 'images/star_color_modified.png' );
 
 var datastarUniforms = {
@@ -47,20 +47,20 @@ var datastarAttributes = {
 };
 
 function generateHipparcosStars(){
-	var container = new THREE.Object3D();
-
-	var pGeo = new THREE.Geometry();
-	var count = starData.length;
-
+	var container    = new THREE.Object3D();
+	
+	var pGeo         = new THREE.Geometry();
+	var count        = starData.length;
+	
 	var starPreviews = new THREE.Object3D();
 	container.add(starPreviews);
 
 	var starPreviewMaterial = new THREE.MeshBasicMaterial({
-		map: starPreviewTexture,
-		blending: THREE.AdditiveBlending,
-		transparent: true,
-		depthTest: false,
-		depthWrite: false,
+		map         : starPreviewTexture,
+		blending    : THREE.AdditiveBlending,
+		transparent : true,
+		depthTest   : false,
+		depthWrite  : false
 	});
 
 	var starPreview = new THREE.Mesh( new THREE.PlaneGeometry( 40, 40 ), starPreviewMaterial );

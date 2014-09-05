@@ -17,14 +17,12 @@
             <div class="container">
                 
                <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Hello {$user.username|ucfirst}</h1>
-               <p>Welcome to YouMeOS <small class="badge badge-success">{$PHP.version}</small>, Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
+               <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                  
                {if $masterKey.is.user}
                 <a class="btn btn-alt btn-lg" href="#" onclick="$('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}'); ">
                 <!-- <a class="btn btn-alt btn-lg" href="#/{$Xtra}/dashboard"> -->
-               
                      You <i class="fa fa-dashboard"></i> Me Portal
-
                 </a>
                {/if}
 
@@ -35,9 +33,9 @@
                      St<i class="fa fa-star"></i>r Field
                 </a> 
 
-                <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
                    <i class="fa fa-ge"></i>  Galaxy
-                </a>  -->
+                </a> 
 
                
 

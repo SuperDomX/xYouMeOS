@@ -29,12 +29,12 @@ function makeSunEarthDiagram(){
 
 var clamperTexture = THREE.ImageUtils.loadTexture( 'images/clamper.png' );
 var clamperMaterial = new THREE.MeshBasicMaterial({
-	map: clamperTexture,
-	depthTest: false,
-	depthWrite: false,
-	transparent: true,
-	side: THREE.DoubleSide,
-	blending: THREE.AdditiveBlending
+	map         : clamperTexture,
+	depthTest   : false,
+	depthWrite  : false,
+	transparent : true,
+	side        : THREE.DoubleSide,
+	blending    : THREE.AdditiveBlending
 });
 
 function makeClamper( scale ){
@@ -80,7 +80,7 @@ function fadeInLoginForm(reg){
         $('#detailBody').html(data);        
         $detailContainer.fadeIn();
 
-        $('#icon-nav').appendTo('#login');
+        $('#icon-nav').hide();//appendTo('#login');
 
         $('.box-switcher').parent().on('click touchstart', '.box-switcher', function(e){
 		    e.preventDefault();

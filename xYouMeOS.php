@@ -2,8 +2,8 @@
 /**
  * @author heylisten@xtiv.net
  * @name You Me OS
- * @desc A 4D Internet Operating System
- * @version v0.2.4
+ * @desc A 4D Interactive Orbital System
+ * @version v0.2.5
  * @icon  dashboard
  * @link youMeOS
  * @see community 

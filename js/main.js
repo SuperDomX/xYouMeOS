@@ -16,32 +16,32 @@ var enableStarModel   = true;
 var enableTour        = true;
 var enableDirector    = true;
 
-var firstTime = localStorage ? (localStorage.getItem('first') == null) : true;
+var firstTime         = localStorage ? (localStorage.getItem('first') == null) : true;
 
 // Tour
-var tour = new Tour(GALAXY_TOUR);
+var tour              = new Tour(GALAXY_TOUR);
 
 var initialAutoRotate = true;
 
 //	animation timing
-var startTime = Date.now();
-var clock = new THREE.Clock();
-var shaderTiming = 0;
+var startTime         = Date.now();
+var clock             = new THREE.Clock();
+var shaderTiming      = 0;
 
-var $starName = $('#star-name');
+var $starName         = $('#star-name');
 
-var $iconNav = $('#icon-nav');
+var $iconNav          = $('#icon-nav');
 
-var $detailContainer = $('#detailContainer');
-var $cssContainer = $('#css-container');
+var $detailContainer  = $('#detailContainer');
+var $cssContainer     = $('#css-container');
 
-var $spectralGraph = $('#spectral-graph');
+var $spectralGraph    = $('#spectral-graph');
 
 //	world transform
 var rotating;
 var translating;
 
-var lastRotateY = 0;
+var lastRotateY       = 0;
 var rotateYAccumulate = 0;
 
 //	global objects
@@ -82,12 +82,11 @@ function start( e ){
 		// Detector.addGetWebGLMessage();
 		// return;
 		window.location.href = '/login.html';
+	}else{
+		gradientImage = document.createElement('img');
+		gradientImage.onload = postStarGradientLoaded;
+		gradientImage.src = 'images/star_color_modified.png';	 	
 	}
-
-	gradientImage = document.createElement('img');
-	gradientImage.onload = postStarGradientLoaded;
-	gradientImage.src = 'images/star_color_modified.png';	 
-
 }
 
 	var postStarGradientLoaded = function(){
@@ -410,7 +409,7 @@ function sceneSetup(){
 	}
 
 	if( enableSkybox ){
-		initSkybox(false);
+		initSkybox(true);
 	}	
 
 }

@@ -155,7 +155,7 @@
 			<div>   
 				<span class="atom" /></span>
 				<p id="loadtext" >
-					YouMeOS&hellip;
+					<!-- You Me OS {$PHP.version}&hellip; -->
 				</p>  
 			</div>
 		</div>

@@ -9,7 +9,7 @@ function setupSkyboxScene(){
 }
 
 function initSkybox( highres ){
-	// setLoadMessage("Loading internal stars")
+	setLoadMessage("Loading internal stars")
 	var r = "images/ss_skybox/";
 
 	if( highres == false )
@@ -19,19 +19,19 @@ function initSkybox( highres ){
 				 r + "py.jpg", r + "ny.jpg",
 				 r + "pz.jpg", r + "nz.jpg" ];
 
-	var textureCube = THREE.ImageUtils.loadTextureCube( urls, undefined, setLoadMessage("Now") );
-	textureCube.anisotropy = maxAniso;
-	var shader = THREE.ShaderLib[ "cube" ];
+	var textureCube                  = THREE.ImageUtils.loadTextureCube( urls, undefined, setLoadMessage("You") );
+	textureCube.anisotropy           = maxAniso;
+	var shader                       = THREE.ShaderLib[ "cube" ];
 	shader.uniforms[ "tCube" ].value = textureCube;
-	shader.uniforms[ "opacity" ] = { value: 1.0, type: "f" };
-	skyboxUniforms = shader.uniforms;
-	var skyboxMat = new THREE.ShaderMaterial( {
-		fragmentShader: shaderList.cubemapcustom.fragment,
-		vertexShader: shaderList.cubemapcustom.vertex,
-		uniforms: shader.uniforms,
-		side: THREE.BackSide,
-		depthWrite: false,
-		depthTest: false,
+	shader.uniforms[ "opacity" ]     = { value: 1.0, type: "f" };
+	skyboxUniforms                   = shader.uniforms;
+	var skyboxMat                    = new THREE.ShaderMaterial( {
+		fragmentShader : shaderList.cubemapcustom.fragment,
+		vertexShader   : shaderList.cubemapcustom.vertex,
+		uniforms       : shader.uniforms,
+		side           : THREE.BackSide,
+		depthWrite     : false,
+		depthTest      : false
 	} );
 
 	skybox = new THREE.Mesh( new THREE.CubeGeometry( 1000, 1000, 1000 ), skyboxMat );
@@ -47,9 +47,9 @@ function updateSkybox(override){
 		var rot = starModel.rotation.clone();		
 		rot.x -= Math.PI/4;
 		rot.y += Math.PI/4
-		// rot.x *= -1;
-		// rot.y *= -1;
-		// rot.z *= -1;
+		rot.x *= -1;
+		rot.y *= -1;
+		rot.z *= -1;
 		cameraCube.rotation.copy( rot );
 	}
 	else{
@@ -65,7 +65,7 @@ function updateSkybox(override){
 	cameraCube.fov = constrain( camera.position.z * 20.0, 60, 70);
 	cameraCube.updateProjectionMatrix();
 
-	var skyboxBrightness = constrain(1.4 / camera.position.z, 0.0, 1.0);
+	var skyboxBrightness = constrain(13 / camera.position.z, 0.01, 1.0);
 	skyboxUniforms["opacity"].value = skyboxBrightness;
 	// skyboxUniforms["opacity"].value = 1.0;
 }

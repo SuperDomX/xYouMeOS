@@ -254,9 +254,9 @@ function generateGalaxy(){
 	pGalacticSystem.rotation.y = -0.4;
 	pGalacticSystem.rotation.z = -1.099999;
 
-	// pGalacticSystem.targetPosition = pGalacticSystem.position.clone();
-	// pGalacticSystem.zeroRotation = new THREE.Vector3();
-	// pGalacticSystem.targetRotation = pGalacticSystem.rotation.clone();
+	pGalacticSystem.targetPosition = pGalacticSystem.position.clone();
+	pGalacticSystem.zeroRotation = new THREE.Vector3();
+	pGalacticSystem.targetRotation = pGalacticSystem.rotation.clone();
 
 
 
