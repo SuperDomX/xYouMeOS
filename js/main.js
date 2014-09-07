@@ -490,7 +490,7 @@ function animate() {
 			$detailContainer.fadeOut();
 		}
 
-		if( $detailContainer.css('display') == 'none'/* && starModel.scale.length() < 10 */){
+		if( $detailContainer.css('display') == 'none' && starModel.scale.length() < 10 ){
 			camera.position.x *= 0.95;
 		}
 		else{
@@ -499,12 +499,12 @@ function animate() {
 
 	}
 
-	var targetFov = constrain( Math.pow(camera.position.z,2) / 100000, 0.000001, 40 );
-	camera.fov = targetFov;
-	fovValue = 0.5 / Math.tan(camera.fov * Math.PI / 360) * screenHeight;
+	var targetFov     = constrain( Math.pow(camera.position.z,2) / 100000, 0.000001, 40 );
+	camera.fov        = targetFov;
+	fovValue          = 0.5 / Math.tan(camera.fov * Math.PI / 360) * screenHeight;
 	camera.updateProjectionMatrix();
-
-	shaderTiming = (Date.now() - startTime )/ 1000;
+	
+	shaderTiming      = (Date.now() - startTime )/ 1000;
 	
 	rotateYAccumulate += Math.abs(rotateY-lastRotateY) * 5;
 
@@ -545,8 +545,6 @@ function render() {
 		renderSkybox();
 
 	renderer.render( scene, camera );
-
-
 }
 
 function muteSound(){
@@ -565,7 +563,7 @@ function unmuteSound(){
 
 function displayIntroMessage(){
 	Tour.meta.fadeIn();
-	tour.showMessage('"To my children. Krislynn Night, Khronus Infinidee, & Gaia Rhæ."', 6000
+	tour.showMessage('"To my children. Krislynn Night, Khronus Infinidee, & Gaia Rhæ."', 5000
 	//  )
 	// .showMessage('Hello, I am: "You Me OS"', 4000 )
 	// .showMessage('Visualize, from the back your head, the Intergalatic Web in multiple dimensions...', 6000 )

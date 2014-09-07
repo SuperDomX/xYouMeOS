@@ -173,11 +173,16 @@
                             <span class="menu-item">Calendar</span>
                         </a>
                     </li>
-                    <!-- <li>
+                    <li>
+                        <a  href="#/content-widgets.html">
+                            <i class="fa fa-globe fa-3x"></i><span class="menu-item">AetherNet</span>
+                        </a>
+                    </li>
+                    <li>
                         <a class="sa-side-widget" href="#/content-widgets.html">
                             <span class="menu-item">Widgets</span>
                         </a>
-                    </li> -->
+                    </li>
                    <!-- 
                     <li class="dropdown">
                         <a class="sa-side-photos" href="">
