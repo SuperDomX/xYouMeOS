@@ -15,8 +15,8 @@
 
 
       <div class="listview list-container">
-                          <header class="listview-header media">
-                          </header>
+        <header class="listview-header media">
+        </header>
             {foreach $data.entry as $d => $e}
               
              <div class="media">
@@ -65,22 +65,22 @@
                 
                      You <i class="fa fa-dashboard"></i> Me Portal
                 </a> -->
-               {/if}
 
                 <a class="btn btn-alt btn-lg" onclick="zoomOut(7)">
-                   Or<i class="fa fa-sun-o"></i>Biting System
+                   <i class="fa fa-sun-o"></i>rbiting System
                 </a> 
                 <a class="btn btn-alt btn-lg" onclick="zoomOut(1000)">
-                     St<i class="fa fa-star"></i>rs
+                     St<i class="fa fa-star"></i>r Field
                 </a> 
-
-                <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                   <i class="fa fa-ge"></i>  Galaxy
-                </a> 
+                
+               {/if}
+                <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                   <i class="fa fa-ge"></i>  
+                </a>  -->
 
                
 
-               <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm()">
+               <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm(); zoomOut(133333);">
                 <i class="fa fa-rocket"></i> {if $masterKey.is.user}Logout{else}Login{/if}
                </a> 
                

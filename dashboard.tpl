@@ -3,22 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta name="format-detection" content="telephone=no">
-        <meta charset="UTF-8">
-
-        
-        
-   
-        <!-- CSS -->
-        <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/animate.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/form.css" rel="stylesheet">
-        <link href="css/calendar.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/icons.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet">  -->
+        <meta charset="UTF-8"> 
     </head>
 
+    <body id="skin-blur-violate">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -27,8 +15,6 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/icons.css" rel="stylesheet">
         <link href="css/generics.css" rel="stylesheet">
-
-    <body id="skin-blur-violate">
 
         <header id="header" class="media" style="margin:0">
             <a href="#/" id="menu-toggle"></a> 
@@ -57,12 +43,13 @@
 
                     
 
-                    <div id="time" class="pull-right">
-                        <span id="hours"></span>
+                    <div class="pull-right">
+                        {include file="~blox/clock.tpl"}
+                        <!-- <span id="hours"></span>
                         :
                         <span id="min"></span>
                         :
-                        <span id="sec"></span>
+                        <span id="sec"></span> -->
                     </div>
                     
                     <div class="media-body">
@@ -167,7 +154,7 @@
                 <ul class="list-unstyled side-menu">
                     <li class="active">
                         <a class="sa-side-home" href="#/{$Xtra}/{$method}" > <!-- /{$user.username} -->
-                            <i class="fa fa-pencil"></i><span class="menu-item">Dashboard</span>
+                            <span class="menu-item">Dashboard</span>
                         </a>
                     </li>
                      <li  >
@@ -186,11 +173,11 @@
                             <span class="menu-item">Calendar</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="sa-side-widget" href="#/content-widgets.html">
                             <span class="menu-item">Widgets</span>
                         </a>
-                    </li>
+                    </li> -->
                    <!-- 
                     <li class="dropdown">
                         <a class="sa-side-photos" href="">
@@ -360,6 +347,7 @@
                                     
                                     <!-- Completed Projects -->
                                     <div class="tile">
+
                                         <h2 class="tile-title m-b-5">Completed Projects</h2>
                                         <div class="tile-config dropdown">
                                             <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
@@ -660,11 +648,37 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <br/><br/><br/>
+                    </div> 
                 </div>
-                <script src="/x/html/layout/watchtower/js/jquery.masonry.min.js"></script>    
+                <script type="text/javascript">
+                    console.log($('div[class^="col-"]').sortable({
+                        connectWith          : 'div[class^="col-"]',
+                        items                : '.tile',
+                        handle               : '.tile-title',
+                        forcePlaceholderSize : true,
+                        forceHelperSize      : true,
+                        revert               : true,
+                        dropOnEmpty          : true,
+                        placeholder          : '.tile'
+                    }))
+                  $(document).ready(function() {
+                    
+                    
+                 
+                    // $( ".portlet" )
+                    //   .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+                    //   .find( ".portlet-header" )
+                    //     .addClass( "ui-widget-header ui-corner-all" )
+                    //     .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+                 
+                    // $( ".portlet-toggle" ).click(function() {
+                    //   var icon = $( this );
+                    //   icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+                    //   icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+                    // });
+                  });
+                  </script>
+                <!-- // <script src="/x/html/layout/watchtower/js/jquery.masonry.min.js"></script>     -->
             </section>
 
             <!-- Older IE Message -->
@@ -707,33 +721,7 @@
                     <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
                 </div>   
             <![endif]-->
-           <script type="text/javascript">
-          $(function() {
-            console.log($('div[class^="col-"]').sortable({
-                connectWith          : 'div[class^="col-"]',
-                items                : '.tile',
-                handle               : '.tile-title',
-                forcePlaceholderSize : true,
-                forceHelperSize      : true,
-                revert               : true,
-                dropOnEmpty          : true,
-                placeholder          : 'div[class^="col-"] .tile'
-            }))
-
-         
-            // $( ".portlet" )
-            //   .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
-            //   .find( ".portlet-header" )
-            //     .addClass( "ui-widget-header ui-corner-all" )
-            //     .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
-         
-            // $( ".portlet-toggle" ).click(function() {
-            //   var icon = $( this );
-            //   icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
-            //   icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
-            // });
-          });
-          </script>
+           
         </section>
         
         <!-- Javascript Libraries -->
@@ -765,6 +753,9 @@
         <script src="js/calendar.min.js"></script> <!-- Calendar -->
         <script src="js/feeds.min.js"></script> <!-- News Feeds -->
         
+        <!--  Form Related -->
+        <script src="js/validation/validate.min.js"></script> <!-- jQuery Form Validation Library -->
+        <script src="js/validation/validationEngine.min.js"></script> <!-- jQuery Form Validation Library - requirred with above js -->
         
         <!-- All JS functions -->
         <script src="js/functions.js"></script>  
