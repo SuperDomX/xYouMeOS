@@ -126,9 +126,6 @@
         <!-- // <script src="js/jquery.min.js"></script>  -->
 
         
-        <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
-
-        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
     
         <script type="text/javascript">
             

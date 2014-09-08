@@ -71,9 +71,9 @@
                     <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
                         <a href="#/" data-toggle="dropdown">
                         <h3 class="tile-title">{$user.name}
-                        <hr/>
-                        {$user.email}</h3>
-                        
+                            <hr/>
+                            {$user.email}
+                        </h3>
                             <img class="profile-pic animated img-circle" src="images/g1.jpg" alt="">
                         </a>
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
@@ -81,7 +81,7 @@
                             <li><a href="#/{$Xtra}/{$method}"> Dashboard</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/profile">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <!-- <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li> -->
                         </ul>
                         
                     </div>

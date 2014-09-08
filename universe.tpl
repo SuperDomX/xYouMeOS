@@ -178,28 +178,10 @@
 		<script type="text/javascript" src="{$_DIR}js/THREEx.WindowResize.js"></script>
 
 		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>  -->
-		<script type="text/javascript" src="/bin/js/jq/jquery-2.0.0.js"></script>
-
-		 <!-- // <script src="js/jquery.min.js"></script>  -->
-		<script type="text/javascript">			
-			function setLoadMessage(msg){
-				var $loadText = $('#loadtext');
-				$loadText.html(msg+"&hellip;");	
-			}
-
-            $(document).ready(function(){
-            	start(); // Load You Me OS
-            });
-		</script>
-
+		
 		
         
-        <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
-        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-       
-        <script src="js/bootstrap.min.js"></script>
         
-
 
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.mousewheel.js"></script>
@@ -233,4 +215,24 @@
 		<script type="text/javascript" src="{$_DIR}js/jquery.tooltip.js" ></script>
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
 
+		<!-- Jquery -->
+		<script type="text/javascript" src="/bin/js/jq/jquery-2.0.0.js"></script>
+		<!-- // <script src="js/jquery.min.js"></script> -->
+		<script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
+       	<script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script> 
+
 		<script type="text/javascript" src="/bin/js/jq/jquery.cookie.js"></script> <!-- jQuery Library -->
+		<script type="text/javascript">			
+			function setLoadMessage(msg){
+				var $loadText = $('#loadtext');
+				$loadText.html(msg+"&hellip;");	
+			}
+
+            $(document).ready(function(){
+            	start(); // Load You Me OS
+            });
+		</script>

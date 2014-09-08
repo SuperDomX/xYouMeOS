@@ -22,26 +22,26 @@
         <!-- // <script type="text/javascript" src="js/functions.js"></script> -->
 
         
-        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
+        <!-- // <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
         
-
+        
         <script type="text/javascript">
             $('#fileManager').elfinder({
-                      resizable : false,
-                      requestType : 'post',
-                      url       : '/youMeOS/fileManager/',  // connector URL (REQUIRED)
-                      // url       : '/x/X/xYouMeOS/php/connector.minimal.php',  // connector URL (REQUIRED)
-                      uiOptions : {
-                        toolbar   : [
-                                ['back', 'forward', 'home', 'reload'],
-                                ['mkdir', 'mkfile', 'upload'],
-                                ['view', 'sort'],
-                                ['search']
-                        ]
-                      },
-                      height  : $(window).height() - $('#content').parent().offset().top - 50
-                 });
+              resizable   : true,
+              requestType : 'post',
+              url         : '/youMeOS/fileManager/',  // connector URL (REQUIRED)
+              // url      : '/x/X/xYouMeOS/php/connector.minimal.php',  // connector URL (REQUIRED)
+              uiOptions   : {
+                toolbar   : [
+                        ['back', 'forward', 'home', 'reload'],
+                        ['mkdir', 'mkfile', 'upload'],
+                        ['view', 'sort'],
+                        ['search']
+                ]
+              },
+              height  : $(window).height() - $('#content').parent().offset().top - 50
+            });
                  
-                 $('.elfinder-cwd-wrapper, .elfinder-navbar').niceScroll();
+            $('.elfinder-cwd-wrapper, .elfinder-navbar').niceScroll();
         </script>
  </section>
