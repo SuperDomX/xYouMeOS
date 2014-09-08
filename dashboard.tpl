@@ -934,7 +934,13 @@
                     });     
                     {if $google_analytics_id}
                     
-                    console.log(ga('send', 'pageview', go));
+                    ga('send', {
+                      'hitType' : 'pageview',
+                      'page'    : go,
+                      'hitCallback': function() {
+                        console.log('hit sent');
+                      }
+                    }); 
 
                     {/if}
                 }
