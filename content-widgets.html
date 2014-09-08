@@ -10,16 +10,7 @@
 
         <title>You Me OS Control Panel</title>
             
-        <!-- CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/animate.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/form.css" rel="stylesheet">
-        <link href="css/calendar.css" rel="stylesheet">
-        <link href="css/media-player.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/icons.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet"> 
+       
     </head>
     <body id="skin-blur-violate">
         <header id="header" class="media">
@@ -229,7 +220,16 @@
             </aside>
         
             <section id="content" class="container">
-            
+                 <!-- CSS -->
+                <link href="css/bootstrap.min.css" rel="stylesheet">
+                <link href="css/animate.min.css" rel="stylesheet">
+                <link href="css/font-awesome.min.css" rel="stylesheet">
+                <link href="css/form.css" rel="stylesheet">
+                <link href="css/calendar.css" rel="stylesheet">
+                <link href="css/media-player.css" rel="stylesheet">
+                <link href="css/style.css" rel="stylesheet">
+                <link href="css/icons.css" rel="stylesheet">
+                <link href="css/generics.css" rel="stylesheet"> 
                 <!-- Messages Drawer -->
                 <div id="messages" class="tile drawer animated">
                     <div class="listview news narrow">
@@ -993,157 +993,170 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+
+                 <!-- Form Related -->
+                <script type="text/javascript" src="js/select.min.js"></script> <!-- Custom Select -->
+                <script type="text/javascript"  src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+                <!-- Text Editor -->
+                <script type="text/javascript"  src="js/editor.min.js"></script> <!-- WYSIWYG Editor -->
+
+                <!-- Media -->
+                <script type="text/javascript"  src="js/media-player.min.js"></script> <!-- Video Player -->
+
+                <!-- UX -->
+                <script type="text/javascript"  src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+                <!-- Other -->
+                <script type="text/javascript"  src="js/calendar.min.js"></script> <!-- Calendar -->
+                <script type="text/javascript"  src="js/feeds.min.js"></script> <!-- News Feeds -->
+
+
+                <!-- All JS functions -->
+                <script type="text/javascript"  src="js/functions.js"></script>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        
+                        //Calendar
+                        (function(){
+                            var date = new Date();
+                            var d = date.getDate();
+                            var m = date.getMonth();
+                            var y = date.getFullYear();
+                            $('#calendar').fullCalendar({
+                                header: {
+                                     center : '',
+                                     right  : 'prev, next',
+                                     left   : 'title'
+                                },
+
+                                selectable   : true,
+                                selectHelper : true,
+                                editable     : true,
+                                events       : [
+                                    {
+                                        title: 'Hangout with friends',
+                                        start: new Date(y, m, 1),
+                                        end: new Date(y, m, 2)
+                                    },
+                                    {
+                                        title: 'Meeting with client',
+                                        start: new Date(y, m, 10),
+                                        allDay: true
+                                    },
+                                    {
+                                        title: 'Repeat Event',
+                                        start: new Date(y, m, 18),
+                                        allDay: true
+                                    },
+                                    {
+                                        title: 'Semester Exam',
+                                        start: new Date(y, m, 20),
+                                        end: new Date(y, m, 23)
+                                    },
+                                    {
+                                        title: 'Soccor match',
+                                        start: new Date(y, m, 5),
+                                        end: new Date(y, m, 6)
+                                    },
+                                    {
+                                        title: 'Coffee time',
+                                        start: new Date(y, m, 21),
+                                    },
+                                    {
+                                        title: 'Job Interview',
+                                        start: new Date(y, m, 5),
+                                    }
+                                ],
+                                 
+                                //On Day Select
+                                select: function(start, end, allDay) {
+                                    $('#addNew-event').modal('show');   
+                                    $('#addNew-event input:text').val('');
+                                    $('#getStart').val(start);
+                                    $('#getEnd').val(end);
+                                },
+                                 
+                                eventResize: function(event,dayDelta,minuteDelta,revertFunc) {
+                                    $('#editEvent').modal('show');
+
+                                    var info =
+                                        "The end date of " + event.title + "has been moved " +
+                                        dayDelta + " days and " +
+                                        minuteDelta + " minutes."
+                                    ;
+                                    
+                                    $('#eventInfo').html(info);
+                            
+                            
+                                    $('#editEvent #editCancel').click(function(){
+                                         revertFunc();
+                                    }) 
+                                }
+                            });
+                            
+                            $('body').on('click', '#addEvent', function(){
+                                 var eventForm =  $(this).closest('.modal').find('.form-validation');
+                                 eventForm.validationEngine('validate');
+                                 
+                                 if (!(eventForm).find('.formErrorContent')[0]) {
+                                      
+                                      //Event Name
+                                      var eventName = $('#eventName').val();
+
+                                      //Render Event
+                                      $('#calendar').fullCalendar('renderEvent',{
+                                           title  : eventName,
+                                           start  : $('#getStart').val(),
+                                           end    :  $('#getEnd').val(),
+                                           allDay : true,
+                                      },true ); //Stick the event
+                                      
+                                      $('#addNew-event form')[0].reset()
+                                      $('#addNew-event').modal('hide');
+                                 } 
+                            });
+                            
+                            //Calendar views
+                            $('body').on('click', '.calendar-actions > li > a', function(e){
+                                e.preventDefault();
+                                var dataView = $(this).attr('data-view');
+                                $('#calendar').fullCalendar('changeView', dataView);
+                                
+                                //Custom scrollbar
+                                var overflowRegular, overflowInvisible = false;
+                                overflowRegular = $('.overflow').niceScroll();     
+                            });      
+                        })();
+                    });    
+                    
+                                  
+                    
+                </script>
+                <script type="text/javascript">
+                    console.log($('div[class^="col-"]').sortable({
+                        connectWith          : 'div[class^="col-"]',
+                        items                : '.tile',
+                        handle               : 'h2',
+                        forcePlaceholderSize : true,
+                        forceHelperSize      : true,
+                        revert               : true,
+                        dropOnEmpty          : true,
+                        placeholder          : 'tile tile-placeholder'
+                    })); 
+
+                    $('div[class^="col-"]').css({
+                        minHeight : 100
+                    });
+                    $('.tile h2').css({
+                        cursor : 'move'
+                    });
+                </script>
             </section>
         </section>
         
-        <!-- Javascript Libraries -->
-        <!-- jQuery -->
-        <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
-        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-
-        <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-        
-        <!-- Form Related -->
-        <script src="js/select.min.js"></script> <!-- Custom Select -->
-        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
-        
-        <!-- Text Editor -->
-        <script src="js/editor.min.js"></script> <!-- WYSIWYG Editor -->
-        
-        <!-- Media -->
-        <script src="js/media-player.min.js"></script> <!-- Video Player -->
-        
-        <!-- UX -->
-        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
-        
-        <!-- Other -->
-        <script src="js/calendar.min.js"></script> <!-- Calendar -->
-        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
-        
-        
-        <!-- All JS functions -->
-        <script src="js/functions.js"></script>
-        
-        <script type="text/javascript">
-            $(document).ready(function() {
-                
-                //Calendar
-                (function(){
-                    var date = new Date();
-                    var d = date.getDate();
-                    var m = date.getMonth();
-                    var y = date.getFullYear();
-                    $('#calendar').fullCalendar({
-                        header: {
-                             center: '',
-                             right: 'prev, next',
-                             left: 'title'
-                        },
-    
-                        selectable: true,
-                        selectHelper: true,
-                        editable: true,
-                        events: [
-                            {
-                                title: 'Hangout with friends',
-                                start: new Date(y, m, 1),
-                                end: new Date(y, m, 2)
-                            },
-                            {
-                                title: 'Meeting with client',
-                                start: new Date(y, m, 10),
-                                allDay: true
-                            },
-                            {
-                                title: 'Repeat Event',
-                                start: new Date(y, m, 18),
-                                allDay: true
-                            },
-                            {
-                                title: 'Semester Exam',
-                                start: new Date(y, m, 20),
-                                end: new Date(y, m, 23)
-                            },
-                            {
-                                title: 'Soccor match',
-                                start: new Date(y, m, 5),
-                                end: new Date(y, m, 6)
-                            },
-                            {
-                                title: 'Coffee time',
-                                start: new Date(y, m, 21),
-                            },
-                            {
-                                title: 'Job Interview',
-                                start: new Date(y, m, 5),
-                            }
-                        ],
-                         
-                        //On Day Select
-                        select: function(start, end, allDay) {
-                            $('#addNew-event').modal('show');   
-                            $('#addNew-event input:text').val('');
-                            $('#getStart').val(start);
-                            $('#getEnd').val(end);
-                        },
-                         
-                        eventResize: function(event,dayDelta,minuteDelta,revertFunc) {
-                            $('#editEvent').modal('show');
-    
-                            var info =
-                                "The end date of " + event.title + "has been moved " +
-                                dayDelta + " days and " +
-                                minuteDelta + " minutes."
-                            ;
-                            
-                            $('#eventInfo').html(info);
-                    
-                    
-                            $('#editEvent #editCancel').click(function(){
-                                 revertFunc();
-                            }) 
-                        }
-                    });
-                    
-                    $('body').on('click', '#addEvent', function(){
-                         var eventForm =  $(this).closest('.modal').find('.form-validation');
-                         eventForm.validationEngine('validate');
-                         
-                         if (!(eventForm).find('.formErrorContent')[0]) {
-                              
-                              //Event Name
-                              var eventName = $('#eventName').val();
-    
-                              //Render Event
-                              $('#calendar').fullCalendar('renderEvent',{
-                                   title: eventName,
-                                   start: $('#getStart').val(),
-                                   end:  $('#getEnd').val(),
-                                   allDay: true,
-                              },true ); //Stick the event
-                              
-                              $('#addNew-event form')[0].reset()
-                              $('#addNew-event').modal('hide');
-                         } 
-                    });
-                    
-                    //Calendar views
-                    $('body').on('click', '.calendar-actions > li > a', function(e){
-                        e.preventDefault();
-                        var dataView = $(this).attr('data-view');
-                        $('#calendar').fullCalendar('changeView', dataView);
-                        
-                        //Custom scrollbar
-                        var overflowRegular, overflowInvisible = false;
-                        overflowRegular = $('.overflow').niceScroll();     
-                    });      
-                })();
-            });    
-            
-                          
-            
-       </script>
+       
     </body>
 </html>
 

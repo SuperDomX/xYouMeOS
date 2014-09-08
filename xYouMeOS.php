@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.2.7
+ * @version v0.2.9
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -15,8 +15,8 @@
 		public function version($feed=false)					
 		{
 			if($feed){
-				$feed  = implode(file('http://github.com/SuperDomX/xYouMeOS/commits/master.atom'));
-				$xml   = simplexml_load_string($feed);
+				$feed  = 'http://github.com/SuperDomX/xYouMeOS/commits/master.atom';
+				$xml   = simplexml_load_file($feed);
 				$json  = json_encode($xml);
 				$array = json_decode($json,TRUE);		
 				return array(

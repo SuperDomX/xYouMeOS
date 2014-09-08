@@ -18,8 +18,8 @@
 
         <header id="header" class="media" style="margin:0">
             <a href="#/" id="menu-toggle"></a> 
-            <a class="logo pull-left" href="#/{$Xtra}/version">
-                <strong>Open</strong> Shuttle
+            <a class="logo pull-left" href="#/{$Xtra}/version/feed">
+              <strong>You Me OS </strong>{$PHP.version}
             </a>
             
             <div class="media-body">
@@ -42,7 +42,6 @@
                     </div>
 
                     
-
                     <div class="pull-right">
                         {include file="~blox/clock.tpl"}
                         <!-- <span id="hours"></span>
@@ -71,16 +70,20 @@
                     <!-- Profile Menu -->
                     <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
                         <a href="#/" data-toggle="dropdown">
-                            <img class="profile-pic animated" src="images/g1.jpg" alt="">
+                        <h3 class="tile-title">{$user.name}
+                        <hr/>
+                        {$user.email}</h3>
+                        
+                            <img class="profile-pic animated img-circle" src="images/g1.jpg" alt="">
                         </a>
+                        <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
                         <ul class="dropdown-menu profile-menu">
-                            <li><a href="#/{$Xtra}/{$method}">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="#/{$Xtra}/{$method}"> Dashboard</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/profile">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                         </ul>
-                        <h4 class="m-0">{$user.username}</h4> 
-                        {$user.email}
+                        
                     </div>
                     
                     <!-- Calendar -->
@@ -91,7 +94,7 @@
                     <!-- Feeds -->
                     <div class="s-widget m-b-25">
                         <h2 class="tile-title">
-                           <strong>You Me OS </strong>{$PHP.version}
+                           <strong>News Feed</strong>
                         </h2>
                         
                         <div class="s-widget-body">
@@ -153,13 +156,13 @@
                 <!-- Side Menu -->
                 <ul class="list-unstyled side-menu">
                     <li class="active">
-                        <a class="sa-side-home" href="#/{$Xtra}/{$method}" > <!-- /{$user.username} -->
-                            <span class="menu-item">Dashboard</span>
+                        <a class="sa-side-home" href="#/{$user.username}" > <!-- /{$user.username} -->
+                            <!-- <i class="fa fa-dashboard fa-3x"></i> --> <span class="menu-item">/{$user.username}</span>
                         </a>
                     </li>
                      <li  >
                         <a class="sa-side-folder" href="#/{$Xtra}/chronus">
-                            <span class="menu-item">INFINITE SPACE FILE MANAGER</span>
+                            <span class="menu-item">Chronus Infinity</span>
                         </a>
                         <!-- <ul class="list-unstyled menu-item">
                             
@@ -174,7 +177,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#/content-widgets.html">
+                        <a  href="#/{$Xtra}/aethernet">
                             <i class="fa fa-globe fa-3x"></i><span class="menu-item">AetherNet</span>
                         </a>
                     </li>
@@ -268,36 +271,93 @@
                 </ol>
                 
                 
-                <h4 class="page-title">Profile of {$user.name}</h4>
+                <h4 class="page-title">
+
+                    Profile of {$user.name}
+
+                </h4>
                 
                 <div class="block-area">
                     <div class="row">
                         <div class="col-md-9">
                             <div class="tile-light p-5 m-b-15">
                                 <div class="cover p-relative">
-                                    <img src="img/cover-bg.jpg" class="w-100" alt="">
-                                    <img class="profile-pic" src="images/g1.jpg" alt="">
-                                    <div class="profile-btn">
-
+                                    <img src="img/cover-bg.jpg" class="w-100 " alt="">
+                                    <style type="text/css">
+                                        div.profile-pic:hover > div.btn-group{
+                                            display    : block !important;
+                                            visibility : visible !important;
+                                        }
+                                    </style>
+                                    <div class="profile-pic hidden-xs text-center">
+                                        <img src="{$thumb}src=/x/X/xYouMeOS/images/g1.jpg&h=150"  >
                                         {if $user.username != $params[2]}
-                                            <button class="btn btn-alt btn-sm"><i class="icon-bubble"></i> <span>Message</span></button>
-                                            <button class="btn btn-alt btn-sm"><i class="icon-user-2"></i> <span>Friend</span></button>
+                                        <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
+                                            <button type="button" class="btn btn-sm btn-alt   btn-block"  >
+                                                <strong>
+                                                    <i class="fa fa-user fa-2x pull-left"></i>
+                                                    {$user.username}
+                                                </strong>
+                                                <!-- <span class="caret"></span> -->
+                                            </button>
+                                            <!-- <ul class="dropdown-menu  animated flipInX">
+                                                <li><a href="">Dropdown link</a></li>
+                                                <li><a href="">Dropdown link</a></li>
+                                            </ul> -->
+                                        </div>
+                                      
                                         {/if}
+                                    </div>
+                                    
+                                    <div class="profile-btn hidden-xs">
+
+                                            <div class="tile input-focused btn-group"   >
+                                                
+                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
+                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> -->
+                                                <button class="btn btn-alt btn-sm hidden-xs">0 Comments</button>
+                                                <button class="btn btn-alt btn-sm">0 Connections</button>
+                                                <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> -->
+                                                
+                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(7)">
+                                                <i class="fa fa-sun-o"></i>rbiting System
+                                                </button> 
+                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(1000)">
+                                                St<i class="fa fa-star"></i>r Field
+                                                </button> 
+                                                <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                                                <i class="fa fa-ge"></i>  
+                                                </a>  -->
+
+
+
+                                                <button class="btn btn-alt btn-sm" onclick="fadeInLoginForm(); zoomOut(133333);">
+                                                <i class="fa fa-rocket"></i> {if $masterKey.is.user}Logout{else}Login{/if}
+                                                </button> 
+                                            </div>
+                                            
+ 
                                         
                                     </div>
-
+ 
                                 </div>
                                 <div class="p-5 m-t-15">
-                                     Welcome to your profile page. Here you can manage a variety of different widgets that give you complete control over how your profile page looks to the public. Use this as your main hub where all important information is in a easy to access area. You can also edit this description of your profile page in your settings. 
+                                   <!--  <div class="m-b-25 text-center profile-summary">
+                                        <button class="btn btn-xs hidden-xs">0 Comments</button>
+                                        <button class="btn btn-xs">0 Connections</button>
+                                        <button class="btn btn-xs hidden-xs">0 Interests</button>
+                                    </div> -->
+                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Welcome {$user.username|ucfirst}</h1>
+                                    <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
+                                      
+                                    {$_DIR}
+
+                                     This is your dashboard. Here you can manage a variety of different widgets that give you complete control over data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
                                 </div>
                             </div>
                             
-                            <div class="m-b-15 text-center profile-summary">
-                                <button class="btn btn-sm">0 Followers</button>
-                                <button class="btn btn-sm">0 Followings</button>
-                                <button class="btn btn-sm hidden-xs">0 Comments</button>
-                                <button class="btn btn-sm hidden-xs">0 Likes</button>
-                            </div>
+                            
+
                             
                             <div class="row">
                                 <!-- Works -->
@@ -655,34 +715,35 @@
                         </div>
                     </div> 
                 </div>
+
+                <style type="text/css">
+                    .tile-placeholder {
+                        min-height : 50px;
+                        border     : 1px dotted white;
+                        margin     : 0 1em 1em 0; 
+                        height     : 50px;
+                    }
+                </style>
+
                 <script type="text/javascript">
                     console.log($('div[class^="col-"]').sortable({
                         connectWith          : 'div[class^="col-"]',
                         items                : '.tile',
-                        handle               : '.tile-title',
+                        handle               : 'h2',
                         forcePlaceholderSize : true,
                         forceHelperSize      : true,
                         revert               : true,
                         dropOnEmpty          : true,
-                        placeholder          : '.tile'
-                    }))
-                  $(document).ready(function() {
-                    
-                    
-                 
-                    // $( ".portlet" )
-                    //   .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
-                    //   .find( ".portlet-header" )
-                    //     .addClass( "ui-widget-header ui-corner-all" )
-                    //     .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
-                 
-                    // $( ".portlet-toggle" ).click(function() {
-                    //   var icon = $( this );
-                    //   icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
-                    //   icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
-                    // });
-                  });
-                  </script>
+                        placeholder          : 'tile tile-placeholder'
+                    })); 
+
+                    $('div[class^="col-"]').css({
+                        minHeight : 100
+                    });
+                    $('.tile h2').css({
+                        cursor : 'move'
+                    });
+                </script>
                 <!-- // <script src="/x/html/layout/watchtower/js/jquery.masonry.min.js"></script>     -->
             </section>
 
@@ -764,5 +825,25 @@
         
         <!-- All JS functions -->
         <script src="js/functions.js"></script>  
+
+
+        <script type="text/javascript">
+            $(window).on('hashchange', function() { 
+                var go = window.location.hash.replace('#','');
+                if(go != ''){
+                    console.log('Loading'+go);
+                    $.pjax({ 
+                        container : '#content',
+                        fragment  : '#content',
+                        timeout   : 5000,
+                        url       : go,
+                        success     : function  () {
+                            alert('Hello');
+                        }
+                    });      
+                }
+            });
+        </script>
+
     </body>
 </html>

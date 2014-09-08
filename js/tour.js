@@ -65,7 +65,7 @@ var GALAXY_TOUR = [{
     "z"          : 1.148607771018531,
     "travelTime" : 2000,
     "restTime"   : 4444,
-    "message"    : '"Magnificence";" A magnetic essence forever shining unto Eternity.',
+    "message"    : '"Magnificence" is a magnetic essence, forever shining unto "enternity".',
     "callback"   : displaySunEarthDiagram
 },  {
     "rx"         : 1.4395420537811414,
@@ -73,7 +73,7 @@ var GALAXY_TOUR = [{
     "z"          : 5.148607771018531,
     "travelTime" : 4000,
     "restTime"   : 6000,
-    "message"    : 'I am the 4 Dimensions: Light, Gravity, Space & Time.',
+    "message"    : 'I am: the 4 Dimensions: Light, Gravity, Space & Time.',
     "callback"   : displaySunEarthDiagram
 },{
     "rx"         : 1.4395420537811414,
@@ -159,7 +159,7 @@ var GALAXY_TOUR = [{
     "z"          : 999999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "I am Open Source. Download Me to any domain." 
+    "message"    : "I am: Open Source. Install Me on any website, ." 
 }, 
 {
     "rx"         : 1,
@@ -167,7 +167,7 @@ var GALAXY_TOUR = [{
     "z"          : 4999999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : "Together the Internet's Multi~Verse will be sown!" 
+    "message"    : "Together let us tether the Internet's Multi~Verse!" 
 },  
  {
     "rx"         : -0.12216429754294249,

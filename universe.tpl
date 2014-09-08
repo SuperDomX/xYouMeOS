@@ -178,9 +178,9 @@
 		<script type="text/javascript" src="{$_DIR}js/THREEx.WindowResize.js"></script>
 
 		<!-- // <script type="text/javascript" src="{$_DIR}js/jquery-1.7.1.min.js"></script>  -->
-		<script type="text/javascript" src="/bin/js/jq/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="/bin/js/jq/jquery-2.0.0.js"></script>
 
-		<!-- // <script src="js/jquery.min.js"></script>  -->
+		 <!-- // <script src="js/jquery.min.js"></script>  -->
 		<script type="text/javascript">			
 			function setLoadMessage(msg){
 				var $loadText = $('#loadtext');
@@ -191,6 +191,15 @@
             	start(); // Load You Me OS
             });
 		</script>
+
+		
+        
+        <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+       
+        <script src="js/bootstrap.min.js"></script>
+        
+
 
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.mousewheel.js"></script>
