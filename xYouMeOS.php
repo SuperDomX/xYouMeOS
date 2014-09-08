@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.3.0
+ * @version v0.3.1
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -15,10 +15,42 @@
 		public function version($feed=false)					
 		{
 			if($feed){
-				$feed  = 'http://github.com/SuperDomX/xYouMeOS/commits/master.atom';
+				$feed  = 'https://github.com/SuperDomX/xYouMeOS/commits/master.atom';
 				$xml   = simplexml_load_file($feed);
-				$json  = json_encode($xml);
+				
+
+
+				$namespaces = $xml->getNamespaces(true); // get namespaces
+ 
+				// iterate items and store in an array of objects
+				$items = array();
+				foreach ($xml->entry as $item) {
+
+				  $tmp = $item;
+				
+				  // var_dump($item);
+				
+
+
+				  // $tmp = new stdClass(); 
+				  // $tmp->title = trim((string) $item->title);
+				  // $tmp->link  = $item->link->attributes();
+				  // $tmp->content  = trim((string) $item->content);
+				  // etc... 
+				  // now for the url in media:content
+				  //
+				  $tmp->media_thumb = trim((string)
+				  	$item->children($namespaces['media'])->attributes()->url
+				  );
+
+				  
+				  // add parsed data to the array
+				  $items[] = $tmp;
+				}
+
+				$json  = json_encode($items);
 				$array = json_decode($json,TRUE);		
+
 				return array(
 					'success' => true,
 					'data'    => $array

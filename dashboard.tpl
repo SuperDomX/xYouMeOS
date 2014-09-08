@@ -19,7 +19,7 @@
         <header id="header" class="media" style="margin:0">
             <a href="#/" id="menu-toggle"></a> 
             <a class="logo pull-left" href="#/{$Xtra}/version/feed">
-              <strong>You Me OS </strong>{$PHP.version}
+              <strong>You Me OS </strong><small>{$PHP.version}</small>
             </a>
             
             <div class="media-body">
@@ -790,8 +790,8 @@
            
         </section>
         
-        
-        
+
+
         <!-- Javascript Libraries -->
         <!-- jQuery -->
         

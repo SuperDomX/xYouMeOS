@@ -17,30 +17,32 @@
       <div class="listview list-container">
         <header class="listview-header media">
         </header>
-            {foreach $data.entry as $d => $e}
+            {foreach $data as $d => $e}
               
              <div class="media">
                   <!-- <input type="checkbox" class="pull-left list-check" value=""> -->
-                  <img class="media-object pull-left" src="img/profile-pics/2.jpg" alt="" width="45">
+                  <img class="media-object pull-left img-circle" src="{$e.media_thumb}" >
                   <div class="media-body">
-                      <a href="{$e.link}" target="_blank">{$e.title}</a>
+                      "{$e.title}"
                       <div class="clearfix"></div>
+                      
                         <small> {$e.content}</small>
                         <br>
                       <div class="block attrs">
                           Author: <a href="{$e.author.uri}" target="_blank">{$e.author.name}</a>
                       </div>
                       <div class="block attrs">
-                          Updated: {$e.updated|date_format:"%A, %B %e, %Y @ %H : %M %A"}
+                          Updated: {$e.updated|date_format:"%A, %B %e, %Y @ %H:%M%p"}
                       </div>
                       
-                      <div class="block attrs">
-                          <!-- Published: Yes -->
-                      </div>
+                      <!-- <div class="block attrs">
+                          Published: Yes
+                      </div> -->
                   </div>
                   <div class="list-options">
-                      <button class="btn btn-sm">View</button>
-                      <button class="btn btn-sm">Delete</button>                                
+                       <a href="{$e.link['@attributes'].href}" target="_blank" class="btn btn-sm">View</a>
+
+                      <!-- <button class="btn btn-sm">Delete</button>                                 -->
                   </div>
               </div>
 
@@ -72,7 +74,7 @@
                 <a class="btn btn-alt btn-lg" onclick="zoomOut(1000)">
                      St<i class="fa fa-star"></i>r Field
                 </a> 
-                
+
                {/if}
                 <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
                    <i class="fa fa-ge"></i>  

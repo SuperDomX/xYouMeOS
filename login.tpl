@@ -134,7 +134,6 @@
         <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
         <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
         
-
         <script src="js/bootstrap.min.js"></script>
         
         <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
