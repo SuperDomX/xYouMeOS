@@ -11,11 +11,9 @@
 <section id="content" class="container" style="margin: 0;">
     {include file="./notice.tpl"}
     {if $data}
-
-
       <div class="listview list-container">
         <header class="listview-header media">
-        YouMeOS Latest Updates
+        Latest YouMeOS commit Updates feed via <a href="{$feed|replace:'.atom':''}" target="_blank">{$feed|replace:'.atom':''}
         </header>
             {foreach $data as $d => $e} 
              <div class="media">
@@ -33,7 +31,7 @@
                          </div>
                          <div class="panel-body">
                           <a href="{$e.link['@attributes'].href}" title="{$e.title}" target="_blank" class="btn btn-alt btn-xs pull-right"><i class="fa fa-github fa-3x pull-right"></i> View on<br/>GitHub</a>
-                             {$e.content|strip_tags: false}
+                             {$e.content|regex_replace:"/(<pre>|<pre [^>]*>|<\\/pre>)/":""}
                          </div>
                          <div class="panel-footer">
 

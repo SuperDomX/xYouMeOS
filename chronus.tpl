@@ -7,7 +7,7 @@
             <!-- <li>Data</li> -->
         </ol>
         
-        <h4 class="page-title">Infinite Space File Manager (Chronus Infinity)</h4>
+        <h4 class="page-title">"Chronus Infinity" File Manager w/ Infinite Space</h4>
         
         <div id="fileManager"></div>
         <!-- Javascript Libraries -->
@@ -24,7 +24,7 @@
         
         <!-- // <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
         
-        
+
         <script type="text/javascript">
             $('#fileManager').elfinder({
               resizable   : true,

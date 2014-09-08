@@ -104,9 +104,10 @@
                 <br/>
                 <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
             </form>
-        </section>         
+
         <small class="label label-sm " >super powered by<br/>  
         <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/></small>
+        </section>         
 
         </center>             
         
@@ -138,7 +139,8 @@
 
         <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
     
-
+        <script src="js/bootstrap.min.js"></script>
+        
     
         <script type="text/javascript">
             

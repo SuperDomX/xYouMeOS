@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.3.4
+ * @version v0.3.5
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -35,7 +35,8 @@
 
 				return array(
 					'success' => count($array),
-					'data'    => $items
+					'data'    => $items,
+					'feed'    =>$feed
 				);
 			}
 		}

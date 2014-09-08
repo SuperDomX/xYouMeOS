@@ -74,10 +74,13 @@
                             <hr/>
                             {$user.email}
                         </h3>
-                            <img class="profile-pic animated img-circle" src="images/g1.jpg" alt="">
+                            
+                            <img class="profile-pic animated img-circle" src="/users/avatar" alt="">
+                            
                         </a>
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
                         <ul class="dropdown-menu profile-menu">
+                            
                             <li><a href="#/{$Xtra}/{$method}"> Dashboard</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/profile">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
@@ -290,7 +293,9 @@
                                         }
                                     </style>
                                     <div class="profile-pic hidden-xs">
-                                        <img src="{$thumb}src=/x/X/xYouMeOS/images/g1.jpg&h=168"  >
+                                         
+
+                                        <img src="/users/avatar/"  >
                                         {if $user.username != $params[2]}
                                             <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
                                                 <button type="button" class="btn btn-sm  btn-block dropdown-toggle" data-toggle="dropdown"  >
@@ -300,37 +305,47 @@
                                                     </strong>
                                                     <!-- <span class="caret"></span> -->
                                                 </button>
-                                                <ul class="dropdown-menu  dropdown-menu-alt animated bounceIn" role="menu">
-                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                        <i class="fa fa-cloud-upload"></i> Upload Photo...</a>
+                                                <ul class="dropdown-menu  dropdown-menu-alt animated rollIn" role="menu">
+                                                    
+                                                    <li role="presentation">
+                                                        <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/users/avatar/takePhoto')">
+                                                        <i class="fa fa-camera"></i> Take Snapshot...</a>
+                                                       
                                                     </li>
-                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+
+
+
+                                                    <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
                                                         <i class="fa fa-folder"></i> Choose From Photos...</a>
-                                                    </li>
-                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                        <i class="fa fa-camera"></i> Take Photo...</a>
+                                                    </li> -->
+                                                    <li role="presentation"><a  data-toggle="modal" tabindex="-1" href="#uploadAvatar"> 
+                                                        <i class="fa fa-upload"></i> Upload Photo...</a>
                                                     </li>
                                                     
+                                                    
+
                                                     <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
                                                         <i class="fa fa-camera"></i> Edit Thumbnail...</a>
                                                     </li> -->
                                                     
-                                                    <li role="presentation" class="divider"></li>
+                                                    <!-- <li role="presentation" class="divider"></li>
                                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="">
                                                         <i class="fa fa-ban"></i> Remove Photo...</a>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </div> 
                                         {/if}
                                     </div>
                                     
+                                   
+
                                     <div class="profile-btn hidden-xs">
 
                                             <div class="tile input-focused btn-group"   >
                                                 
                                                 <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
                                                 <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> -->
-                                                <button class="btn btn-alt btn-sm hidden-xs">0 Comments</button>
+                                                <a class="btn btn-alt btn-sm hidden-xs">0 Comments</a>
                                                 <button class="btn btn-alt btn-sm">0 Connections</button>
                                                 <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> -->
                                                 
@@ -347,22 +362,28 @@
 
 
                                                 <button class="btn btn-alt btn-sm" onclick="fadeInLoginForm(); zoomOut(133333);">
-                                                <i class="fa fa-rocket"></i> {if $masterKey.is.user}Logout{else}Login{/if}
+                                                <i class="fa fa-rocket"></i> {if $masterKey.is.user}Galaxy{else}Login{/if}
                                                 </button> 
                                             </div>
                                             
- 
+    
                                         
                                     </div>
  
                                 </div>
+
+
+                               
+                                
+
+
                                 <div class="p-5 m-t-15">
                                    <!--  <div class="m-b-25 text-center profile-summary">
                                         <button class="btn btn-xs hidden-xs">0 Comments</button>
                                         <button class="btn btn-xs">0 Connections</button>
                                         <button class="btn btn-xs hidden-xs">0 Interests</button>
                                     </div> -->
-                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Welcome {$user.username|ucfirst}</h1>
+                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Welcome {$user.name}</h1>
                                     <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                                       
                                     {$_DIR}
@@ -373,8 +394,58 @@
                                 </div>
                             </div>
                             
-                            
+                             <!-- Modal Take Photo -->  
+                            <div class="modal fade" id="takePhoto" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title"><i class="fa fa-camera"></i> Take Snapshot</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="takePhotoSnap" class="btn btn-sm">
+                                                <i class="fa fa-camera"></i> Snap Photo
+                                            </button>
+                                            <button type="button" class="btn btn-sm" data-dismiss="modal" onmousedown="takePhoto.stop();"> <i class="fa fa-ban"></i> Close</button>
 
+                                            <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                             <!-- Modal Take Photo -->  
+                            <div class="modal fade" id="uploadAvatar" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title"><i class="fa fa-camera"></i> Take Snapshot</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <span class="btn btn-file btn-sm btn-alt">
+                                                <span class="fileupload-new">Select file</span>
+                                                <span class="fileupload-exists">Change</span>
+                                                <input type="file">
+                                            </span> 
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="takePhotoSnap" class="btn btn-sm">
+                                                <i class="fa fa-upload"></i> Upload Photo
+                                            </button>
+                                            <button type="button" class="btn btn-sm" data-dismiss="modal" > <i class="fa fa-ban"></i> Close</button>
+
+                                            <!-- <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
                             
                             <div class="row">
                                 <!-- Works -->
