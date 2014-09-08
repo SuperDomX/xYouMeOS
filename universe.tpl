@@ -15,6 +15,7 @@
 
 		<link href="css/bootstrap.css" rel="stylesheet">
 
+        <link href="css/icons.css" rel="stylesheet">
         <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/form.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
@@ -117,7 +118,9 @@
 				<div id="zoom-backdrop"></div>
 				<div id="zoom-cursor"></div>
 			</div>
-			<div id="about">?</div>
+			<div id="about">
+				<!-- <span class="icon">&#61790;</span> -->
+			</div>
 		</div>
 
 		<small class="label" style="position: absolute; bottom: 3px; right: 10px;">

@@ -22,7 +22,7 @@
 }
 
 /* Left Menu */
-[class*="sa-side-"] {
+[class*="sa-side-"], [class*="sa-side-"]  {
     width: 44px;
     height: 44px;
 }

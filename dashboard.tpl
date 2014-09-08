@@ -15,7 +15,9 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/icons.css" rel="stylesheet">
         <link href="css/generics.css" rel="stylesheet">
-
+        <style type="text/css">
+            .font-icons .icon { font-size: 30px; margin-top: 5px; }
+        </style>    
         <header id="header" class="media" style="margin:0">
             <a href="#/" id="menu-toggle"></a> 
             <a class="logo pull-left" href="#/{$Xtra}/version/feed">
@@ -33,15 +35,15 @@
                             <span>Messages</span>
                         </a>
                     </div>
-                    <div class="pull-left tm-icon">
+
+                    <!-- <div class="pull-left tm-icon">
                         <a data-drawer="notifications" class="drawer-toggle" href="#/">
                             <i class="sa-top-updates"></i>
                             <i class="n-count animated">0</i>
                             <span>Updates</span>
                         </a>
                     </div>
-
-                    
+                     -->
                     <div class="pull-right">
                         {include file="~blox/clock.tpl"}
                         <!-- <span id="hours"></span>
@@ -51,9 +53,9 @@
                         <span id="sec"></span> -->
                     </div>
                     
-                    <div class="media-body">
+                  <!--   <div class="media-body">
                         <input type="text" class="main-search">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </header>
@@ -157,15 +159,24 @@
                 </div>
                 
                 <!-- Side Menu -->
-                <ul class="list-unstyled side-menu">
+                <ul class="list-unstyled side-menu font-icons">
                     <li class="active">
-                        <a class="sa-side-home" href="#/{$user.username}" > <!-- /{$user.username} -->
-                            <!-- <i class="fa fa-dashboard fa-3x"></i> --> <span class="menu-item">/{$user.username}</span>
+                        <a class="" href="#/{$Xtra}/dashboard/{$user.username}" > <!-- /{$user.username} -->
+                            <span class="icon">&#61698;</span> <span class="menu-item">
+                            Dashboard
+                            </span>
                         </a>
                     </li>
-                     <li  >
-                        <a class="sa-side-folder" href="#/{$Xtra}/chronus">
-                            <span class="menu-item">Chronus Infinity</span>
+
+                    <li>
+                        <a  href="#/{$Xtra}/aethernet">
+                             <span class="icon">&#61838;</span> <span class="menu-item">The AetherNets</span>
+                        </a>
+                    </li>
+
+                    <li  >
+                        <a   href="#/{$Xtra}/chronus">
+                             <span class="icon">&#61836;</span> <span class="menu-item">Chronus Infinity Files</span>
                         </a>
                         <!-- <ul class="list-unstyled menu-item">
                             
@@ -176,12 +187,7 @@
                     </li>
                     <li>
                         <a class="sa-side-calendar" href="#/calendar/full">
-                            <span class="menu-item">Calendar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a  href="#/{$Xtra}/aethernet">
-                            <i class="fa fa-globe fa-3x"></i><span class="menu-item">AetherNet</span>
+                            <span class="menu-item">Timeless Nights</span>
                         </a>
                     </li>
                     <li>
@@ -295,7 +301,7 @@
                                     <div class="profile-pic hidden-xs">
                                          
 
-                                        <img src="/users/avatar/"  >
+                                        <img src="/users/avatar/" class="img-circle"  >
                                         {if $user.username != $params[2]}
                                             <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
                                                 <button type="button" class="btn btn-sm  btn-block dropdown-toggle" data-toggle="dropdown"  >
@@ -339,57 +345,58 @@
                                     
                                    
 
-                                    <div class="profile-btn hidden-xs">
+                                    
+                                <div class="profile-btn  text-center">
 
-                                            <div class="tile input-focused btn-group"   >
-                                                
-                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
-                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> -->
-                                                <a class="btn btn-alt btn-sm hidden-xs">0 Comments</a>
-                                                <button class="btn btn-alt btn-sm">0 Connections</button>
-                                                <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> -->
-                                                
-                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(7)">
-                                                <i class="fa fa-sun-o"></i>rbiting System
-                                                </button> 
-                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(1000)">
-                                                St<i class="fa fa-star"></i>r Field
-                                                </button> 
-                                                <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                                                <i class="fa fa-ge"></i>  
-                                                </a>  -->
-
-
-
-                                                <button class="btn btn-alt btn-sm" onclick=" zoomOut(133333);">
-                                                <i class="fa fa-rocket"></i> Galaxy
-                                                </button> 
-                                            </div>
+                                        <div class="btn-group tile input-focused"   >
                                             
-    
+                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
+                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> -->
+                                            <a class="btn btn-alt btn-sm hidden-xs">0 Comments</a>
+                                            <button class="btn btn-alt btn-sm">0 Connections</button>
+                                            <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> -->
+                                            
+                                            <button class="btn btn-alt btn-sm" onclick="zoomOut(7)">
+                                            <i class="fa fa-sun-o"></i>rbiting System
+                                            </button> 
+                                            <button class="btn btn-alt btn-sm" onclick="zoomOut(1000)">
+                                            St<i class="fa fa-star"></i>r Field
+                                            </button> 
+                                            <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                                            <i class="fa fa-ge"></i>  
+                                            </a>  -->
+
+
+
+                                            <button class="btn btn-alt btn-sm" onclick=" zoomOut(133333);">
+                                            <i class="fa fa-rocket"></i> Galaxy
+                                            </button> 
+                                        </div>
                                         
-                                    </div>
+
+                                    
+                                </div>
  
                                 </div>
 
 
                                
                                 
-
+<!-- 
 
                                 <div class="p-5 m-t-15">
-                                   <!--  <div class="m-b-25 text-center profile-summary">
+                                    <div class="m-b-25 text-center profile-summary">
                                         <button class="btn btn-xs hidden-xs">0 Comments</button>
                                         <button class="btn btn-xs">0 Connections</button>
                                         <button class="btn btn-xs hidden-xs">0 Interests</button>
-                                    </div> -->
-                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Welcome {$user.name}</h1>
+                                    </div>
+                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Hello {$user.name}</h1>
                                     <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                                       
                                      
 
                                      This is your dashboard, no one else can see this but You. Here you can manage a variety of different widgets that give you complete control over your data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
-                                </div>
+                                </div> -->
                             </div>
                             
                              <!-- Modal Take Photo -->  
@@ -915,16 +922,21 @@
             $(window).on('hashchange', function() { 
                 var go = window.location.hash.replace('#','');
                 if(go != ''){
-                    console.log('Loading'+go);
+                    console.log('Loading '+go);
                     $.pjax({ 
                         container : '#content',
                         fragment  : '#content',
-                        timeout   : 5000,
+                        timeout   : 10000,
                         url       : go,
                         success     : function  () {
-                            alert('Hello');
+                            
                         }
-                    });      
+                    });     
+                    {if $google_analytics_id}
+                    
+                    console.log(ga('send', 'pageview', go));
+
+                    {/if}
                 }
             });
         </script>
