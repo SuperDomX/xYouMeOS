@@ -1,6 +1,6 @@
 function loadStarData( dataFile, callback ){
 	var xhr = new XMLHttpRequest();
-	setLoadMessage('"It\'s Dangerous to go alone,');	
+	setLoadMessage('I am You Me OS');	
 	xhr.addEventListener( 'load', function ( event ) {
 		var parsed = JSON.parse( xhr.responseText );
 		// console.log(parsed);
@@ -20,7 +20,7 @@ var datastarTexture1          = THREE.ImageUtils.loadTexture( "images/p_2.png" )
 var datastarHeatVisionTexture = THREE.ImageUtils.loadTexture( "images/sharppoint.png" );
 
 //	bright flashy named stars graphic
-var starPreviewTexture        = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("You Me OS")	);
+var starPreviewTexture        = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("Hello World")	);
 var starColorGraph            = THREE.ImageUtils.loadTexture( 'images/star_color_modified.png' );
 
 var datastarUniforms = {

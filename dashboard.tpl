@@ -308,7 +308,7 @@
                                                 <ul class="dropdown-menu  dropdown-menu-alt animated rollIn" role="menu">
                                                     
                                                     <li role="presentation">
-                                                        <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/users/avatar/takePhoto')">
+                                                        <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/html/users/avatar/takePhoto')">
                                                         <i class="fa fa-camera"></i> Take Snapshot...</a>
                                                        
                                                     </li>
@@ -318,7 +318,7 @@
                                                     <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
                                                         <i class="fa fa-folder"></i> Choose From Photos...</a>
                                                     </li> -->
-                                                    <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/users/avatar/uploadAvatar');"> 
+                                                    <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
                                                         <i class="fa fa-upload"></i> Upload Avatar...</a>
                                                     </li>
                                                     
@@ -361,8 +361,8 @@
 
 
 
-                                                <button class="btn btn-alt btn-sm" onclick="fadeInLoginForm(); zoomOut(133333);">
-                                                <i class="fa fa-rocket"></i> {if $masterKey.is.user}Galaxy{else}Login{/if}
+                                                <button class="btn btn-alt btn-sm" onclick=" zoomOut(133333);">
+                                                <i class="fa fa-rocket"></i> Galaxy
                                                 </button> 
                                             </div>
                                             
@@ -386,11 +386,9 @@
                                     <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Welcome {$user.name}</h1>
                                     <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                                       
-                                    {$_DIR}
+                                     
 
-                                     This is your dashboard. Here you can manage a variety of different widgets that give you complete control over data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
-
-
+                                     This is your dashboard, no one else can see this but You. Here you can manage a variety of different widgets that give you complete control over your data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
                                 </div>
                             </div>
                             

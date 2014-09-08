@@ -83,7 +83,7 @@
                
 
                <a class="btn btn-alt btn-lg" onclick="fadeInLoginForm(); zoomOut(133333);">
-                <i class="fa fa-rocket"></i> {if $masterKey.is.user}Logout{else}Login{/if}
+                <i class="fa fa-rocket"></i> Login Screen
                </a> 
                
             </div>
