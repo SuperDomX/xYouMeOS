@@ -318,8 +318,8 @@
                                                     <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
                                                         <i class="fa fa-folder"></i> Choose From Photos...</a>
                                                     </li> -->
-                                                    <li role="presentation"><a  data-toggle="modal" tabindex="-1" href="#uploadAvatar"> 
-                                                        <i class="fa fa-upload"></i> Upload Photo...</a>
+                                                    <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/users/avatar/uploadAvatar');"> 
+                                                        <i class="fa fa-upload"></i> Upload Avatar...</a>
                                                     </li>
                                                     
                                                     
@@ -424,20 +424,16 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title"><i class="fa fa-camera"></i> Take Snapshot</h4>
+                                            <h4 class="modal-title"><i class="fa fa-upload"></i> Upload Avatar</h4>
                                         </div>
-                                        <div class="modal-body">
-                                            <span class="btn btn-file btn-sm btn-alt">
-                                                <span class="fileupload-new">Select file</span>
-                                                <span class="fileupload-exists">Change</span>
-                                                <input type="file">
-                                            </span> 
+                                        <div class="modal-body text-center">
+                                            
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" id="takePhotoSnap" class="btn btn-sm">
-                                                <i class="fa fa-upload"></i> Upload Photo
+                                            <button type="button" id="takePhotoSnap" class="btn btn-sm" onclick="$('#uploadAvatar form').submit();">
+                                                <i class="fa fa-upload"></i> Upload Avatar
                                             </button>
-                                            <button type="button" class="btn btn-sm" data-dismiss="modal" > <i class="fa fa-ban"></i> Close</button>
+                                            <button type="button" class="btn btn-sm pull-right" data-dismiss="modal" > <i class="fa fa-ban"></i> Close</button>
 
                                             <!-- <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button> -->
                                         </div>
@@ -912,7 +908,7 @@
         <!--  Form Related -->
         <script src="js/validation/validate.min.js"></script> <!-- jQuery Form Validation Library -->
         <script src="js/validation/validationEngine.min.js"></script> <!-- jQuery Form Validation Library - requirred with above js -->
-        
+
         <!-- All JS functions -->
         <script src="js/functions.js"></script>  
 
