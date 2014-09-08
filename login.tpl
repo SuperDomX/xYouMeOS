@@ -126,6 +126,22 @@
         <!-- // <script src="js/jquery.min.js"></script>  -->
 
         
+        
+        <script type="text/javascript" src="/bin/js/jq/jquery-2.0.0.js"></script>
+
+        <!-- // <script src="js/jquery.min.js"></script>  -->
+
+        <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+        
+
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
+
+        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
+    
+
     
         <script type="text/javascript">
             
