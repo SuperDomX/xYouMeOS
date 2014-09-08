@@ -1,4 +1,3 @@
-
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -16,36 +15,39 @@
 
       <div class="listview list-container">
         <header class="listview-header media">
+        YouMeOS Latest Updates
         </header>
-            {foreach $data as $d => $e}
-              
+            {foreach $data as $d => $e} 
              <div class="media">
-                  <!-- <input type="checkbox" class="pull-left list-check" value=""> -->
-                  <img class="media-object pull-left img-circle" src="{$e.media_thumb}" >
-                  <div class="media-body">
-                      "{$e.title}"
-                      <div class="clearfix"></div>
-                      
-                        <small> {$e.content}</small>
-                        <br>
-                      <div class="block attrs">
-                          Author: <a href="{$e.author.uri}" target="_blank">{$e.author.name}</a>
-                      </div>
-                      <div class="block attrs">
-                          Updated: {$e.updated|date_format:"%A, %B %e, %Y @ %H:%M%p"}
-                      </div>
-                      
-                      <!-- <div class="block attrs">
-                          Published: Yes
-                      </div> -->
+                  <!-- <input type="checkbox" class="pull-left list-check" value="">  -->
+                  <div class="media-body"> 
+                    <div class="panel panel-default tile">
+                         <div class="panel-heading">
+                            <a href="{$e.author.uri}" target="_blank" class="" title="{$e.author.name}">
+                              <img class="media-object pull-left  img-circle" src="{$e.media_thumb}" >
+                           
+                            <h3 class="panel-title">
+                              &nbsp; {$e.author.name}  
+                            </h3>
+                             </a>
+                         </div>
+                         <div class="panel-body">
+                          <a href="{$e.link['@attributes'].href}" title="{$e.title}" target="_blank" class="btn btn-alt btn-xs pull-right"><i class="fa fa-github fa-3x pull-right"></i> View on<br/>GitHub</a>
+                             {$e.content|strip_tags: false}
+                         </div>
+                         <div class="panel-footer">
+
+                            <small>{$e.updated|date_format:"%A, %B %e, %Y @ %H:%M%p"}</small>
+                           
+                          
+                         </div>
+                    </div>
                   </div>
                   <div class="list-options">
-                       <a href="{$e.link['@attributes'].href}" target="_blank" class="btn btn-sm">View</a>
-
+                 
                       <!-- <button class="btn btn-sm">Delete</button>                                 -->
                   </div>
-              </div>
-
+              </div> 
             {/foreach}
       </div>
         <!-- All JS functions -->
