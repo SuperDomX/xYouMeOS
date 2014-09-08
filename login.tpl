@@ -69,7 +69,7 @@
                         Remember Me
                     </label>
                 </div> --><br/><br/>
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="">Center You</button>
+                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="" title="" data-original-title="">Center You</button>
 
                 <br/><br/>
                 <small>
@@ -133,8 +133,6 @@
 
         <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
         <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-        
-        <script src="js/bootstrap.min.js"></script>
         
         <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
 

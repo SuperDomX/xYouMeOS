@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.3.1
+ * @version v0.3.3
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -15,45 +15,27 @@
 		public function version($feed=false)					
 		{
 			if($feed){
-				$feed  = 'https://github.com/SuperDomX/xYouMeOS/commits/master.atom';
-				$xml   = simplexml_load_file($feed);
-				
-
-
+				$feed       = 'https://github.com/SuperDomX/xYouMeOS/commits/master.atom';
+				$xml        = simplexml_load_file($feed);
 				$namespaces = $xml->getNamespaces(true); // get namespaces
- 
+				
 				// iterate items and store in an array of objects
-				$items = array();
+				$items      = array();
 				foreach ($xml->entry as $item) {
-
-				  $tmp = $item;
-				
-				  // var_dump($item);
-				
-
-
-				  // $tmp = new stdClass(); 
-				  // $tmp->title = trim((string) $item->title);
-				  // $tmp->link  = $item->link->attributes();
-				  // $tmp->content  = trim((string) $item->content);
-				  // etc... 
-				  // now for the url in media:content
-				  //
-				  $tmp->media_thumb = trim((string)
+ 
+				  $item->media_thumb = trim((string)
 				  	$item->children($namespaces['media'])->attributes()->url
 				  );
 
-				  
-				  // add parsed data to the array
-				  $items[] = $tmp;
+				  $items[] = $item;
 				}
 
-				$json  = json_encode($items);
-				$array = json_decode($json,TRUE);		
+				$items  = json_encode($items);
+				$items = json_decode($items,TRUE);		
 
 				return array(
-					'success' => true,
-					'data'    => $array
+					'success' => count($array),
+					'data'    => $items
 				);
 			}
 		}
@@ -115,14 +97,29 @@
 
 		}
 
-		function fileManager(){ 
+		function fileManager($dir=null){ 
 			if($this->Key['is']['user']){
-				$user_dir = SVR_FILES.'/files/'.$_SESSION['user']['username'].'/';
+				$rm = array("../","..");
+				$dir = str_replace($rm, "", $dir);
+				$dir = ($dir) ? "$dir/" : null; 
+
+				$user_dir = SVR_FILES.'/files/'.$_SESSION['user']['username'].'/'.$dir;
 				
 				if( !is_dir($user_dir) ){
-					mkdir(SVR_FILES.'/files/');
+					if(!is_dir(SVR_FILES.'/files/'))
+						mkdir(SVR_FILES.'/files/');
+
 					mkdir($user_dir);
 				}
+
+				$dirs = array('Documents','Photos','Music','Videos','∞Trash');
+
+				foreach ($dirs as $d => $dir) {
+					if( !is_dir($user_dir.$dir) )
+						mkdir($user_dir.$dir);
+				}
+
+				
 
 				$url_dir = '/'.str_replace($_SERVER['DOCUMENT_ROOT'], "", $user_dir);
 

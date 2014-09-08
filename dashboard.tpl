@@ -81,7 +81,7 @@
                             <li><a href="#/{$Xtra}/{$method}"> Dashboard</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/profile">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <!-- <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li> -->
+                            <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                         </ul>
                         
                     </div>
@@ -289,23 +289,38 @@
                                             visibility : visible !important;
                                         }
                                     </style>
-                                    <div class="profile-pic hidden-xs text-center">
-                                        <img src="{$thumb}src=/x/X/xYouMeOS/images/g1.jpg&h=150"  >
+                                    <div class="profile-pic hidden-xs">
+                                        <img src="{$thumb}src=/x/X/xYouMeOS/images/g1.jpg&h=168"  >
                                         {if $user.username != $params[2]}
-                                        <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
-                                            <button type="button" class="btn btn-sm btn-alt   btn-block"  >
-                                                <strong>
-                                                    <i class="fa fa-user fa-2x pull-left"></i>
-                                                    {$user.username}
-                                                </strong>
-                                                <!-- <span class="caret"></span> -->
-                                            </button>
-                                            <!-- <ul class="dropdown-menu  animated flipInX">
-                                                <li><a href="">Dropdown link</a></li>
-                                                <li><a href="">Dropdown link</a></li>
-                                            </ul> -->
-                                        </div>
-                                      
+                                            <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
+                                                <button type="button" class="btn btn-sm  btn-block dropdown-toggle" data-toggle="dropdown"  >
+                                                    <strong>
+                                                        <i class="fa fa-user"></i>
+                                                        Change Avatar
+                                                    </strong>
+                                                    <!-- <span class="caret"></span> -->
+                                                </button>
+                                                <ul class="dropdown-menu  dropdown-menu-alt animated bounceIn" role="menu">
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                        <i class="fa fa-cloud-upload"></i> Upload Photo...</a>
+                                                    </li>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                        <i class="fa fa-folder"></i> Choose From Photos...</a>
+                                                    </li>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                        <i class="fa fa-camera"></i> Take Photo...</a>
+                                                    </li>
+                                                    
+                                                    <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                        <i class="fa fa-camera"></i> Edit Thumbnail...</a>
+                                                    </li> -->
+                                                    
+                                                    <li role="presentation" class="divider"></li>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                        <i class="fa fa-ban"></i> Remove Photo...</a>
+                                                    </li>
+                                                </ul>
+                                            </div> 
                                         {/if}
                                     </div>
                                     
@@ -353,6 +368,8 @@
                                     {$_DIR}
 
                                      This is your dashboard. Here you can manage a variety of different widgets that give you complete control over data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
+
+
                                 </div>
                             </div>
                             

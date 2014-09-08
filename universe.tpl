@@ -230,3 +230,6 @@
 		<script type="text/javascript" src="{$_DIR}js/jquery.tooltip.js" ></script>
 		
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
+
+		<script src="js/bootstrap.min.js"></script>
+        
