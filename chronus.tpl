@@ -1,4 +1,5 @@
-<section id="content">
+      <section id="content">
+        {include file="../xYouMeOS/notice.tpl"}  
         <link href="css/file-manager.css" rel="stylesheet"> 
         <!-- Breadcrumb -->
         <ol class="breadcrumb hidden-xs">
@@ -26,22 +27,31 @@
         
 
         <script type="text/javascript">
-            $('#fileManager').elfinder({
-              resizable   : true,
-              requestType : 'post',
-              url         : '/youMeOS/fileManager/',  // connector URL (REQUIRED)
+            var elf = $('#fileManager').elfinder({
+              resizable   : false,
+              requestType : 'POST',
+              lang : 'en',
+              url         : '/youMeOS/fileManager/{$folder}',  // connector URL (REQUIRED)
               // url      : '/x/X/xYouMeOS/php/connector.minimal.php',  // connector URL (REQUIRED)
               uiOptions   : {
                 toolbar   : [
                         ['back', 'forward', 'home', 'reload'],
-                        ['mkdir', 'mkfile', 'upload'],
+                        {if !$folder}['mkdir', 'mkfile', 'upload'],{/if}
                         ['view', 'sort'],
                         ['search']
                 ]
               },
+              {if $folder}
+              // commandsOptions: {
+              //   getfile: {
+              //     oncomplete: 'destroy' 
+              //   }
+              // },                            
+              getFileCallback: window.getFileCallback,
+              {/if}
               height  : $(window).height() - $('#content').parent().offset().top - 50
             });
-                 
+
             $('.elfinder-cwd-wrapper, .elfinder-navbar').niceScroll();
         </script>
  </section>

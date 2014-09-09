@@ -126,20 +126,20 @@
 
         <!-- // <script src="js/jquery.min.js"></script>  -->
 
-        
-        
         <script type="text/javascript" src="/bin/js/jq/jquery-2.0.0.js"></script>
 
         <!-- // <script src="js/jquery.min.js"></script>  -->
 
-        <script src="js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
-        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+        {$umeos_bin = "/x/X/xYouMeOS/"}
+
+        <script src="{$umeos_bin}js/jquery-ui.min.js"></script>     <!-- jQuery UI -->
+        <script src="{$umeos_bin}js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
         
         <script src="/x/html/layout/watchtower/lib/jquery-pjax/jquery.pjax.js"></script>
 
-        <script src="js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
+        <script src="{$umeos_bin}js/file-manager/elfinder.min.js"></script> <!-- File Manager -->
     
-        <script src="js/bootstrap.min.js"></script>
+        <script src="{$umeos_bin}js/bootstrap.min.js"></script>
         
     
         <script type="text/javascript">
@@ -228,6 +228,44 @@
             $('#box-register').submit(window.login);
  
         </script>
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        
+        <!-- Bootstrap -->
+        <!-- // <script src="js/bootstrap.min.js"></script> -->
+        <!-- Charts -->
+        <script src="{$umeos_bin}js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+        <script src="{$umeos_bin}js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+        <script src="{$umeos_bin}js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+        <script src="{$umeos_bin}js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+
+        <script src="{$umeos_bin}js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+        <script src="{$umeos_bin}js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="{$umeos_bin}js/charts.js"></script> <!-- All the above chart related functions -->
+
+        <!-- Map -->
+        <script src="{$umeos_bin}js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="{$umeos_bin}js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+
+        <!--  Form Related -->
+        <script src="{$umeos_bin}js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+        <!-- UX -->
+        <script src="{$umeos_bin}js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+        <!-- Text Editor -->
+        <script src="{$umeos_bin}js/editor.min.js"></script> <!-- WYSIWYG Editor -->
+
+        <!-- Other -->
+        <script src="{$umeos_bin}js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="{$umeos_bin}js/feeds.min.js"></script> <!-- News Feeds -->
+        
+        <!--  Form Related -->
+        <script src="{$umeos_bin}js/validation/validate.min.js"></script> <!-- jQuery Form Validation Library -->
+        <script src="{$umeos_bin}js/validation/validationEngine.min.js"></script> <!-- jQuery Form Validation Library - requirred with above js -->
+
+        <!-- All JS functions -->
+        <script src="{$umeos_bin}js/functions.js"></script>  
     </body>
 </html>
 

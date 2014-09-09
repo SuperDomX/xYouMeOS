@@ -1414,7 +1414,9 @@ embed.elfinder-quicklook-preview-audio {
 .elfinder-button-icon-mkdir {
 	background-image: url(../img/icon/folder.png);
 }
-
+.elfinder-button-icon-info{
+	background-image: url(../img/icon/spam.png);
+}
 .elfinder-button-icon-mkfile {
 	background-image: url(../img/icon/file.png);
 }

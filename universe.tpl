@@ -10,7 +10,7 @@
 		
 
 		<link href='http://fonts.googleapis.com/css?family=Lekton|Lora:400,700,400italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="{$_DIR}css/font-awesome.min.css"> 
+		<link rel="stylesheet" href="/bin/css/font-awesome-4.2.0.min.css"> 
 		<link rel="stylesheet" type="text/css" href="{$_DIR}styles/style.css">
 
 		<link href="css/bootstrap.css" rel="stylesheet">

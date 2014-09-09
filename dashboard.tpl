@@ -9,7 +9,7 @@
     <body id="skin-blur-violate">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/animate.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="/bin/css/font-awesome-4.2.0.min.css" rel="stylesheet">
         <link href="css/form.css" rel="stylesheet">
         <link href="css/calendar.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
@@ -84,7 +84,7 @@
                         <ul class="dropdown-menu profile-menu">
                             
                             <li><a href="#/{$Xtra}/{$method}"> Dashboard</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="#/messages.html">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="#/inbox/messages">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/profile">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                         </ul>
@@ -161,7 +161,7 @@
                 <!-- Side Menu -->
                 <ul class="list-unstyled side-menu font-icons">
                     <li class="active">
-                        <a class="" href="#/{$Xtra}/dashboard/{$user.username}" > <!-- /{$user.username} -->
+                        <a class="" href="#/{$Xtra}/dashboard" > <!-- /{$user.username} -->
                             <span class="icon">&#61698;</span> <span class="menu-item">
                             Dashboard
                             </span>
@@ -190,6 +190,14 @@
                             <span class="menu-item">Timeless Nights</span>
                         </a>
                     </li>
+
+                    <li>
+                        <a  href="#/{$Xtra}/aethernet">
+                             <span class="icon">&#61838;</span> <span class="menu-item">The AetherNets</span>
+                        </a>
+                    </li>
+
+
                     <li>
                         <a class="sa-side-widget" href="#/content-widgets.html">
                             <span class="menu-item">Widgets</span>
@@ -290,8 +298,10 @@
                     <div class="row">
                         <div class="col-md-9">
                             <div class="tile-light p-5 m-b-15">
+
                                 <div class="cover p-relative">
                                     <img src="img/cover-bg.jpg" class="w-100 " alt="">
+
                                     <style type="text/css">
                                         div.profile-pic:hover > div.btn-group{
                                             display    : block !important;
@@ -327,6 +337,10 @@
                                                     <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
                                                         <i class="fa fa-upload"></i> Upload Avatar...</a>
                                                     </li>
+
+                                                    <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
+                                                        <i class="fa fa-folder-open-o"></i> Choose from Photos...</a>
+                                                    </li>
                                                     
                                                     
 
@@ -343,43 +357,99 @@
                                         {/if}
                                     </div>
                                     
-                                   
+                                    
 
                                     
-                                <div class="profile-btn  text-center">
+                                    <div class="profile-btn  text-center">
 
-                                        <div class="btn-group tile input-focused"   >
+                                            <div class="btn-group tile input-focused"   >
+                                                
+                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
+                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> -->
+                                                <a class="btn btn-alt btn-sm hidden-xs">0 Comments</a>
+                                                <button class="btn btn-alt btn-sm">0 Connections</button>
+                                                <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> -->
+                                                
+                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(7)">
+                                                <i class="fa fa-sun-o"></i>rbiting System
+                                                </button> 
+                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(1000)">
+                                                St<i class="fa fa-star"></i>r Field
+                                                </button> 
+                                                <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                                                <i class="fa fa-ge"></i>  
+                                                </a>  -->
+
+
+
+                                                <button class="btn btn-alt btn-sm" onclick=" zoomOut(133333);">
+                                                <i class="fa fa-rocket"></i> Galaxy
+                                                </button> 
+                                            </div>
                                             
-                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
-                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> -->
-                                            <a class="btn btn-alt btn-sm hidden-xs">0 Comments</a>
-                                            <button class="btn btn-alt btn-sm">0 Connections</button>
-                                            <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> -->
-                                            
-                                            <button class="btn btn-alt btn-sm" onclick="zoomOut(7)">
-                                            <i class="fa fa-sun-o"></i>rbiting System
-                                            </button> 
-                                            <button class="btn btn-alt btn-sm" onclick="zoomOut(1000)">
-                                            St<i class="fa fa-star"></i>r Field
-                                            </button> 
-                                            <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                                            <i class="fa fa-ge"></i>  
-                                            </a>  -->
 
-
-
-                                            <button class="btn btn-alt btn-sm" onclick=" zoomOut(133333);">
-                                            <i class="fa fa-rocket"></i> Galaxy
-                                            </button> 
-                                        </div>
                                         
-
+                                    </div>
                                     
                                 </div>
- 
-                                </div>
+                                <div class="text-center  tile-dark" >
+                        
+                                        <div class="pie-chart-tiny user-stat" data-percent="0">
+                                            <span class="percent"></span>
+                                            <span class="pie-title">Messages</span>
+                                        </div>
+                                        <div class="pie-chart-tiny user-stat" data-percent="23">
+                                            <span class="percent"></span>
+                                            <span class="pie-title">Comments</span>
+                                        </div>
+                                        <div class="pie-chart-tiny user-stat" data-percent="57">
+                                            <span class="percent"></span>
+                                            <span class="pie-title">Emails Sent</span>
+                                        </div>
+                                        <!-- <div class="pie-chart-tiny user-stat" data-percent="0">
+                                            <span class="percent"></span>
+                                            <span class="pie-title">Sales Rate </span>
+                                        </div> -->
+                                        <div class="pie-chart-tiny user-stat" data-percent="81">
+                                            <span class="percent"></span>
+                                            <span class="pie-title">Invitations</span>
+                                        </div>
+                                    </div>
+                                
+                                <style type="text/css">
+                                    .user-stat .percent {
+                                    position     : absolute;
+                                    text-align   : center;
+                                    width        : 100%;
+                                    margin-top   : 27px;
+                                    font-size    : 12px;
+                                    color        : rgba(255, 255, 255, 0.68);
+                                    text-shadow  : none;
+                                    padding-left : 2px;
+                                    }
+                                </style>
+                                <script type="text/javascript">
+                                    $(document).ready(function  () {
+                                         $('.pie-chart-tiny.user-stat').easyPieChart({
+                                               easing     : 'easeOutBounce',
+                                               barColor   : 'rgba(255,255,255,0.75)',
+                                               trackColor : 'rgba(0,0,0,0.3)',
+                                               scaleColor : 'rgba(255,255,255,0.3)',
+                                               lineCap    : 'square',
+                                               lineWidth  : 4,
+                                               size       : 70,
+                                               animate    : 3000,
+                                                onStep: function(from, to, percent) {
+                                                    $(this.el).find('.percent').text(Math.round(percent));
+                                                }
+                                            });
 
-
+                                            var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
+                                            $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
+                                                $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
+                                            });
+                                    })
+                                </script>
                                
                                 
 <!-- 
@@ -423,7 +493,7 @@
                             </div>
 
 
-                             <!-- Modal Take Photo -->  
+                             <!-- Modal Upload Avatar -->  
                             <div class="modal fade" id="uploadAvatar" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -446,8 +516,57 @@
                                 </div>
                             </div>
 
+                            <!-- Choose from Photos -->
+                            <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        {$btns[] = [
+                                            'id'      => 'new-message-close',
+                                            'class'   => 'btn-lg btn-block',
+                                            'dismiss' => 1,
+                                            'html'    =>'<i class="fa fa-ban"></i> Cancel'
+                                        ]}
+                                        {include 
+                                            file    = "../../html/~blox/modal-body.tpl" 
+                                            title   = '<i class="fa fa-user"> </i> Double Click to Choose Photo' 
+                                            load    = 'youMeOS/chronus/Photos'
+                                            buttons = $btns
+                                        }
+                                        <script type="text/javascript">
+                                        window.getFileCallback = function(file) {
+                                            $('#selectAvatar').modal('hide');
+
+                                            $.ajax({
+                                                url      : '/users/avatar/selectAvatar/.json',
+                                                type     : "POST",
+                                                data     : {
+                                                    src : file.url
+                                                },
+                                                dataType : 'json',
+                                                success  : function(data, textStatus, jqXHR){
+                                                    $('.profile-pic').attr({
+                                                        src : file.url
+                                                    });
+
+                                                    $('.profile-pic img').attr({
+                                                        src : file.url
+                                                    });
+                                                }
+                                            });
+
+                                            // return false;
+                                        }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div> 
                             
-                            
+                            <style type="text/css">
+                            .modal #content{
+                                margin: 0;
+                            }
+                            </style>
+
                             <div class="row">
                                 <!-- Works -->
                                 <div class="col-md-7">
@@ -878,46 +997,6 @@
             <![endif]-->
            
         </section>
-        
-
-
-        <!-- Javascript Libraries -->
-        <!-- jQuery -->
-        
-        <!-- Bootstrap -->
-        <!-- // <script src="js/bootstrap.min.js"></script> -->
-        <!-- Charts -->
-        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
-        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
-        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
-        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
-
-        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
-        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
-        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
-
-        <!-- Map -->
-        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
-        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
-
-        <!--  Form Related -->
-        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
-
-        <!-- UX -->
-        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
-
-        <!-- Other -->
-        <script src="js/calendar.min.js"></script> <!-- Calendar -->
-        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
-        
-        <!--  Form Related -->
-        <script src="js/validation/validate.min.js"></script> <!-- jQuery Form Validation Library -->
-        <script src="js/validation/validationEngine.min.js"></script> <!-- jQuery Form Validation Library - requirred with above js -->
-
-        <!-- All JS functions -->
-        <script src="js/functions.js"></script>  
-
-
         <script type="text/javascript">
             $(window).on('hashchange', function() { 
                 var go = window.location.hash.replace('#','');
@@ -946,6 +1025,5 @@
                 }
             });
         </script>
-
     </body>
 </html>

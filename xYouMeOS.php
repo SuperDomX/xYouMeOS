@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.3.8
+ * @version v0.3.9
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -46,9 +46,11 @@
 			 
 		}
 
-		public function chronus()
+		public function chronus($folder=null)
 		{
-			 
+			 return array(
+			 	'folder' => $folder
+			 );
 		}
 
 		/**
@@ -113,12 +115,16 @@
 					mkdir($user_dir);
 				}
 
-				$dirs = array('Documents','Photos','Music','Videos','∞Trash');
+				if(!$dir){
+					$dirs = array('Documents','Photos','Music','Videos','∞Trash');
 
-				foreach ($dirs as $d => $dir) {
-					if( !is_dir($user_dir.$dir) )
-						mkdir($user_dir.$dir);
+					foreach ($dirs as $d => $dir) {
+						if( !is_dir($user_dir.$dir) )
+							mkdir($user_dir.$dir);
+					}
 				}
+
+				
 
 				
 

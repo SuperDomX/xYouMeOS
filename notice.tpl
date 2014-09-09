@@ -2,12 +2,29 @@
 <div id="messages" class="tile drawer animated">
     <div class="listview narrow">
         <div class="media">
-            <a href="#/">Send a New Message</a>
+            <a href="#new-message" class="btn btn-alt btn-xs" data-toggle="modal" 
+                
+            >
+                <i class="fa fa-paper-plane-o"></i> Send a Message
+            </a>
             <span class="drawer-close">&times;</span>
             
         </div>
         <div class="overflow" style="height: 254px">
-        	<h3>No Messages</h3>
+        	
+            {if !$notice.messages}
+            <section id="error-page" class="tile">
+                <h1 class="m-b-10">Your Inbox is Empty</h1>
+                <p>There are no new messages.</p>
+                <div class="btn-group">
+                    <a href="#new-message"  class="btn btn-alt btn-sm  " data-toggle="modal" ><i class='fa fa-comment'></i> Compose Message</a>
+                    <a href="#/inbox/messages"  class="btn btn-alt btn-sm  "><i class='fa fa-inbox'></i> Go to Inbox</a>     
+                </div>
+            </section>
+            {/if}
+
+            
+
             <!-- <div class="media">
                 <div class="pull-left">
                     <img width="40" src="img/profile-pics/1.jpg" alt="">
@@ -91,10 +108,35 @@
             </div> -->
         </div>
         <div class="media text-center whiter l-100">
-            <a href="#/"><small>VIEW ALL</small></a>
+            <a href="#/inbox/messages" class="btn btn-alt btn-xs"><small>VIEW ALL</small></a>
         </div>
     </div>
 </div>
+
+<!-- Compose -->
+<div class="modal fade" id="new-message">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            {$btns[] = [
+                'id'    => 'new-message-send',
+                'class' => 'btn-lg',
+                'html'  => '<i class="fa fa-paper-plane"></i> Send'
+            ]}
+            {$btns[] = [
+                'id'      => 'new-message-close',
+                'class'   => 'btn-lg pull-right',
+                'dismiss' => 1,
+                'html'    =>'<i class="fa fa-ban"></i> Cancel'
+            ]}
+            {include 
+                file    = "../../html/~blox/modal-body.tpl" 
+                title   = '<i class="fa fa-comment"> </i> New Message' 
+                load    = 'inbox/newMessage' 
+                buttons = $btns
+            }
+        </div>
+    </div>
+</div> 
 
 <!-- Notification Drawer -->
 <div id="notifications" class="tile drawer animated">
@@ -166,9 +208,12 @@
     </div>
 </div>
 <script type="text/javascript">
+    
 	if(typeof($.nicescroll) == 'object')
-		$(document).ready(function() {
-			$('#messages').nicescroll();
-			$('#notifications').nicescroll();
+		$(document).ready(function() { 
+   //          $('#messages').nicescroll();
+			// $('#notifications').nicescroll();
+
 		});
+
 </script>
