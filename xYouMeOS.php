@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.4.0
+ * @version v0.4.0-RC
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -43,7 +43,8 @@
 
 		public function login()
 		{
-			 
+			$r['count_universes'] = $this->countUsers()['data'];
+			return $r;	 
 		}
 
 		public function chronus($folder=null)

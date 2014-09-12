@@ -60,7 +60,9 @@
             </form>
 
             <form class="box tile animated " id="box-login" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Travel to your Universe</h2>
+                
+                <h3 class="m-t-0 m-b-15">Travel to You</h3>
+                <h5> #Youinverses: {$count_universes} </h5>
                 <input type="text" class="login-control m-b-10" placeholder="Universal Name" name="login[username]">
                 <input type="password" class="login-control" placeholder="Key" name="login[password]">
                 <!-- <div class="checkbox m-b-20">
