@@ -203,7 +203,8 @@
                             <span class="menu-item">Widgets</span>
                         </a>
                     </li>
-                   <!-- 
+                    {if $masterKey.is.admin}
+                   
                     <li class="dropdown">
                         <a class="sa-side-photos" href="">
                             <span class="menu-item">PHOTO GALLERY</span>
@@ -270,7 +271,8 @@
                             <li><a href="#/login.html">Login</a></li>
                             <li><a href="#/404.html">404 Error</a></li>
                         </ul>
-                    </li> -->
+                    </li>
+                    {/if}
                 </ul>
 
             </aside>
@@ -392,30 +394,31 @@
                                     </div>
                                     
                                 </div>
+                                <!-- 
                                 <div class="text-center  tile-dark" >
                         
-                                        <div class="pie-chart-tiny user-stat" data-percent="0">
-                                            <span class="percent"></span>
-                                            <span class="pie-title">Messages</span>
-                                        </div>
-                                        <div class="pie-chart-tiny user-stat" data-percent="23">
-                                            <span class="percent"></span>
-                                            <span class="pie-title">Comments</span>
-                                        </div>
-                                        <div class="pie-chart-tiny user-stat" data-percent="57">
-                                            <span class="percent"></span>
-                                            <span class="pie-title">Emails Sent</span>
-                                        </div>
-                                        <!-- <div class="pie-chart-tiny user-stat" data-percent="0">
-                                            <span class="percent"></span>
-                                            <span class="pie-title">Sales Rate </span>
-                                        </div> -->
-                                        <div class="pie-chart-tiny user-stat" data-percent="81">
-                                            <span class="percent"></span>
-                                            <span class="pie-title">Invitations</span>
-                                        </div>
+                                    <div class="pie-chart-tiny user-stat" data-percent="0">
+                                        <span class="percent"></span>
+                                        <span class="pie-title">Messages</span>
                                     </div>
-                                
+                                    <div class="pie-chart-tiny user-stat" data-percent="23">
+                                        <span class="percent"></span>
+                                        <span class="pie-title">Comments</span>
+                                    </div>
+                                    <div class="pie-chart-tiny user-stat" data-percent="57">
+                                        <span class="percent"></span>
+                                        <span class="pie-title">Emails Sent</span>
+                                    </div>
+                                    <div class="pie-chart-tiny user-stat" data-percent="0">
+                                        <span class="percent"></span>
+                                        <span class="pie-title">Sales Rate </span>
+                                    </div>
+                                    <div class="pie-chart-tiny user-stat" data-percent="81">
+                                        <span class="percent"></span>
+                                        <span class="pie-title">Invitations</span>
+                                    </div>
+                                </div>
+                                 -->
                                 <style type="text/css">
                                     .user-stat .percent {
                                     position     : absolute;
@@ -429,26 +432,26 @@
                                     }
                                 </style>
                                 <script type="text/javascript">
-                                    $(document).ready(function  () {
-                                         $('.pie-chart-tiny.user-stat').easyPieChart({
-                                               easing     : 'easeOutBounce',
-                                               barColor   : 'rgba(255,255,255,0.75)',
-                                               trackColor : 'rgba(0,0,0,0.3)',
-                                               scaleColor : 'rgba(255,255,255,0.3)',
-                                               lineCap    : 'square',
-                                               lineWidth  : 4,
-                                               size       : 70,
-                                               animate    : 3000,
-                                                onStep: function(from, to, percent) {
-                                                    $(this.el).find('.percent').text(Math.round(percent));
-                                                }
-                                            });
+                                    // $(document).ready(function  () {
+                                    //      $('.pie-chart-tiny.user-stat').easyPieChart({
+                                    //            easing     : 'easeOutBounce',
+                                    //            barColor   : 'rgba(255,255,255,0.75)',
+                                    //            trackColor : 'rgba(0,0,0,0.3)',
+                                    //            scaleColor : 'rgba(255,255,255,0.3)',
+                                    //            lineCap    : 'square',
+                                    //            lineWidth  : 4,
+                                    //            size       : 70,
+                                    //            animate    : 3000,
+                                    //             onStep: function(from, to, percent) {
+                                    //                 $(this.el).find('.percent').text(Math.round(percent));
+                                    //             }
+                                    //         });
 
-                                            var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
-                                            $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
-                                                $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
-                                            });
-                                    })
+                                    //         var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
+                                    //         $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
+                                    //             $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
+                                    //         });
+                                    // })
                                 </script>
                                
                                 
@@ -467,8 +470,52 @@
 
                                      This is your dashboard, no one else can see this but You. Here you can manage a variety of different widgets that give you complete control over your data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
                                 </div> -->
-                            </div>
-                            
+                            </div> 
+
+                            <!-- Choose from Photos -->
+                            <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        {$btns[] = [
+                                            'id'      => 'new-message-close',
+                                            'class'   => 'btn-lg btn-block',
+                                            'dismiss' => 1,
+                                            'html'    =>'<i class="fa fa-ban"></i> Cancel'
+                                        ]}
+                                        {include 
+                                            file    = "../../html/~blox/modal-body.tpl" 
+                                            title   = '<i class="fa fa-user"> </i> Double Click to Choose Photo' 
+                                            load    = 'youMeOS/chronus/Photos'
+                                            buttons = $btns
+                                        }
+                                        <script type="text/javascript">
+                                        window.getFileCallback = function(file) {
+                                            $('#selectAvatar').modal('hide');
+
+                                            $.ajax({
+                                                url      : '/users/avatar/selectAvatar/.json',
+                                                type     : "POST",
+                                                data     : {
+                                                    src : file.url
+                                                },
+                                                dataType : 'json',
+                                                success  : function(data, textStatus, jqXHR){
+                                                    $('.profile-pic').attr({
+                                                        src : file.url
+                                                    });
+
+                                                    $('.profile-pic img').attr({
+                                                        src : file.url
+                                                    });
+                                                }
+                                            });
+
+                                            // return false;
+                                        }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div> 
                              <!-- Modal Take Photo -->  
                             <div class="modal fade" id="takePhoto" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
@@ -516,50 +563,7 @@
                                 </div>
                             </div>
 
-                            <!-- Choose from Photos -->
-                            <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        {$btns[] = [
-                                            'id'      => 'new-message-close',
-                                            'class'   => 'btn-lg btn-block',
-                                            'dismiss' => 1,
-                                            'html'    =>'<i class="fa fa-ban"></i> Cancel'
-                                        ]}
-                                        {include 
-                                            file    = "../../html/~blox/modal-body.tpl" 
-                                            title   = '<i class="fa fa-user"> </i> Double Click to Choose Photo' 
-                                            load    = 'youMeOS/chronus/Photos'
-                                            buttons = $btns
-                                        }
-                                        <script type="text/javascript">
-                                        window.getFileCallback = function(file) {
-                                            $('#selectAvatar').modal('hide');
-
-                                            $.ajax({
-                                                url      : '/users/avatar/selectAvatar/.json',
-                                                type     : "POST",
-                                                data     : {
-                                                    src : file.url
-                                                },
-                                                dataType : 'json',
-                                                success  : function(data, textStatus, jqXHR){
-                                                    $('.profile-pic').attr({
-                                                        src : file.url
-                                                    });
-
-                                                    $('.profile-pic img').attr({
-                                                        src : file.url
-                                                    });
-                                                }
-                                            });
-
-                                            // return false;
-                                        }
-                                        </script>
-                                    </div>
-                                </div>
-                            </div> 
+                           
                             
                             <style type="text/css">
                             .modal #content{

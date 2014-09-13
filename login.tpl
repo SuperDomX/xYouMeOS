@@ -167,7 +167,7 @@
                                 
                             var go = "/youMeOS/dashboard";
 
-                            window.location.hash = "#"+go;
+                            // window.location.hash = "#"+go;
 
                             $('#detailBody').load('/html'+go); 
 
