@@ -999,6 +999,11 @@
         </section>
         <script type="text/javascript">
             $(window).on('hashchange', function() { 
+
+                $('#content').html(
+                    '<div id="loader"><div><span class="atom" /></span><p id="loadtext">loading &hellip;</p></div></div>'
+                );
+
                 var go = window.location.hash.replace('#','');
                 if(go != ''){
                     console.log('Loading '+go);
@@ -1023,7 +1028,18 @@
 
                     {/if}
                 }
+
+
             });
         </script>
+
+        <style type="text/css">
+            
+            #loader{
+                background: none;
+            }
+
+        </style>
+        
     </body>
 </html>
