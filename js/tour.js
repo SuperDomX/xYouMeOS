@@ -168,7 +168,7 @@ var GALAXY_TOUR = [{
     "z"          : 4999999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : "Together, let us tether the Internet's Multi~Verse!" 
+    "message"    : "Together, we can tether the Internet's Multi~Verse!" 
 },  
  {
     "rx"         : -0.12216429754294249,
@@ -176,7 +176,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Now; Weave your Universal Web's OS & Godspeed!",
+    "message"    : "Now; Weave your Web's Universal OS & Godspeed!",
     "callback"   : fadeInLoginForm
 }];
 var cinematic_width = 5;
@@ -222,9 +222,9 @@ Tour.prototype = {
   getState: function() {
 
     var camera_state = {
-      rx: camera.rotation.x,
-      ry: camera.rotation.y,
-      z: camera.position.z
+      rx : camera.rotation.x,
+      ry : camera.rotation.y,
+      z  : camera.position.z
     };
 
     var state;
