@@ -26,10 +26,10 @@
             <section id="login" class="block-area">
             <header>
                 <br/><br/>
-                <h1>You Me OS</h1>
+                <h1>YouMeO.S.</h1>
                 
                 <h4>
-                    Welcome to the Future
+                    Welcome to the <s>World Wide</s> Universal Web
                 </h4>
 
             </header>

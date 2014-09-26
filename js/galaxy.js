@@ -1,19 +1,19 @@
-var galacticTexture0 = THREE.ImageUtils.loadTexture( "images/galactic_sharp.png" );
-var galacticTexture1 = THREE.ImageUtils.loadTexture( "images/galactic_blur.png" );
-var galaxypng = THREE.ImageUtils.loadTexture('images/galactictop.png');
+var galacticTexture0 = THREE.ImageUtils.loadTexture("images/galactic_sharp.png");
+var galacticTexture1 = THREE.ImageUtils.loadTexture("images/galactic_blur.png");
+var galaxypng        = THREE.ImageUtils.loadTexture("images/galactictop.png");
 
 var galacticUniforms = {
-	color:     { type: "c", value: new THREE.Color( 0xffffff ) },
-	texture0:   { type: "t", value: galacticTexture0 },
-	texture1:   { type: "t", value: galacticTexture1 },
-	idealDepth: { type: "f", value: 1.0 },
-	blurPower: { type: "f", value: 1.0 },
-	blurDivisor: { type: "f", value: 2.0 },
-	sceneSize: { type: "f", value: 120.0 },
-	cameraDistance: { type: "f", value: 800.0 },
-	zoomSize: 	{ type: "f", value: 1.0 },
-	scale: 		{ type: "f", value: 1.0 },
-	heatVision: { type: "f", value: 0.0 },
+	color          : { type: "c", value: new THREE.Color( 0xffffff ) },
+	texture0       : { type: "t", value: galacticTexture0 },
+	texture1       : { type: "t", value: galacticTexture1 },
+	idealDepth     : { type: "f", value: 1.0 },
+	blurPower      : { type: "f", value: 1.0 },
+	blurDivisor    : { type: "f", value: 2.0 },
+	sceneSize      : { type: "f", value: 120.0 },
+	cameraDistance : { type: "f", value: 800.0 },
+	zoomSize       : { type: "f", value: 1.0 },
+	scale          : { type: "f", value: 1.0 },
+	heatVision     : { type: "f", value: 0.0 },
 };
 
 var galacticAttributes = {
@@ -25,27 +25,27 @@ var galacticAttributes = {
 function generateGalaxy(){
 	setLoadMessage("Generating the galaxy");
 	var galacticShaderMaterial = new THREE.ShaderMaterial( {
-		uniforms: 		galacticUniforms,
-		attributes:     galacticAttributes,
-		vertexShader:   shaderList.galacticstars.vertex,
-		fragmentShader: shaderList.galacticstars.fragment,
-
-		blending: 		THREE.AdditiveBlending,
-		depthTest: 		false,
-		depthWrite: 	false,
-		transparent:	true,
-		sizeAttenuation: true,
-		opacity: 		0.0,
+		uniforms        : galacticUniforms,
+		attributes      : galacticAttributes,
+		vertexShader    : shaderList.galacticstars.vertex,
+		fragmentShader  : shaderList.galacticstars.fragment,
+		
+		blending        : THREE.AdditiveBlending,
+		depthTest       : false,
+		depthWrite      : false,
+		transparent     : true,
+		sizeAttenuation : true,
+		opacity         : 0.0
 	});
 
-	var pGalaxy = new THREE.Geometry();	
-
-	var count = 100000;
-	var numArms = 6;
-	var arm = 0;
+	var pGalaxy     = new THREE.Geometry();	
+	
+	var count       = 100000;
+	var numArms     = 30;
+	var arm         = 0;
 	var countPerArm = count / numArms;
-	var ang = 0;
-	var dist = 0;
+	var ang         = 0;
+	var dist        = 0;
 	for( var i=0; i<count; i++ ){
 		var x = Math.cos(ang) * dist;
 		var y = 0;
@@ -81,7 +81,7 @@ function generateGalaxy(){
 			p.size = 100000;
 			// p.x = -100 * 20;
 			// p.y = 0;
-			// p.z = -1500 * 20;;
+			// p.z = -1500 * 20;
 		}
 		pGalaxy.vertices.push( p );
 
@@ -105,11 +105,11 @@ function generateGalaxy(){
 	var pGalacticSystem = new THREE.ParticleSystem( pGalaxy, galacticShaderMaterial );
 
 	//	set the values to the shader
-	var values_size = galacticAttributes.size.value;
+	var values_size  = galacticAttributes.size.value;
 	var values_color = galacticAttributes.customColor.value;
 
 	for( var v = 0; v < pGalaxy.vertices.length; v++ ) {		
-		values_size[ v ] = pGalaxy.vertices[v].size;
+		values_size[ v ]  = pGalaxy.vertices[v].size;
 		values_color[ v ] = pGalaxy.colors[v];
 	}
 
@@ -143,14 +143,20 @@ function generateGalaxy(){
 	pGalacticSystem.add( plane );	
 
 	//	a measurement of the galactic plane
-	var measurement = createDistanceMeasurement( new THREE.Vector3( 0,0,-55000 ), new THREE.Vector3( 0,0,55000 ) );
-	measurement.position.y = -1000;
-	measurement.visible = false;
-	attachLegacyMarker( "This is roughly 400,000,000,000 (Billion) Stars!", measurement, 1.0, {min:6000, max: 120000} );
+	var measurement             = createDistanceMeasurement( new THREE.Vector3( 0,0,-55000 ), new THREE.Vector3( 0,0,55000 ) );
+	measurement.position.y      = -1000;
+	measurement.visible         = false;
+	
 	pGalacticSystem.add( measurement );
-	measurement.rotation.x = Math.PI;
-
+	measurement.rotation.x      = Math.PI;
+	
+	
+	
 	pGalacticSystem.measurement = measurement;
+
+	attachLegacyMarker( "This is roughly 400,000,000,000 (Billion) Stars!", measurement, 1.0, {min:6000, max: 120000} );
+	
+
 	window.toggleGalacticMeasurement = function( desired ){
 		if( desired == undefined )
 			pGalacticSystem.measurement.visible = !this.measurement.visible;
@@ -167,10 +173,16 @@ function generateGalaxy(){
 		depthWrite  : false,		
 		wireframe   : true,
 		opacity     : 1.0,
-	})	
+	});
+
+	// 
 	var isogeo = new THREE.IcosahedronGeometry( 40000, 4 );	
 	var matrix = new THREE.Matrix4();
-	matrix.scale( new THREE.Vector3(1,0,1) );
+
+	// Length, Bubble, Width
+	matrix.scale( new THREE.Vector3(1.5,0,1.5) );
+
+
 	isogeo.applyMatrix( matrix );	
 	var isoball = new THREE.Mesh( isogeo, cylinderMaterial );
 	isoball.material.map.wrapS = THREE.RepeatWrapping;
@@ -192,11 +204,11 @@ function generateGalaxy(){
 		galacticUniforms.zoomSize.value = 1.0 + 10000 / camera.position.z;
 		
 		//	scale the particles based off of screen size
-		var areaOfWindow = window.innerWidth * window.innerHeight;
-
-		galacticUniforms.scale.value = Math.sqrt(areaOfWindow) * 1.5;
-
-		galacticTopMaterial.opacity = galacticShaderMaterial.opacity;
+		var areaOfWindow                = window.innerWidth * window.innerHeight;
+		
+		galacticUniforms.scale.value    = Math.sqrt(areaOfWindow) * 1.5;
+		
+		galacticTopMaterial.opacity     = galacticShaderMaterial.opacity;
 
 		//	for heat vision...
 		if( pSystem ){
@@ -217,7 +229,7 @@ function generateGalaxy(){
 
 		}
 		
-		// console.log( galacticUniforms.zoomSize.value);
+		console.log( galacticUniforms.zoomSize.value);
 		if( camera.position.z < 2500 ){
 			if( galacticShaderMaterial.opacity > 0 )
 				galacticShaderMaterial.opacity -= 0.05;
@@ -247,16 +259,16 @@ function generateGalaxy(){
 	}
 
 	//	position it as if the disc visible in the star data were the actual galactic disc
-	pGalacticSystem.position.x = 11404;
-	pGalacticSystem.position.y = 14000;
-	pGalacticSystem.position.z = 10000;
-
-	pGalacticSystem.rotation.x = 2.775557;
-	pGalacticSystem.rotation.y = -0.4;
-	pGalacticSystem.rotation.z = -1.099999;
-
-	pGalacticSystem.targetPosition = pGalacticSystem.position.clone();
-	pGalacticSystem.zeroRotation = new THREE.Vector3();
+	pGalacticSystem.position.x     = 11404;
+	pGalacticSystem.position.y     = 14000;
+	pGalacticSystem.position.z     = 10000;
+	
+	pGalacticSystem.rotation.x     = 2.775557;
+	pGalacticSystem.rotation.y     = -0.4;
+	pGalacticSystem.rotation.z     = -1.099999;
+	
+	// pGalacticSystem.targetPosition = pGalacticSystem.position.clone();
+	pGalacticSystem.zeroRotation   = new THREE.Vector3();
 	pGalacticSystem.targetRotation = pGalacticSystem.rotation.clone();
 
 
