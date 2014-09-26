@@ -96,10 +96,25 @@
             <!-- Forgot Password -->
             <form class="box animated tile" id="box-reset" action="/.json">
                 <h2 class="m-t-0 m-b-15">Reset Key</h2>
-                <p>A new Key will be sent to your email address.</p>
-                <input type="email" class="login-control m-b-20" placeholder="Email Address">    
+                <p>A link will be sent to reset your Key.</p>
+                <input required type="email" class="login-control m-b-20" placeholder="Email Address" name="login[email]">    
+                <input type="hidden" name="login[action]" value="reset" >
+                <button class="btn btn btn-lg btn-block btn-alt  m-r-5 box-switcher" data-switch="box-secret" type="submit" 
+                onclick="$('#box-reset').submit()" >Reset Key</button>
+                <br/>
+                <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
+            </form>
 
-                <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Reset Key</button>
+            <!-- Reset Password -->
+            <form class="box animated tile" id="box-secret" action="/.json">
+                <h2 class="m-t-0 m-b-15">Secret Key Code</h2>
+                <p>Please enter the keycode sent to your email</p>
+                <input required type="text" class="login-control m-b-20" placeholder="Secret Code" name="login[secret]">    
+                <input required type="password" class="login-control m-b-20" placeholder="New Key" name="login[password]">    
+                <input required type="password" class="login-control m-b-20" placeholder="Confirm Key" name="login[confirm]">    
+                <input type="hidden" name="login[action]" value="secret" >
+                <button class="btn btn btn-lg btn-block btn-alt  m-r-5" data-switch="box-login" type="submit" 
+                onclick="$('#box-secret').submit()">Update Key</button>
                 <br/>
                 <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
             </form>
@@ -273,6 +288,7 @@
 
             $('#box-login').submit(window.login);
             $('#box-register').submit(window.login);
+            $('#box-reset').submit(window.login);
  
         </script>
     </body>
