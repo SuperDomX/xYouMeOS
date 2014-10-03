@@ -139,7 +139,7 @@ function equalizeTouchTracking( event ){
 
 	var touch = event.touches[0];
 	pmouseX = mouseX = touch.pageX - window.innerWidth * 0.5;
-	pmouseX = mouseY = touch.pageY- window.innerHeight * 0.5;	
+	pmouseX = mouseY = touch.pageY - window.innerHeight * 0.5;	
 }
 
 function touchStart( event ){
@@ -189,7 +189,7 @@ function touchMove( event ){
 
 		if(dragging){			
 			doCameraRotationFromInteraction();
-	    window.setMinimap(dragging);
+	    	window.setMinimap(dragging);
 		}	
 	}
 
@@ -203,7 +203,7 @@ function touchMove( event ){
 
 		var pinchAmount = touchDelta - previousTouchDelta;
 		// console.log('pinch amount ' + pinchAmount );
-		handleMWheel( -pinchAmount * 0.25 );		
+		handleMWheel( - pinchAmount * 0.25 );		
 	}
 
 
