@@ -334,8 +334,44 @@
                 
 
                      
-                 <div class="side-border col-md-3">
-                       <h4 class="page-title" > {$user.name}  </h4>
+                    <div class="side-border col-md-3">
+                       <h4 class="page-title" > {$user.name}  
+
+                        <div class="btn-group">
+                        
+                        <div class="btn-group m-b-10">
+                            <button type="button" class="btn btn-xs btn-alt dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-eye"></i>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="zoomOut(7)"><i class="fa fa-sun-o" ></i>rbit System</a></li>
+                                <li><a href="#" onclick="zoomOut(1000)">St<i class="fa fa-star" ></i>r Field </a></li>
+                                <li><a href="#" onclick=" zoomOut(133333);"><i class="fa fa-rocket" ></i> Galaxy Kinexus</a></li>
+
+                                <!--  <button class="btn btn-alt btn-sm" >
+                                <i class="fa fa-sun-o"></i>rbiting System
+                                </button> 
+                                <button class="btn btn-alt btn-sm" >
+                                St<i class="fa fa-star"></i>r Field
+                                </button> 
+                                <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                                <i class="fa fa-ge"></i>  
+                                </a> 
+
+
+
+                                <button class="btn btn-alt btn-sm">
+                                <i class="fa fa-rocket"></i> Galaxy
+                                </button>  -->
+
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-xs btn-alt active disabled "><i class="fa fa-dashboard"></i> Dashboard</button>
+                        <button type="button" class="btn btn-xs btn-alt"><i class="fa fa-cog"></i> Settings</button>
+                  
+                    </div>
+                       </h4>
                     </div>
                      <div class="side-border col-md-2">
                         <small>X.Points</small>
@@ -381,7 +417,7 @@
                                             <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
                                             <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> --> 
                                             <a class="btn btn-alt btn-sm hidden-xs">0 YouMeme's</a>
-                                            <button class="btn btn-alt btn-sm">0 Kinnexus'</button>
+                                            <a href="#/youMeOS/kinnexus" class="btn btn-alt btn-sm">0 Kinnexus'</a>
                                             <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> --> 
                                         </div> 
                                     </div>
@@ -525,7 +561,7 @@
 
                                     <!-- Friends -->
                                     <div class="tile">
-                                        <h2 class="tile-title">Kinnexus' Close to You</h2>
+                                        <h2 class="tile-title">YouMeOS Community</h2>
                                         <div class="tile-config dropdown">
                                             <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
                                             <ul class="dropdown-menu pull-right text-right"> 
@@ -603,7 +639,7 @@
                                                 </div>
                                             </div> -->
                                             <div class="media p-5 text-center l-100">
-                                                <!-- <a href="#/"><small>VIEW ALL</small></a> -->
+                                                <a href="#/youMeOS/kinnexus"><small>VIEW ALL</small></a>
                                             </div>
                                         </div>
                                     </div>
@@ -620,7 +656,7 @@
                                         
                                         <div class="p-10">
 
-                                           <!--  <div class="text-center  tile-dark" >
+                                            <div class="text-center  tile-dark" >
                             
                                                 <div class="pie-chart-tiny user-stat" data-percent="0">
                                                     <span class="percent"></span>
@@ -652,28 +688,28 @@
                                                 </div> 
 
                                             </div>
-                                         -->
+                                        
                                         <script type="text/javascript">
-                                            // $(document).ready(function  () {
-                                            //      $('.pie-chart-tiny.user-stat').easyPieChart({
-                                            //            easing     : 'easeOutBounce',
-                                            //            barColor   : 'rgba(255,255,255,0.75)',
-                                            //            trackColor : 'rgba(0,0,0,0.3)',
-                                            //            scaleColor : 'rgba(255,255,255,0.3)',
-                                            //            lineCap    : 'square',
-                                            //            lineWidth  : 4,
-                                            //            size       : 70,
-                                            //            animate    : 3000,
-                                            //             onStep: function(from, to, percent) {
-                                            //                 $(this.el).find('.percent').text(Math.round(percent));
-                                            //             }
-                                            //         });
+                                            $(document).ready(function  () {
+                                                 $('.pie-chart-tiny.user-stat').easyPieChart({
+                                                       easing     : 'easeOutBounce',
+                                                       barColor   : 'rgba(255,255,255,0.75)',
+                                                       trackColor : 'rgba(0,0,0,0.3)',
+                                                       scaleColor : 'rgba(255,255,255,0.3)',
+                                                       lineCap    : 'square',
+                                                       lineWidth  : 4,
+                                                       size       : 70,
+                                                       animate    : 3000,
+                                                        onStep: function(from, to, percent) {
+                                                            $(this.el).find('.percent').text(Math.round(percent));
+                                                        }
+                                                    });
 
-                                            //         var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
-                                            //         $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
-                                            //             $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
-                                            //         });
-                                            // })
+                                                    var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
+                                                    $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
+                                                        $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
+                                                    });
+                                            })
                                         </script>
 
                                             <!-- <div class="m-b-10">
@@ -880,50 +916,8 @@
                                     }
                                 </style>
                                 <div class=" hidden-xs "> 
-                                    <img src="/users/avatar/" width="100%"  >
-                                    {if $user.username != $params[2]}
-                                        <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
-                                            <button type="button" class="btn btn-sm  btn-block dropdown-toggle" data-toggle="dropdown"  >
-                                                <strong>
-                                                    <i class="fa fa-user"></i>
-                                                    Update Avatar
-                                                </strong>
-                                                <!-- <span class="caret"></span> -->
-                                            </button>
-                                            <ul class="dropdown-menu  dropdown-menu-alt animated rollIn" role="menu">
-                                                
-                                                <li role="presentation">
-                                                    <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/html/users/avatar/takePhoto')">
-                                                    <i class="fa fa-camera"></i> Take Snapshot...</a>
-                                                   
-                                                </li>
-
-
-
-                                                <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                    <i class="fa fa-folder"></i> Choose From Photos...</a>
-                                                </li> -->
-                                                <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
-                                                    <i class="fa fa-upload"></i> Upload Avatar...</a>
-                                                </li>
-
-                                                <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
-                                                    <i class="fa fa-folder-open-o"></i> Choose from Photos...</a>
-                                                </li>
-                                                
-                                                
-
-                                                <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                    <i class="fa fa-camera"></i> Edit Thumbnail...</a>
-                                                </li> -->
-                                                
-                                                <!-- <li role="presentation" class="divider"></li>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                    <i class="fa fa-ban"></i> Remove Photo...</a>
-                                                </li> -->
-                                            </ul>
-                                        </div> 
-                                    {/if}
+                                    
+                                    
                                 </div>
 
                                 <div class="listview icon-list">

@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0(4.3.1)
+ * @version v0(4.4)
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -101,7 +101,10 @@
 
 		}
 
-		function kinnexus(){
+		function kinnexus($count=null){
+
+			// $_POST['limit'] = 100;
+
 			return array(
 				'data' => array(
 					'users'      => $this->users('name, id, username')
