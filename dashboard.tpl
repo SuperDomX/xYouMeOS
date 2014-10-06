@@ -542,7 +542,7 @@
                                                 {foreach $data.users as $u => $user}
                                                 <div class="col-xs-3 col-md-3">
                                                     <div class="widget" style="position: absolute">{$user.username}</div>
-                                                    <a href="#/{$user.username}"><img src="/users/avatar/&user={$user.username}" alt=""  ></a>
+                                                    <a href="#/youMeOS/dashboard/{$user.username}"><img src="/users/avatar/&user={$user.username}" alt=""  ></a>
 
                                                 </div> 
                                                 {/foreach} 
