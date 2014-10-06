@@ -71,23 +71,64 @@
                 <div class="side-widgets overflow">
                     <!-- Profile Menu -->
                     <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
-                        <a href="#/" data-toggle="dropdown">
-                        <h3 class="tile-title">{$user.name}
-                            <hr/>
-                            {$user.email}
+                        <h3 class="tile-title">
+                            {$user.name}
+                            
+                            
                         </h3>
-                            
-                            <img class="profile-pic animated img-circle" src="/users/avatar" alt="">
-                            
+                       
+
+                        <div class="btn-group btn-block  " width="100%">
+                            <button class="btn btn-alt col-md-3 " onclick="zoomOut(.77)">
+                                <i class="fa fa-sun-o"></i>   
+                            </button> 
+                            <button class="btn btn-alt col-md-3 " onclick="zoomOut(7)">
+                                <i class="fa fa-globe"></i>   
+                            </button> 
+                            <button class="btn btn-alt  col-md-3  " onclick="zoomOut(1000)">
+                                 <i class="fa fa-star"></i>
+                            </button> 
+
+                            <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                            <i class="fa fa-ge"></i>  
+                            </a>  -->
+
+                            <button class="btn btn-alt col-md-3 tooltips"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on left" onclick=" zoomOut(133333);">
+                                <i class="fa fa-rocket"></i>  
+                            </button> 
+
+                        </div>
+
+
+                        <a href="#/" data-toggle="dropdown">
+                            <img class="profile-pic animated img-circle" src="/users/avatar" alt=""> 
                         </a>
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
-                        <ul class="dropdown-menu profile-menu">
-                            
-                            <li><a href="#/{$Xtra}/{$method}"> Dashboard</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="#/inbox/messages">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="#/login/profile">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="#/login/logout">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                        <ul class="dropdown-menu profile-menu"> 
+                            <li>
+                                <a href="#/{$Xtra}/{$method}"> Dashboard</a> 
+                                <i class=" left fa fa-rocket"></i>
+                                <i class=" right fa fa-sun-o"></i>
+                            </li>
+                            <li>
+                                <a href="#/inbox/messages">Messages</a> 
+                                <i class=" left fa fa-envelope"></i>
+                                <i class=" right fa fa-comment"></i>
+                            </li>
+                            <li><a href="#/login/profile">Settings</a>
+                                <i class=" left fa fa-cog fa-spin"></i>
+                                <i class=" right fa fa-cog fa-spin-reverse"></i>
+                            </li>
+                            <li><a href="#/login/logout">Sign Out</a> 
+                            <i class=" left fa fa-key"></i>
+                                <i class=" right fa fa-lock"></i>
+                            </li>
                         </ul>
+                        
+                            
+                        
+                        
+                        
                         
                     </div>
                     
@@ -168,11 +209,11 @@
                         </a>
                     </li>
 
-                    <li>
+                    <!-- <li>
                         <a  href="#/{$Xtra}/aethernet">
                              <span class="icon">&#61838;</span> <span class="menu-item">The AetherNets</span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li  >
                         <a   href="#/{$Xtra}/chronus">
@@ -191,13 +232,13 @@
                         </a>
                     </li>
 
-                    <li>
+                    <!-- <li>
                         <a  href="#/{$Xtra}/aethernet">
                              <span class="icon">&#61838;</span> <span class="menu-item">The AetherNets</span>
                         </a>
                     </li>
 
-
+ -->
                     <li>
                         <a class="sa-side-widget" href="#/content-widgets.html">
                             <span class="menu-item">Widgets</span>
@@ -289,12 +330,38 @@
                     <!-- <li>Data</li> -->
                 </ol>
                 
+                 
                 
-                <h4 class="page-title">
 
-                    Profile of {$user.name}
-
-                </h4>
+                     
+                 <div class="side-border col-md-3">
+                       <h4 class="page-title" > {$user.name}  </h4>
+                    </div>
+                     <div class="side-border col-md-2">
+                        <small>X.Points</small>
+                        <div class="progress progress-small">
+                             <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-primary" style="width: 10%;" data-original-title="10%">
+                                  <span class="sr-only">10% Complete</span>
+                             </a>
+                        </div>
+                    </div>
+                    <div class="side-border  col-md-2">
+                        <small>Hit Points</small>
+                        <div class="progress progress-small">
+                             <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-danger" style="width: 43%;" data-original-title="43%">
+                                  <span class="sr-only">43% Complete</span>
+                             </a>
+                        </div>
+                    </div>
+                     <div class="side-border  col-md-2">
+                        <small>G~Energy</small>
+                        <div class="progress progress-small">
+                             <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 43%;" data-original-title="43%">
+                                  <span class="sr-only">88% Complete</span>
+                             </a>
+                        </div>
+                    </div>
+ 
                 
                 <div class="block-area">
                     <div class="row">
@@ -302,123 +369,24 @@
                             <div class="tile-light p-5 m-b-15">
 
                                 <div class="cover p-relative">
+                                    <h4 class="page-title" style="position: absolute;">
+                                        <span class="dropcap">{$user.username|substr:0:1}</span>{$user.username|substr:1}
+                                    </h4>
                                     <img src="img/cover-bg.jpg" class="w-100 " alt="">
 
-                                    <style type="text/css">
-                                        div.profile-pic:hover > div.btn-group{
-                                            display    : block !important;
-                                            visibility : visible !important;
-                                        }
-                                    </style>
-                                    <div class="profile-pic hidden-xs">
-                                         
-
-                                        <img src="/users/avatar/" class="img-circle"  >
-                                        {if $user.username != $params[2]}
-                                            <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
-                                                <button type="button" class="btn btn-sm  btn-block dropdown-toggle" data-toggle="dropdown"  >
-                                                    <strong>
-                                                        <i class="fa fa-user"></i>
-                                                        Change Avatar
-                                                    </strong>
-                                                    <!-- <span class="caret"></span> -->
-                                                </button>
-                                                <ul class="dropdown-menu  dropdown-menu-alt animated rollIn" role="menu">
-                                                    
-                                                    <li role="presentation">
-                                                        <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/html/users/avatar/takePhoto')">
-                                                        <i class="fa fa-camera"></i> Take Snapshot...</a>
-                                                       
-                                                    </li>
-
-
-
-                                                    <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                        <i class="fa fa-folder"></i> Choose From Photos...</a>
-                                                    </li> -->
-                                                    <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
-                                                        <i class="fa fa-upload"></i> Upload Avatar...</a>
-                                                    </li>
-
-                                                    <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
-                                                        <i class="fa fa-folder-open-o"></i> Choose from Photos...</a>
-                                                    </li>
-                                                    
-                                                    
-
-                                                    <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                        <i class="fa fa-camera"></i> Edit Thumbnail...</a>
-                                                    </li> -->
-                                                    
-                                                    <!-- <li role="presentation" class="divider"></li>
-                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                                        <i class="fa fa-ban"></i> Remove Photo...</a>
-                                                    </li> -->
-                                                </ul>
-                                            </div> 
-                                        {/if}
-                                    </div>
                                     
                                     
-
-                                    
-                                    <div class="profile-btn  text-center">
-
-                                            <div class="btn-group tile input-focused"   >
-                                                
-                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
-                                                <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> -->
-                                                <a class="btn btn-alt btn-sm hidden-xs">0 Comments</a>
-                                                <button class="btn btn-alt btn-sm">0 Connections</button>
-                                                <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> -->
-                                                
-                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(7)">
-                                                <i class="fa fa-sun-o"></i>rbiting System
-                                                </button> 
-                                                <button class="btn btn-alt btn-sm" onclick="zoomOut(1000)">
-                                                St<i class="fa fa-star"></i>r Field
-                                                </button> 
-                                                <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                                                <i class="fa fa-ge"></i>  
-                                                </a>  -->
-
-
-
-                                                <button class="btn btn-alt btn-sm" onclick=" zoomOut(133333);">
-                                                <i class="fa fa-rocket"></i> Galaxy
-                                                </button> 
-                                            </div>
-                                            
-
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <!-- 
-                                <div class="text-center  tile-dark" >
-                        
-                                    <div class="pie-chart-tiny user-stat" data-percent="0">
-                                        <span class="percent"></span>
-                                        <span class="pie-title">Messages</span>
-                                    </div>
-                                    <div class="pie-chart-tiny user-stat" data-percent="23">
-                                        <span class="percent"></span>
-                                        <span class="pie-title">Comments</span>
-                                    </div>
-                                    <div class="pie-chart-tiny user-stat" data-percent="57">
-                                        <span class="percent"></span>
-                                        <span class="pie-title">Emails Sent</span>
-                                    </div>
-                                    <div class="pie-chart-tiny user-stat" data-percent="0">
-                                        <span class="percent"></span>
-                                        <span class="pie-title">Sales Rate </span>
-                                    </div>
-                                    <div class="pie-chart-tiny user-stat" data-percent="81">
-                                        <span class="percent"></span>
-                                        <span class="pie-title">Invitations</span>
+                                    <div class="profile-btn pull-left" > 
+                                        <div class="btn-group tile input-focused"   > 
+                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
+                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> --> 
+                                            <a class="btn btn-alt btn-sm hidden-xs">0 YouMeme's</a>
+                                            <button class="btn btn-alt btn-sm">0 Kinnexus'</button>
+                                            <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> --> 
+                                        </div> 
                                     </div>
                                 </div>
-                                 -->
+                               
                                 <style type="text/css">
                                     .user-stat .percent {
                                     position     : absolute;
@@ -431,28 +399,8 @@
                                     padding-left : 2px;
                                     }
                                 </style>
-                                <script type="text/javascript">
-                                    // $(document).ready(function  () {
-                                    //      $('.pie-chart-tiny.user-stat').easyPieChart({
-                                    //            easing     : 'easeOutBounce',
-                                    //            barColor   : 'rgba(255,255,255,0.75)',
-                                    //            trackColor : 'rgba(0,0,0,0.3)',
-                                    //            scaleColor : 'rgba(255,255,255,0.3)',
-                                    //            lineCap    : 'square',
-                                    //            lineWidth  : 4,
-                                    //            size       : 70,
-                                    //            animate    : 3000,
-                                    //             onStep: function(from, to, percent) {
-                                    //                 $(this.el).find('.percent').text(Math.round(percent));
-                                    //             }
-                                    //         });
 
-                                    //         var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
-                                    //         $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
-                                    //             $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
-                                    //         });
-                                    // })
-                                </script>
+                                
                                
                                 
 <!-- 
@@ -574,8 +522,94 @@
                             <div class="row">
                                 <!-- Works -->
                                 <div class="col-md-7">
+
+                                    <!-- Friends -->
                                     <div class="tile">
-                                        <h2 class="tile-title">Works in progress</h2>
+                                        <h2 class="tile-title">Kinnexus' Close to You</h2>
+                                        <div class="tile-config dropdown">
+                                            <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
+                                            <ul class="dropdown-menu pull-right text-right"> 
+                                                <li><a href="#/">Edit</a></li>
+                                                <li><a href="#/">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                             
+                                        <div class="p-5 photos">
+
+                                            
+
+                                            
+                                                {foreach $data.users as $u => $user}
+                                                <div class="col-xs-3 col-md-3">
+                                                    <div class="widget" style="position: absolute">{$user.username}</div>
+                                                    <a href="#/{$user.username}"><img src="/users/avatar/&user={$user.username}" alt=""  ></a>
+
+                                                </div> 
+                                                {/foreach} 
+                                            
+                                            <div class="clearfix"></div>
+                                        </div>
+
+
+                                        <div class="listview narrow">
+                                            <!-- <div class="media p-l-5">
+                                                <div class="pull-left">
+                                                    <img width="37" src="img/profile-pics/1.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <a class="news-title" href="#/">Mitchell Christein</a>
+                                                    <div class="clearfix"></div>
+                                                    <a href="#/"><small class="text-muted">Unfriend</small></a>
+                                                </div>
+                                            </div>
+                                            <div class="media p-l-5">
+                                                <div class="pull-left">
+                                                    <img width="37" src="img/profile-pics/2.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <a class="news-title" href="#/">David Villa</a>
+                                                    <div class="clearfix"></div>
+                                                    <a href="#/"><small class="text-muted">Unfriend</small></a>
+                                                </div>
+                                            </div>
+                                            <div class="media p-l-5">
+                                                <div class="pull-left">
+                                                    <img width="37" src="img/profile-pics/3.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <a class="news-title" href="#/">The Iron man Jr.</a>
+                                                    <div class="clearfix"></div>
+                                                    <a href="#/"><small class="text-muted">Unfriend</small></a>
+                                                </div>
+                                            </div>
+                                            <div class="media p-l-5">
+                                                <div class="pull-left">
+                                                    <img width="37" src="img/profile-pics/4.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <a class="news-title" href="#/">Stephen Elop</a>
+                                                    <div class="clearfix"></div>
+                                                    <a href="#/"><small class="text-muted">Unfriend</small></a>
+                                                </div>
+                                            </div>
+                                            <div class="media p-l-5">
+                                                <div class="pull-left">
+                                                    <img width="37" src="img/profile-pics/5.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <a class="news-title" href="#/">Wendy wenkitson</a>
+                                                    <div class="clearfix"></div>
+                                                    <a href="#/"><small class="text-muted">Unfriend</small></a>
+                                                </div>
+                                            </div> -->
+                                            <div class="media p-5 text-center l-100">
+                                                <!-- <a href="#/"><small>VIEW ALL</small></a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tile">
+                                        <h2 class="tile-title">Profile Completion</h2>
                                         <div class="tile-config dropdown">
                                             <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
                                             <ul class="dropdown-menu pull-right text-right"> 
@@ -585,6 +619,63 @@
                                         </div>
                                         
                                         <div class="p-10">
+
+                                           <!--  <div class="text-center  tile-dark" >
+                            
+                                                <div class="pie-chart-tiny user-stat" data-percent="0">
+                                                    <span class="percent"></span>
+                                                    <span class="pie-title">0</span>
+                                                </div>
+                                                <div class="pie-chart-tiny user-stat" data-percent="23">
+                                                    <span class="percent"></span>
+                                                    <span class="pie-title">1</span>
+                                                </div>
+                                                <div class="pie-chart-tiny user-stat" data-percent="57">
+                                                    <span class="percent"></span>
+                                                    <span class="pie-title">2</span>
+                                                </div>
+                                                <div class="pie-chart-tiny user-stat" data-percent="0">
+                                                    <span class="percent"></span>
+                                                    <span class="pie-title">Sales Rate </span>
+                                                </div>
+                                                <div class="pie-chart-tiny user-stat" data-percent="81">
+                                                    <span class="percent"></span>
+                                                    <span class="pie-title">Invitations</span>
+                                                </div>
+                                                <div class="pie-chart-tiny user-stat" data-percent="0">
+                                                    <span class="percent"></span>
+                                                    <span class="pie-title">Messages</span>
+                                                </div>
+                                                <div class="pie-chart-tiny user-stat" data-percent="23">
+                                                    <span class="percent"></span>
+                                                    <span class="pie-title">Comments</span>
+                                                </div> 
+
+                                            </div>
+                                         -->
+                                        <script type="text/javascript">
+                                            // $(document).ready(function  () {
+                                            //      $('.pie-chart-tiny.user-stat').easyPieChart({
+                                            //            easing     : 'easeOutBounce',
+                                            //            barColor   : 'rgba(255,255,255,0.75)',
+                                            //            trackColor : 'rgba(0,0,0,0.3)',
+                                            //            scaleColor : 'rgba(255,255,255,0.3)',
+                                            //            lineCap    : 'square',
+                                            //            lineWidth  : 4,
+                                            //            size       : 70,
+                                            //            animate    : 3000,
+                                            //             onStep: function(from, to, percent) {
+                                            //                 $(this.el).find('.percent').text(Math.round(percent));
+                                            //             }
+                                            //         });
+
+                                            //         var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
+                                            //         $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
+                                            //             $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
+                                            //         });
+                                            // })
+                                        </script>
+
                                             <!-- <div class="m-b-10">
                                                 Joomla CMS website for Lexus Inc. - 60%
                                                 <div class="progress progress-striped progress-alt">
@@ -772,7 +863,7 @@
                             
                             <!-- About Me -->
                             <div class="tile">
-                                <h2 class="tile-title">About me</h2>
+                                <h2 class="tile-title">About {$user.username}</h2>
                                 <div class="tile-config dropdown">
                                     <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
                                     <ul class="dropdown-menu pull-right text-right"> 
@@ -781,8 +872,62 @@
                                     </ul>
                                 </div>
                                 
+
+                                <style type="text/css">
+                                    div.profile-pic:hover > div.btn-group{
+                                        display    : block !important;
+                                        visibility : visible !important;
+                                    }
+                                </style>
+                                <div class=" hidden-xs "> 
+                                    <img src="/users/avatar/" width="100%"  >
+                                    {if $user.username != $params[2]}
+                                        <div class="btn-group m-b-10 tile open btn-block hidden" style="position: absolute; bottom: -10px; left: 0;" >
+                                            <button type="button" class="btn btn-sm  btn-block dropdown-toggle" data-toggle="dropdown"  >
+                                                <strong>
+                                                    <i class="fa fa-user"></i>
+                                                    Update Avatar
+                                                </strong>
+                                                <!-- <span class="caret"></span> -->
+                                            </button>
+                                            <ul class="dropdown-menu  dropdown-menu-alt animated rollIn" role="menu">
+                                                
+                                                <li role="presentation">
+                                                    <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/html/users/avatar/takePhoto')">
+                                                    <i class="fa fa-camera"></i> Take Snapshot...</a>
+                                                   
+                                                </li>
+
+
+
+                                                <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                    <i class="fa fa-folder"></i> Choose From Photos...</a>
+                                                </li> -->
+                                                <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
+                                                    <i class="fa fa-upload"></i> Upload Avatar...</a>
+                                                </li>
+
+                                                <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
+                                                    <i class="fa fa-folder-open-o"></i> Choose from Photos...</a>
+                                                </li>
+                                                
+                                                
+
+                                                <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                    <i class="fa fa-camera"></i> Edit Thumbnail...</a>
+                                                </li> -->
+                                                
+                                                <!-- <li role="presentation" class="divider"></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                                    <i class="fa fa-ban"></i> Remove Photo...</a>
+                                                </li> -->
+                                            </ul>
+                                        </div> 
+                                    {/if}
+                                </div>
+
                                 <div class="listview icon-list">
-                                    <!-- <div class="media">
+                                    <div class="media">
                                         <i class="icon pull-left">&#61744</i>
                                         <div class="media-body">Software Developer at Google</div>
                                     </div>
@@ -800,77 +945,11 @@
                                     <div class="media">
                                         <i class="icon pull-left">&#61742</i>
                                         <div class="media-body">From Titan, Jupitor</div>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                             
-                            <!-- Friends -->
-                            <div class="tile">
-                                <h2 class="tile-title">Connections</h2>
-                                <div class="tile-config dropdown">
-                                    <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
-                                    <ul class="dropdown-menu pull-right text-right"> 
-                                        <li><a href="#/">Edit</a></li>
-                                        <li><a href="#/">Delete</a></li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="listview narrow">
-                                    <!-- <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="37" src="img/profile-pics/1.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a class="news-title" href="#/">Mitchell Christein</a>
-                                            <div class="clearfix"></div>
-                                            <a href="#/"><small class="text-muted">Unfriend</small></a>
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="37" src="img/profile-pics/2.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a class="news-title" href="#/">David Villa</a>
-                                            <div class="clearfix"></div>
-                                            <a href="#/"><small class="text-muted">Unfriend</small></a>
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="37" src="img/profile-pics/3.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a class="news-title" href="#/">The Iron man Jr.</a>
-                                            <div class="clearfix"></div>
-                                            <a href="#/"><small class="text-muted">Unfriend</small></a>
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="37" src="img/profile-pics/4.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a class="news-title" href="#/">Stephen Elop</a>
-                                            <div class="clearfix"></div>
-                                            <a href="#/"><small class="text-muted">Unfriend</small></a>
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="37" src="img/profile-pics/5.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a class="news-title" href="#/">Wendy wenkitson</a>
-                                            <div class="clearfix"></div>
-                                            <a href="#/"><small class="text-muted">Unfriend</small></a>
-                                        </div>
-                                    </div> -->
-                                    <div class="media p-5 text-center l-100">
-                                        <a href="#/"><small>VIEW ALL</small></a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             
                             <!-- Photos -->
                             <div class="tile">
@@ -1027,6 +1106,9 @@
 
                     {/if}
                 }
+            });
+            $(document).ready(function(){
+                $('#detailContainer').show();
             });
         </script>
     </body>

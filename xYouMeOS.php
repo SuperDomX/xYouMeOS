@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0.4.2
+ * @version v0(4.3)
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -94,11 +94,19 @@
 		}
 
 		function dashboard(){
-
+			return $this->kinnexus();
 		}
 
 		function settings(){ 
 
+		}
+
+		function kinnexus(){
+			return array(
+				'data' => array(
+					'users'      => $this->users('name, id, username')
+				)
+			);
 		}
 
 		function fileManager($dir=null){ 

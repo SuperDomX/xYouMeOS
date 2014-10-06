@@ -160,7 +160,9 @@
 
 
 
+
                         if(data.success){
+                            $('#detailContainer').hide();
                             zoomOut(.750);
                             // $('#ex-out').click();
                             // $('#about').click();
@@ -169,7 +171,9 @@
 
                             // window.location.hash = "#"+go;
 
-                            $('#detailBody').load('/html'+go); 
+                            $('#detailBody').load('/html'+go,function(){
+                                
+                            }); 
 
                             // $(window).on('hashchange', function() {  
                             //     var go = window.location.hash.replace('#','');
