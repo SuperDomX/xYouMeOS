@@ -27,7 +27,6 @@
             <div class="media-body">
                 <div class="media" id="top-menu">
 
-                    
                     <div class="pull-left tm-icon">
                         <a data-drawer="messages" class="drawer-toggle" href="#/">
                             <i class="sa-top-message"></i>
@@ -36,14 +35,16 @@
                         </a>
                     </div>
 
-                    <!-- <div class="pull-left tm-icon">
+                    <div class="pull-left tm-icon">
                         <a data-drawer="notifications" class="drawer-toggle" href="#/">
                             <i class="sa-top-updates"></i>
                             <i class="n-count animated">0</i>
-                            <span>Updates</span>
+                            <span>Points in Time</span>
                         </a>
                     </div>
-                     -->
+
+                    
+                    
                     <div class="pull-right">
                         {include file="~blox/clock.tpl"}
                         <!-- <span id="hours"></span>
@@ -53,9 +54,9 @@
                         <span id="sec"></span> -->
                     </div>
                     
-                  <!--   <div class="media-body">
+                    <div class="media-body">
                         <input type="text" class="main-search">
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </header>
@@ -71,44 +72,69 @@
                 <div class="side-widgets overflow">
                     <!-- Profile Menu -->
                     <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+
+                        
                         <h3 class="tile-title">
-                            {$user.name}
-                            
-                            
+                            {$user.name} 
                         </h3>
-                       
-
-                        <div class="btn-group btn-block  " width="100%">
-                            <button class="btn btn-alt col-md-3 " onclick="zoomOut(.77)">
-                                <i class="fa fa-sun-o"></i>   
-                            </button> 
-                            <button class="btn btn-alt col-md-3 " onclick="zoomOut(7)">
-                                <i class="fa fa-globe"></i>   
-                            </button> 
-                            <button class="btn btn-alt  col-md-3  " onclick="zoomOut(1000)">
-                                 <i class="fa fa-star"></i>
-                            </button> 
-
-                            <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                            <i class="fa fa-ge"></i>  
-                            </a>  -->
-
-                            <button class="btn btn-alt col-md-3 tooltips"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on left" onclick=" zoomOut(133333);">
-                                <i class="fa fa-rocket"></i>  
-                            </button> 
-
-                        </div>
-
+                         
 
                         <a href="#/" data-toggle="dropdown">
                             <img class="profile-pic animated img-circle" src="/users/avatar" alt=""> 
                         </a>
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
-                        <ul class="dropdown-menu profile-menu"> 
-                            <li>
-                                <a href="#/{$Xtra}/{$method}"> Dashboard</a> 
-                                <i class=" left fa fa-rocket"></i>
-                                <i class=" right fa fa-sun-o"></i>
+                        <ul class="dropdown-menu profile-menu">  
+
+                           <li>
+                               <div class="row" style="padding: 2px;">
+                            <div class="  col-md-4">
+                                <small>xEnergy</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 90%;" data-original-title="90%">
+                                          <span class="sr-only">90% Complete</span>
+                                     </a>
+                                </div>
+                            </div> 
+                            <div class=" col-md-4">
+                                <small>xPoints</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-primary" style="width: 10%;" data-original-title="10%">
+                                          <span class="sr-only">10% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="  col-md-4">
+                                <small>xViews</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-danger" style="width: 43%;" data-original-title="43%">
+                                          <span class="sr-only">43% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                           </div>
+
+                           </li>
+
+                            <!-- <div class="btn-group btn-block ">
+                                <button class="btn btn-alt col-md-3 " onclick="zoomOut(.77)">
+                                    <i class="fa fa-sun-o text-danger"></i>   
+                                </button> 
+                                <button class="btn btn-alt col-md-3 " onclick="zoomOut(7)">
+                                    <i class="fa fa-globe text-success"></i>   
+                                </button> 
+                                <button class="btn btn-alt col-md-3  " onclick="zoomOut(1000)">
+                                     <i class="fa fa-star text-warning"></i>
+                                </button> 
+                                <button class="btn btn-alt col-md-3 tooltips"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on left" onclick=" zoomOut(133333);">
+                                    <i class="fa fa-rocket text-info"></i>  
+                                </button>  
+                            </div> -->
+
+                    
+                            <!-- <li>
+                                <a href="#/{$Xtra}/{$method}"> All-Seeing "I"</a> 
+                                <i class=" left fa fa-eye-slash"></i>
+                                <i class=" right fa fa-eye"></i>
                             </li>
                             <li>
                                 <a href="#/inbox/messages">Messages</a> 
@@ -119,11 +145,38 @@
                                 <i class=" left fa fa-cog fa-spin"></i>
                                 <i class=" right fa fa-cog fa-spin-reverse"></i>
                             </li>
-                            <li><a href="#/login/logout">Sign Out</a> 
-                            <i class=" left fa fa-key"></i>
+                             -->
+                             <li><a href="#/youMeOS/dashboard" onclick=" zoomOut(.57);">Magnify Essence</a> 
+                                <i class=" left fa fa-sun-o fa-spin  "></i>
+                                <i class=" right fa fa-sun-o fa-spin "></i>
+                            </li>
+                            <li><a href="#/youMeOS/orbitSystem" onclick=" zoomOut(7);">Orbiting System</a> 
+                            <i class=" left fa fa-globe "></i>
+                                <i class=" right fa fa-cloud "></i>
+                            </li>
+                            <li><a href="#/youMeOS/kinnexus" onclick=" zoomOut(1000);">Kinnexus</a> 
+                                <i class=" left fa fa-star-o "></i>
+                                <i class=" right fa fa-star"></i>
+                            </li>
+                            <li><a href="#/youMeOS/home" onclick=" zoomOut(133333);">Galatic Core</a> 
+                                 <i class=" left fa fa-rocket"></i>
+                                <i class=" right fa fa-sun-o"></i>
+                            </li>
+
+                            <li><a href="#/login/logout">Sign Off</a> 
+                                <i class=" left fa fa-key"></i>
                                 <i class=" right fa fa-lock"></i>
                             </li>
+                            <li>
+                                 
+                            </li>
                         </ul>
+
+
+                        
+
+
+                        
                         
                             
                         
@@ -201,19 +254,30 @@
                 
                 <!-- Side Menu -->
                 <ul class="list-unstyled side-menu font-icons">
+
                     <li class="active">
                         <a class="" href="#/{$Xtra}/dashboard" > <!-- /{$user.username} -->
                             <span class="icon">&#61698;</span> <span class="menu-item">
-                            Dashboard
+                            All-Seeing "I"
                             </span>
                         </a>
                     </li>
 
-                    <!-- <li>
-                        <a  href="#/{$Xtra}/aethernet">
-                             <span class="icon">&#61838;</span> <span class="menu-item">The AetherNets</span>
+                    <li>
+                        <a class="sa-side-home" href="#/youMeOS/home"  onclick=" zoomOut(133333);">
+                            <span class="menu-item">Home is where the Heart is</span>
                         </a>
-                    </li> -->
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a class="sa-side-calendar" href="#/calendar/full">
+                            <span class="menu-item">Timeless Nights</span>
+                        </a>
+                    </li>
 
                     <li  >
                         <a   href="#/{$Xtra}/chronus">
@@ -226,11 +290,6 @@
                         </a></li>
                         </ul> -->
                     </li>
-                    <li>
-                        <a class="sa-side-calendar" href="#/calendar/full">
-                            <span class="menu-item">Timeless Nights</span>
-                        </a>
-                    </li>
 
                     <!-- <li>
                         <a  href="#/{$Xtra}/aethernet">
@@ -239,11 +298,11 @@
                     </li>
 
  -->
-                    <li>
+                    <!-- <li>
                         <a class="sa-side-widget" href="#/content-widgets.html">
                             <span class="menu-item">Widgets</span>
                         </a>
-                    </li>
+                    </li> -->
                     {if $masterKey.is.admin}
                    
                     <li class="dropdown">
@@ -277,7 +336,7 @@
                         <ul class="list-unstyled menu-item">
                             <li><a href="#/form-elements.html">Basic Form Elements</a></li>
                             <li><a href="#/form-components.html">Form Components</a></li>
-                            <li><a href="#/form-examples.html">Form Examples</a></li>
+                            <li><a href="#/form-examplefs.html">Form Examples</a></li>
                             <li><a href="#/form-validation.html">Form Validation</a></li>
                         </ul>
                     </li>
@@ -325,78 +384,54 @@
                 
                 <!-- Breadcrumb -->
                 <ol class="breadcrumb hidden-xs">
-                    <li ><a href="#/#">Home</a></li>
+                    <li ><a href="#/youMeOS/home">Home</a></li>
                     <li class="active"><a href="#/">Profile</a></li>
                     <!-- <li>Data</li> -->
                 </ol>
                 
                  
                 
+                  <div class="btn-group">          
+                    <div class="btn-group m-b-10">
+                        <button type="button" class="btn btn-sm btn-alt dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-eye"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/youMeOS/dashboard" onclick="zoomOut(7)"><i class="fa fa-sun-o" ></i>rbit System</a></li>
+                            <li><a href="#/youMeOS/kinnexus" onclick="zoomOut(1000)">St<i class="fa fa-star" ></i>r Field </a></li>
+                            <li><a href="#" onclick=" zoomOut(133333);"><i class="fa fa-rocket" ></i> Galaxy Kinexus</a></li>
 
+                            <!--  <button class="btn btn-alt btn-sm" >
+                            <i class="fa fa-sun-o"></i>rbiting System
+                            </button> 
+                            <button class="btn btn-alt btn-sm" >
+                            St<i class="fa fa-star"></i>r Field
+                            </button> 
+                            <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
+                            <i class="fa fa-ge"></i>  
+                            </a> 
+
+
+
+                            <button class="btn btn-alt btn-sm">
+                            <i class="fa fa-rocket"></i> Galaxy
+                            </button>  -->
+
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-sm  btn-alt active disabled "><i class="fa fa-dashboard"></i> Dashboard</button>
+                    <button type="button" class="btn btn-sm btn-alt"><i class="fa fa-cog"></i> Settings</button>
+              
+                </div>
                      
                     <div class="side-border col-md-3">
                        <h4 class="page-title" > {$user.name}  
 
-                        <div class="btn-group">
-                        
-                        <div class="btn-group m-b-10">
-                            <button type="button" class="btn btn-xs btn-alt dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-eye"></i>
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" onclick="zoomOut(7)"><i class="fa fa-sun-o" ></i>rbit System</a></li>
-                                <li><a href="#" onclick="zoomOut(1000)">St<i class="fa fa-star" ></i>r Field </a></li>
-                                <li><a href="#" onclick=" zoomOut(133333);"><i class="fa fa-rocket" ></i> Galaxy Kinexus</a></li>
-
-                                <!--  <button class="btn btn-alt btn-sm" >
-                                <i class="fa fa-sun-o"></i>rbiting System
-                                </button> 
-                                <button class="btn btn-alt btn-sm" >
-                                St<i class="fa fa-star"></i>r Field
-                                </button> 
-                                <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                                <i class="fa fa-ge"></i>  
-                                </a> 
-
-
-
-                                <button class="btn btn-alt btn-sm">
-                                <i class="fa fa-rocket"></i> Galaxy
-                                </button>  -->
-
-                            </ul>
-                        </div>
-                        <button type="button" class="btn btn-xs btn-alt active disabled "><i class="fa fa-dashboard"></i> Dashboard</button>
-                        <button type="button" class="btn btn-xs btn-alt"><i class="fa fa-cog"></i> Settings</button>
-                  
-                    </div>
+                          
                        </h4>
                     </div>
-                     <div class="side-border col-md-2">
-                        <small>X.Points</small>
-                        <div class="progress progress-small">
-                             <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-primary" style="width: 10%;" data-original-title="10%">
-                                  <span class="sr-only">10% Complete</span>
-                             </a>
-                        </div>
-                    </div>
-                    <div class="side-border  col-md-2">
-                        <small>Hit Points</small>
-                        <div class="progress progress-small">
-                             <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-danger" style="width: 43%;" data-original-title="43%">
-                                  <span class="sr-only">43% Complete</span>
-                             </a>
-                        </div>
-                    </div>
-                     <div class="side-border  col-md-2">
-                        <small>G~Energy</small>
-                        <div class="progress progress-small">
-                             <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 43%;" data-original-title="43%">
-                                  <span class="sr-only">88% Complete</span>
-                             </a>
-                        </div>
-                    </div>
+                    
  
                 
                 <div class="block-area">
@@ -1105,5 +1140,8 @@
                 $('#detailContainer').show();
             });
         </script>
+
+        <!-- All JS functions -->
+        <script src="{$umeos_bin}js/functions.js"></script>  
     </body>
 </html>

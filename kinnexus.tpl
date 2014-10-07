@@ -5,11 +5,11 @@
             <!-- Breadcrumb -->
             <ol class="breadcrumb hidden-xs">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Community</a></li>
-                <li class="active">Master List</li>
+                <li><a href="#">You Me OS</a></li>
+                <li class="active">Kinnexus</li>
             </ol>
             
-            <h4 class="page-title b-0">Messages</h4>
+            <h4 class="page-title b-0">Master List</h4>
        
 
 		{foreach $data.users as $u => $user}

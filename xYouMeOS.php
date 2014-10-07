@@ -41,6 +41,16 @@
 			}
 		}
 
+		public function home()
+		{
+			# code...
+		}
+
+		public function orbitSystem()
+		{
+			# code...
+		}
+
 		public function login()
 		{
 			$r['count_universes'] = $this->countUsers()['data'];

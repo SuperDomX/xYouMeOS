@@ -20,7 +20,7 @@ var datastarTexture1          = THREE.ImageUtils.loadTexture( "images/p_2.png" )
 var datastarHeatVisionTexture = THREE.ImageUtils.loadTexture( "images/sharppoint.png" );
 
 //	bright flashy named stars graphic
-var starPreviewTexture        = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("Hello World")	);
+var starPreviewTexture        = THREE.ImageUtils.loadTexture( 'images/star_preview.png', undefined, setLoadMessage("Welcome to the Future")	);
 var starColorGraph            = THREE.ImageUtils.loadTexture( 'images/star_color_modified.png' );
 
 var datastarUniforms = {

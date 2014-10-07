@@ -270,8 +270,6 @@
         <script src="{$umeos_bin}js/validation/validate.min.js"></script> <!-- jQuery Form Validation Library -->
         <script src="{$umeos_bin}js/validation/validationEngine.min.js"></script> <!-- jQuery Form Validation Library - requirred with above js -->
 
-        <!-- All JS functions -->
-        <script src="{$umeos_bin}js/functions.js"></script>  
     </body>
 </html>
 
