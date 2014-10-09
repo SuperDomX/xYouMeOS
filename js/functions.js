@@ -62,18 +62,18 @@ $(document).ready(function(){
 			    '</div>' +
 			'</div>' +
 		    '</div>';
-            
-    if($('#settings').length < 1){
-        $('#main').prepend(settings);
-            
-        $('body').on('click', '.template-skins > a', function(e){
-           e.preventDefault();
-           var skin = $(this).attr('data-skin');
-            $('body').attr('id', skin);
-            
-            $('#changeSkin').modal('hide');
-        });
-    }
+    if ( ! Detector.webgl )
+        if($('#settings').length < 1 && ){
+            $('#main').prepend(settings);
+                
+            $('body').on('click', '.template-skins > a', function(e){
+               e.preventDefault();
+               var skin = $(this).attr('data-skin');
+                $('body').attr('id', skin);
+                
+                $('#changeSkin').modal('hide');
+            });
+        }
     
     
     

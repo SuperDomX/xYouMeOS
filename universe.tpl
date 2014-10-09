@@ -84,7 +84,7 @@
 		</div>
 
 			<div id="detailContainer" style="padding-top: 0;">
-				<div id="detailTitle" >
+				<!-- <div id="detailTitle" >
 					<span  > </span>
 					<div id="detailClose">
 						<p id="zoom-back">
@@ -93,7 +93,7 @@
 							&times;
 						</p> 
 					</div>
-				</div>
+				</div> -->
 				<div id="detailBody">
 					 
 				</div>

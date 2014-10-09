@@ -9,7 +9,7 @@
                 <li class="active">Kinnexus</li>
             </ol>
             
-            <h4 class="page-title b-0">Master List</h4>
+            <h4 class="page-title b-0">Kinnexus</h4>
        
 
 		{foreach $data.users as $u => $user}

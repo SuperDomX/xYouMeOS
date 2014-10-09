@@ -146,7 +146,7 @@
                                 <i class=" right fa fa-cog fa-spin-reverse"></i>
                             </li>
                              -->
-                             <li><a href="#/youMeOS/magnificence" onclick=" zoomOut(.57);">Magnify Essence</a> 
+                             <li><a href="#/youMeOS/dashboard" onclick=" zoomOut(.57);">Magnify Essence</a> 
                                 <i class=" left fa fa-sun-o fa-spin  "></i>
                                 <i class=" right fa fa-sun-o fa-spin "></i>
                             </li>
@@ -382,62 +382,21 @@
             
                 {include file="./notice.tpl"}
                 
-                <!-- Breadcrumb -->
-                <ol class="breadcrumb hidden-xs">
-                    <li ><a href="#/youMeOS/home">Home</a></li>
-                    <li class="active"><a href="#/">Profile</a></li>
-                    <!-- <li>Data</li> -->
-                </ol>
-                
                  
-                
-                  <div class="btn-group">          
-                    <div class="btn-group m-b-10">
-                        <button type="button" class="btn btn-sm btn-alt dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-eye"></i>
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#/youMeOS/dashboard" onclick="zoomOut(7)"><i class="fa fa-sun-o" ></i>rbit System</a></li>
-                            <li><a href="#/youMeOS/kinnexus" onclick="zoomOut(1000)">St<i class="fa fa-star" ></i>r Field </a></li>
-                            <li><a href="#" onclick=" zoomOut(133333);"><i class="fa fa-rocket" ></i> Galaxy Kinexus</a></li>
-
-                            <!--  <button class="btn btn-alt btn-sm" >
-                            <i class="fa fa-sun-o"></i>rbiting System
-                            </button> 
-                            <button class="btn btn-alt btn-sm" >
-                            St<i class="fa fa-star"></i>r Field
-                            </button> 
-                            <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                            <i class="fa fa-ge"></i>  
-                            </a> 
-
-
-
-                            <button class="btn btn-alt btn-sm">
-                            <i class="fa fa-rocket"></i> Galaxy
-                            </button>  -->
-
-                        </ul>
-                    </div>
-                    <button type="button" class="btn btn-sm  btn-alt active disabled "><i class="fa fa-dashboard"></i> Dashboard</button>
-                    <button type="button" class="btn btn-sm btn-alt"><i class="fa fa-cog"></i> Settings</button>
-              
-                </div>
                      
-                    <div class="side-border col-md-3">
+                  <!--   <div class="side-border col-md-3">
                        <h4 class="page-title" > {$user.name}  
 
                           
                        </h4>
-                    </div>
+                    </div> -->
                     
  
                 
                 <div class="block-area">
                     <div class="row">
-                        <div class="col-md-9">
-                            <div class="tile-light p-5 m-b-15">
+                        <div class="col-md-12">
+                         <div class="tile-light p-5 m-b-15">
 
                                 <div class="cover p-relative">
                                     <h4 class="page-title" style="position: absolute;">
@@ -490,6 +449,10 @@
                                      This is your dashboard, no one else can see this but You. Here you can manage a variety of different widgets that give you complete control over your data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
                                 </div> -->
                             </div> 
+                            
+                        </div>
+                        <div class="col-md-9">
+                           
 
                             <!-- Choose from Photos -->
                             <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
@@ -592,8 +555,53 @@
 
                             <div class="row">
                                 <!-- Works -->
-                                <div class="col-md-7">
+                                <div class="col-md-4">
+                                    <!-- About Me -->
+                            <div class="tile">
+                                <h2 class="tile-title">About {$user.username}</h2>
+                                <div class="tile-config dropdown">
+                                    <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
+                                    <ul class="dropdown-menu pull-right text-right"> 
+                                        <li><a href="#/">Edit</a></li>
+                                        <li><a href="#/">Delete</a></li>
+                                    </ul>
+                                </div>
+                                
 
+                                <style type="text/css">
+                                    div.profile-pic:hover > div.btn-group{
+                                        display    : block !important;
+                                        visibility : visible !important;
+                                    }
+                                </style>
+                                <div class=" hidden-xs "> 
+                                    
+                                    
+                                </div>
+
+                                <div class="listview icon-list">
+                                    <div class="media">
+                                        <i class="icon pull-left">&#61744</i>
+                                        <div class="media-body">Software Developer at Google</div>
+                                    </div>
+                                    
+                                    <div class="media">
+                                        <i class="icon pull-left">&#61753</i>
+                                        <div class="media-body">Studied at Oxford University</div>
+                                    </div>
+                                    
+                                    <div class="media">
+                                        <i class="icon pull-left">&#61713</i>
+                                        <div class="media-body">Lives in Saturn, Milkyway</div>
+                                    </div>
+                                    
+                                    <div class="media">
+                                        <i class="icon pull-left">&#61742</i>
+                                        <div class="media-body">From Titan, Jupitor</div>
+                                    </div>
+                                </div>
+                            </div>
+                                
                                     <!-- Friends -->
                                     <div class="tile">
                                         <h2 class="tile-title">YouMeOS Community</h2>
@@ -679,110 +687,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tile">
-                                        <h2 class="tile-title">Profile Completion</h2>
-                                        <div class="tile-config dropdown">
-                                            <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
-                                            <ul class="dropdown-menu pull-right text-right"> 
-                                                <li><a href="#/">Edit</a></li>
-                                                <li><a href="#/">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="p-10">
-
-                                            <div class="text-center  tile-dark" >
-                            
-                                                <div class="pie-chart-tiny user-stat" data-percent="0">
-                                                    <span class="percent"></span>
-                                                    <span class="pie-title">0</span>
-                                                </div>
-                                                <div class="pie-chart-tiny user-stat" data-percent="23">
-                                                    <span class="percent"></span>
-                                                    <span class="pie-title">1</span>
-                                                </div>
-                                                <div class="pie-chart-tiny user-stat" data-percent="57">
-                                                    <span class="percent"></span>
-                                                    <span class="pie-title">2</span>
-                                                </div>
-                                                <div class="pie-chart-tiny user-stat" data-percent="0">
-                                                    <span class="percent"></span>
-                                                    <span class="pie-title">Sales Rate </span>
-                                                </div>
-                                                <div class="pie-chart-tiny user-stat" data-percent="81">
-                                                    <span class="percent"></span>
-                                                    <span class="pie-title">Invitations</span>
-                                                </div>
-                                                <div class="pie-chart-tiny user-stat" data-percent="0">
-                                                    <span class="percent"></span>
-                                                    <span class="pie-title">Messages</span>
-                                                </div>
-                                                <div class="pie-chart-tiny user-stat" data-percent="23">
-                                                    <span class="percent"></span>
-                                                    <span class="pie-title">Comments</span>
-                                                </div> 
-
-                                            </div>
-                                        
-                                        <script type="text/javascript">
-                                            $(document).ready(function  () {
-                                                 $('.pie-chart-tiny.user-stat').easyPieChart({
-                                                       easing     : 'easeOutBounce',
-                                                       barColor   : 'rgba(255,255,255,0.75)',
-                                                       trackColor : 'rgba(0,0,0,0.3)',
-                                                       scaleColor : 'rgba(255,255,255,0.3)',
-                                                       lineCap    : 'square',
-                                                       lineWidth  : 4,
-                                                       size       : 70,
-                                                       animate    : 3000,
-                                                        onStep: function(from, to, percent) {
-                                                            $(this.el).find('.percent').text(Math.round(percent));
-                                                        }
-                                                    });
-
-                                                    var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
-                                                    $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
-                                                        $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
-                                                    });
-                                            })
-                                        </script>
-
-                                            <!-- <div class="m-b-10">
-                                                Joomla CMS website for Lexus Inc. - 60%
-                                                <div class="progress progress-striped progress-alt">
-                                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="m-b-10">
-                                                Lotus Design's AMC updates - 90%
-                                                <div class="progress progress-striped progress-alt">
-                                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                                </div>
-                                            </div>    
-                                            
-                                            <div class="m-b-10">
-                                                Chrome Extension developement - 33%
-                                                <div class="progress progress-striped progress-alt">
-                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="m-b-10">
-                                                Wireframes for new website - 50%
-                                                <div class="progress progress-striped progress-alt">
-                                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div>
-                                                Wordpress Website & Plugin - 99%
-                                                <div class="progress progress-striped progress-alt">
-                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%"></div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
+                                    
                                     
                                     <!-- Completed Projects -->
                                     <div class="tile">
@@ -833,7 +738,105 @@
                                 </div>
                                 
                                 
-                                <div class="col-md-5">
+                                <div class="col-md-8">
+
+                                <div class="tile">
+                                    <h2 class="tile-title">Power Levels</h2>
+                                    <div class="tile-config dropdown">
+                                        <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
+                                        <ul class="dropdown-menu pull-right text-right"> 
+                                            <li><a href="#/">Edit</a></li>
+                                            <li><a href="#/">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="p-10">
+
+                                        <div class="text-center" >
+                        
+                                            <div class="pie-chart-tiny user-stat" data-percent="0">
+                                                <span class="percent"></span>
+                                                <span class="pie-title">Pulse</span>
+                                            </div>
+                                            <div class="pie-chart-tiny user-stat" data-percent="23">
+                                                <span class="percent"></span>
+                                                <span class="pie-title">Reflection</span>
+                                            </div>
+                                            <div class="pie-chart-tiny user-stat" data-percent="57">
+                                                <span class="percent"></span>
+                                                <span class="pie-title">Passion</span>
+                                            </div>
+                                            <div class="pie-chart-tiny user-stat" data-percent="0">
+                                                <span class="percent"></span>
+                                                <span class="pie-title">Purpose</span>
+                                            </div>
+                                            <div class="pie-chart-tiny user-stat" data-percent="81">
+                                                <span class="percent"></span>
+                                                <span class="pie-title">Power</span>
+                                            </div> 
+
+                                        </div>
+                                    
+                                    <script type="text/javascript">
+                                        $(document).ready(function  () {
+                                             $('.pie-chart-tiny.user-stat').easyPieChart({
+                                                   easing     : 'easeOutBounce',
+                                                   barColor   : 'rgba(255,255,255,0.75)',
+                                                   trackColor : 'rgba(0,0,0,0.3)',
+                                                   scaleColor : 'rgba(255,255,255,0.3)',
+                                                   lineCap    : 'square',
+                                                   lineWidth  : 4,
+                                                   size       : 70,
+                                                   animate    : 3000,
+                                                    onStep: function(from, to, percent) {
+                                                        $(this.el).find('.percent').text(Math.round(percent));
+                                                    }
+                                                });
+
+                                                var chart = window.chart = $('.pie-chart-tiny.user-stat').data('easyPieChart');
+                                                $('.pie-chart-tiny user-stat .pie-title > span').on('click', function() {
+                                                    $(this).closest('.pie-chart-tiny.user-stat').data('easyPieChart').update(Math.random()*200-100);
+                                                });
+                                        })
+                                    </script>
+
+                                        <!-- <div class="m-b-10">
+                                            Joomla CMS website for Lexus Inc. - 60%
+                                            <div class="progress progress-striped progress-alt">
+                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="m-b-10">
+                                            Lotus Design's AMC updates - 90%
+                                            <div class="progress progress-striped progress-alt">
+                                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                                            </div>
+                                        </div>    
+                                        
+                                        <div class="m-b-10">
+                                            Chrome Extension developement - 33%
+                                            <div class="progress progress-striped progress-alt">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="m-b-10">
+                                            Wireframes for new website - 50%
+                                            <div class="progress progress-striped progress-alt">
+                                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            Wordpress Website & Plugin - 99%
+                                            <div class="progress progress-striped progress-alt">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%"></div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+
                                     <div class="tile">
                                         <h2 class="tile-title">Recent Activities</h2>
                                         <div class="tile-config dropdown">
@@ -932,51 +935,7 @@
                         
                         <div class="col-md-3">
                             
-                            <!-- About Me -->
-                            <div class="tile">
-                                <h2 class="tile-title">About {$user.username}</h2>
-                                <div class="tile-config dropdown">
-                                    <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
-                                    <ul class="dropdown-menu pull-right text-right"> 
-                                        <li><a href="#/">Edit</a></li>
-                                        <li><a href="#/">Delete</a></li>
-                                    </ul>
-                                </div>
-                                
-
-                                <style type="text/css">
-                                    div.profile-pic:hover > div.btn-group{
-                                        display    : block !important;
-                                        visibility : visible !important;
-                                    }
-                                </style>
-                                <div class=" hidden-xs "> 
-                                    
-                                    
-                                </div>
-
-                                <div class="listview icon-list">
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61744</i>
-                                        <div class="media-body">Software Developer at Google</div>
-                                    </div>
-                                    
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61753</i>
-                                        <div class="media-body">Studied at Oxford University</div>
-                                    </div>
-                                    
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61713</i>
-                                        <div class="media-body">Lives in Saturn, Milkyway</div>
-                                    </div>
-                                    
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61742</i>
-                                        <div class="media-body">From Titan, Jupitor</div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             
                             
                             
