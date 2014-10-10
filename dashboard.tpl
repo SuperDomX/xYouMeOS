@@ -73,15 +73,22 @@
                     <!-- Profile Menu -->
                     <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
 
-                        
-                        <h3 class="tile-title">
-                            {$user.name} 
+
+                        <!-- <h3 class="tile-title">
+                            
                         </h3>
+                        <h4 class="tile-title">
+                            
+                        </h4> -->
                          
 
                         <a href="#/" data-toggle="dropdown">
                             <img class="profile-pic animated img-circle" src="/users/avatar" alt=""> 
                         </a>
+                         <h4 class="m-0">{$user.name}</h4>
+                        @{$user.username} 
+                        {include "_menu_avatar.tpl"}
+                        
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
                         <ul class="dropdown-menu profile-menu">  
 
@@ -146,30 +153,31 @@
                                 <i class=" right fa fa-cog fa-spin-reverse"></i>
                             </li>
                              -->
-                             <li><a href="#/youMeOS/magnificence" onclick=" zoomOut(.57);">Magnify Essence</a> 
-                                <i class=" left fa fa-sun-o fa-spin  "></i>
-                                <i class=" right fa fa-sun-o fa-spin "></i>
+                             <li><a href="#/login/logout">Sign Off</a> 
+                                <i class=" left fa fa-key"></i>
+                                <i class=" right fa fa-lock"></i>
                             </li>
-                            <li><a href="#/youMeOS/orbitSystem" onclick=" zoomOut(7);">Orbiting System</a> 
-                            <i class=" left fa fa-globe "></i>
-                                <i class=" right fa fa-cloud "></i>
-                            </li>
-                            <li><a href="#/youMeOS/kinnexus" onclick=" zoomOut(1000);">Kinnexus</a> 
-                                <i class=" left fa fa-star-o "></i>
-                                <i class=" right fa fa-star"></i>
-                            </li>
+
                             <li><a href="#/youMeOS/home" onclick=" zoomOut(133333);">Galatic Core</a> 
                                  <i class=" left fa fa-rocket"></i>
                                 <i class=" right fa fa-sun-o"></i>
                             </li>
 
-                            <li><a href="#/login/logout">Sign Off</a> 
-                                <i class=" left fa fa-key"></i>
-                                <i class=" right fa fa-lock"></i>
+                            <li><a href="#/youMeOS/kinnexus" onclick=" zoomOut(1000);">The Kinnexus</a> 
+                                <i class=" left fa fa-star-o "></i>
+                                <i class=" right fa fa-star"></i>
                             </li>
-                            <li>
-                                 
+                            <li><a href="#/youMeOS/orbitSystem" onclick=" zoomOut(7);">Orbiting System</a> 
+                            <i class=" left fa fa-globe "></i>
+                                <i class=" right fa fa-cloud "></i>
                             </li>
+
+                             <li><a href="#/youMeOS/magnificence" onclick=" zoomOut(.57);">Magnify Essence</a> 
+                                <i class=" left fa fa-sun-o fa-spin  "></i>
+                                <i class=" right fa fa-sun-o fa-spin "></i>
+                            </li>
+
+                            
                         </ul>
 
 
@@ -265,7 +273,7 @@
 
                     <li>
                         <a class="sa-side-home" href="#/youMeOS/home"  onclick=" zoomOut(133333);">
-                            <span class="menu-item">Home is where the Heart is</span>
+                            <span class="menu-item">Home is; Where the Heart is</span>
                         </a>
                     </li>
                     

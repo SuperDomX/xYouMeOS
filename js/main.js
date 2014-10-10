@@ -291,18 +291,21 @@ function initScene() {
 
 	// Close Button
 
-	var $exout = $('#ex-out').click(function(e) {
+	$('#closeDetail').click(function(e) {
 		e.preventDefault();
 		$detailContainer.fadeOut();
 		$('#css-container').css('display', 'block');
 		if ($detailContainer.hasClass('about')) {
-			$detailContainer.removeClass('about');
+			// $detailContainer.removeClass('about');
 		}
+		
+		$('#closeDetail').hide();
+		$('#about').show();
 	});
 
 	var $zoomback = $('#zoom-back').click(function(e) {
 		e.preventDefault();
-		$exout.click();
+		// $exout.click();
 		zoomOut(750);
 	});
 

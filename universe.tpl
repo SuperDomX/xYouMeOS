@@ -111,21 +111,29 @@
 		</div>
 
 		<div id="minimap">
-			<div id="volume">
-				<!-- <img src="/images/icons/sound-on.svg" alt="" /> -->
+			<div id="closeDetail" style="display: none;">
+				<span class="icon" id="ex-out">
+					&#61838;
+				</span>
+			</div>
+			<div id="about">
+				<span class="icon" id="ex-eye">
+					&#61698;
+				</span>
 			</div>
 			<div id="zoom-levels">
 				<div id="zoom-backdrop"></div>
 				<div id="zoom-cursor"></div>
 			</div>
-			<div id="about">
-				<!-- <span class="icon">&#61790;</span> -->
+			<div id="volume">
+				<!-- <img src="/images/icons/sound-on.svg" alt="" /> -->
 			</div>
+			<small class="label" style="position: absolute; bottom: 3px; right: 10px;">
+	            {$PHP.version}
+	        </small>
 		</div>
 
-		<small class="label" style="position: absolute; bottom: 3px; right: 10px;">
-            {$PHP.version}
-        </small>
+		
 
         
 		<style type="text/css">

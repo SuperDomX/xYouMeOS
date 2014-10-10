@@ -21,6 +21,7 @@
   var $minimap    = $domElement.find('#zoom-levels');
   var $volume     = $domElement.find('#volume').load(updateCount);
   var $about      = $domElement.find('#about').load(updateCount);
+  var $closeDetail= $domElement.find('#closeDetail').load(updateCount);
   var $tour       = $domElement.find('#tour').load(updateCount);
   var $heatvision = $domElement.find('#heatvision').load(updateCount);
   var $sound      = $domElement.find('#sound').load(updateCount);
@@ -192,9 +193,9 @@
 
       $('#css-container').css('display', 'none');
 
-      $.get('/html/youMeOS/version/' , function(data) {
-        $('#detailBody').html(data);        
-      });
+      // $.get('/html/youMeOS/version/' , function(data) {
+      //   $('#detailBody').html(data);        
+      // });
 
       $('#detailTitle').find('span').html("Welcome");
 
@@ -202,7 +203,10 @@
         paddingTop: 0
       });
 
-      $detailContainer.slideDown();
+      $detailContainer.fadeIn();
+
+      $about.hide();
+      $closeDetail.show();
 
     });
 

@@ -61,8 +61,8 @@
 
             <form class="box tile animated " id="box-login" action="/.json" >
                 
-                <h3 class="m-t-0 m-b-15">Travel to You</h3>
-                <h5> #Youinverses: {$count_universes} </h5>
+                <h3 class="m-t-0 m-b-15">Who are You?</h3>
+                
                 <input type="text" class="login-control m-b-10" placeholder="Universal Name" name="login[username]">
                 <input type="password" class="login-control" placeholder="Key" name="login[password]">
                 <!-- <div class="checkbox m-b-20">
@@ -71,8 +71,9 @@
                         Remember Me
                     </label>
                 </div> --><br/><br/>
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="" title="" data-original-title="">Center You</button>
+                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="" title="" data-original-title="">Center In</button>
 
+                <h5> #Youinverses: {$count_universes} </h5>
                 <br/><br/>
                 <small>
                      <!-- <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> | -->
@@ -167,7 +168,7 @@
                             // $('#ex-out').click();
                             // $('#about').click();
                                 
-                            var go = "/youMeOS/dashboard";
+                            var go = "/youMeOS/I";
 
                             // window.location.hash = "#"+go;
 
@@ -228,10 +229,11 @@
                 e.preventDefault(); //STOP default action
                 // e.unbind(); //unbind. to stop multiple form submit.
             }
-
-
             $('#box-login').submit(window.login);
             $('#box-register').submit(window.login);
+
+            $('#closeDetail').show();
+            $('#about').hide();
  
         </script>
         <!-- Javascript Libraries -->

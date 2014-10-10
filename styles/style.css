@@ -523,56 +523,60 @@ div.tip {
     vertical-align: top; }
 
 #minimap {
-  opacity: 0.0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  /*
+   opacity             : 0.0;
+   position            : fixed;
+   right               : 5px;
+   top                 : 0;
+   bottom              : 0;
+   color               : #fff;
+   text-align          : center;
+   padding             : 15px 20px;
+   -moz-user-select    : -moz-none;
+   -khtml-user-select  : none;
+   -webkit-user-select : none;
+   /*
    Introduced in IE 10.
-   See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-  */
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: opacity 0.25s;
-  -moz-transition: opacity 0.25s;
-  -ms-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-  transition: opacity 0.25s;
-  z-index: 9999;
-  /**
+   See http            ://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select     : none;
+   user-select         : none;
+   -webkit-transition  : opacity 0.25s;
+   -moz-transition     : opacity 0.25s;
+   -ms-transition      : opacity 0.25s;
+   -o-transition       : opacity 0.25s;
+   transition          : opacity 0.25s;
+   z-index             : 9999;
+   /**
    * Zoom variables
-   */ }
+   */ 
+  }
   #minimap.ready {
     opacity: 0.8; }
   #minimap.ready:hover {
-    opacity: 1.0; }
+    opacity : 1.0; 
+  }
   #minimap #home {
-    cursor: pointer;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s; }
+    cursor             : pointer;
+    -webkit-transition : all 0.25s;
+    -moz-transition    : all 0.25s;
+    -ms-transition     : all 0.25s;
+    -o-transition      : all 0.25s;
+    transition         : all 0.25s; 
+  }
   #minimap #zoom-levels {
-    left: 0;
-    right: 0;
-    position: relative;
-    cursor: ns-resize;
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s;
-    margin-top: 10px; }
+    left               : 0;
+    right              : 0;
+    position           : relative;
+    cursor             : ns-resize;
+    border-bottom      : 1px solid white;
+    border-top         : 1px solid white;
+    -webkit-transition : all 0.25s !important;
+    -moz-transition    : all 0.25s !important;
+    -ms-transition     : all 0.25s !important;
+    -o-transition      : all 0.25s !important;
+    transition         : all 0.25s !important;
+    margin-top         : 10px;
+  }
   #minimap #zoom-backdrop {
     position: relative;
     width: 0;
@@ -580,40 +584,44 @@ div.tip {
     margin: 0 auto;
     border-left: 2px solid white; }
   #minimap #zoom-cursor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 0;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white; }
-  #minimap #about {
-    position: absolute;
-    font-family: 'Lekton', monospace;
-    font-size: 24px;
-    width: 24px;
-    line-height: 27px;
-    text-align: center;
-    height: 24px;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    -ms-border-radius: 24px;
-    -o-border-radius: 24px;
-    border-radius: 24px;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s;
-    font-weight: bold;
-    cursor: pointer;
-    bottom: 20px;
-    margin-left: -2px; }
+    position      : absolute;
+    top           : 0;
+    left          : 0;
+    right         : 0;
+    width         : 100%;
+    height        : 0;
+    border-top    : 2px solid white;
+    border-bottom : 2px solid white; 
+  }
+  #minimap #about, #minimap #closeDetail {
+    font-family           : 'Lekton', monospace;
+    font-size             : 24px;
+    width                 : 24px;
+    line-height           : 27px;
+    text-align            : center;
+    height                : 24px;
+    -webkit-border-radius : 24px;
+    -moz-border-radius    : 24px;
+    -ms-border-radius     : 24px;
+    -o-border-radius      : 24px;
+    border-radius         : 24px;
+    -webkit-transition    : all 0.25s;
+    -moz-transition       : all 0.25s;
+    -ms-transition        : all 0.25s;
+    -o-transition         : all 0.25s;
+    transition            : all 0.25s;
+    font-weight           : bold;
+    cursor                : pointer;
+    /*top                   : 20px;*/
+    margin-left           : -1px;
+    
+  }
   #minimap #volume {
-    cursor: pointer;
-    width: 24px;
-    height: 24px; }
+    cursor : pointer;
+    width  : 24px;
+    height : 24px;
+    margin-top: 15px;
+  }
   #minimap #tour {
     position: absolute;
     font-family: 'Lekton', monospace;

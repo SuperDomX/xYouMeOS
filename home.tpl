@@ -5,17 +5,18 @@
         <div class="jumbotron tile-light">
             <div class="container">
                 
-              <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-45"></i>Journey Home</h1>
+              <h1>
+                <i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-45"></i>Home for the Ages
+              </h1>
               <p>
-                Ready for an adventure {$user.username|ucfirst}? You & Me have a lot of ground to cover, or rather <b>Infinite Space</b>. Click the arrows to learn more.
+                It's time to begin the ad-less venture You & Me will be having in <b>Infinite Space</b>. Which way do you want to go?
               </p>
-                  
-                
-               
-
-               <a class="btn btn-alt btn-lg" onclick="tour.start();" href="#">
+              <br/><br/>
+              <blockquote>"Like Home, there is no other palace. "</blockquote> 
+            <!--
+                <a class="btn btn-alt btn-lg" onclick="tour.start();" href="#">
                 <i class="fa fa-rocket"></i> Take the Tour
-               </a> 
+               </a>  -->
                
             </div>
         </div> 
@@ -47,38 +48,85 @@
                 <div class="item ">
                    <div class="jumbotron tile-light">
                     <div class="container">
-                        
-                      <h1><i class="fa fa-4x fa-user-md pull-right fa-rotate-180  "></i>Tell Me; Who are You?</h1>
+                        <img src="/users/avatar" class=" pull-right "></i>
+                      
+                      <h1> 
+                        Who... are... You?
+                        </h1>
+                      
                       <p>
                        
-                      Please, make yourself at home.
+                      You, are; <b>You</b>! Configure Me to your liking, so I shall present configuration however you like.
+                      Perfect Example: on the right is your Avatar. Please feel free to change Me.
+                      <br/> 
+                        <div class="btn-group m-b-10   "  >
+                              <button type="button" class="btn btn-lg btn-alt dropdown-toggle" data-toggle="dropdown"  >
+                                  <strong>
+                                      <i class="fa fa-user"></i>
+                                      Change Avatar
+                                  </strong>
+                                  <!-- <span class="caret"></span> -->
+                              </button>
+                              <ul class="dropdown-menu  dropdown-menu-alt animated rollIn" role="menu">
+                                  
+                                  <li role="presentation">
+                                      <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/html/users/avatar/takePhoto')">
+                                      <i class="fa fa-camera"></i> Take Snapshot...</a>
+                                     
+                                  </li>
+
+
+
+                                  <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                      <i class="fa fa-folder"></i> Choose From Photos...</a>
+                                  </li> -->
+                                  <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
+                                      <i class="fa fa-upload"></i> Upload Avatar...</a>
+                                  </li>
+
+                                  <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
+                                      <i class="fa fa-folder-open-o"></i> Choose from Photos...</a>
+                                  </li>
+                                  
+                                  
+
+                                  <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                      <i class="fa fa-camera"></i> Edit Thumbnail...</a>
+                                  </li> -->
+                                  
+                                  <!-- <li role="presentation" class="divider"></li>
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                      <i class="fa fa-ban"></i> Remove Photo...</a>
+                                  </li> -->
+                              </ul>
+                          </div> 
 
                                           
+                      <blockquote>"I am You, You are Me... Opera Sauce!"</blockquote> 
 
                       </p>
                           
                        {if $masterKey.is.user}
-                        <!-- <a class="btn btn-alt btn-lg" href="#" onclick="$('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}'); ">
-                        
-                             You <i class="fa fa-dashboard"></i> Me Portal
-                        </a> -->
+                        <!-- <a class="btn btn-alt btn-lg" href="#" onclick="$('#detailBody').load('/html/{$Xtra}/dashboard/{$user.username}'); "> 
+                             Take Your Pulse <i class="fa fa-dashboard"></i> Me Portal
+                        </a>
                         <div class="btn-group">
-                        <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
-                           <i class="fa fa-user-md"></i> Pulse
-                        </a> 
                           <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
-                           <i class="fa fa-eye"></i> Reflection
-                        </a> 
-                          <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
-                           <i class="fa fa-fire"></i> Passion
-                        </a> 
-                          <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
-                           <i class="fa fa-trophy"></i> Purpose
-                        </a> 
-                          <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
-                           <i class="fa fa-heart"></i> Power
-                        </a> 
-                        </div>
+                             <i class="fa fa-user-md"></i> Pulse
+                          </a> 
+                            <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
+                             <i class="fa fa-eye"></i> Reflection
+                          </a> 
+                            <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
+                             <i class="fa fa-fire"></i> Passion
+                          </a> 
+                            <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
+                             <i class="fa fa-trophy"></i> Purpose
+                          </a> 
+                            <a class="btn btn-alt btn-lg" href="#/youMeOS/aboutYou" onclick="zoomOut(7)">
+                             <i class="fa fa-heart"></i> Power
+                          </a> 
+                        </div> -->
                         <!-- <a class="btn btn-alt btn-lg" onclick="zoomOut(7)">
                            <i class="fa fa-sun-o"></i>rbiting System
                         </a> 
@@ -93,7 +141,96 @@
 
                        
 
-                        
+                         <!-- Choose from Photos -->
+                            <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        {$btns[] = [
+                                            'id'      => 'new-message-close',
+                                            'class'   => 'btn-lg btn-block',
+                                            'dismiss' => 1,
+                                            'html'    =>'<i class="fa fa-ban"></i> Cancel'
+                                        ]}
+                                        {include 
+                                            file    = "../../html/~blox/modal-body.tpl" 
+                                            title   = '<i class="fa fa-user"> </i> Double Click to Choose Photo' 
+                                            load    = 'youMeOS/chronus/Photos'
+                                            buttons = $btns
+                                        }
+                                        <script type="text/javascript">
+                                        window.getFileCallback = function(file) {
+                                            $('#selectAvatar').modal('hide');
+
+                                            $.ajax({
+                                                url      : '/users/avatar/selectAvatar/.json',
+                                                type     : "POST",
+                                                data     : {
+                                                    src : file.url
+                                                },
+                                                dataType : 'json',
+                                                success  : function(data, textStatus, jqXHR){
+                                                    $('.profile-pic').attr({
+                                                        src : file.url
+                                                    });
+
+                                                    $('.profile-pic img').attr({
+                                                        src : file.url
+                                                    });
+                                                }
+                                            });
+
+                                            // return false;
+                                        }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div> 
+                             <!-- Modal Take Photo -->  
+                            <div class="modal fade" id="takePhoto" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title"><i class="fa fa-camera"></i> Take Snapshot</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="takePhotoSnap" class="btn btn-sm">
+                                                <i class="fa fa-camera"></i> Snap Photo
+                                            </button>
+                                            <button type="button" class="btn btn-sm" data-dismiss="modal" onmousedown="takePhoto.stop();"> <i class="fa fa-ban"></i> Close</button>
+
+                                            <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                             <!-- Modal Upload Avatar -->  
+                            <div class="modal fade" id="uploadAvatar" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title"><i class="fa fa-upload"></i> Upload Avatar</h4>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="takePhotoSnap" class="btn btn-sm" onclick="$('#uploadAvatar form').submit();">
+                                                <i class="fa fa-upload"></i> Upload Avatar
+                                            </button>
+                                            <button type="button" class="btn btn-sm pull-right" data-dismiss="modal" > <i class="fa fa-ban"></i> Close</button>
+
+                                            <!-- <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                        
                     </div>
                   </div> 
@@ -105,23 +242,26 @@
                         
                       <h1><i class="fa fa-4x fa-ge fa-spin pull-right   "></i>Universal O.S.</h1>
                       <p>
-                        The O.S. in YouMeOS stands for whatever you can come up with; I'm Universal.
+                        I, YouMeOS, am Universal. Think of the "OS" as an infinite ball of string that I give you to weave everything and any who you want. 
                         
                         <div class="btn-group">
                          
-                        <a class="btn btn-alt " href="#/youMeOS/dashboard" onclick="zoomOut(7)">
-                           <i class="fa fa-github"></i> Open Source
-                        </a> 
-                        <a class="btn btn-alt " href="#/youMeOS/dashboard" onclick="zoomOut(7)">
-                           <i class="fa fa-users"></i> Operation <b>Society</b>
-                        </a> 
-                          <a class="btn btn-alt " href="#/youMeOS/dashboard" onclick="zoomOut(7)">
-                           <i class="fa fa-star"></i> Other Stuff
-                        </a> 
+                        
+                        
+
                           
                           <a class="btn btn-alt " href="#/youMeOS/dashboard" onclick="zoomOut(7)">
                            <i class="fa fa-sun-o"></i>rbiting System
                         </a> 
+                       <!--  <a class="btn btn-alt " href="#/youMeOS/dashboard" onclick="zoomOut(7)">
+                           <i class="fa fa-github"></i> Open Source
+                        </a> 
+                          <a class="btn btn-alt " href="#/youMeOS/dashboard" onclick="zoomOut(7)">
+                           <i class="fa fa-star"></i> Other Stuff
+                        </a> 
+                        <a class="btn btn-alt " href="#/youMeOS/dashboard" onclick="zoomOut(7)">
+                           <i class="fa fa-users"></i> Operation: <b>"Society"</b>
+                        </a> -->
                         </div>
                       </p>
                     </div>
