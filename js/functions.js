@@ -62,8 +62,9 @@ $(document).ready(function(){
 			    '</div>' +
 			'</div>' +
 		    '</div>';
-    if ( ! Detector.webgl )
-        if($('#settings').length < 1 && ){
+
+    
+        if($('#settings').length < 1 ){
             $('#main').prepend(settings);
                 
             $('body').on('click', '.template-skins > a', function(e){
@@ -343,7 +344,7 @@ $(document).ready(function(){
     })();
 
     /* --------------------------------------------------------
-     `Color Picker
+     Color Picker
     -----------------------------------------------------------*/
     (function(){
         //Default - hex
