@@ -50,7 +50,7 @@
 <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            
+           
         </div>
     </div>
 </div> 
@@ -78,8 +78,7 @@
 </div>
 
 
-
-<!-- Modal Upload Avatar -->  
+ <!-- Modal Upload Avatar -->  
 <div class="modal fade" id="uploadAvatar" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
