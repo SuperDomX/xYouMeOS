@@ -50,10 +50,12 @@
 <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-           
+          
         </div>
     </div>
 </div> 
+
+
  <!-- Modal Take Photo -->  
 <div class="modal fade" id="takePhoto" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -63,7 +65,7 @@
                 <h4 class="modal-title"><i class="fa fa-camera"></i> Take Snapshot</h4>
             </div>
             <div class="modal-body">
-                
+                 
             </div>
             <div class="modal-footer">
                 <button type="button" id="takePhotoSnap" class="btn btn-sm">
