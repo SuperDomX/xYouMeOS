@@ -3,6 +3,13 @@ $(document).ready(function(){
 	Template Settings
     -----------------------------------------------------------*/
     
+     $('body').on('click touchstart', '#menu-toggle', function(e){
+            e.preventDefault();
+            $('html').toggleClass('menu-active');
+            $('#sidebar').toggleClass('toggled');
+            //$('#content').toggleClass('m-0');
+        });
+
     var settings =  '<a id="settings" href="#changeSkin" data-toggle="modal">' +
 			'<i class="fa fa-gear"></i> Change Skin' +
 		    '</a>' +   
@@ -64,17 +71,15 @@ $(document).ready(function(){
 		    '</div>';
 
     
-        if($('#settings').length < 1 ){
-            $('#main').prepend(settings);
+       $('.cover').prepend(settings);
                 
-            $('body').on('click', '.template-skins > a', function(e){
-               e.preventDefault();
-               var skin = $(this).attr('data-skin');
-                $('body').attr('id', skin);
-                
-                $('#changeSkin').modal('hide');
-            });
-        }
+        $('.cover').on('click', '.template-skins > a', function(e){
+           e.preventDefault();
+           var skin = $(this).attr('data-skin');
+            $('body').attr('id', skin);
+            
+            $('#changeSkin').modal('hide');
+        });
     
     
     

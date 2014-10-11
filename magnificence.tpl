@@ -75,14 +75,14 @@
 
                         
                         <h3 class="tile-title">
-                            {$user.name} 
+                            {$sun.name} 
                         </h3>
                          
 
                         <a href="#/" data-toggle="dropdown">
                             <img class="profile-pic animated img-circle" src="/users/avatar" alt=""> 
                         </a>
-                        <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
+                        <!-- <h4 class="tile m-0">{$sun.username}</h4>  -->
                         <ul class="dropdown-menu profile-menu">  
 
                            <li>
@@ -256,7 +256,7 @@
                 <ul class="list-unstyled side-menu font-icons">
 
                     <li class="active">
-                        <a class="" href="#/{$Xtra}/dashboard" > <!-- /{$user.username} -->
+                        <a class="" href="#/{$Xtra}/dashboard" > <!-- /{$sun.username} -->
                             <span class="icon">&#61698;</span> <span class="menu-item">
                             All-Seeing "I"
                             </span>
@@ -385,7 +385,7 @@
                  
                      
                   <!--   <div class="side-border col-md-3">
-                       <h4 class="page-title" > {$user.name}  
+                       <h4 class="page-title" > {$sun.name}  
 
                           
                        </h4>
@@ -395,26 +395,48 @@
                 
                 <div class="block-area">
                     <div class="row">
-                        <div class="col-md-12">
-                         <div class="tile-light p-5 m-b-15">
+                        <div class="col-md-3 pull-right">
+                            <div class="tile-light p-5 m-b-15">
 
-                                <div class="cover p-relative">
-                                    <h4 class="page-title" style="position: absolute;">
-                                        <span class="dropcap">{$user.username|substr:0:1}</span>{$user.username|substr:1}
-                                    </h4>
-                                    <img src="img/cover-bg.jpg" class="w-100 " alt="">
-
+                                <div class="cover ">
+                                    
+                                    <img src="/users/avatar/&user={$sun.username}" class="w-100 img-circle" alt="">
                                     
                                     
                                     <div class="profile-btn pull-left" > 
                                         <div class="btn-group tile input-focused"   > 
                                             <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
                                             <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> --> 
-                                            <a class="btn btn-alt btn-sm hidden-xs">0 YouMeme's</a>
-                                            <a href="#/youMeOS/kinnexus" class="btn btn-alt btn-sm">0 Kinnexus'</a>
+                                            <!-- <a class="btn btn-alt btn-sm hidden-xs">0 Umeme's</a> -->
+                                            <a href="#/youMeOS/kinnexus" class="btn btn-alt btn-sm">Kinnexus Me</a>
                                             <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> --> 
                                         </div> 
                                     </div>
+                                     
+                                </div><!-- 
+                                <h4 class="m-0">
+                                    {$sun.name}
+                                </h4>
+                                    <i class="fa fa-caret-down pull-left"></i>
+                                    <i class="fa fa-caret-down pull-right"></i>
+                                @{$sun.username}  -->
+
+                                 
+                            </div>
+                           
+                        </div>
+                        <div class="col-md-9">
+                         <div class="tile-light p-5 m-b-15">
+
+                                <div class="cover ">
+                                    
+                                    <img src="/img/cover-bg.jpg" class="w-100 " alt="">
+
+                                    <h4 class="page-title" style="position: absolute; top: 0;">
+                                        <span class="dropcap">{$sun.username|substr:0:1}</span>{$sun.username|substr:1}
+                                    </h4>
+                                    
+                                   
                                 </div>
                                
                                 <style type="text/css">
@@ -441,7 +463,7 @@
                                         <button class="btn btn-xs">0 Connections</button>
                                         <button class="btn btn-xs hidden-xs">0 Interests</button>
                                     </div>
-                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Hello {$user.name}</h1>
+                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Hello {$sun.name}</h1>
                                     <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
                                       
                                      
@@ -556,51 +578,7 @@
                             <div class="row">
                                 <!-- Works -->
                                 <div class="col-md-4">
-                                    <!-- About Me -->
-                            <div class="tile">
-                                <h2 class="tile-title">About {$user.username}</h2>
-                                <div class="tile-config dropdown">
-                                    <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
-                                    <ul class="dropdown-menu pull-right text-right"> 
-                                        <li><a href="#/">Edit</a></li>
-                                        <li><a href="#/">Delete</a></li>
-                                    </ul>
-                                </div>
-                                
-
-                                <style type="text/css">
-                                    div.profile-pic:hover > div.btn-group{
-                                        display    : block !important;
-                                        visibility : visible !important;
-                                    }
-                                </style>
-                                <div class=" hidden-xs "> 
                                     
-                                    
-                                </div>
-
-                                <div class="listview icon-list">
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61744</i>
-                                        <div class="media-body">Software Developer at Google</div>
-                                    </div>
-                                    
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61753</i>
-                                        <div class="media-body">Studied at Oxford University</div>
-                                    </div>
-                                    
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61713</i>
-                                        <div class="media-body">Lives in Saturn, Milkyway</div>
-                                    </div>
-                                    
-                                    <div class="media">
-                                        <i class="icon pull-left">&#61742</i>
-                                        <div class="media-body">From Titan, Jupitor</div>
-                                    </div>
-                                </div>
-                            </div>
                                 
                                     <!-- Friends -->
                                     <div class="tile">
@@ -618,10 +596,10 @@
                                             
 
                                             
-                                                {foreach $data.users as $u => $user}
+                                                {foreach $data.users as $u => $sun}
                                                 <div class="col-xs-3 col-md-3">
-                                                    <div class="widget" style="position: absolute">{$user.username}</div>
-                                                    <a href="#/youMeOS/dashboard/{$user.username}"><img src="/users/avatar/&user={$user.username}" alt=""  ></a>
+                                                    <div class="widget" style="position: absolute">{$sun.username}</div>
+                                                    <a href="#/youMeOS/dashboard/{$sun.username}"><img src="/users/avatar/&user={$sun.username}" alt=""  ></a>
 
                                                 </div> 
                                                 {/foreach} 
@@ -936,7 +914,51 @@
                         <div class="col-md-3">
                             
                             
-                            
+                             <!-- About Me -->
+                                    <div class="tile">
+                                        <h2 class="tile-title">About {$sun.username}</h2>
+                                        <div class="tile-config dropdown">
+                                            <a data-toggle="dropdown" href="#/" class="tooltips tile-menu" title="" data-original-title="Options"></a>
+                                            <ul class="dropdown-menu pull-right text-right"> 
+                                                <li><a href="#/">Edit</a></li>
+                                                <li><a href="#/">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                        
+
+                                        <style type="text/css">
+                                            div.profile-pic:hover > div.btn-group{
+                                                display    : block !important;
+                                                visibility : visible !important;
+                                            }
+                                        </style>
+                                        <div class=" hidden-xs "> 
+                                            
+                                            
+                                        </div>
+
+                                        <div class="listview icon-list">
+                                            <div class="media">
+                                                <i class="icon pull-left">&#61744</i>
+                                                <div class="media-body">Software Developer at Google</div>
+                                            </div>
+                                            
+                                            <div class="media">
+                                                <i class="icon pull-left">&#61753</i>
+                                                <div class="media-body">Studied at Oxford University</div>
+                                            </div>
+                                            
+                                            <div class="media">
+                                                <i class="icon pull-left">&#61713</i>
+                                                <div class="media-body">Lives in Saturn, Milkyway</div>
+                                            </div>
+                                            
+                                            <div class="media">
+                                                <i class="icon pull-left">&#61742</i>
+                                                <div class="media-body">From Titan, Jupitor</div>
+                                            </div>
+                                        </div>
+                                    </div>
                             
                             
                             <!-- Photos -->

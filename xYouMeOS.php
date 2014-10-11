@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0(4.7.2)
+ * @version v0(4.8)
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -46,14 +46,31 @@
 			# code...
 		}
 
+		public function assistant()
+		{
+			# code...
+		}
+
+		// public function orbitSystem()
+		// {
+		// 	# code...
+		// }
+
 		public function aboutYou()
 		{
 			# code...
 		}
 
-		public function magnificence()
+		public function magnificence($user=null)
 		{
 			# code...
+			if($user != null){
+				$user = $this->q()->Select('*','Users',array('username'=>$user) )[0] ;
+				
+				return array(
+					'sun' => $user
+				);
+			}
 		}
 
 		public function orbitSystem()

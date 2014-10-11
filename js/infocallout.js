@@ -1,27 +1,27 @@
 
 
 function makeSunEarthDiagram(){
-	var sunEarthDiagram = new THREE.Object3D();
-
-	var distanceToEarth = KMToLY(150000000);
-	var lineGeo = new THREE.Geometry();
+	var sunEarthDiagram  = new THREE.Object3D();
+	
+	var distanceToEarth  = KMToLY(150000000);
+	var lineGeo          = new THREE.Geometry();
 	lineGeo.vertices.push( new THREE.Vector3(0,0,0) );
 	lineGeo.vertices.push( new THREE.Vector3(distanceToEarth,0,0) );
-	var line = new THREE.Line(lineGeo, new THREE.LineBasicMaterial({color:0xffffff}));
+	var line             = new THREE.Line(lineGeo, new THREE.LineBasicMaterial({color:0xffffff}));
 	sunEarthDiagram.add( line );	
 	
-	var earthGyro = new THREE.Gyroscope();
+	var earthGyro        = new THREE.Gyroscope();
 	earthGyro.position.x = distanceToEarth;	
 	sunEarthDiagram.add( earthGyro );	
-	var earthCallout = makeClamper(0.0000025);	
+	var earthCallout     = makeClamper(0.0000025);	
 	earthGyro.add( earthCallout );
-
-	earthGyro.name = "Sun";
+	
+	earthGyro.name       = "Sun";
 	attachMarker( earthGyro, 0.001 );
-
-	var sunGyro = new THREE.Gyroscope();
+	
+	var sunGyro          = new THREE.Gyroscope();
 	sunEarthDiagram.add( sunGyro );
-	var sunCallout = makeClamper(0.000003);
+	var sunCallout       = makeClamper(0.000003);
 	sunGyro.add( sunCallout );
 	
 	translating.add(sunEarthDiagram);

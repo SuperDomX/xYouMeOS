@@ -20,12 +20,21 @@
         </style>    
         <header id="header" class="media" style="margin:0">
             <a href="#" id="menu-toggle"></a> 
-            <a class="logo pull-left" href="#/{$Xtra}/version/feed">
-              <strong>You Me OS </strong><small>{$PHP.version}</small>
-            </a>
+            
+            <div class="logo pull-left" >
+                
+                
+                <a href="#/{$Xtra}/assistant"  ><strong>  Ume<span class="icon">&#61780;</span>s </strong>
+                    
+                <!-- <small>{$PHP.version}</small> -->
+                </a>
+                    
+            </div>
             
             <div class="media-body">
                 <div class="media" id="top-menu">
+
+                    
 
                     <div class="pull-left tm-icon">
                         <a data-drawer="messages" class="drawer-toggle" href="#/">
@@ -47,11 +56,6 @@
                     
                     <div class="pull-right">
                         {include file="~blox/clock.tpl"}
-                        <!-- <span id="hours"></span>
-                        :
-                        <span id="min"></span>
-                        :
-                        <span id="sec"></span> -->
                     </div>
                     
                     <div class="media-body">
@@ -72,8 +76,8 @@
                 <div class="side-widgets overflow">
                     <!-- Profile Menu -->
                     {include "./_menu_avatar.tpl"}                        
-                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
-
+                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu" style="padding: 0px 5px;">
+                        
 
                         <!-- <h3 class="tile-title">
                             
@@ -83,9 +87,12 @@
                         </h4> -->
                          
 
-                        
+                        {include "./_user_xstats.tpl" }
                         <a href="#/" data-toggle="dropdown">
-                            <h4 class="m-0">{$user.name}</h4>
+                            <h4 class="m-0">
+                                {$user.name}
+                            </h4>
+
                             @{$user.username} 
                         </a>
 
@@ -95,10 +102,10 @@
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
                         <ul class="dropdown-menu profile-menu">  
 
-                           <li>
-                                {include "./_user_xstats.tpl"}
+                           <!-- <li>
+                                
                            </li>
-
+ -->
                             <!-- <div class="btn-group btn-block ">
                                 <button class="btn btn-alt col-md-3 " onclick="zoomOut(.77)">
                                     <i class="fa fa-sun-o text-danger"></i>   
@@ -129,30 +136,32 @@
                                 <i class=" left fa fa-cog fa-spin"></i>
                                 <i class=" right fa fa-cog fa-spin-reverse"></i>
                             </li>
-                             -->
                              <li><a href="#/login/logout">Sign Off</a> 
                                 <i class=" left fa fa-key"></i>
                                 <i class=" right fa fa-lock"></i>
                             </li>
 
-                            <li><a href="#/youMeOS/home" onclick=" zoomOut(133333);">Galatic Core</a> 
-                                 <i class=" left fa fa-rocket"></i>
-                                <i class=" right fa fa-sun-o"></i>
-                            </li>
+                             -->
 
-                            <li><a href="#/youMeOS/kinnexus" onclick=" zoomOut(1000);">The Kinnexus</a> 
-                                <i class=" left fa fa-star-o "></i>
-                                <i class=" right fa fa-star"></i>
+                             <li><a href="#/youMeOS/magnificence" onclick=" zoomOut(.57);">Magnify Essence</a> 
+                                <i class=" left fa fa-sun-o fa-spin  "></i>
+                                <i class=" right fa fa-sun-o fa-spin "></i>
                             </li>
                             <li><a href="#/youMeOS/orbitSystem" onclick=" zoomOut(7);">Orbiting System</a> 
                             <i class=" left fa fa-globe "></i>
                                 <i class=" right fa fa-cloud "></i>
                             </li>
 
-                             <li><a href="#/youMeOS/magnificence" onclick=" zoomOut(.57);">Magnify Essence</a> 
-                                <i class=" left fa fa-sun-o fa-spin  "></i>
-                                <i class=" right fa fa-sun-o fa-spin "></i>
+                            <li><a href="#/youMeOS/kinnexus" onclick=" zoomOut(1000);">Kinnexus Plexus</a> 
+                                <i class=" left fa fa-star-o "></i>
+                                <i class=" right fa fa-star"></i>
+                            </li>                            
+                            <li><a href="#/youMeOS/home" onclick=" zoomOut(133333);">Galatic Core</a> 
+                                 <i class=" left fa fa-rocket"></i>
+                                <i class=" right fa fa-sun-o"></i>
                             </li>
+
+
 
                             
                         </ul>
@@ -166,16 +175,6 @@
                         <div id="sidebar-calendar"></div>
                     </div>
                     
-                    <!-- Feeds -->
-                    <div class="s-widget m-b-25">
-                        <h2 class="tile-title">
-                           <strong>News Feed</strong>
-                        </h2>
-                        
-                        <div class="s-widget-body">
-                            <div id="news-feed"></div>
-                        </div>
-                    </div>
                     
                     <!-- Projects -->
                     <div class="s-widget m-b-25">
@@ -226,26 +225,63 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Feeds -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                           <strong>News Feed</strong>
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div id="news-feed"></div>
+                        </div>
+                    </div>
+                    
                 </div>
                 
                 <!-- Side Menu -->
                 <ul class="list-unstyled side-menu font-icons">
 
+                    <li>
+                        <a class="" href="#/youMeOS/aboutYou"  onclick=" zoomOut(133333);">
+                            <span class="icon">&#61925;</span> 
+                            <span class="menu-item">Operating Self</span>
+                        </a>
+                    </li>
+
                     <li class="active">
                         <a class="" href="#/{$Xtra}/I" > <!-- /{$user.username} -->
-                            <span class="icon">&#61698;</span> <span class="menu-item">
+                            <span class="icon">&#61698;</span> 
+                            
+                            <span class="menu-item">
                             All-Seeing "I"
                             </span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="sa-side-home" href="#/youMeOS/home"  onclick=" zoomOut(133333);">
+                        <a class=" " href="#/youMeOS/home"  onclick=" zoomOut(133333);">
+                             <span class="icon">&#61811;</span> 
+                            <span class="menu-item">
+                            Open Speech
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="" href="#/youMeOS/home"  onclick=" zoomOut(133333);">
+                            <span class="icon">&#61749;</span> 
                             <span class="menu-item">Home is; Where the Heart is</span>
                         </a>
                     </li>
                     
-
+                    <li>
+                        <a class=" " href="#/youMeOS/kinnexus"  onclick=" zoomOut(888);">
+                             <span class="icon">&#61735;</span> 
+                            <span class="menu-item">
+                            Kinnexus Plexus
+                            </span>
+                        </a>
+                    </li>
                     
 
                     
@@ -267,6 +303,11 @@
                         </ul> -->
                     </li>
 
+                    <li style="position: absolute: bottom: 2px;">
+                        <a href="#/login/logout">
+                            <span class="icon">&#61733;</span> <span class="menu-item">Sign Off</span>
+                        </a>
+                    </li>
                     <!-- <li>
                         <a  href="#/{$Xtra}/aethernet">
                              <span class="icon">&#61838;</span> <span class="menu-item">The AetherNets</span>
@@ -500,7 +541,7 @@
                                                 {foreach $data.users as $u => $user}
                                                 <div class="col-xs-3 col-md-3">
                                                     <div class="widget" style="position: absolute">{$user.username}</div>
-                                                    <a href="#/youMeOS/I/{$user.username}"><img src="/users/avatar/&user={$user.username}" alt=""  ></a>
+                                                    <a href="#/youMeOS/magnificence/{$user.username}"><img src="/users/avatar/&user={$user.username}" alt=""  ></a>
 
                                                 </div> 
                                                 {/foreach} 
@@ -996,6 +1037,9 @@
             <![endif]-->
            
         </section>
+        <!-- All JS functions -->
+        <script src="/js/functions.js" type="text/javascript"></script>  
+
         <script type="text/javascript">
             $(window).on('hashchange', function() { 
                 var go = window.location.hash.replace('#','');
@@ -1027,8 +1071,5 @@
                 $('#detailContainer').show();
             });
         </script>
-
-        <!-- All JS functions -->
-        <script src="{$umeos_bin}js/functions.js"></script>  
     </body>
 </html>

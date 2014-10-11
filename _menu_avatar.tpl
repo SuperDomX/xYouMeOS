@@ -29,9 +29,9 @@
           <i class="fa fa-upload"></i> Upload Avatar...</a>
       </li>
 
-      <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
+      <!-- <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
           <i class="fa fa-folder-open-o"></i> Choose from Photos...</a>
-      </li>
+      </li> -->
       
       
 

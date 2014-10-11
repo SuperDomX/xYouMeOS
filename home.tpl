@@ -6,10 +6,10 @@
             <div class="container">
                 
               <h1>
-                <i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-45"></i>Home for the Ages
+                <i class="fa fa-4x fa-home pull-right fa-rotate-45"></i>"Which way do I Go?"
               </h1>
               <p>
-                It's time to begin the ad-less venture You & Me will be having in <b>Infinite Space</b>. Which way do you want to go?
+                The Time has come for <b>You & Me</b> to journey Home in this <b>Infinite Space</b>. Our ad-less venture awaits! Which way do you want to go?
               </p>
               <br/><br/>
               <blockquote>"Like Home, there is no other palace. "</blockquote> 
@@ -48,7 +48,7 @@
                 <div class="item ">
                    <div class="jumbotron tile-light">
                     <div class="container">
-                        <img src="/users/avatar" class=" pull-right "></i>
+                        <img src="/users/avatar" class=" pull-right col-md-4"></i>
                       
                       <h1> 
                         Who... are... You?
@@ -59,50 +59,10 @@
                       You, are; <b>You</b>! Configure Me to your liking, so I shall present configuration however you like.
                       Perfect Example: on the right is your Avatar. Please feel free to change Me.
                       <br/> 
-                        <div class="btn-group m-b-10   "  >
-                              <button type="button" class="btn btn-lg btn-alt dropdown-toggle" data-toggle="dropdown"  >
-                                  <strong>
-                                      <i class="fa fa-user"></i>
-                                      Change Avatar
-                                  </strong>
-                                  <!-- <span class="caret"></span> -->
-                              </button>
-                              <ul class="dropdown-menu  dropdown-menu-alt animated rollIn" role="menu">
-                                  
-                                  <li role="presentation">
-                                      <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/html/users/avatar/takePhoto')">
-                                      <i class="fa fa-camera"></i> Take Snapshot...</a>
-                                     
-                                  </li>
-
-
-
-                                  <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                      <i class="fa fa-folder"></i> Choose From Photos...</a>
-                                  </li> -->
-                                  <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
-                                      <i class="fa fa-upload"></i> Upload Avatar...</a>
-                                  </li>
-
-                                  <li role="presentation"><a  data-toggle="modal"  href="#selectAvatar"> 
-                                      <i class="fa fa-folder-open-o"></i> Choose from Photos...</a>
-                                  </li>
-                                  
-                                  
-
-                                  <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                      <i class="fa fa-camera"></i> Edit Thumbnail...</a>
-                                  </li> -->
-                                  
-                                  <!-- <li role="presentation" class="divider"></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="">
-                                      <i class="fa fa-ban"></i> Remove Photo...</a>
-                                  </li> -->
-                              </ul>
-                          </div> 
+                        
 
                                           
-                      <blockquote>"I am You, You are Me... Opera Sauce!"</blockquote> 
+                      <blockquote>"I am You, You are Me... Ohm Sauce!"</blockquote> 
 
                       </p>
                           
@@ -139,98 +99,6 @@
                            <i class="fa fa-ge"></i>  
                         </a>  -->
 
-                       
-
-                         <!-- Choose from Photos -->
-                            <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        {$btns[] = [
-                                            'id'      => 'new-message-close',
-                                            'class'   => 'btn-lg btn-block',
-                                            'dismiss' => 1,
-                                            'html'    =>'<i class="fa fa-ban"></i> Cancel'
-                                        ]}
-                                        {include 
-                                            file    = "../../html/~blox/modal-body.tpl" 
-                                            title   = '<i class="fa fa-user"> </i> Double Click to Choose Photo' 
-                                            load    = 'youMeOS/chronus/Photos'
-                                            buttons = $btns
-                                        }
-                                        <script type="text/javascript">
-                                        window.getFileCallback = function(file) {
-                                            $('#selectAvatar').modal('hide');
-
-                                            $.ajax({
-                                                url      : '/users/avatar/selectAvatar/.json',
-                                                type     : "POST",
-                                                data     : {
-                                                    src : file.url
-                                                },
-                                                dataType : 'json',
-                                                success  : function(data, textStatus, jqXHR){
-                                                    $('.profile-pic').attr({
-                                                        src : file.url
-                                                    });
-
-                                                    $('.profile-pic img').attr({
-                                                        src : file.url
-                                                    });
-                                                }
-                                            });
-
-                                            // return false;
-                                        }
-                                        </script>
-                                    </div>
-                                </div>
-                            </div> 
-                             <!-- Modal Take Photo -->  
-                            <div class="modal fade" id="takePhoto" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title"><i class="fa fa-camera"></i> Take Snapshot</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" id="takePhotoSnap" class="btn btn-sm">
-                                                <i class="fa fa-camera"></i> Snap Photo
-                                            </button>
-                                            <button type="button" class="btn btn-sm" data-dismiss="modal" onmousedown="takePhoto.stop();"> <i class="fa fa-ban"></i> Close</button>
-
-                                            <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                             <!-- Modal Upload Avatar -->  
-                            <div class="modal fade" id="uploadAvatar" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title"><i class="fa fa-upload"></i> Upload Avatar</h4>
-                                        </div>
-                                        <div class="modal-body text-center">
-                                            
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" id="takePhotoSnap" class="btn btn-sm" onclick="$('#uploadAvatar form').submit();">
-                                                <i class="fa fa-upload"></i> Upload Avatar
-                                            </button>
-                                            <button type="button" class="btn btn-sm pull-right" data-dismiss="modal" > <i class="fa fa-ban"></i> Close</button>
-
-                                            <!-- <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                        
                     </div>
                   </div> 

@@ -5,7 +5,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta charset="UTF-8">
 
-        <title>You Me OS Login</title>
+        <title>U Me O.S. Login</title>
             
         <!-- CSS -->
         
@@ -21,23 +21,25 @@
 
 
 
-        <center>
-             
-            <section id="login" class="block-area">
-            <header>
-                <br/><br/>
-                <h1>YouMeO.S.</h1>
-                
-                <h4>
-                    Welcome to the <s>World Wide</s> Universal Web
-                </h4>
+        <small class="label tile label-sm " style="position: absolute; bottom: 0; left: 0; margin: 10px;">super powered by<br/>  
+            <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>
+        </small><br/>
 
-            </header>
-        
+        <center>
+            <section id="login" class="block-area">
+                
+
+
+             <header>
+                    <br/><br/><br/><br/>
+                    <!-- <h1 class="fa-5x">U Me O.S.</h1>     -->
+                    <br/><br/>
+
+                </header>
             <div class="clearfix"></div>
             
             <!-- Login -->
-            <form class="box tile animated active " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
+            <form class="box  animated active " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
                 <!-- <h2 id="tour-head" class="m-t-0 m-b-15">Take a tour</h2> -->
                 <!-- <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
                 <input type="password" class="login-control" placeholder="Password" name="login[password]">
@@ -47,21 +49,27 @@
                         Remember Me
                     </label>
                 </div> --> 
-               
-                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt input-focused btn-lg " data-switch="box-login" href="">You are Here</a>
+                
+                <header>
+                    <br/><br/>
+                    <h1 class="fa-5x">U Me O.S.</h1>    
+                    <br/>
+
+                </header>
+                <a class="box-switcher btn btn-lg m-r-5 btn-block  input-focused btn-lg " data-switch="box-login" href="">You</a>
                  
                 <br/><br/>
                 
                <button id="tour-btn" class="btn m-r-5 btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
 
-                    Tour Me</button>
-                <a class="box-switcher btn btn-sm m-r-5 btn-block btn-alt " data-switch="box-register" href="">Weave OS</a>
+                    Me</button>
+                <a class="box-switcher btn  m-r-5 btn-block   " data-switch="box-register" href="">O.S.</a>
                 
             </form>
 
             <form class="box tile animated " id="box-login" action="/.json" >
                 
-                <h3 class="m-t-0 m-b-15">Who are You?</h3>
+                <h3 class="m-t-0 m-b-15">Who... are.. You?</h3>
                 
                 <input type="text" class="login-control m-b-10" placeholder="Universal Name" name="login[username]">
                 <input type="password" class="login-control" placeholder="Key" name="login[password]">
@@ -71,12 +79,13 @@
                         Remember Me
                     </label>
                 </div> --><br/><br/>
-                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="" title="" data-original-title="">Center In</button>
+                <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="" title="" data-original-title="">Me</button>
 
-                <h5> #Youinverses: {$count_universes} </h5>
+                
                 <br/><br/>
+
                 <small>
-                     <!-- <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> | -->
+                     <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> |
                     <a class="box-switcher" data-switch="box-register" href="">Weave OS</a> |
                     <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a>
                 </small>
@@ -84,17 +93,20 @@
             
             <!-- Register -->
             <form class="box animated tile" id="box-register" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Weave your Universal OS</h2>
-                <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="How should I address You?">
+                <h2 class="m-t-0 m-b-15">"Weave a Universal O.S."</h2>
+                
+                <!-- <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="What is Your Name?"> -->
                 <input required name="login[username]" type="text" class="login-control m-b-10" placeholder="What is your Universal Name?">
                 <input required name="login[email]" type="email" class="login-control m-b-10" placeholder="Where should I send Emails?">    
                 <input required name="login[password]" type="password" class="login-control m-b-10" placeholder="When ready, Enter Key">
                 <input required name="login[confirm]" type="password" class="login-control m-b-20" placeholder="Confirm Key">
                 <input type="hidden" name="login[action]" value="register" >
+                
+                <button class="btn btn btn-lg btn-block btn-alt input-focused m-r-5">Weave New O.S.</button>
+                
+                <h5> #Youinverses: {$count_universes} </h5>
 
-                <button class="btn btn btn-lg btn-block btn-alt  m-r-5">Weave OS</button>
-<br/>
-                <small><a class="box-switcher" data-switch="box-tour" href=""> <- You are Here</a></small>
+                <small><a class="box-switcher btn btn btn-xs" data-switch="box-tour" href=""> Cancel </a></small>
             </form>
             
             <!-- Forgot Password -->
@@ -108,8 +120,7 @@
                 <small><a class="box-switcher" data-switch="box-login" href="">Remembered Your Key?</a></small>
             </form>
 
-        <small class="label label-sm " >super powered by<br/>  
-        <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/></small>
+        
         </section>         
 
         </center>             
@@ -144,7 +155,9 @@
     
         <script src="{$umeos_bin}js/bootstrap.min.js"></script>
         
-    
+        <script type="text/javascript" src="{$umeos_bin}js/chosen.min.js"></script> <!-- Custom Multi Select -->
+
+
         <script type="text/javascript">
             
             window.login = function(e){ 
