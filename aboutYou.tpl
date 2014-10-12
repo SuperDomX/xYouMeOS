@@ -96,16 +96,18 @@
         <div class="tab-container tile media">
              
             <ul class="tab   nav nav-tabs   text-right">
+
                 <li class="active" >
                     <a href="#pulse" class="active" onclick="zoomOut(133333)" > <i class="fa fa-heart "></i> Pulse</a>
                 </li>
-                <li>
-                    <a href="#purpose"  > <i class="fa fa-star "></i> Purpose</a>
-                </li>
+                
                 <li >
                     <a href="#reflection"  > <i class="fa fa-eye "></i> Reflection</a>
                 </li>
 
+                <li>
+                    <a href="#purpose"  > <i class="fa fa-star "></i> Purpose</a>
+                </li>
                 
                 <li>
                     <a href="#passion"  > <i class="fa fa-fire "></i> Passion</a>
