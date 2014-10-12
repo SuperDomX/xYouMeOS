@@ -7,7 +7,7 @@
         <li class="active">About You</li>
     </ol>
     
-    <h4 class="page-title">Operating Self</h4>
+    <h4 class="page-title">Operating Self:  <b>{$user.username}</b></h4>
     
     <div class="block-area">
          
@@ -17,46 +17,17 @@
 
 
          
-  <div class="col-md-3 pull-right">
-        <!-- About Me -->
-        <div class="tile">
-            <h2 class="tile-title">About {$user.username}</h2>
-             
-            {include "./_user_avatar.tpl"}
-
-            <div class="listview icon-list">
-                <div class="media">
-                    <i class="icon pull-left">&#61744;</i>
-                    <div class="media-body">Software Developer at Google</div>
-                </div>
-                
-                <div class="media">
-                    <i class="icon pull-left">&#61753;</i>
-                    <div class="media-body">Studied at Oxford University</div>
-                </div>
-                
-                <div class="media">
-                    <i class="icon pull-left">&#61713;</i>
-                    <div class="media-body">Lives in Saturn, Milkyway</div>
-                </div>
-                
-                <div class="media">
-                    <i class="icon pull-left">&#61742;</i>
-                    <div class="media-body">From Titan, Jupitor</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="col-md-9">
+    <div class="col-md-3 pull-right">
         <div class="tile-light p-5 m-b-15">
-
+        <!-- <h2 class="tile-title"></h2> -->
+             
             <div class="cover p-relative">
                 <h4 class="page-title" style="position: absolute;">
-                    <span class="dropcap">{$user.username|substr:0:1}</span>{$user.username|substr:1}
+                    
+                    <span class="dropcap">M</span>obile Settings
+
                 </h4>
-                <img src="img/cover-bg.jpg" class="w-100 " alt="">
+                <img src="img/skin-blue.jpg" class="w-100 " alt="">
 
                 
                 
@@ -72,9 +43,78 @@
             </div>
 
         </div>
+    </div>
+    
+    <div class="col-md-2">
+
+        <!-- About Me -->
+        <div class="tile">
+            <!-- <h2 class="tile-title">Operating as</h2> -->
+           <!--  <h4 class="tile-title" style="position: absolute;">
+                <span class="dropcap">{$user.username|substr:0:1}</span>{$user.username|substr:1}
+            </h4>    -->             
+            {include "./_user_avatar.tpl"}
+
+
+
+            <div class="listview icon-list">
+                <div class="media">
+                    <i class="icon pull-left">&#61713;</i>
+                    <div class="media-body">
+                        Locations
+                    </div>
+                </div>
+
+                <div class="media">
+                    <i class="icon pull-left">&#61744;</i>
+                    <div class="media-body">
+                        Work Places
+                    </div>
+                </div>
+                
+                <div class="media">
+                    <i class="icon pull-left">&#61753;</i>
+                    <div class="media-body">
+                        Fields of Study
+                    </div>
+                </div>
+                <div class="media">
+                    <i class="icon pull-left">&#61742;</i>
+                    <div class="media-body">
+                        Projects
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+     <div class="col-md-7">
+        
+
+       
         <div class="tab-container tile media">
              
-              
+            <ul class="tab   nav nav-tabs   text-right">
+                <li class="active" >
+                    <a href="#pulse" class="active" onclick="zoomOut(133333)" > <i class="fa fa-heart "></i> Pulse</a>
+                </li>
+                <li>
+                    <a href="#purpose"  > <i class="fa fa-star "></i> Purpose</a>
+                </li>
+                <li >
+                    <a href="#reflection"  > <i class="fa fa-eye "></i> Reflection</a>
+                </li>
+
+                
+                <li>
+                    <a href="#passion"  > <i class="fa fa-fire "></i> Passion</a>
+                </li>
+
+                <li>
+                    <a href="#power"  > <i class="fa fa-bolt "></i> Power</a>
+                </li>
+            </ul>              
             <div class="tab-content media-body">
                 <div class="tab-pane active " id="pulse">
                     <select data-placeholder="Share the top 5 qualities that best resonate with and most describe YOU." class="tag-select-limited input-lg" multiple>
@@ -82,9 +122,9 @@
                          
                     </select>  
                     <h2> 
-                        <i class="fa fa-3x pull-right"><span class="icon">&#61749;</span> </i>The Heartbeat of your Blue Grid...
+                        <i class="fa fa-3x pull-right"><span class="icon">&#61749;</span> </i>Explain the Blue Grid.
                     </h2> 
-                    <blockquote>What you enter here will Influence how others will find you naturally.</blockquote>
+                    <blockquote>Your pulse magnitizes with the overall Heartbeat, making this: Your Own System.</blockquote>
                     
                 </div>
                 <div class="tab-pane " id="reflection">
@@ -95,7 +135,7 @@
                     <h2> 
                         <i class="fa fa-3x pull-right"><span class="icon">&#61698;</span> </i>What are you seeking...
                     </h2> 
-                    <blockquote>Influence how your target audience finds your content.</blockquote>
+                    <blockquote>Influence how your audience targets your content.</blockquote>
                      
                 </div>
                 <div class="tab-pane" id="passion">
@@ -115,9 +155,9 @@
                          
                     </select>  
                      <h2> 
-                        <i class="fa fa-3x pull-right"><span class="icon">&#61823;</span> </i>The Momentum that Drives you
+                        <i class="fa fa-3x pull-right"><span class="icon">&#61823;</span> </i>Driving Momentum...
                     </h2> 
-                    <blockquote>What you enter here will influence how you Expand.</blockquote>
+                    <blockquote>What you enter here will influence the force behind your Expansion.</blockquote>
                     
                 </div>
                 <div class="tab-pane" id="power">
@@ -126,35 +166,17 @@
                          
                     </select>  
                      <h2> 
-                        <i class="fa fa-3x pull-right"><span class="icon">&#61897;</span> </i>Fuel for the Engine...
+                        <i class="fa fa-3x pull-right"><span class="icon">&#61897;</span> </i>Fuel the Engine!
                     </h2> 
-                    <blockquote>Your strengths increases the horse power of our overall engine.</blockquote>
+                    <blockquote>Your strengths add to the power of the overall engine.</blockquote>
                    
                 </div>
             </div>
-            <ul class="tab   nav nav-tabs   text-right">
-                            <li class="active" >
-                                <a href="#pulse" class="active" onclick="zoomOut(133333)" > <i class="fa fa-heart "></i> Pulse</a>
-                            </li>
-                            <li>
-                                <a href="#purpose"  > <i class="fa fa-star "></i> Purpose</a>
-                            </li>
-                            <li >
-                                <a href="#reflection"  > <i class="fa fa-eye "></i> Reflection</a>
-                            </li>
 
-                            
-                            <li>
-                                <a href="#passion"  > <i class="fa fa-fire "></i> Passion</a>
-                            </li>
-
-                            <li>
-                                <a href="#power"  > <i class="fa fa-bolt "></i> Power</a>
-                            </li>
-                        </ul>
         </div>
+
     </div>
-    
+
     <!-- All JS functions -->
     <script src="js/functions.js"></script>  
 

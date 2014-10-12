@@ -73,6 +73,21 @@
 			}
 		}
 
+		public function wiki(){
+
+		
+			$html = file_get_contents("https://raw.githubusercontent.com/wiki/SuperDomX/xYouMeOS/Home.md");
+
+			// $content = file_get_contents('http://www.google.com/'); 
+			if ($html == false) {
+			   $html = "error";
+			}
+
+			return array(
+				'data' => $html
+			);
+		}
+
 		public function orbitSystem()
 		{
 			# code...
