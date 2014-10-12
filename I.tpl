@@ -61,6 +61,9 @@
                     <div class="media-body">
                         <input type="text" class="main-search">
                     </div>
+                    <!-- <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div> -->
                 </div>
             </div>
         </header>
@@ -75,6 +78,7 @@
                 <!-- Sidbar Widgets -->
                 <div class="side-widgets overflow">
                     <!-- Profile Menu -->
+
                     {include "./_menu_avatar.tpl"}                        
                     <div class="text-center s-widget m-b-25 dropdown" id="profile-menu" style="padding: 0px 5px;">
                         
@@ -87,7 +91,7 @@
                         </h4> -->
                          
 
-                        {include "./_user_xstats.tpl" }
+                        
                         <a href="#/" data-toggle="dropdown">
                             <h4 class="m-0">
                                 {$user.name}
@@ -101,7 +105,7 @@
                         
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
                         <ul class="dropdown-menu profile-menu">  
-
+                            {include "./_user_xstats.tpl" }
                            <!-- <li>
                                 
                            </li>
@@ -253,7 +257,7 @@
                             <span class="icon">&#61698;</span> 
                             
                             <span class="menu-item">
-                            All-Seeing "I"
+                            'Ol Seeing "I"
                             </span>
                         </a>
                     </li>

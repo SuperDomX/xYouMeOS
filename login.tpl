@@ -21,7 +21,7 @@
 
 
 
-        <small class="label tile label-sm " style="position: absolute; bottom: 0; left: 0; margin: 10px;">super powered by<br/>  
+        <small class="label tile label-sm " style="position: absolute; bottom: 0; right: 0; margin: 0 50px 10px 0;">super powered by<br/>  
             <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>
         </small><br/>
 
@@ -69,10 +69,10 @@
 
             <form class="box tile animated " id="box-login" action="/.json" >
                 
-                <h3 class="m-t-0 m-b-15">Who... are.. You?</h3>
+                <h3 class="m-t-0 m-b-15">Enter Universe</h3>
                 
-                <input type="text" class="login-control m-b-10" placeholder="Universal Name" name="login[username]">
-                <input type="password" class="login-control" placeholder="Key" name="login[password]">
+                <input type="text" class="login-control m-b-10 input-lg" placeholder="Universe or Email" name="login[username]">
+                <input type="password" class="login-control input-lg" placeholder="Key" name="login[password]">
                 <!-- <div class="checkbox m-b-20">
                     <label>
                         <input class="checkbox m-b-20" type="checkbox">
@@ -93,16 +93,16 @@
             
             <!-- Register -->
             <form class="box animated tile" id="box-register" action="/.json" >
-                <h2 class="m-t-0 m-b-15">"Weave a Universal O.S."</h2>
+                <h2 class="m-t-0 m-b-15">Open Saucer</h2>
                 
                 <!-- <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="What is Your Name?"> -->
-                <input required name="login[username]" type="text" class="login-control m-b-10" placeholder="What is your Universal Name?">
-                <input required name="login[email]" type="email" class="login-control m-b-10" placeholder="Where should I send Emails?">    
-                <input required name="login[password]" type="password" class="login-control m-b-10" placeholder="When ready, Enter Key">
-                <input required name="login[confirm]" type="password" class="login-control m-b-20" placeholder="Confirm Key">
+                <input required name="login[username]" type="text" class="login-control m-b-10 input-lg" placeholder="Name Universe">
+                <input required name="login[email]" type="email" class="login-control m-b-10 input-lg" placeholder="Email">    
+                <input required name="login[password]" type="password" class="login-control m-b-10 input-lg" placeholder="Combination Key">
+                <input required name="login[confirm]" type="password" class="login-control m-b-20 input-lg" placeholder="Confirm Key">
                 <input type="hidden" name="login[action]" value="register" >
                 
-                <button class="btn btn btn-lg btn-block btn-alt input-focused m-r-5">Weave New O.S.</button>
+                <button class="btn btn btn-lg btn-block btn-alt input-focused m-r-5">"We've" a Universal O.S.</button>
                 
                 <h5> #Youinverses: {$count_universes} </h5>
 
@@ -171,7 +171,7 @@
                     data     : postData,
                     dataType : 'json',
                     success  : function(data, textStatus, jqXHR){
-
+                        $('#minimap').fadeIn();
 
 
 
@@ -247,6 +247,7 @@
 
             $('#closeDetail').show();
             $('#about').hide();
+            $('#minimap').hide();
  
         </script>
         <!-- Javascript Libraries -->
