@@ -117,58 +117,58 @@
             </ul>              
             <div class="tab-content media-body">
                 <div class="tab-pane active " id="pulse">
-                    <select data-placeholder="Share the top 5 qualities that best resonate with and most describe YOU." class="tag-select-limited input-lg" multiple>
+                    <select data-placeholder="Share the top 5 one-word qualities that best resonate with and most describe YOU right now." class="tag-select-limited input-lg" multiple>
                         <option value="David Becham">David Becham</option> 
                          
                     </select>  
                     <h2> 
                         <i class="fa fa-3x pull-right"><span class="icon">&#61749;</span> </i>Explain the Blue Grid.
                     </h2> 
-                    <blockquote>Your pulse magnitizes with the overall Heartbeat, making this: Your Own System.</blockquote>
+                    <blockquote>Your PULSE magnetizes with the overall Heartbeat of the nexus, making this: Your Own System. Help the nexus help you find your community of action and the entities and projects with whom you resonate most. This is a dynamic field, ever changing, and you can update at any time to help the nexus stay current with your passions, focus, and outward expressions.</blockquote>
                     
                 </div>
                 <div class="tab-pane " id="reflection">
-                    <select data-placeholder="Tag 5 qualites that You are seeking." class="tag-select-limited input-lg" multiple>
+                    <select data-placeholder="Share the top 5 one-word qualities that best describe what You are currently seeking, in yourself, in your friends and collaborators, or in your personal endeavors." class="tag-select-limited input-lg" multiple>
                         <option value="David Becham">David Becham</option> 
                          
                     </select>  
                     <h2> 
                         <i class="fa fa-3x pull-right"><span class="icon">&#61698;</span> </i>What are you seeking...
                     </h2> 
-                    <blockquote>Influence how your audience targets your content.</blockquote>
+                    <blockquote>Your REFLECTION shines back at you that which you seek. Influence how your audience targets your content by showing them what you require, and let the nexus make the match which reunites you with your reflection. Always dynamic, your needs may shift and change, and updating this field regularly keeps the nexus humming along on your behalf.</blockquote>
                      
                 </div>
                 <div class="tab-pane" id="passion">
-                    <select data-placeholder="The Passions which inspire you." class="tag-select-limited input-lg" multiple>
+                    <select data-placeholder="Share the top 5 one-word qualities that best describe the Passions which inspire you." class="tag-select-limited input-lg" multiple>
                         <option value="David Becham">David Becham</option> 
                          
                     </select> 
                     <h2> 
                         <i class="fa fa-3x pull-right"><span class="icon">&#61803;</span> </i>Inspiration comes from within...
                     </h2> 
-                    <blockquote>Influence what gravitates towards you naturally.</blockquote>
+                    <blockquote>Influence what gravitates towards you naturally. Please indicate the areas with which you resonate, which you are passionate about and deeply interested in learning more, spending time on, sharing, expounding upon, without any regard to your level of expertise. What do you LOVE and InJoy?</blockquote>
                      
                 </div>
                  <div class="tab-pane" id="purpose">
-                     <select data-placeholder="Tag 5 qualites that best describe what motivates YOU." class="tag-select-limited input-lg" multiple>
+                     <select data-placeholder="Share the top 5 one-word qualities that best describe what motivates YOU and gives you purpose." class="tag-select-limited input-lg" multiple>
                         <option value="David Becham">David Becham</option> 
                          
                     </select>  
                      <h2> 
                         <i class="fa fa-3x pull-right"><span class="icon">&#61823;</span> </i>Driving Momentum...
                     </h2> 
-                    <blockquote>What you enter here will influence the force behind your Expansion.</blockquote>
+                    <blockquote>What is the PURPOSE which drives you forward? What you enter here will influence the force behind your Expansion. Let the nexus help you find other like-minded kin driven by the same purposes, motivated by the same desires and goals. Together we ceate synergy in symbiosis!</blockquote>
                     
                 </div>
                 <div class="tab-pane" id="power">
-                 <select data-placeholder="Strengths that are the Heart of your Power." class="tag-select-limited input-lg" multiple>
+                 <select data-placeholder="Share the top 5 one-word qualities which best describe the Strengths that are the Heart of your Power." class="tag-select-limited input-lg" multiple>
                         <option value="David Becham">David Becham</option> 
                          
                     </select>  
                      <h2> 
                         <i class="fa fa-3x pull-right"><span class="icon">&#61897;</span> </i>Fuel the Engine!
                     </h2> 
-                    <blockquote>Your strengths add to the power of the overall engine.</blockquote>
+                    <blockquote>Let us acknowledge the gifts and offerings which make us unique and which we bring to the collective table! Be bold and declare the ways in which you shine! Your strengths add to the collective power and of the overall engine and will help the nexus match you with KIN in need of those strengths.</blockquote>
                    
                 </div>
             </div>
