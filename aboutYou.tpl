@@ -77,7 +77,7 @@
               
             <div class="tab-content media-body">
                 <div class="tab-pane active " id="pulse">
-                    <select data-placeholder="Tag 5 qualites that best resonate with YOU." class="tag-select-limited input-lg" multiple>
+                    <select data-placeholder="Share the top 5 qualities that best resonate with and most describe YOU." class="tag-select-limited input-lg" multiple>
                         <option value="David Becham">David Becham</option> 
                          
                     </select>  
