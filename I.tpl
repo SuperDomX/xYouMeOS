@@ -257,7 +257,7 @@
                             <span class="icon">&#61698;</span> 
                             
                             <span class="menu-item">
-                            'Ol Seeing "I"
+                            'Oled Seeing "I"
                             </span>
                         </a>
                     </li>
@@ -282,7 +282,7 @@
                         <a class=" " href="#/youMeOS/kinnexus"  onclick=" zoomOut(888);">
                              <span class="icon">&#61735;</span> 
                             <span class="menu-item">
-                            Kinnexus Plexus
+                            The Kinnexus
                             </span>
                         </a>
                     </li>
@@ -297,7 +297,7 @@
 
                     <li  >
                         <a   href="#/{$Xtra}/chronus">
-                             <span class="icon">&#61836;</span> <span class="menu-item">Chronus Infinity Files</span>
+                             <span class="icon">&#61836;</span> <span class="menu-item">Infinite Space</span>
                         </a>
                         <!-- <ul class="list-unstyled menu-item">
                             
