@@ -4,7 +4,7 @@ var GALAXY_TOUR = [{
     "z"          : 80000,
     "travelTime" : 1333,
     "restTime"   : 3000,
-    "message"    : "Let us begin our Journey!",
+    "message"    : "Hello, I am YouMeOS.",
     // "callback" : highlightMilkyWay
 }, {
     "rx"         : 2.12216429754294249,
@@ -12,7 +12,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 4333,
     "restTime"   : 6333,
-    "message"    : 'An explorer can easily become lost in cyberspace.',
+    "message"    : 'Welcome to the Future of the Internet',
     "callback"   : highlightMilkyWay
 }, {
     "rx"         : 4.12216429754294249,
@@ -20,7 +20,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 6000,
-    "message"    : 'Surfing the Web has taken FOREVER.'
+    "message"    : 'Let us begin our Journey!'
     // "callback"   : highlightMilkyWay
 },
 {

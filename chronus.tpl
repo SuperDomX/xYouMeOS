@@ -8,7 +8,7 @@
             <!-- <li>Data</li> -->
         </ol>
         
-        <h4 class="page-title">"Chronus Infinity" File Manager w/ Infinite Space</h4>
+        <h4 class="page-title">Omega Space: "Chronus Infinity"</h4>
         
         <div id="fileManager"></div>
         <!-- Javascript Libraries -->

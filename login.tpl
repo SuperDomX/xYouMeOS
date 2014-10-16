@@ -52,7 +52,7 @@
                 
                 <header>
                     <br/><br/>
-                    <h1 class="fa-5x">U Me O.S.</h1>    
+                    <h1 class="fa-5x">You Me O.S.</h1>    
                     <br/>
 
                 </header>
@@ -69,7 +69,7 @@
 
             <form class="box tile animated " id="box-login" action="/.json" >
                 
-                <h3 class="m-t-0 m-b-15">Enter Universe</h3>
+                <h2 class="m-t-0 m-b-15">Who are You?</h2>
                 
                 <input type="text" class="login-control m-b-10 input-lg" placeholder="Universe or Email" name="login[username]">
                 <input type="password" class="login-control input-lg" placeholder="Key" name="login[password]">

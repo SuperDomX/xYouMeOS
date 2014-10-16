@@ -20,21 +20,12 @@
         </div>
 
         <!-- Add Nexuss -->
-        <div class="modal fade" id="addNexus"  role="dialog" aria-hidden="true">
+        <div class="modal fade" id="aboutYou"  role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                	{include file="~blox/modal-body.tpl" load='youMeOS/addNexus' title='Connect Nexus'}
+                	{include file="~blox/modal-body.tpl" load='youMeOS/aboutYou' title='About You'}
                 </div>
             </div>
         </div> 
 
-        {include file="~widgets/col.tpl"}
-
-
-		{foreach $data.users as $u => $user}
-		<div class="col-xs-3 col-md-2">
-		    <div class="widget" style="position: absolute">{$user.username}</div>
-		    <a href="#/youMeOS/magnificence/{$user.username}"><img src="/users/avatar/&user={$user.username}" alt=""  ></a>
-		</div> 
-		{/foreach}
 	</section>

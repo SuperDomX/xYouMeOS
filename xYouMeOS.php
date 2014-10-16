@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0(4.8)
+ * @version v0(4.9)
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -51,10 +51,10 @@
 			# code...
 		}
 
-		// public function orbitSystem()
-		// {
-		// 	# code...
-		// }
+		public function omniSelf()
+		{
+			# code...
+		}
 
 		public function aboutYou()
 		{
@@ -154,6 +154,17 @@
 		}
 
 		function kinnexus($count=null){
+
+			// $_POST['limit'] = 100;
+
+			return array(
+				'data' => array(
+					'users'      => $this->users('name, id, username')
+				)
+			);
+		}
+
+		function addNexus($count=null){
 
 			// $_POST['limit'] = 100;
 

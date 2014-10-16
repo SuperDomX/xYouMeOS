@@ -36,7 +36,7 @@
 
                     
 
-                    <div class="pull-left tm-icon">
+                    <!-- <div class="pull-left tm-icon">
                         <a data-drawer="messages" class="drawer-toggle" href="#/">
                             <i class="sa-top-message"></i>
                             <i class="n-count animated">0</i>
@@ -50,7 +50,7 @@
                             <i class="n-count animated">0</i>
                             <span>Points'n Time</span>
                         </a>
-                    </div>
+                    </div> -->
 
                     
                     
@@ -79,7 +79,7 @@
                 <div class="side-widgets overflow">
                     <!-- Profile Menu -->
 
-                    {include "./_menu_avatar.tpl"}                        
+                    {* include "./_menu_avatar.tpl" *}                        
                     <div class="text-center s-widget m-b-25 dropdown" id="profile-menu" style="padding: 0px 5px;">
                         
 
@@ -92,16 +92,18 @@
                          
 
                         
-                        <a href="#/" data-toggle="dropdown">
+                       
+
+                         <a href="#/" data-toggle="dropdown">
+                        <img class="profile-pic animated img-circle" src="/users/avatar" alt=""> 
+                        </a>
+                         <a href="#/" data-toggle="dropdown">
                             <h4 class="m-0">
                                 {$user.name}
                             </h4>
 
                             @{$user.username} 
                         </a>
-
-                        
-                        
                         
                         <!-- <h4 class="tile m-0">{$user.username}</h4>  -->
                         <ul class="dropdown-menu profile-menu">  
@@ -146,8 +148,24 @@
                             </li>
 
                              -->
+                             <li role="presentation">
+                                  <a data-toggle="modal" href="#takePhoto" onclick="$('#takePhoto .modal-body').load('/html/users/avatar/takePhoto')">
+                                   Take Snapshot...</a>
+                                <i class=" left fa fa-camera  "></i>
+                                <i class=" right fa fa-camera "></i> 
+                              </li>
 
-                             <li><a href="#/youMeOS/magnificence" onclick=" zoomOut(.57);">Magnify Essence</a> 
+
+
+                              <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="">
+                                  <i class="fa fa-folder"></i> Choose From Photos...</a>
+                              </li> -->
+                              <li role="presentation"><a  data-toggle="modal"  href="#uploadAvatar" onclick="$('#uploadAvatar .modal-body').load('/html/users/avatar/uploadAvatar');"> 
+                                 Upload Avatar...</a>
+                                  <i class="left fa fa-upload"></i> 
+                                   <i class="right fa fa-upload"></i> 
+                              </li>
+                            <!--  <li><a href="#/youMeOS/magnificence" onclick=" zoomOut(.57);">Magnify Essence</a> 
                                 <i class=" left fa fa-sun-o fa-spin  "></i>
                                 <i class=" right fa fa-sun-o fa-spin "></i>
                             </li>
@@ -164,7 +182,7 @@
                                  <i class=" left fa fa-rocket"></i>
                                 <i class=" right fa fa-sun-o"></i>
                             </li>
-
+ -->
 
 
                             
@@ -173,6 +191,64 @@
                     </div>
                     
 
+
+
+                    <!-- Choose from Photos -->
+                    <div class="modal fade" id="selectAvatar"  role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              
+                            </div>
+                        </div>
+                    </div> 
+
+
+                     <!-- Modal Take Photo -->  
+                    <div class="modal fade" id="takePhoto" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title"><i class="fa fa-camera"></i> Take Snapshot</h4>
+                                </div>
+                                <div class="modal-body">
+                                     
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="takePhotoSnap" class="btn btn-sm">
+                                        <i class="fa fa-camera"></i> Snap Photo
+                                    </button>
+                                    <button type="button" class="btn btn-sm" data-dismiss="modal" onmousedown="takePhoto.stop();"> <i class="fa fa-ban"></i> Close</button>
+
+                                    <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                     <!-- Modal Upload Avatar -->  
+                    <div class="modal fade" id="uploadAvatar" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title"><i class="fa fa-upload"></i> Upload Avatar</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="takePhotoSnap" class="btn btn-sm" onclick="$('#uploadAvatar form').submit();">
+                                        <i class="fa fa-upload"></i> Upload Avatar
+                                    </button>
+                                    <button type="button" class="btn btn-sm pull-right" data-dismiss="modal" > <i class="fa fa-ban"></i> Close</button>
+
+                                    <!-- <button type="button" id="takePhotoSave" onclick="takePhoto.stop(); $('#takePhoto').modal('hide'); takePhotoSave($('#takePhotoCanvas'));  " class="btn disabled  pull-right"><i class="fa fa-save"></i> Save Photo</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Calendar -->
                     <div class="s-widget m-b-25">
@@ -243,38 +319,38 @@
                 </div>
                 
                 <!-- Side Menu -->
-                <ul class="list-unstyled side-menu font-icons">
+                <ul class="list-unstyled side-menu font-icons" id="chalk-tras">
 
                     <li>
-                        <a class="" href="#/youMeOS/aboutYou"  onclick=" zoomOut(133333);">
+                        <a class="" href="#/youMeOS/omniSelf"  onclick=" zoomOut(133333);">
                             <span class="icon">&#61925;</span> 
-                            <span class="menu-item">Operating Self</span>
+                            <span class="menu-item">Omni Self</span>
                         </a>
                     </li>
 
                     <li class="active">
-                        <a class="" href="#/{$Xtra}/I" > <!-- /{$user.username} -->
+                        <a class="" href="#/{$Xtra}/I" onclick=" zoomOut(133333);"> <!-- /{$user.username} -->
                             <span class="icon">&#61698;</span> 
                             
                             <span class="menu-item">
-                            'Oled Seeing "I"
+                            Open Sight
                             </span>
                         </a>
                     </li>
 
                     <li>
                         <a class=" " href="#/youMeOS/home"  onclick=" zoomOut(133333);">
-                             <span class="icon">&#61811;</span> 
+                             <span class="icon">&#61704;</span> 
                             <span class="menu-item">
-                            Open Speech
+                            Open Sonic
                             </span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="" href="#/youMeOS/home"  onclick=" zoomOut(133333);">
-                            <span class="icon">&#61749;</span> 
-                            <span class="menu-item">Home is; Where the Heart is</span>
+                        <a class="" href="#/youMeOS/home"  onclick="zoomOut(.57);">
+                            <span class="icon">&#61869;</span> 
+                            <span class="menu-item">Open Source</span>
                         </a>
                     </li>
                     
@@ -282,7 +358,7 @@
                         <a class=" " href="#/youMeOS/kinnexus"  onclick=" zoomOut(888);">
                              <span class="icon">&#61735;</span> 
                             <span class="menu-item">
-                            The Kinnexus
+                            Orbiting Solar Systems
                             </span>
                         </a>
                     </li>
@@ -291,13 +367,15 @@
                     
                     <li>
                         <a class="sa-side-calendar" href="#/calendar/full">
-                            <span class="menu-item">Timeless Nights</span>
+                            <span class="menu-item">
+                                Open Sands-of-Time
+                            </span>
                         </a>
                     </li>
 
                     <li  >
                         <a   href="#/{$Xtra}/chronus">
-                             <span class="icon">&#61836;</span> <span class="menu-item">Infinite Space</span>
+                             <span class="icon">&#61836;</span> <span class="menu-item">Omega Space</span>
                         </a>
                         <!-- <ul class="list-unstyled menu-item">
                             
@@ -309,7 +387,7 @@
 
                     <li style="position: absolute: bottom: 2px;">
                         <a href="#/login/logout">
-                            <span class="icon">&#61733;</span> <span class="menu-item">Sign Off</span>
+                            <span class="icon">&#61733;</span> <span class="menu-item">Sign Off :)</span>
                         </a>
                     </li>
                     <!-- <li>
@@ -396,6 +474,7 @@
                     {/if}
                 </ul>
 
+
             </aside>
         
             <!-- Content -->
@@ -404,65 +483,35 @@
                 {include file="./notice.tpl"}
                 
                 <!-- Breadcrumb -->
-                <ol class="breadcrumb hidden-xs">
+                <!-- <ol class="breadcrumb hidden-xs">
                     <li ><a href="#/youMeOS/home">Home</a></li>
                     <li class="active"><a href="#/">Profile</a></li>
-                    <!-- <li>Data</li> -->
+                   
                 </ol>
-                
+            
+             
+            
+            
                  
-                
-                  <div class="btn-group">          
-                    <div class="btn-group m-b-10">
-                        <button type="button" class="btn btn-sm btn-alt dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-eye"></i>
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#/youMeOS/I" onclick="zoomOut(7)"><i class="fa fa-sun-o" ></i>rbit System</a></li>
-                            <li><a href="#/youMeOS/kinnexus" onclick="zoomOut(1000)">St<i class="fa fa-star" ></i>r Field </a></li>
-                            <li><a href="#" onclick=" zoomOut(133333);"><i class="fa fa-rocket" ></i> Galaxy Kinexus</a></li>
-
-                            <!--  <button class="btn btn-alt btn-sm" >
-                            <i class="fa fa-sun-o"></i>rbiting System
-                            </button> 
-                            <button class="btn btn-alt btn-sm" >
-                            St<i class="fa fa-star"></i>r Field
-                            </button> 
-                            <a class="btn btn-alt btn-lg" onclick="zoomOut(133333); $detailContainer.hide();">
-                            <i class="fa fa-ge"></i>  
-                            </a> 
-
-
-
-                            <button class="btn btn-alt btn-sm">
-                            <i class="fa fa-rocket"></i> Galaxy
-                            </button>  -->
-
-                        </ul>
-                    </div>
-                    <button type="button" class="btn btn-sm  btn-alt active disabled "><i class="fa fa-dashboard"></i> All-Seeing "I"</button>
-                    <button type="button" class="btn btn-sm btn-alt"><i class="fa fa-cog"></i> Settings</button>
-              
-                </div>
-                     
-                    <div class="side-border col-md-3">
-                       <h4 class="page-title" > {$user.name}  
-
-                          
-                       </h4>
-                    </div>
+                <div class="side-border ">
+                   <h4 class="page-title" >
+                    Open Sight: Portal of {$user.name}  
+                   </h4>
+                </div> -->
                     
  
                 
                 <div class="block-area">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-12">
                             <div class="tile-light p-5 m-b-15">
 
                                 <div class="cover p-relative">
                                     <h4 class="page-title" style="position: absolute;">
-                                        <span class="dropcap">{$user.username|substr:0:1}</span>{$user.username|substr:1}
+                                        
+                                        <span class="dropcap">B</span>ulletin Board 
+                                        <i class="n-count animated pull-right">0</i>
+                                        <!-- <span class="dropcap">{$user.username|substr:0:1}</span>{$user.username|substr:1} -->
                                     </h4>
                                     <img src="img/cover-bg.jpg" class="w-100 " alt="">
 
@@ -470,10 +519,19 @@
                                     
                                     <div class="profile-btn pull-left" > 
                                         <div class="btn-group tile input-focused"   > 
+
+                                            <!-- <button type="button" class="btn btn-sm  btn-alt active disabled "><i class="fa fa-dashboard"></i> All-Seeing "I"</button> -->
+                                            <!-- <button type="button" class="btn btn-sm btn-alt"><i class="fa fa-cog"></i> Settings</button> -->
                                             <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
                                             <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> --> 
-                                            <a class="btn btn-alt btn-sm hidden-xs">0 YouMeme's</a>
-                                            <a href="#/youMeOS/kinnexus" class="btn btn-alt btn-sm">0 Kinnexus'</a>
+                                            <a class="btn btn-alt btn-sm hidden-xs"> 
+                                                <i class=" animated pull-left">0</i>
+                                                Thanks
+                                            </a>
+                                            <a href="#/youMeOS/kinnexus" class="btn btn-alt btn-sm"> 
+                                                <i class="animated pull-left">0</i>
+                                                No Thanks
+                                            </a>
                                             <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> --> 
                                         </div> 
                                     </div>
@@ -511,6 +569,9 @@
                                      This is your dashboard, no one else can see this but You. Here you can manage a variety of different widgets that give you complete control over your data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
                                 </div> -->
                             </div> 
+                        </div>
+                        <div class="col-md-9">
+                            
 
                             
 
