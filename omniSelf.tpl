@@ -16,7 +16,12 @@
        		{$b = $lm.bulletin}
        		{$btns = $b.BTN}
 
-       		{include "./bulletin.tpl" b=$b btns=$btns}
+
+
+       		{include "~blox/jumbotron.tpl" j=$b btns=$btns}
+
+          {* include "./bulletin.tpl" *}
+
 
 
           {* include file="./aboutYou.tpl" *}

@@ -319,6 +319,7 @@
                 </div>
                 
                 <!-- Side Menu -->
+
                 <ul class="list-unstyled side-menu font-icons" id="chalk-tras">
 
                     <li>
@@ -473,7 +474,18 @@
                     </li>
                     {/if}
                 </ul>
+                 <script type="text/javascript">
 
+                    $(document).ready(function(){
+                        $('#chalk-tras li').click(function(){
+                            console.log($(this));
+                            // $(this).parent.find('.active').removeClass('active');
+                            $('#chalk-tras li.active').toggleClass('active');
+                            $(this).toggleClass('active');
+                        })
+                    });
+
+                </script>
 
             </aside>
         

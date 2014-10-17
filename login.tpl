@@ -69,7 +69,7 @@
 
             <form class="box tile animated " id="box-login" action="/.json" >
                 
-                <h2 class="m-t-0 m-b-15">Who are You?</h2>
+                <h2 class="m-t-0 m-b-15">{$L.login}</h2>
                 
                 <input type="text" class="login-control m-b-10 input-lg" placeholder="Universe or Email" name="login[username]">
                 <input type="password" class="login-control input-lg" placeholder="Key" name="login[password]">
@@ -93,7 +93,7 @@
             
             <!-- Register -->
             <form class="box animated tile" id="box-register" action="/.json" >
-                <h2 class="m-t-0 m-b-15">Open Saucer</h2>
+                <h2 class="m-t-0 m-b-15">{$L.open}</h2>
                 
                 <!-- <input required name="login[name]"  type="text" class="login-control m-b-10" placeholder="What is Your Name?"> -->
                 <input required name="login[username]" type="text" class="login-control m-b-10 input-lg" placeholder="Name Universe">

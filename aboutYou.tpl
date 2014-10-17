@@ -19,9 +19,55 @@
                     {foreach $m.menu as $menu => $n}
                          <div class="tab-pane tile {if $menu < 1}active{/if}" id="tab-{$menu}">
                              
-                         {if $menu == 0}
+                         {if $menu == 0} 
 
-                            {include "~blox/magic.form.tpl"}
+                            {$input[] = [
+                                'div' => [
+                                    'class' => 'col-md-4'
+                                ],
+                                'tag'   => 'input',
+                                'type'  => 'text'
+                            ]}
+                            {$input[] = [
+                                'div' => [
+                                    'class' => 'col-md-4'
+                                ],
+                                'tag'   => 'input',
+                                'class' => 'form-control input-sm m-b-10',
+                                'type'  => 'text'
+                            ]}
+                            {$input[] = [
+                                'div' => [
+                                    'class' => 'col-md-4'
+                                ],
+                                'tag'   => 'input',
+                                'type'  => 'text'
+                            ]}
+
+                            {$input[] = [
+                                'div' => [
+                                    'class' => 'col-md-4'
+                                ],
+                                'tag'   => 'input',
+                                'type'  => 'text'
+                            ]}
+                            {$input[] = [
+                                'div' => [
+                                    'class' => 'col-md-4'
+                                ],
+                                'tag'   => 'input',
+                                'type'  => 'text'
+                            ]}
+
+                            {$input[] = [
+                                'div' => [
+                                    'class' => 'col-md-12'
+                                ],
+                                'tag'   => 'textarea'
+                            ]}
+
+
+                            {include "~blox/magic.form.tpl" input=$input}
                             
 
                             <script type="text/javascript">
