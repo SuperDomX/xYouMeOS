@@ -17,13 +17,23 @@
        		{$btns = $b.BTN}
 
        		{include "./bulletin.tpl" b=$b btns=$btns}
+
+
+          {* include file="./aboutYou.tpl" *}
         </div>
 
         <!-- Add Nexuss -->
         <div class="modal fade" id="aboutYou"  role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                	{include file="~blox/modal-body.tpl" load='youMeOS/aboutYou' title='About You'}
+                  {$btns = ''}
+                  {$btns[] = [
+                      'id'      => 'new-message-close',
+                      'class'   => 'btn-lg pull-right',
+                      'dismiss' => 1,
+                      'html'    =>'<i class="fa fa-floppy"></i> Save & Close'
+                  ]}
+                	{include file="~blox/modal-body.tpl" ajax='youMeOS/aboutYou' title='About You' buttons=$btns}
                 </div>
             </div>
         </div> 

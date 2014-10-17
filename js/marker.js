@@ -13,13 +13,13 @@ function updateMarkers(){
 }
 
 function attachMarker( obj, size ){
-	var padding = 3;
+	var padding     = 3;
 	var line_height = 20;
 	var title, extraData;
-	var container = document.getElementById('css-camera');
-	var template = document.getElementById( 'marker_template' );
-	var marker = template.cloneNode(true);
-	marker.$ = $(marker);	// jQuery reference
+	var container   = document.getElementById('css-camera');
+	var template    = document.getElementById( 'marker_template' );
+	var marker      = template.cloneNode(true);
+	marker.$        = $(marker);	// jQuery reference
 
 
 	//	strip out the apostrophe in names first before looking them up
@@ -89,8 +89,8 @@ function attachMarker( obj, size ){
 				var $body = $('#detailBody').html( data );
 
 				$body.find('a').each(function(){
-					var $this = $(this);
-					ahref = $this.attr('href');
+					var $this     = $(this);
+					ahref         = $this.attr('href');
 					var finalLink = 'http://en.wikipedia.org' + ahref;
 					$this.attr( 'href', finalLink );
 					$this.attr( 'target', 'blank' );

@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0(4.9)
+ * @version v0(5.0)
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -55,6 +55,12 @@
 		{
 			# code...
 		}
+
+		public function openSonic()
+		{
+			# code...
+		}
+
 
 		public function aboutYou()
 		{

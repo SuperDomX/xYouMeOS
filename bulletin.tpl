@@ -15,7 +15,7 @@
         
         
         <div class="profile-btn pull-left" > 
-            <div class="btn-group tile input-focused"   > 
+            <div class="btn-group tile"   > 
             {foreach $btns as $bt => $btn}
                 <a href="#{$btn.href}" class="{$btn.class}" {$btn.data}>
                     {$btn.html}
