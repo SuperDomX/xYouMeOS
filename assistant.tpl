@@ -52,10 +52,10 @@
         <div class="tab-container tile media">
              <ul class="tab pull-left tab-vertical nav nav-tabs">
                 <li >
-                    <a href="#orbitSystem" onclick="zoomOut(133333)" > <i class="fa fa-cube "></i> Add Blox</a>
+                    <a href="#orbitSystem" onclick="zoomOut(133333)" > <i class="fa fa-cube "></i> Add & Remove</a>
                 </li>
                 <li >
-                    <a href="#pulse" onclick="$('#pulse').load('/html/youMeOS/wiki/')" > <i class="fa fa-question-circle "></i> Wiki</a>
+                    <a href="#pulse" onclick="$('#pulse').load('/html/youMeOS/wiki/')" > <i class="fa fa-question-circle "></i> F.A.Q.s</a>
                 </li>
               <!--   <li>
                     <a href="#purpose"  > <i class="fa fa-star "></i> Purpose</a>

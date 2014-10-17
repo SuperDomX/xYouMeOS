@@ -113,12 +113,12 @@
 		<div id="minimap">
 			<div id="closeDetail" style="display: none;">
 				<span class="icon" id="ex-out">
-					&#61838;
+					&#61790;
 				</span>
 			</div>
 			<div id="about">
 				<span class="icon" id="ex-eye">
-					&#61698;
+					&#61873;
 				</span>
 			</div>
 			<div id="zoom-levels">

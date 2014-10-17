@@ -14,18 +14,16 @@
        	<div class="col-md-12">
        		{$lm = $lan.method}
        		{$b = $lm.bulletin}
-       		{$btns = $b.BTN}
+       		
+          {$b.BTN = ''}
 
-
-
-       		{include "~blox/jumbotron.tpl" j=$b btns=$btns}
+       		{*include "~blox/jumbotron.tpl" j=$b*}
 
           {* include "./bulletin.tpl" *}
-
-
-
-          {* include file="./aboutYou.tpl" *}
+          {* include file="./aboutYou.tpl" *} 
+          {include file="./aboutYou.tpl"}
         </div>
+        {* include '~widgets/col.tpl' col=6 method="aboutYou" title="About You" *}
 
         <!-- Add Nexuss -->
         <div class="modal fade" id="aboutYou"  role="dialog" aria-hidden="true">

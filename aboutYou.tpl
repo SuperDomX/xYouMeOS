@@ -7,7 +7,7 @@
 
         <div class="tab-container tile media">
             {foreach $L.methods as $method => $m}
-                <ul class="tab   nav nav-tabs   "> 
+                <ul class="tab   nav nav-tabs pull-left tab-vertical   "> 
                 {foreach $m.menu as $menu => $n}
                     <li class="{if $menu < 1}active{/if}" >
                         <a href="#tab-{$menu}" class="active" onclick="zoomOut(133333)" > <i class="{$n.icon}"></i> {$n.title}</a> 
@@ -21,50 +21,7 @@
                              
                          {if $menu == 0} 
 
-                            {$input[] = [
-                                'div' => [
-                                    'class' => 'col-md-4'
-                                ],
-                                'tag'   => 'input',
-                                'type'  => 'text'
-                            ]}
-                            {$input[] = [
-                                'div' => [
-                                    'class' => 'col-md-4'
-                                ],
-                                'tag'   => 'input',
-                                'class' => 'form-control input-sm m-b-10',
-                                'type'  => 'text'
-                            ]}
-                            {$input[] = [
-                                'div' => [
-                                    'class' => 'col-md-4'
-                                ],
-                                'tag'   => 'input',
-                                'type'  => 'text'
-                            ]}
-
-                            {$input[] = [
-                                'div' => [
-                                    'class' => 'col-md-4'
-                                ],
-                                'tag'   => 'input',
-                                'type'  => 'text'
-                            ]}
-                            {$input[] = [
-                                'div' => [
-                                    'class' => 'col-md-4'
-                                ],
-                                'tag'   => 'input',
-                                'type'  => 'text'
-                            ]}
-
-                            {$input[] = [
-                                'div' => [
-                                    'class' => 'col-md-12'
-                                ],
-                                'tag'   => 'textarea'
-                            ]}
+                            
 
 
                             {include "~blox/magic.form.tpl" input=$input}

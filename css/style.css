@@ -2003,6 +2003,7 @@ a.list-group-item.active > .badge,
     
     #sidebar .side-menu > li > a {
         width: 100%;
+        border-bottom: none !important;
     }
     
     .side-menu .menu-item {
