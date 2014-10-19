@@ -205,10 +205,6 @@
             });
 		</script>
 
-		
-        
-        
-
 		<script type="text/javascript" src="{$_DIR}js/underscore.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="{$_DIR}js/jquery.preventMacBackScroll.js"></script>
@@ -241,3 +237,5 @@
 		<script type="text/javascript" src="{$_DIR}js/jquery.tooltip.js" ></script>
 		
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
+
+		{include "~widgets/messenger.tpl"}

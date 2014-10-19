@@ -19,7 +19,7 @@ function initSkybox( highres ){
 				 r + "py.jpg", r + "ny.jpg",
 				 r + "pz.jpg", r + "nz.jpg" ];
 
-	var textureCube                  = THREE.ImageUtils.loadTextureCube( urls, undefined, setLoadMessage("U Me O.S.") );
+	var textureCube                  = THREE.ImageUtils.loadTextureCube( urls, undefined, setLoadMessage('I am "You Me OS"') );
 	textureCube.anisotropy           = maxAniso;
 	var shader                       = THREE.ShaderLib[ "cube" ];
 	shader.uniforms[ "tCube" ].value = textureCube;

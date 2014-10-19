@@ -1,6 +1,5 @@
  	<!-- Content -->
     <section id="content" class="container">      
-
 	     {include file="../xYouMeOS/notice.tpl"}
             <!-- Breadcrumb -->
             <!-- <ol class="breadcrumb hidden-xs">
@@ -10,18 +9,18 @@
             </ol>
             
             <h4 class="page-title b-0">Kinnexus</h4> -->
-       
-       	<div class="col-md-12">
+       <!-- <div class="col-md-2"></div> -->
+       	<div class="col-md-8">
        		{$lm = $lan.method}
        		{$b = $lm.bulletin}
-       		
+
           {$b.BTN = ''}
-
-       		{*include "~blox/jumbotron.tpl" j=$b*}
-
+          
+          {include file="./aboutYou.tpl" assign=b_html}  
+          {include "./bulletin.tpl"}
+       		{* include "~blox/jumbotron.tpl" j=$b*}
           {* include "./bulletin.tpl" *}
           {* include file="./aboutYou.tpl" *} 
-          {include file="./aboutYou.tpl"}
         </div>
         {* include '~widgets/col.tpl' col=6 method="aboutYou" title="About You" *}
 

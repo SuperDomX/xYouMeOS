@@ -6,13 +6,31 @@
         <h4 class="page-title" style="position: absolute;">
             
             <span class="dropcap">{$b.head|substr:0:1}</span>{$b.head|substr:1}
-            <i class="n-count animated pull-right">0</i>
+            <!-- <i class="n-count animated pull-right">0</i> -->
              
         </h4>
-        <h2 class="text-center" style="position: absolute;   right: 100px; top: 25%"> {$b.quote}</h2>  
-        <img src="/img/{$b.cover}-cover-bg.jpg" class="w-100 " alt="">
-        
-        
+        <h2 
+            class="text-center" 
+            style="
+                position : absolute;
+                right    : 100px;
+                top      : 25%"
+        >
+            {$b.quote}
+        </h2>  
+        <div 
+            
+            style="
+                position : absolute;
+                width: 100%;
+                left: 0px;
+                top: 75px
+            "
+            >
+        {$b_html}
+        </div>
+
+        <img src="{$b.cover}" class="w-100 " alt="">
         
         <div class="profile-btn pull-left" > 
             <div class="btn-group tile"   > 

@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0(5.2)
+ * @version v0(5.4)
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -65,6 +65,21 @@
 		public function aboutYou()
 		{
 			# code...
+
+
+			$a = $this->_SET['action'];
+			$u = $_SESSION['user'];
+
+			$r = array(
+				'success' => 1,
+				'data'    => $u,
+				'msg'     => ($id) ? "$k Saved Successfully ($v)" : '',
+				'error'   => "Not Hooked"
+			);
+
+			
+			return $r;
+
 		}
 
 		public function magnificence($user=null)
@@ -110,6 +125,13 @@
 			 return array(
 			 	'folder' => $folder
 			 );
+		}
+
+
+		// Handles logic for main entrance
+		public function entrance()
+		{
+			 
 		}
 
 		/**

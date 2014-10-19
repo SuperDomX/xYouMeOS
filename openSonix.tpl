@@ -36,7 +36,7 @@
 
                     
 
-                    <div class="pull-left tm-icon">
+                    <!-- <div class="pull-left tm-icon">
                         <a data-drawer="messages" class="drawer-toggle" href="#/">
                             <i class="sa-top-message"></i>
                             <i class="n-count animated">0</i>
@@ -44,7 +44,7 @@
                         </a>
                     </div>
 
-                    <!-- <div class="pull-left tm-icon">
+                    <div class="pull-left tm-icon">
                         <a data-drawer="notifications" class="drawer-toggle" href="#/">
                             <i class="sa-top-updates"></i>
                             <i class="n-count animated">0</i>
@@ -323,7 +323,7 @@
                 <ul class="list-unstyled side-menu font-icons" id="chalk-tras">
 
                     <li>
-                        <a class="" href="#/youMeOS/omniSelf"  onclick=" zoomOut(.77);">
+                        <a class="" href="#/youMeOS/omniSelf"  onclick=" zoomOut(133333);">
                             <span class="icon">&#61925;</span> 
                             <span class="menu-item">Omni Self</span>
                         </a>
@@ -331,27 +331,27 @@
 
                     <li class="active">
                         <a class="" href="#/{$Xtra}/I" onclick=" zoomOut(133333);"> <!-- /{$user.username} -->
-                            <span class="icon">&#61913;</span> 
+                            <span class="icon">&#61698;</span> 
                             
                             <span class="menu-item">
-                            Optic Scope
+                            Open Sight
                             </span>
                         </a>
                     </li>
 
                     <li>
-                        <a class=" " href="#/youMeOS/openSonix"  onclick=" zoomOut(133333);">
+                        <a class=" " href="#/youMeOS/home"  onclick=" zoomOut(133333);">
                              <span class="icon">&#61704;</span> 
                             <span class="menu-item">
-                            Oral Sonix
+                            Open Sonic
                             </span>
                         </a>
                     </li>
 
                     <li>
                         <a class="" href="#/youMeOS/home"  onclick="zoomOut(.57);">
-                            <span class="icon">&#61838;</span> 
-                            <span class="menu-item">OS</span>
+                            <span class="icon">&#61869;</span> 
+                            <span class="menu-item">Open Source</span>
                         </a>
                     </li>
                     
@@ -359,7 +359,7 @@
                         <a class=" " href="#/youMeOS/kinnexus"  onclick=" zoomOut(888);">
                              <span class="icon">&#61735;</span> 
                             <span class="menu-item">
-                            Orbiting Systems
+                            Orbiting Solar Systems
                             </span>
                         </a>
                     </li>
@@ -367,17 +367,16 @@
 
                     
                     <li>
-                        <a  href="#/calendar/full">
-                            <span class="icon">&#61741;</span>
+                        <a class="sa-side-calendar" href="#/calendar/full">
                             <span class="menu-item">
-                                O' Sands-of-Time
+                                Open Sands-of-Time
                             </span>
                         </a>
                     </li>
 
                     <li  >
                         <a   href="#/{$Xtra}/chronus">
-                             <span class="icon">&#61809;</span> <span class="menu-item">Omega Space</span>
+                             <span class="icon">&#61836;</span> <span class="menu-item">Omega Space</span>
                         </a>
                         <!-- <ul class="list-unstyled menu-item">
                             
@@ -387,8 +386,8 @@
                         </ul> -->
                     </li>
 
-                    <li style="position: fixed;  bottom: 15px; left: 0" class="text-center">
-                        <a href="#/login/logout" style="padding-left: 7px;">
+                    <li style="position: absolute: bottom: 2px;">
+                        <a href="#/login/logout">
                             <span class="icon">&#61733;</span> <span class="menu-item">Sign Off :)</span>
                         </a>
                     </li>
@@ -517,7 +516,6 @@
                 <div class="block-area">
                     <div class="row">
                         <div class="col-md-12">
-                            
                             <div class="tile-light p-5 m-b-15">
 
                                 <div class="cover p-relative">
@@ -1120,15 +1118,6 @@
         <script src="/js/functions.js" type="text/javascript"></script>  
 
         <script type="text/javascript">
-
-            $('body').on('click touchstart', '#menu-toggle', function(e){
-                e.preventDefault();
-                $('html').toggleClass('menu-active');
-                $('#sidebar').toggleClass('toggled');
-                //$('#content').toggleClass('m-0');
-            });
-             
-
             $(window).on('hashchange', function() { 
                 var go = window.location.hash.replace('#','');
                 if(go != ''){

@@ -1,53 +1,61 @@
 <section id="content" class="container" style="margin: 0;">
     <link href="css/form.css" rel="stylesheet">   
-    
-
     <div class="col-md-12">  
-
-
         <div class="tab-container tile media">
             {foreach $L.methods as $method => $m}
-                <ul class="tab   nav nav-tabs pull-left tab-vertical   "> 
-                {foreach $m.menu as $menu => $n}
-                    <li class="{if $menu < 1}active{/if}" >
-                        <a href="#tab-{$menu}" class="active" onclick="zoomOut(133333)" > <i class="{$n.icon}"></i> {$n.title}</a> 
-                    </li>
-                {/foreach}
-                </ul>        
-
-                <div class="tab-content media-body">
+                {if $m.menu}
+                    <ul class="tab  nav nav-tabs pull-left tab-vertical   "> 
                     {foreach $m.menu as $menu => $n}
-                         <div class="tab-pane tile {if $menu < 1}active{/if}" id="tab-{$menu}">
-                             
+                        <li class="{if $menu < 1}active{/if}" >
+                            <a href="#tab-{$menu}" class="active" onclick="zoomOut(133333)" > <i class="{$n.icon}"></i> {$n.title}</a> 
+                        </li>
+                    {/foreach}
+                    </ul>        
+
+                    <div class="tab-content media-body">
+                    {foreach $m.menu as $menu => $n}
+                         <div class="tab-pane {if $menu < 1}active{/if}" id="tab-{$menu}">
                          {if $menu == 0} 
+                            <h2> 
+                                <i class="fa fa-2x {$n.icon} pull-right"><span class="icon"><!-- &#61749; --></span> </i>
+                                {$n.header}
+                            </h2> 
+                            <blockquote>{$n.quote}</blockquote> 
 
-                            
-
+                            <form class="row form-columned" role="form" id="{$f.action|md5}" action="{$f.action}">
+                            {include file="~widgets/ume.form.tpl" input=$n.input}
+                            </form>
 
                             {include "~blox/magic.form.tpl" input=$input}
-                            
-
                             <script type="text/javascript">
                                 $('#{$menu|md5}');
                             </script>
                          {else}
-                             <select data-placeholder="{$n.select}" class="tag-select-limited input-lg" multiple>
-                                <!-- <option value="David Becham">David Becham</option>  -->
+                            {if $n.input}
+                            <form class="row form-columned" role="form" id="{$f.action|md5}" action="{$f.action}">
+                                {include file="~widgets/ume.form.tpl" input=$n.input}
+                            </form>
+                            {/if}
+                            <!-- <select data-placeholder="{$n.select}" class="tag-select-limited input-lg" multiple>
+                                <option value="David Becham">David Becham</option> 
                             </select> 
-                         {/if}
-                         
+                             -->
+
                             <h2> 
-                                <i class="fa fa-3x {$n.icon} pull-right"><span class="icon"><!-- &#61749; --></span> </i>
+                                <i class="fa fa-5x {$n.icon} pull-right"><span class="icon"><!-- &#61749; --></span> </i>
                                 {$n.header}
                             </h2> 
                             <blockquote>{$n.quote}</blockquote> 
+                         {/if}
+                         
+                            
                         </div>  
                     {/foreach}
 
-                </div>
+                    </div>
+                {/if}
             {/foreach}     
         </div>
-
     </div>
    
     <!-- All JS functions -->
@@ -98,12 +106,12 @@
                     '<a data-skin="skin-blur-sunny" class="col-sm-2 col-xs-4" href="">' +
                         '<img src="/img/skin-sunny.jpg" alt="">' +
                     '</a>' +
-                    '<a data-skin="skin-cloth" class="col-sm-2 col-xs-4" href="">' +
-                        '<img src="/img/skin-cloth.jpg" alt="">' +
-                    '</a>' +
-                    '<a data-skin="skin-tectile" class="col-sm-2 col-xs-4" href="">' +
-                        '<img src="/img/skin-tectile.jpg" alt="">' +
-                    '</a>' +
+                    // '<a data-skin="skin-cloth" class="col-sm-2 col-xs-4" href="">' +
+                    //     '<img src="/img/skin-cloth.jpg" alt="">' +
+                    // '</a>' +
+                    // '<a data-skin="skin-tectile" class="col-sm-2 col-xs-4" href="">' +
+                    //     '<img src="/img/skin-tectile.jpg" alt="">' +
+                    // '</a>' +
                     '<a data-skin="skin-blur-chrome" class="col-sm-2 col-xs-4" href="">' +
                         '<img src="/img/skin-chrome.jpg" alt="">' +
                     '</a>' +
