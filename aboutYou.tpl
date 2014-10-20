@@ -14,9 +14,10 @@
                 $(this).tab('show');
             });
         } 
-    </script>
-
-    <script type="text/javascript">
+ 
+        if($('.tooltips')[0]) {
+            $('.tooltips').tooltip();
+        }
         
 
             var settings =  '<a id="settings" href="#changeSkin" data-toggle="modal">' +

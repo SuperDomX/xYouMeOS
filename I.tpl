@@ -1120,11 +1120,9 @@
                 $('#sidebar').toggleClass('toggled');
                 //$('#content').toggleClass('m-0');
             });
-             
-            
-            
+
             $(document).ready(function(){
-                $('#detailContainer').show();
+                $('#detailContainer').slideDown();
             });
         </script>
     </body>
