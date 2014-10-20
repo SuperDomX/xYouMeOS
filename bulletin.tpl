@@ -1,13 +1,8 @@
-<div class="tile-light p-5 m-b-15">
-
-    <div class="cover p-relative">
-
-          
-        <h4 class="page-title" style="position: absolute;">
-            
+<div class="tile-light p-5 m-b-15"> 
+    <div class="cover p-relative"> 
+        <h4 class="page-title" style="position: absolute;"> 
             <span class="dropcap">{$b.head|substr:0:1}</span>{$b.head|substr:1}
-            <!-- <i class="n-count animated pull-right">0</i> -->
-             
+            <!-- <i class="n-count animated pull-right">0</i> --> 
         </h4>
         <h2 
             class="text-center" 

@@ -1,4 +1,5 @@
 <section class="container">   
+    
     <div class="col-md-12">   
         {include "~blox/ume.tpl" tpl=$L.methods.aboutYou}
     </div>
@@ -21,7 +22,7 @@
         
 
             var settings =  '<a id="settings" href="#changeSkin" data-toggle="modal">' +
-            '<i class="fa fa-magic"></i> Change Color' +
+            '<i class="fa fa-magic"></i> Change Color' + 
             '</a>' +   
             '<div class="modal fade" id="changeSkin" tabindex="-1" role="dialog" aria-hidden="true">' +
             '<div class="modal-dialog modal-lg">' +

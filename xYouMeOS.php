@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0(5.4)
+ * @version v0(5.5)
  * @icon  dashboard
  * @link youMeOS
  * @see community 
@@ -14,7 +14,7 @@
 	class xYouMeOS extends Xengine {
 		public function version($feed=false)					
 		{
-			
+
 			if($feed){
 				$feed       = 'https://github.com/SuperDomX/xYouMeOS/commits/master.atom';
 				$xml        = simplexml_load_file($feed);
