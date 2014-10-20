@@ -1,87 +1,33 @@
-<section id="content" class="container" style="margin: 0;">
-    <link href="css/form.css" rel="stylesheet">   
-    <div class="col-md-12">  
-        <div class="tab-container tile media">
-            {foreach $L.methods as $method => $m}
-                {if $m.menu}
-                    <ul class="tab  nav nav-tabs pull-left tab-vertical   "> 
-                    {foreach $m.menu as $menu => $n}
-                        <li class="{if $menu < 1}active{/if}" >
-                            <a href="#tab-{$menu}" class="active" onclick="zoomOut(133333)" > <i class="{$n.icon}"></i> {$n.title}</a> 
-                        </li>
-                    {/foreach}
-                    </ul>        
-
-                    <div class="tab-content media-body">
-                    {foreach $m.menu as $menu => $n}
-                         <div class="tab-pane {if $menu < 1}active{/if}" id="tab-{$menu}">
-                         {if $menu == 0} 
-                            <h2> 
-                                <i class="fa fa-2x {$n.icon} pull-right"><span class="icon"><!-- &#61749; --></span> </i>
-                                {$n.header}
-                            </h2> 
-                            <blockquote>{$n.quote}</blockquote> 
-
-                            <form class="row form-columned" role="form" id="{$f.action|md5}" action="{$f.action}">
-                            {include file="~widgets/ume.form.tpl" input=$n.input}
-                            </form>
-
-                            {include "~blox/magic.form.tpl" input=$input}
-                            <script type="text/javascript">
-                                $('#{$menu|md5}');
-                            </script>
-                         {else}
-                            {if $n.input}
-                            <form class="row form-columned" role="form" id="{$f.action|md5}" action="{$f.action}">
-                                {include file="~widgets/ume.form.tpl" input=$n.input}
-                            </form>
-                            {/if}
-                            <!-- <select data-placeholder="{$n.select}" class="tag-select-limited input-lg" multiple>
-                                <option value="David Becham">David Becham</option> 
-                            </select> 
-                             -->
-
-                            <h2> 
-                                <i class="fa fa-5x {$n.icon} pull-right"><span class="icon"><!-- &#61749; --></span> </i>
-                                {$n.header}
-                            </h2> 
-                            <blockquote>{$n.quote}</blockquote> 
-                         {/if}
-                         
-                            
-                        </div>  
-                    {/foreach}
-
-                    </div>
-                {/if}
-            {/foreach}     
-        </div>
+<section class="container">   
+    <div class="col-md-12">   
+        {include "~blox/ume.tpl" tpl=$L.methods.aboutYou}
     </div>
    
     <!-- All JS functions -->
     <script src="js/functions.js"></script>  
     <script src="/js/charts.js"></script> <!-- All the above chart related functions -->
         
-
     <script type="text/javascript">
         if($('.tab')[0]) {
             $('.tab a').click(function(e) {
-            e.preventDefault();
-            $(this).tab('show');
+                e.preventDefault();
+                $(this).tab('show');
             });
-        }
+        } 
+    </script>
 
+    <script type="text/javascript">
         
 
             var settings =  '<a id="settings" href="#changeSkin" data-toggle="modal">' +
-            '<i class="fa fa-gear"></i> Change Skin' +
+            '<i class="fa fa-magic"></i> Change Color' +
             '</a>' +   
             '<div class="modal fade" id="changeSkin" tabindex="-1" role="dialog" aria-hidden="true">' +
             '<div class="modal-dialog modal-lg">' +
                 '<div class="modal-content">' +
                 '<div class="modal-header">' +
                     '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>' +
-                    '<h4 class="modal-title">Change Template Skin</h4>' +
+                    '<h4 class="modal-title">Choose a Color</h4>' +
                 '</div>' +
                 '<div class="modal-body">' +
                     '<div class="row template-skins">' +
@@ -151,9 +97,9 @@
             $('#changeSkin').modal('hide');
         });
 
-        $(".tag-select-limited").chosen({
-            max_selected_options: 5
-        });
+        // $(".tag-select-limited").chosen({
+        //     max_selected_options: 5
+        // });
     </script>
 
     

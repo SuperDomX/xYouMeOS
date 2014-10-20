@@ -56,14 +56,14 @@
                     <br/>
 
                 </header>
-                <a class="box-switcher btn btn-lg m-r-5 btn-block  input-focused btn-lg " data-switch="box-login" href="">You</a>
+                <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">You</a>
                  
                 <br/><br/>
                 
-               <button id="tour-btn" class="btn m-r-5 btn-block" data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
+               <button id="tour-btn" class="btn m-r-5  " data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
 
                     Me</button>
-                <a class="box-switcher btn  m-r-5 btn-block   " data-switch="box-register" href="">O.S.</a>
+                <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">O.S.</a>
                 
             </form>
 
@@ -172,7 +172,7 @@
                     dataType : 'json',
                     success  : function(data, textStatus, jqXHR){
                         $('#minimap').fadeIn();
-
+                        
 
 
                         if(data.success){
@@ -248,7 +248,7 @@
             $('#closeDetail').show();
             $('#about').hide();
             $('#minimap').hide();
- 
+            
         </script>
         <!-- Javascript Libraries -->
         <!-- jQuery -->

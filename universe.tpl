@@ -13,14 +13,20 @@
 		<link rel="stylesheet" href="/bin/css/font-awesome-4.2.0.min.css"> 
 		<link rel="stylesheet" type="text/css" href="{$_DIR}styles/style.css">
 
-		<link href="css/bootstrap.css" rel="stylesheet">
-
+		<!-- <link href="css/bootstrap.css" rel="stylesheet">
+ -->
         <link href="css/icons.css" rel="stylesheet">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/animate.min.css" rel="stylesheet">
-        <link href="css/form.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/animate.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet"> 
+        <link href="/bin/css/font-awesome-4.2.0.min.css" rel="stylesheet">
+        <link href="/css/form.css" rel="stylesheet">
+        <link href="/css/calendar.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/icons.css" rel="stylesheet">
+        <link href="/css/generics.css" rel="stylesheet">
+        
+        
 
 		<style type="text/css">
 
@@ -239,3 +245,40 @@
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
 
 		{include "~widgets/messenger.tpl"}
+		
+		<script type="text/javascript">
+
+
+
+			$(window).on('hashchange', function() { 
+                var url = window.location.hash.replace('#','');
+                if(url != ''){
+                    console.log('Loading '+url);
+                    $.pjax({ 
+                        container : '#content',
+                        fragment  : '#content',
+                        timeout   : 10000,
+                        url       : url,
+                        success     : function  () {
+                        	console.log("Loaded: "+url);
+                            if($('.tooltips')[0]) {
+					            console.log($('.tooltips').tooltip());
+					        }
+                        }
+                    },function(){
+                		console.log("Loaded: "+url);
+                    });     
+                    {if $google_analytics_id}
+                    
+                    ga('send', {
+                      'hitType' : 'pageview',
+                      'page'    : url,
+                      'hitCallback': function() {
+                        console.log('hit sent');
+                      }
+                    }); 
+
+                    {/if}
+                }
+            });
+		</script>

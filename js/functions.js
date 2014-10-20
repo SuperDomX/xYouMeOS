@@ -120,6 +120,7 @@ $(document).ready(function(){
         });
 
         $('.panel-collapse').on('hidden.bs.collapse', function () {
+            $(this).parent.find('.panel-title a').removeClass('active');
             $(this).prev().find('.panel-title a').addClass('active');
         });
 

@@ -7,14 +7,7 @@
     </head>
 
     <body id="skin-blur-violate">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/animate.min.css" rel="stylesheet">
-        <link href="/bin/css/font-awesome-4.2.0.min.css" rel="stylesheet">
-        <link href="css/form.css" rel="stylesheet">
-        <link href="css/calendar.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/icons.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet">
+
         <style type="text/css">
             .font-icons .icon { font-size: 30px; margin-top: 5px; }
         </style>    
@@ -1128,33 +1121,8 @@
                 //$('#content').toggleClass('m-0');
             });
              
-
-            $(window).on('hashchange', function() { 
-                var go = window.location.hash.replace('#','');
-                if(go != ''){
-                    console.log('Loading '+go);
-                    $.pjax({ 
-                        container : '#content',
-                        fragment  : '#content',
-                        timeout   : 10000,
-                        url       : go,
-                        success     : function  () {
-                            
-                        }
-                    });     
-                    {if $google_analytics_id}
-                    
-                    ga('send', {
-                      'hitType' : 'pageview',
-                      'page'    : go,
-                      'hitCallback': function() {
-                        console.log('hit sent');
-                      }
-                    }); 
-
-                    {/if}
-                }
-            });
+            
+            
             $(document).ready(function(){
                 $('#detailContainer').show();
             });

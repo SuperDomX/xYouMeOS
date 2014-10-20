@@ -1,4 +1,4 @@
- 	<!-- Content -->
+<!-- Content -->
     <section id="content" class="container">      
 	     {include file="../xYouMeOS/notice.tpl"}
             <!-- Breadcrumb -->
@@ -10,13 +10,19 @@
             
             <h4 class="page-title b-0">Kinnexus</h4> -->
        <!-- <div class="col-md-2"></div> -->
-       	<div class="col-md-8">
+
+
+
+
+       	<div class="col-md-10">
+
        		{$lm = $lan.method}
        		{$b = $lm.bulletin}
 
           {$b.BTN = ''}
           
           {include file="./aboutYou.tpl" assign=b_html}  
+          
           {include "./bulletin.tpl"}
        		{* include "~blox/jumbotron.tpl" j=$b*}
           {* include "./bulletin.tpl" *}
