@@ -41,16 +41,19 @@
         <div class="modal fade" id="aboutYou"  role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
+                  
+                  
                   {$btns = []}
-                  {$btns[] = [ 
-                      'class'   => 'btn btn-lg text-center',
-                      'dismiss' => 1,
-                      'html'    =>'<i class="fa fa-save   "> </i> Save '
-                  ]}
-
                 	{include file="~blox/modal-body.tpl" ajax='youMeOS/aboutYou'   buttons=$btns assign=b_html}
                   {$btns = ''}
                   {$b.head ="@{$user.username}"}
+
+                  {$btns = []}
+                  {$btns[] = [ 
+                      'class'   => 'btn-lg text-center',
+                      'dismiss' => 1,
+                      'html'    =>'<i class="fa fa-save   "> </i> Save '
+                  ]}
 
                   {include "./bulletin.tpl"}
                   <script type="text/javascript">
