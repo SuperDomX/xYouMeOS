@@ -1,6 +1,6 @@
 function loadStarData( dataFile, callback ){
 	var xhr = new XMLHttpRequest();
-	setLoadMessage('Thank You, for You');	
+	setLoadMessage('This is for You, Thank You');	
 	xhr.addEventListener( 'load', function ( event ) {
 		var parsed = JSON.parse( xhr.responseText );
 		// console.log(parsed);

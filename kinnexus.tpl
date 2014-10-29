@@ -28,9 +28,6 @@
             </div>
         </div> 
 
-        {include file="~widgets/col.tpl"}
-
-
 		{foreach $data.users as $u => $user}
 		<div class="col-xs-3 col-md-2">
 		    <div class="widget" style="position: absolute">{$user.username}</div>

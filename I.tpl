@@ -318,7 +318,9 @@
                     <li>
                         <a class="" href="#/youMeOS/omniSelf"  onclick=" zoomOut(.77);">
                             <span class="icon">&#61925;</span> 
-                            <span class="menu-item">Omni Self</span>
+                            <span class="menu-item">
+                                 {$lan.class.CROWN}
+                            </span>
                         </a>
                     </li>
 
@@ -327,7 +329,7 @@
                             <span class="icon">&#61913;</span> 
                             
                             <span class="menu-item">
-                            Optic Scope
+                                 {$lan.class.3RDEYE}
                             </span>
                         </a>
                     </li>
@@ -336,7 +338,7 @@
                         <a class=" " href="#/youMeOS/openSonix"  onclick=" zoomOut(133333);">
                              <span class="icon">&#61704;</span> 
                             <span class="menu-item">
-                            Oral Sonix
+                                 {$lan.class.THROAT}
                             </span>
                         </a>
                     </li>
@@ -344,7 +346,9 @@
                     <li>
                         <a class="" href="#/youMeOS/home"  onclick="zoomOut(.57);">
                             <span class="icon">&#61838;</span> 
-                            <span class="menu-item">OS</span>
+                            <span class="menu-item">
+                                 {$lan.class.HEART}
+                            </span>
                         </a>
                     </li>
                     
@@ -352,7 +356,7 @@
                         <a class=" " href="#/youMeOS/kinnexus"  onclick=" zoomOut(888);">
                              <span class="icon">&#61735;</span> 
                             <span class="menu-item">
-                            Orbiting Systems
+                             {$lan.class.SOLAR}
                             </span>
                         </a>
                     </li>
@@ -363,14 +367,16 @@
                         <a  href="#/calendar/full">
                             <span class="icon">&#61741;</span>
                             <span class="menu-item">
-                                O' Sands-of-Time
+                                 {$lan.class.SACRAL}
                             </span>
                         </a>
                     </li>
 
                     <li  >
                         <a   href="#/{$Xtra}/chronus">
-                             <span class="icon">&#61809;</span> <span class="menu-item">Omega Space</span>
+                             <span class="icon">&#61809;</span> <span class="menu-item">
+                              {$lan.class.ROOT}
+                             </span>
                         </a>
                         <!-- <ul class="list-unstyled menu-item">
                             
@@ -509,6 +515,12 @@
                 
                 <div class="block-area">
                     <div class="row">
+
+                        {$lm = $lan.method}
+                        {foreach $lm.col as $col => $c}
+                            {include "~blox/ume.col.tpl" tpl=$c}
+                        {/foreach}
+
                         <div class="col-md-12">
                             
                             <div class="tile-light p-5 m-b-15">
@@ -1110,9 +1122,17 @@
            
         </section>
         <!-- All JS functions -->
+            <!-- Map -->
+        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="js/maps/usa.js"></script> 
+        <!-- USA Map for jVectorMap -->
+        
+        <script src="js/maps/world.js"></script> <!-- World Map for jVectorMap -->
+        
         <script src="/js/functions.js" type="text/javascript"></script>  
 
         <script type="text/javascript">
+
 
             $('body').on('click touchstart', '#menu-toggle', function(e){
                 e.preventDefault();

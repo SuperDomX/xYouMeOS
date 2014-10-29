@@ -1,11 +1,13 @@
 <section class="container">   
-    
+    <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0; opacity: .5"></iframe>
     <div class="col-md-12">   
         {include "~blox/ume.tpl" tpl=$L.methods.aboutYou}
     </div>
    
+    
+   
     <!-- All JS functions -->
-    <script src="js/functions.js"></script>  
+    <!-- // <script src="js/functions.js"></script>   -->
     <script src="/js/charts.js"></script> <!-- All the above chart related functions -->
         
     <script type="text/javascript">

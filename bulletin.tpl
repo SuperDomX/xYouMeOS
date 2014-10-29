@@ -25,7 +25,10 @@
         {$b_html}
         </div>
 
-        <img src="{$b.cover}" class="w-100 " alt="">
+        {if $b.cover}
+            <img src="{$b.cover}" class="w-100 " alt="">
+        {/if}
+        
         
         <div class="profile-btn pull-left" > 
             <div class="btn-group tile"   > 

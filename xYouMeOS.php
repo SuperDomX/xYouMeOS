@@ -4,11 +4,11 @@
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
  * @version v0(5.6)
- * @icon  dashboard
+ * @icon  sun-o
  * @link youMeOS
- * @see community 
- * @mini ge
- * @release alpha
+ * @see support
+ * @mini sun-o
+ * @release beta
  * @alpha true
  */
 	class xYouMeOS extends Xengine {
@@ -68,6 +68,7 @@
 			# code...
 
 
+
 			$a = $this->_SET['action'];
 			$u = $_SESSION['user'];
 
@@ -75,7 +76,7 @@
 				'success' => 1,
 				'data'    => $u,
 				'msg'     => ($id) ? "$k Saved Successfully ($v)" : '',
-				'error'   => "Not Hooked"
+				'error'   => "Not yet Hooked"
 			);
 
 			
@@ -145,6 +146,8 @@
 			// Also available through $this->Q;		
 			$q = $this->q();
 
+
+
 			// Example of Hard-Coded Admin or User Only privledges.
 			$k = $this->Key['is']; 	
 			if( true === $k['admin'] || true === $k['user'] ){
@@ -171,10 +174,15 @@
 				);
 			}
 			
+			$r['HTML']['HEAD']['TITLE'] = "You Me OS";
+
 			return $r;
 		}
 
 		function I(){
+
+			
+
 			return $this->kinnexus();
 		}
 

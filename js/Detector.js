@@ -1,125 +1,60 @@
 /**
- * @author jonobr1 / http://jonobr1.com
+ * @author alteredq / http://alteredqualia.com/
+ * @author mr.doob / http://mrdoob.com/
  */
 
-(function() {
+Detector = {
 
-  var root = this;
-  var previousDetector = root.has || {};
+  canvas : !! window.CanvasRenderingContext2D,
+  webgl : ( function () { try { return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } } )(),
+  workers : !! window.Worker,
+  fileapi : window.File && window.FileReader && window.FileList && window.Blob,
 
-  // Let's do a bunch of navigator detections shall we?
+  getWebGLErrorMessage : function () {
 
-  var ua = root.navigator.userAgent;
+    var domElement = document.createElement( 'div' );
 
-  var has = {
+    domElement.style.fontFamily = 'monospace';
+    domElement.style.fontSize = '13px';
+    domElement.style.textAlign = 'center';
+    domElement.style.background = '#eee';
+    domElement.style.color = '#000';
+    domElement.style.padding = '1em';
+    domElement.style.width = '475px';
+    domElement.style.margin = '5em auto 0';
 
-    // Mobile Detection
+    if ( ! this.webgl ) {
 
-    Android: !!ua.match(/Android/ig),
-    Blackberry: !!ua.match(/BlackBerry/ig),
-    iOS: !!ua.match(/iPhone|iPad|iPod/ig),
-    Opera: !!ua.match(/Opera Mini/ig),
-    Windows: !!ua.match(/IEMobile/ig),
-    WebOS: !!ua.match(/webOS/ig),
+      domElement.innerHTML = window.WebGLRenderingContext ? [
+        'Sorry, your graphics card doesn\'t support <a href="http://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">WebGL</a>'
+      ].join( '\n' ) : [
+        'Sorry, your browser doesn\'t support <a href="http://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">WebGL</a><br/>',
+        'Please try with',
+        '<a href="http://www.google.com/chrome">Chrome 10</a>, ',
+        '<a href="http://www.mozilla.com/en-US/firefox/all-beta.html">Firefox 4</a> or',
+        '<a href="http://nightly.webkit.org/">Safari 6</a>'
+      ].join( '\n' );
 
-    // Browser Detection
-
-    Arora: !!ua.match(/Arora/ig),
-    Chrome: !!ua.match(/Chrome/ig),
-    Epiphany: !!ua.match(/Epiphany/ig),
-    Firefox: !!ua.match(/Firefox/ig),
-    InternetExplorer: !!ua.match(/MSIE/ig),
-    Midori: !!ua.match(/Midori/ig),
-    Opera: !!ua.match(/Opear/ig),
-    Safari: !!ua.match(/Safari/ig),
-
-    webgl: (function() { try { return !!window.WebGLRenderingContext && !!(document.createElement('canvas').getContext('webgl') || document.createElement('canvas').getContext('experimental-webgl')); } catch(e) { return false; } })(),
-
-    noConflict: function() {
-      return previousDetector;
     }
 
-  };
+    return domElement;
 
-  has.mobile = has.Android || has.Blackberry || has.iOS || has.Opera || has.Windows || has.WebOS;
+  },
 
-  root.has = has;
+  addGetWebGLMessage : function ( parameters ) {
 
-})();
+    var parent, id, domElement;
 
-Detector = has;
+    parameters = parameters || {};
 
+    parent = parameters.parent !== undefined ? parameters.parent : document.body;
+    id = parameters.id !== undefined ? parameters.id : 'oldie';
 
-Detector.getWebGLErrorMessage = function (message) {
+    domElement = Detector.getWebGLErrorMessage();
+    domElement.id = id;
 
-  var element = document.createElement( 'div' );
-  element.id = 'webgl-error-message';
-  element.style.fontFamily = 'arial';
-  element.style.fontSize = '13px';
-  element.style.fontWeight = 'normal';
-  element.style.textAlign = 'center';
-  element.style.background = '#000000';
-  element.style.color = '#ffffff';
-  element.style.padding = '1.5em';
-  element.style.width = '840px';
-  element.style.height = '630px';
-  element.style.margin = '0em auto 0';
-  element.style.zIndex = '500000';
-  element.style.position = 'absolute';
-  element.style.pointerEvents = 'all';
-  element.style.overflow = 'scroll';
-
-  if ( ! this.webgl ) {
-
-   element.innerHTML = message || [
-     'Either your graphics card or your browser does not support WebGL. Please try again on a Windows, Mac, or Linux computer using <a href="http://www.google.com/chrome/" style="color:#ffffff; text-decoration:underline; text-transform:capitalize">Google Chrome</a><br>',
-     'or another <a href="http://www.khronos.org/webgl/wiki_1_15/index.php/Getting_a_WebGL_Implementation" style="color:#ffffff; text-decoration:underline; text-transform:none"> WebGL-Compatible browser</a>. You can watch a video preview of the experiment below:',
-     '<p><iframe id="trailer" width="100%" height="100%" src="http://www.youtube.com/embed/TU6RAjABX40" frameborder="0" allowfullscreen></iframe></p>',
-   ].join( '\n' );
-
-   var youtube = $('#trailer');
-
-   var $window = $(window);
-   var $element = $(element);
-
-   $window
-     .resize(function(e) {
-
-       // console.log('resizing');
-       $element
-         .width( $window.width() )
-         .height( $window.height() );
-       // youtube
-       //  .width($window.width())
-       //  .height($window.height());
-
-     })
-     .trigger('resize');
+    parent.appendChild( domElement );
 
   }
-
-  return element;
-
-};
-
-Detector.addGetWebGLMessage = function ( message ) {
-
-  var parent, id, element;
-
-  parameters = window.parameters || {};
-
-  parent = parameters.parent !== undefined ? parameters.parent : document.body;
-  id = parameters.id !== undefined ? parameters.id : 'oldie';
-
-  element = Detector.getWebGLErrorMessage(message);
-  element.id = id;
-
-  $(element).css({
-   border: 0,
-   padding: 0,
-   margin: 0
-  });   
-
-  parent.appendChild( element );
 
 };
