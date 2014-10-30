@@ -52,9 +52,9 @@
                 
                 <header>
                     <br/><br/>
-                    <h1 class="fa-5x">You Me O.S.</h1>    
-                    <br/>
-
+                    <h1 class="fa-5x">You Me O.S.
+                    <small>™</small>
+                    </h1>
                 </header>
                 <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">You</a>
                  
@@ -64,7 +64,9 @@
 
                     Me</button>
                 <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">O.S.</a>
-                
+                <br/><br/>
+                Copyright &copy; 2014 <br/>
+                Hall of the Gods, Inc.
             </form>
 
             <form class="box tile animated " id="box-login" action="/.json" >
@@ -80,14 +82,18 @@
                     </label>
                 </div> --><br/><br/>
                 <button class="btn btn-sm m-r-5 btn btn-lg btn-block btn-alt input-focused " data-trigger="hover" data-toggle="popover" data-placement="right" data-content="" title="" data-original-title="">Me</button>
+                
 
                 
                 <br/><br/>
 
                 <small>
-                     <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> |
+                    <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> |
                     <a class="box-switcher" data-switch="box-register" href="">Weave OS</a> |
                     <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a>
+
+                    <br/>
+                    
                 </small>
             </form>
             
