@@ -22,6 +22,14 @@ var GALAXY_TOUR = [{
     "restTime"   : 6000,
     "message"    : 'Let us begin our Journey!'
     // "callback"   : highlightMilkyWay
+}, {
+    "rx"         : 4.12216429754294249,
+    "ry"         : 2.1189722678912,
+    "z"          : 79999.99999999994,
+    "travelTime" : 5000,
+    "restTime"   : 6000,
+    "message"    : 'You are on of so many. It is difficult to track all of our connections in this age of information.'
+    // "callback"   : highlightMilkyWay
 },
 {
     "rx"         : 0.5522785678088462,
@@ -29,7 +37,7 @@ var GALAXY_TOUR = [{
     "z"          : 2000.4214873346518,
     "travelTime" : 5000,
     "restTime"   : 7000,
-    "message"    : "But what if YOU could defy Space & Time, creating a Wormhole?",
+    "message"    : "But what if we could defy Space & Time, creating Wormholes?",
 },
 {
     "rx"         : 0.5522785678088462,
@@ -58,14 +66,14 @@ var GALAXY_TOUR = [{
     "z"          : 0.57,
     "travelTime" : 5777,
     "restTime"   : 8888,
-    "message"    : '"Take a moment to Center; Bathe in your Magnificence!"'
+    "message"    : '"Take a moment to Center. Bathe in your Magnificence!"'
 }, {
     "rx"         : 1.4395420537811414,
     "ry"         : 6.281532559509658,
     "z"          : 1.148607771018531,
     "travelTime" : 4000,
     "restTime"   : 6444,
-    "message"    : 'Magnificence: a "magnetic-essence". Forever shining onto \'internity\'.',
+    "message"    : 'Magnificence: a "magnetic-essence". Forever shining into \'internity\'.',
     // "callback"   : displaySunEarthDiagram
 },  {
     "rx"         : 1.4395420537811414,
@@ -73,7 +81,7 @@ var GALAXY_TOUR = [{
     "z"          : 5.148607771018531,
     "travelTime" : 4000,
     "restTime"   : 6000,
-    "message"    : 'IM the Center of Your Web.',
+    "message"    : 'I AM, the Center of Your Web.',
     "callback"   : displaySunEarthDiagram
 },{
     "rx"         : 1.4395420537811414,
@@ -144,7 +152,7 @@ var GALAXY_TOUR = [{
     "z"          : 31782.290495394205,
     "travelTime" : 5000,
     "restTime"   : 6000,
-    "message"    : "Activate 'Heat vision' to get a glace at the activity of online stellar bodies.",
+    "message"    : "Activate 'Heat vision' to get a glance at the activity of online stellar bodies.",
     "callback"   : highlightStarHeat
 }, {
     "rx"         : -0.12216429754294249,
@@ -168,7 +176,7 @@ var GALAXY_TOUR = [{
     "z"          : 4999999.99999999994,
     "travelTime" : 3000,
     "restTime"   : 5000,
-    "message"    : "Together, we can tether the Internet's Multi~Verse!" 
+    "message"    : "Together, let's tether the Internet's Multi~Verse!" 
 },  
  {
     "rx"         : -0.12216429754294249,
@@ -176,7 +184,7 @@ var GALAXY_TOUR = [{
     "z"          : 79999.99999999994,
     "travelTime" : 5000,
     "restTime"   : 5000,
-    "message"    : "Now; Weave your Web's Universal OS & Godspeed!",
+    "message"    : "Now, Weave your Web's Universal OS & Godspeed!",
     "callback"   : fadeInLoginForm
 }];
 var cinematic_width = 5;
