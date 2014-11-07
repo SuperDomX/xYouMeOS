@@ -69,10 +69,10 @@ function makeOortCloud(){
 	var particles = new THREE.ParticleSystem( particlesGeo, material );
 
 	var oortInfo = new THREE.Gyroscope();
-	oortInfo.name = "Oort Cloud";
+	oortInfo.name = 'YOUR Cloud "NIMBUS"';
 	oortInfo.position.set( dist, -dist , 0 );
 	oortInfo.scale.setLength( 0.1 );
-	attachLegacyMarker( "Oort Cloud", oortInfo, 1.0, {min:40.0, max: 500.0}  );
+	attachLegacyMarker( 'YOUR Cloud "NIMBUS"', oortInfo, 1.0, {min:40.0, max: 500.0}  );
 
 	particles.add( oortInfo );
 
@@ -198,7 +198,7 @@ function makeSolarSystem(){
 	sub.position.x = 0.5;
 	sub.position.y = 0.08;
 	measurement.add( sub );
-	attachLegacyMarker( "One light year.", sub, 1.0, {min:120, max: 400} );
+	attachLegacyMarker( "1 light year", sub, 1.0, {min:120, max: 400} );
 	solarSystem.add( measurement );	
 
 	//	pioneer

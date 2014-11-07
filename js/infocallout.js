@@ -67,6 +67,10 @@ function fadeInRegForm(){
 	fadeInLoginForm(true);
 }
 
+function timeoutLogin(){
+	setTimeout(fadeInLoginForm,3000);
+}
+
 function fadeInLoginForm(reg){
 	 $detailContainer.addClass('about');
 

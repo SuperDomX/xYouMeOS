@@ -60,7 +60,7 @@ function attachMarker( obj, size ){
 		return;
 
 	if( obj.name === "Rigel Kentaurus A" )
-		nameLayer.innerHTML = "Alpha Centauri";
+		nameLayer.innerHTML = "Hall of the Gods, Inc.";
 
 	marker.defaultSize = marker.style.fontSize;
 

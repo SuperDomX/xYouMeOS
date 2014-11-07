@@ -19,8 +19,6 @@
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/generics.css" rel="stylesheet"> 
 
-
-
         <small class="label tile label-sm " style="position: absolute; bottom: 0; right: 0; margin: 0 50px 10px 0;">super powered by<br/>  
             <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>™
         </small><br/>
@@ -52,18 +50,52 @@
                 
                 <header>
                     <br/><br/>
-                    <h1 class="fa-5x">You Me O.S.
+                    <h1 class="fa-5x">UMeOS
                     <small>™</small>
                     </h1>
+                    <h2>Welcome to the Future</h2>
                 </header>
-                <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">You</a>
+
+                <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a>
                  
                 <br/><br/>
                 
                <button id="tour-btn" class="btn m-r-5  " data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
 
-                    Me</button>
-                <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">O.S.</a>
+                    {$L.tour}</button>
+                <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a>
+                <br/><br/>
+                Copyright &copy; 2014 <br/>
+                Hall of the Gods, Inc.
+            </form>
+
+            <!-- Login -->
+            <form class="box  animated  " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
+                <!-- <h2 id="tour-head" class="m-t-0 m-b-15">Take a tour</h2> -->
+                <!-- <input type="text" class="login-control m-b-10" placeholder="Username or Email Address" name="login[username]">
+                <input type="password" class="login-control" placeholder="Password" name="login[password]">
+                <div class="checkbox m-b-20">
+                    <label>
+                        <input class="checkbox m-b-20" type="checkbox">
+                        Remember Me
+                    </label>
+                </div> --> 
+                
+                <header>
+                    <br/><br/>
+                    <h1 class="fa-5x">UMeOS
+                    <small>™</small>
+                    </h1>
+                    <h2>Welcome to the Future</h2>
+                </header>
+                <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a>
+                 
+                <br/><br/>
+                
+               <button id="tour-btn" class="btn m-r-5  " data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
+
+                    {$L.tour}</button>
+                <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a>
                 <br/><br/>
                 Copyright &copy; 2014 <br/>
                 Hall of the Gods, Inc.
@@ -108,9 +140,13 @@
                 <input required name="login[confirm]" type="password" class="login-control m-b-20 input-lg" placeholder="Confirm Key">
                 <input type="hidden" name="login[action]" value="register" >
                 
-                <button class="btn btn btn-lg btn-block btn-alt input-focused m-r-5">"We've" a Universal O.S.</button>
+                <button class="btn btn btn-lg btn-block btn-alt input-focused m-r-5">
+                Weave a Universal OS</button>
                 
+                {if $masterKey.is.user}
                 <h5> #Youinverses: {$count_universes} </h5>
+                {/if}
+                
 
                 <small><a class="box-switcher btn btn btn-xs" data-switch="box-tour" href=""> Cancel </a></small>
             </form>

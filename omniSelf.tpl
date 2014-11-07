@@ -33,7 +33,7 @@
                   {$btns = []}
                 	{include file="~blox/modal-body.tpl" ajax='youMeOS/aboutYou'   buttons=$btns assign=b_html}
                   {$btns = ''}
-                  {$b.head ="@{$user.username}"}
+                  {$b.head ="Castle in the Cloud"}
 
                   {$btns = []}
                   {$btns[] = [ 

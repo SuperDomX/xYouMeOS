@@ -10,7 +10,7 @@ var galacticUniforms = {
 	blurPower      : { type: "f", value: 1.0 },
 	blurDivisor    : { type: "f", value: 2.0 },
 	sceneSize      : { type: "f", value: 120.0 },
-	cameraDistance : { type: "f", value: 800.0 },
+	cameraDistance : { type: "f", value: 1000.0 },
 	zoomSize       : { type: "f", value: 1.0 },
 	scale          : { type: "f", value: 1.0 },
 	heatVision     : { type: "f", value: 0.0 },
@@ -154,7 +154,7 @@ function generateGalaxy(){
 	
 	pGalacticSystem.measurement = measurement;
 
-	attachLegacyMarker( "This is roughly 400,000,000,000 (Billion) Stars!", measurement, 1.0, {min:6000, max: 120000} );
+	attachLegacyMarker( "Over 400 (Billion) Stars!", measurement, 1.0, {min:6000, max: 120000} );
 	
 
 	window.toggleGalacticMeasurement = function( desired ){
@@ -259,13 +259,19 @@ function generateGalaxy(){
 	}
 
 	//	position it as if the disc visible in the star data were the actual galactic disc
-	pGalacticSystem.position.x     = 11404;
-	pGalacticSystem.position.y     = 14000;
-	pGalacticSystem.position.z     = 10000;
+	// pGalacticSystem.position.x     = 11404;
+	// pGalacticSystem.position.y     = 14000;
+	pGalacticSystem.position.x     = 5000;
+	pGalacticSystem.position.y     = 5000;
+	pGalacticSystem.position.z     = 0;
 	
-	pGalacticSystem.rotation.x     = 2.775557;
-	pGalacticSystem.rotation.y     = -0.4;
-	pGalacticSystem.rotation.z     = -1.099999;
+	pGalacticSystem.rotation.x = 2.775557;
+	pGalacticSystem.rotation.y = -0.4;
+	pGalacticSystem.rotation.z  = -1.099999;
+	
+	// pGalacticSystem.rotation.x     = 0;
+	// pGalacticSystem.rotation.y     = 0;
+	// pGalacticSystem.rotation.z     = 0;
 	
 	// pGalacticSystem.targetPosition = pGalacticSystem.position.clone();
 	pGalacticSystem.zeroRotation   = new THREE.Vector3();

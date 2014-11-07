@@ -7,7 +7,7 @@
 var starSystems = {
     "268 G. Cet": {
         "id": 12082, 
-        "name": "HR 753", 
+        "name": "Facebook", 
         "sep": 0.0, 
         "sub": [
             {
@@ -29,7 +29,7 @@ var starSystems = {
     }, 
     "33 G. Lib": {
         "id": 72958, 
-        "name": "Gliese 570", 
+        "name": "YouTube", 
         "sep": 0.000, 
         "sub": [
             {
@@ -51,7 +51,7 @@ var starSystems = {
     }, 
     "82 G. Eri": {
         "id": 15471, 
-        "name": "82 G. Eridani", 
+        "name": "Robert", 
         "sep": 0.0, 
         "sub": [
             {
@@ -63,7 +63,7 @@ var starSystems = {
     }, 
     "96 G. Psc": {
         "id": 3759, 
-        "name": "96 G. Piscium", 
+        "name": "Ashley", 
         "sep": 0.0, 
         "sub": [
             {
@@ -92,7 +92,7 @@ var starSystems = {
     }, 
     "Acrux": {
         "id": 60531, 
-        "name": "Alpha Crucis", 
+        "name": "Melissa", 
         "sep": 430.0, 
         "sub": [
             {
@@ -165,7 +165,7 @@ var starSystems = {
     }, 
     "Alderamin": {
         "id": 104862, 
-        "name": "Alpha Cephei", 
+        "name": "Alissa", 
         "sep": 0.0, 
         "sub": [
             {
@@ -329,7 +329,7 @@ var starSystems = {
     }, 
     "Alphekka": {
         "id": 76036, 
-        "name": "Alpha Coronae Borealis", 
+        "name": "James M.", 
         "sep": 100.0, // complete guess
         "sub": [
             {
@@ -363,7 +363,7 @@ var starSystems = {
     }, 
     "Altair": {
         "id": 97339, 
-        "name": "Altair", 
+        "name": "Vimeo", 
         "sep": 0.0, 
         "sub": [
             {
@@ -404,7 +404,7 @@ var starSystems = {
     }, 
     "Arcturus": {
         "id": 69452, 
-        "name": "Arcturus", 
+        "name": "Zeus", 
         "sep": 0.0, 
         "sub": [
             {
@@ -428,7 +428,7 @@ var starSystems = {
     }, 
     "Barnards Star": {
         "id": 87666, 
-        "name": "Barnard's Star", 
+        "name": "Yvette", 
         "sep": 0.0, 
         "sub": [
             {
@@ -559,7 +559,7 @@ var starSystems = {
     }, 
     "Denebola": {
         "id": 57460, 
-        "name": "Denebola", 
+        "name": "Meaghan", 
         "sep": 0.0, 
         "sub": [
             {
@@ -619,7 +619,7 @@ var starSystems = {
     }, 
     "Fomalhaut": {
         "id": 113009, 
-        "name": "Fomalhaut", 
+        "name": "Nikkole", 
         "sep": 0.0, 
         "sub": [
             {
@@ -631,7 +631,7 @@ var starSystems = {
     }, 
     "Groombridge 1618": {
         "id": 49767, 
-        "name": "Groombridge 1618", 
+        "name": "Ryan", 
         "sep": 0.0, 
         "sub": [
             {
@@ -643,7 +643,7 @@ var starSystems = {
     }, 
     "Groombridge 1830": {
         "id": 57768, 
-        "name": "Groombridge 1830", 
+        "name": "Grandma Jean", 
         "sep": 0.0, 
         "sub": [
             {
@@ -696,7 +696,7 @@ var starSystems = {
     }, 
     "Kapteyns Star": {
         "id": 24129, 
-        "name": "Kapteyn's Star", 
+        "name": "Crystal", 
         "sep": 0.0, 
         "sub": [
             {
@@ -737,7 +737,7 @@ var starSystems = {
     }, 
     "Kruger 60": {
         "id": 110548, 
-        "name": "Kruger 60", 
+        "name": "Krislynn", 
         "sep": 9.5, 
         "sub": [
             {
@@ -754,7 +754,7 @@ var starSystems = {
     }, 
     "Lacaille 8760": {
         "id": 104752, 
-        "name": "Lacaille 8760", 
+        "name": "Rebecca", 
         "sep": 0.0, 
         "sub": [
             {
@@ -766,7 +766,7 @@ var starSystems = {
     }, 
     "Lacaille 9352": {
         "id": 113688, 
-        "name": "Lacaille 9352", 
+        "name": "Betsy", 
         "sep": 0.0, 
         "sub": [
             {
@@ -778,7 +778,7 @@ var starSystems = {
     }, 
     "Lalande 21185": {
         "id": 53879, 
-        "name": "Lalande 21185", 
+        "name": "Nevaeh", 
         "sep": 0.0, 
         "sub": [
             {
@@ -790,7 +790,7 @@ var starSystems = {
     }, 
     "Luytens Star": {
         "id": 36107, 
-        "name": "Luyten's Star", 
+        "name": "Gaia", 
         "sep": 0.0, 
         "sub": [
             {
@@ -934,7 +934,7 @@ var starSystems = {
     }, 
     "Pollux": {
         "id": 37718, 
-        "name": "Pollux", 
+        "name": "Vanessa", 
         "sep": 0.0, 
         "sub": [
             {
@@ -946,7 +946,7 @@ var starSystems = {
     }, 
     "Procyon": {
         "id": 37173, 
-        "name": "Procyon", 
+        "name": "Khronus", 
         "sep": 15.0, 
         "sub": [
             {
@@ -963,7 +963,7 @@ var starSystems = {
     }, 
     "Proxima Centauri": {
         "id": 70667, 
-        "name": "Proxima Centauri", 
+        "name": "", 
         "sep": 0.0, 
         "sub": [
             {
@@ -987,7 +987,7 @@ var starSystems = {
     }, 
     "Rasalhague": {
         "id": 85770, 
-        "name": "Alpha Ophiuchi", 
+        "name": "Colissa", 
         "sep": 20.0, // complete guess
         "sub": [
             {
@@ -1096,7 +1096,7 @@ var starSystems = {
     }, 
     "Shaula": {
         "id": 85666, 
-        "name": "Lambda Scorpii", 
+        "name": "Jacque Scorpii", 
         "sep": 0.0, 
         "sub": [
             {
@@ -1130,7 +1130,7 @@ var starSystems = {
     }, 
     "Sirius": {
         "id": 32263, 
-        "name": "Sirius", 
+        "name": "Mother Mary", 
         "sep": 80.0,     //  complete guess
         "sub": [
             {
@@ -1147,7 +1147,7 @@ var starSystems = {
     }, 
     "Sol": {
         "id": 0, 
-        "name": "Sun", 
+        "name": "YOU", 
         "sep": 0.0, 
         "sub": [
             {
@@ -1195,7 +1195,7 @@ var starSystems = {
     }, 
     "Van Maanens Star": {
         "id": 3820, 
-        "name": "Van Maanen's Star", 
+        "name": "Dad", 
         "sep": 0.0, 
         "sub": [
             {
@@ -1207,7 +1207,7 @@ var starSystems = {
     }, 
     "Vega": {
         "id": 90980, 
-        "name": "Vega", 
+        "name": "Google", 
         "sep": 0.0, 
         "sub": [
             {
@@ -1231,7 +1231,7 @@ var starSystems = {
     }, 
     "p Eridani": {
         "id": 7736, 
-        "name": "p Eridani", 
+        "name": "Grandma Judy", 
         "sep": 0.0, 
         "sub": [
             {

@@ -123,13 +123,13 @@ var postShadersLoaded = function(){
 };
 
 var controllers = {
-	viewSize: 0.6,
-	datastarSize: 1.0,
-	sceneSize: 1000.0,
-	sol: function(){ camera.position.z = 1.1; },
-	solarsystem: function(){ camera.position.z = 18; },
-	hipparcos: function(){ camera.position.z = 1840; },
-	milkyway: function(){ camera.position.z = 40000; },
+	viewSize     : 0.6,
+	datastarSize : 1.0,
+	sceneSize    : 1000.0,
+	sol          : function(){ camera.position.z = 1.1; },
+	solarsystem  : function(){ camera.position.z = 18; },
+	hipparcos    : function(){ camera.position.z = 1840; },
+	milkyway     : function(){ camera.position.z = 40000; },
 };
 
 var gui;
@@ -271,7 +271,7 @@ function initScene() {
 	};
 
 	camera.position.y = 0;
-	camera.scale.z = 0.83;
+	camera.scale.z = 1;
 
 	scene.add( camera );
 

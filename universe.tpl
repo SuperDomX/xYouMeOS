@@ -129,7 +129,22 @@
 			</div>
 			<div id="zoom-levels">
 				<div id="zoom-backdrop"></div>
-				<div id="zoom-cursor"></div>
+				<div id="zoom-cursor">
+					<span class="icon" id="ex-eye">
+					&#61736;
+					</span>
+					<div class="arrow-up"></div>
+					<div class="arrow-down"></div>
+					<span class="icon" id="ex-eye">
+					&#61701;
+					</span>
+
+				</div>
+			</div>
+			<div id="solsun">
+				<span class="icon" id="ex-eye">
+					&#61735;
+				</span>
 			</div>
 			<div id="volume">
 				<!-- <img src="/images/icons/sound-on.svg" alt="" /> -->
