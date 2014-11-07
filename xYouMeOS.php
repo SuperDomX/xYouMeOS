@@ -3,7 +3,7 @@
  * @author heylisten@xtiv.net
  * @name You Me OS
  * @desc A 4D Interactive Orbital System
- * @version v0(5.8.5)
+ * @version v0(5.8.6)
  * @icon  sun-o
  * @link youMeOS
  * @see support
