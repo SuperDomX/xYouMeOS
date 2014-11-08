@@ -11,6 +11,14 @@
   	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="plugins/creative-brands/creative-brands.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css"> 
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="plugins/time-circles/TimeCircles.css" rel="stylesheet" type="text/css">
+    <link href="plugins/vegas/css/jquery.vegas.css" rel="stylesheet" type="text/css">
+
     <!-- CSS -->
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -18,29 +26,44 @@
     <link href="/bin/css/font-awesome-4.2.0.min.css" rel="stylesheet">
     <!-- Custom styles CSS -->
     <link href="assets/css/style.css" rel="stylesheet" media="screen">   
+
 </head>
 
 <body>
+	<div class="container"> 
+	<div class="line"><h3>Crowdfunding</h3></div>
+
+    <div class="row countdown"><!-- start of row countdown -->
+    
+        <div class="col-md-12"><!-- Line Separator -->
+        	
+        	<div id="DateCountdown" data-date="2015-01-06 00:00:00"></div>
+        	<!-- Circle Countdown here you can set up time to countdown just simply change atribute data-date="yyyy-mm-dd time" -->
+        </div> 
+        
+    </div><!-- end of row countdown -->
+    
+    <div class="row" id="text"><!-- start of row text -->
+      <div class="col-md-12">
+    	    <div class="line"><h3>Umeos</h3></div>
+        <p>In this exact moment, & <span class="highlight">since 2006</span>, we have been <span class="highlight">working really hard</span> on our New ''Era'' project. You can look forward to an amazing FREE service which will completely <span class="highlight">Rock Your World</span>. It's going to literally turn your Universe <span class="highlight">upside down & inside out</span>. 
+        <span class="highlight">Stay tuned!</span>
+        <br/>
+		<!-- 
+            For more information visit our website or you can check our 
+            <span class="highlight"><i class="fa fa-facebook-square"></i> Facebook</span></p>
+		<a class="btn btn-primary" data-toggle="modal" data-target="#subscribe">Subscribe</a>
+		-->       
+        
+
+       </div>
+    </div><!-- end of row text -->
+    
+</div><!-- end of container -->
 
 	<div id="content" class="container">
-
-		<h2>KEY: There are limited number of accounts. Each date signifies the amount of accounts that will be open by that time. Each Symbol marks when the account will be accessible. Reaching our strech goals will dramatically reduce the amount of time it will take to get LIVE and out of production.</h2>
 		<div class="row attached">
 
-			<div class="progress">
-				<div class="progress-bar progress-bar-warning" style="width: 25%">
-				100,000 Ω Keys<span class="sr-only">25% Complete (success)</span></div>
-				<div class="progress-bar progress-bar-success" style="width: 25%">
-				1 Million Δ Keys
-				<span class="sr-only">25% Complete (warning)</span></div>
-				<div class="progress-bar progress-bar-info" style="width: 25%">
-				100 β Million Keys
-				<span class="sr-only">10% Complete (danger)</span></div>
-
-				<div class="progress-bar progress-bar-primary" style="width: 25%">
-				1 Billion α Keys
-				<span class="sr-only">10% Complete (danger)</span></div>
-			</div>
 
 			<div class="col-sm-3 col-md-3">
 				<div class="plan most-popular">
@@ -165,21 +188,98 @@
               		</div>
 				</div>
 			</div>
+			<div class="line"><h3>KEY</h3></div>
+
+		<p>
+
+			<div class="progress">
+				<div class="progress-bar progress-bar-danger" style="width: 25%">
+				100,000 Ω Keys<span class="sr-only">25% Complete (success)</span></div>
+				<div class="progress-bar progress-bar-warning" style="width: 25%">
+				1 Million Δ Keys
+				<span class="sr-only">25% Complete (warning)</span></div>
+				<div class="progress-bar progress-bar-success" style="width: 25%">
+				100 β Million Keys
+				<span class="sr-only">10% Complete (danger)</span></div>
+
+				<div class="progress-bar progress-bar-info" style="width: 25%">
+				1 Billion α Keys
+				<span class="sr-only">10% Complete (danger)</span></div>
+			</div>
+			</p>
+			<p>
+		There are LIMITED Number of Keys! Each date signifies the amount of accounts that will be open by that time. Each Symbol marks when the account will be accessible. Reaching our strech goals will dramatically reduce the amount of time it will take to get LIVE and out of production.</p>
 		</div><!-- /.row -->
 	</div><!-- /.container -->
 
-<div class="jumbotron pricing-tables-jumbotron">
+
+    
+    <!-- ==========================
+    	FOOTER - START
+    =========================== -->
+  
+    
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation" style="display:none;" >
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand visible-xs" href="#">YouMeOS</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="brands brands-inline navbar-left">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li> 
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>  
+                <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+           </ul>
+           
+        
+          
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#subscribe">Test Drive</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#work">YouMeOS</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#contact">Get Involved</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </footer>
+
+	 <!-- ==========================
+    	FOOTER - END
+    =========================== -->
+    
+   	<!-- ==========================
+    	JS 
+    =========================== -->        
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./plugins/vegas/js/jquery.vegas.js"></script>
+	<script src="./js/bootstrap.js"></script>
+    
+    
+    <script src="./plugins/creative-brands/creative-brands.js"></script>
+    <script src="./plugins/time-circles/TimeCircles.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true"></script>
+<script src="./js/custom.js"></script>
+
+
+		<div class="line"><h3>Elementary Pledges</h3></div>
+		<div class="container">
+
+			 
+		<!-- <div class="jumbotron pricing-tables-jumbotron">
 		  	<h1>UMeOS Kickstarer Campaign
 		  	Backer Pledge Rewards</h1>
 		  	<h3>www.YouMeOS.com</h3>
-		</div>
-		
-		<div class="container">
-<div class="progress">
-		        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-		Campaign Goal $42,000 (242 Hitchhackers At SFO Hack-a-thon)
-		        <span class="sr-only">100% Complete (success)</span></div>
-	      	</div>
+		</div> -->
 		<div class="row">
 
 			<div class="col-sm-2 col-md-2">
@@ -332,8 +432,14 @@
 	</div><!-- /.container -->
 <div class="container">
 		<div class="row attached">
-			<h2>Hitchhackers Around-the-World Hack-a-Thon Stretch Goals</h2>
+			
+			<div class="progress">
+		        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+		Campaign Goal $42,000 (242 Hitchhackers At SFO Hack-a-thon)
+		        <span class="sr-only">100% Complete (success)</span></div>
+	      	</div>
 
+<div class="line"><h3>Reaching for Stars</h3></div>
 			<div class="progress">
 				<div class="progress-bar progress-bar-primary" style="width: 15%">
 				San Fransisco $42,000<span class="sr-only">35% Complete (success)</span></div>
@@ -351,7 +457,6 @@
 				Austraila & Brazil $424,242
 				<span class="sr-only">10% Complete (danger)</span></div>
 			</div>
-			
 			<div class="col-sm-4 col-md-4">
 				<div class="plan">
 					<div class="plan-title">
@@ -964,8 +1069,8 @@
 	</div><!-- /.container -->
    	<!-- Javascript files -->
    	<!-- jQuery -->
-   	<script src="assets/js/jquery-2.0.3.min.js"></script>
+   	<!-- // <script src="assets/js/jquery-2.0.3.min.js"></script> -->
    	<!-- Bootstrap JS -->
-   	<script src="assets/js/bootstrap.min.js"></script>  
+   	<!-- // <script src="assets/js/bootstrap.min.js"></script>   -->
 </body>
 </html>

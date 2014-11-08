@@ -180,7 +180,7 @@ var GALAXY_TOUR = [
     "ry"         : 0.9,
     "z"          : 40000,
     "travelTime" : 500,
-    "restTime"   : 6000,
+    "restTime"   : 3000,
     "message"    : '“…slip further away into the Blackhole in the Center of the Galaxy!”', 
     "callback"   : highlightStarHeat
 },
@@ -189,7 +189,7 @@ var GALAXY_TOUR = [
     "ry"         : 1.9989722678912,
     "rx"         : 1,
     "ry"         : 0,
-    "z"          : 2000,
+    "z"          : 1000,
     "travelTime" : 2000,
     "restTime"   : 3000,
     "message"    : '“Surf in 5D, growing, colliding, and expanding your YOUniverse.”'
@@ -393,7 +393,7 @@ var GALAXY_TOUR = [
     "z"          : 4000,
     "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '“Be a part of that ‘Nex-Us’ best thing.”'
+    "message"    : '“OUR O.S. is just the Beginning.”'
 }, 
 {
     "rx"         : 0,
@@ -401,7 +401,7 @@ var GALAXY_TOUR = [
     "z"          : 6000,
     "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '“Multiply ME on other Domains & Devices…”'
+   "message"    : '“Be a part of that ‘Nex-Us’ best thing.”'
 },
 
 {
@@ -410,7 +410,7 @@ var GALAXY_TOUR = [
     "z"          : 8000,
     "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '“…to build and improve O.pen S.olutions.”'
+     "message"    : '“Multiply ME on other Domains & Devices…”'
 },
 {
     "rx"         : 0,
@@ -418,7 +418,7 @@ var GALAXY_TOUR = [
     "z"          : 40000,
     "travelTime" : 250,
     "restTime"   : 3000,
-    "message"    : '“Together, WE are Infinite…”'
+    "message"    : '“…to build and improve O.pen S.olutions.”'
 },
 {
     "rx"         : 0,
@@ -426,7 +426,8 @@ var GALAXY_TOUR = [
     "z"          : 80000,
     "travelTime" : 2000,
     "restTime"   : 1500,
-    "message"    : '“…WE are the Future!”',    
+
+    "message"    : 'Designed to PLAY well with Everybody!”'
 },
  
 {
@@ -435,7 +436,8 @@ var GALAXY_TOUR = [
     "z"          : 2000,
     "travelTime" : 3000,
     "restTime"   : 2000,
-    "message"    : '“Let\s Connect!”',
+
+    "message"    : '“…WE are the Future!”',    
 },
 {
     "rx"         : 0,
@@ -444,7 +446,10 @@ var GALAXY_TOUR = [
     "travelTime" : 1000,
     "restTime"   : 3000,
     
-    "message"    : '“OUR O.S. is just the Beginning.”'
+    
+    "message"    : '“Together, WE are Infinite…”'
+    
+     
 },
 {
     "rx"         : 0,
@@ -452,7 +457,9 @@ var GALAXY_TOUR = [
     "z"          : 160000,
     "travelTime" : 250,
     "restTime"   : 2000,
-    "message"    : 'Designed to PLAY well with Everybody!”'
+    
+     "message"    : '“Let\s Connect!”',
+    "callback"   : timeoutLogin
 },
 {   
     "rx"         : 0,
@@ -460,8 +467,7 @@ var GALAXY_TOUR = [
     "z"          : 140000,
     "travelTime" : 500,
     "restTime"   : 2000,
-    "message"    : '“Do YOU want to PLAY?”',
-    "callback"   : timeoutLogin
+    "message"    : '“Do YOU want to PLAY?”'
 },
 // {
 //     "rx"         : 0,
