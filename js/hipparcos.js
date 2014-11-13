@@ -1,6 +1,6 @@
 function loadStarData( dataFile, callback ){
 	var xhr = new XMLHttpRequest();
-	setLoadMessage('I am Umeos. You~Me OS');	
+	setLoadMessage('Thank You for Everything');	
 	xhr.addEventListener( 'load', function ( event ) {
 		var parsed = JSON.parse( xhr.responseText );
 		// console.log(parsed);
