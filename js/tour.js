@@ -28,7 +28,7 @@ var GALAXY_TOUR = [
     "ry"         : 1.9989722678912,
     "z"          : 7999999,
     "travelTime" : 2500,
-    "restTime"   : 1500,
+    "restTime"   : 2500,
     "message"    : '“Hello World, I am Umeos.”'
 },
 {
@@ -36,7 +36,7 @@ var GALAXY_TOUR = [
     "ry"         : 1.9989722678912,
     "z"          : 7999999,
     "travelTime" : 0,
-    "restTime"   : 1500,
+    "restTime"   : 2000,
     "message"    : '“A YOU, Me, O.S.”'
 },
 {
@@ -85,7 +85,7 @@ var GALAXY_TOUR = [
     "z"          : 499999,
     "travelTime" : 4000,
     "restTime"   : 3000,
-    "message"    : '“I’m here to show YOU the KEY into that YOUniverse…”'
+    "message"    : '“I’m here to hand YOU the KEY into the YOUniverse…”'
 
 }, 
 {
@@ -93,7 +93,7 @@ var GALAXY_TOUR = [
     "ry"         : 6,
     "z"          : 499999,
     "travelTime" : 0,
-    "restTime"   : 3000,
+    "restTime"   : 4000,
     "message"    : '“…O.pening S.hortcuts through Space & Time at Godspeed…”',
     "callback" : highlightMilkyWay
 }, 
@@ -102,7 +102,7 @@ var GALAXY_TOUR = [
     "ry"         : 6,
     "z"          : 499999,
     "travelTime" : 0,
-    "restTime"   : 3000,
+    "restTime"   : 4000,
     "message"    : '“…unraveling an Intergalactic O.perating S.ystem for the Internet!”',
 }, 
 {
@@ -111,7 +111,7 @@ var GALAXY_TOUR = [
     "z"          : 99999,
     "travelTime" : 3000,
     "restTime"   : 4000,
-     "message"    : '“Welcome to the Revolutionary way to Visualize the Web.”',
+     "message"    : '“Welcome to the Revolutionary way to Visualize the Evolutionary Web.”',
 }, {
     "rx"         : 7,
     "ry"         : 0.9,
@@ -176,7 +176,7 @@ var GALAXY_TOUR = [
     "z"          : 199999,
     "travelTime" : 2000,
     "restTime"   : 4000,
-    "message"    : '“In this Space & Time, every Idea (Person, Place or Thing) is a Star…”',
+    "message"    : '“In this Space & Time, every Person, Place and Idea is a Star…”',
     "callback"   : highlightMilkyWay   
     
 
@@ -216,7 +216,7 @@ var GALAXY_TOUR = [
     "ry"         : 6.281532559509658,
     "z"          : 1077,
     "travelTime" : 1500,
-    "restTime"   : 2000,
+    "restTime"   : 3000,
     "message"    : '“Your Nexus will KINNEXUS with new People, Projects and Entities.”'
 },
 
@@ -234,7 +234,7 @@ var GALAXY_TOUR = [
     "z"          : 500.99999999994,
     "travelTime" : 500,
     "restTime"   : 3000,
-    "message"    : '“…gravitating what is magnetically important to YOU.”'
+    "message"    : '“…magnetically gravitating all that is important to YOU.”'
 },
 // {
 //     "rx"         : 6.281532559509658,
@@ -260,7 +260,7 @@ var GALAXY_TOUR = [
     "ry"         : 0.9,
     "z"          : 99999,
     "travelTime" : 3000,
-    "restTime"   : 2500,    
+    "restTime"   : 2000,    
      "message"    : '“What YOU interact with least…”'
 },
 {
@@ -269,8 +269,8 @@ var GALAXY_TOUR = [
     "ry"         : 0.9,
     "z"          : 99999,
     "travelTime" : 0,
-    "restTime"   : 4000,
-    "message"    : '“…lapse into the Blackhole in the Center of your Galaxy.”',
+    "restTime"   : 3500,
+    "message"    : '“…lapses into the Blackhole in the Center of your Galaxy.”',
     "callback"   : highlightStarHeat
 },
 
@@ -278,31 +278,38 @@ var GALAXY_TOUR = [
 ////////
 // ENTER YOU: The SUN of the Universe
 ////////
-
+{
+      "rx"         : 1.4395420537811414,
+    "ry"         : 6.281532559509658,
+    "z"          : 777.97,
+    "travelTime" : 3000,
+    "restTime"   : 5000,
+    "message"    : '“In your YOUniverse, you determine your Gravitational Influence.”'
+},  
 {
       "rx"         : 1.4395420537811414,
     "ry"         : 6.281532559509658,
     "z"          : 0.97,
-    "travelTime" : 10000,
-    "restTime"   : 6000,
-    "message"    : '“This SUN is the Gravitational Influence of your YOUniversal Core…”'
+    "travelTime" : 6000,
+    "restTime"   : 5000,
+    "message"    : '“This is YOUR SUN, your YOUniversal Core.”'
 },  
 {
     "rx"         : -0.18605511827781787,
     "ry"         : -3.464222597755626,
     "z"          : 0.87,
-    "travelTime" : 1500,
+    "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '"…YOUR Glorious Magnificence…"'
+    "message"    : '"Emanating YOUR Glorious Magnificence!"'
 },  
 
 {
     "rx"         : 0.4395420537811414,
     "ry"         : 5.281532559509658,
     "z"          : 0.77,
-    "travelTime" : 1000,
+    "travelTime" : 2000,
     "restTime"   : 1500,
-    "message"    : '"…I…am…YOU…"'
+    "message"    : '"I…am…YOU…"'
 }, 
 {
     "rx"         : -0.18605511827781787,
@@ -319,7 +326,7 @@ var GALAXY_TOUR = [
     "z"          : 0.57,
     "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '“…YOU are the MASTER of the YOU-IN-Verse!”'
+    "message"    : '“…YOU are the MASTER of this YOU-IN-Verse!”'
     // "message"    : '"Take a moment to Center. Bathe in your Magnificence!"'
 }, 
 // {
@@ -374,14 +381,14 @@ var GALAXY_TOUR = [
     "z"          : 7.23179619362583,
     "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '“…Ultimately weaving your O.wn webbed S.ite…”'   
+    "message"    : '“…ultimately weaving your O.wn webbed S.ite…”'   
 },
 {
     "rx"         : 0.6424544063335803,
     "ry"         : -0.0031800804774647718,
     "z"          : 17.23179619362583,
     "travelTime" : 1000,
-    "restTime"   : 2000,
+    "restTime"   : 3000,
     
     "message"    : '“…O.rganically S.haring your thoughts on blogs or in group forums…"'
 
@@ -412,7 +419,7 @@ var GALAXY_TOUR = [
     "z"          : youniverse.z.nexus*.25,
     "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '“All from YOUR Interconnected, Intertwined, YOUniverse."'
+    "message"    : '“All from YOUR Intertwined, Interconnected, YOUniverse."'
 },
 {
     "rx"         : youniverse.x.nexus,
@@ -433,50 +440,56 @@ var GALAXY_TOUR = [
 },
 
 {
-    "rx"         : youniverse.x.nexus,
-    "ry"         : youniverse.y.nexus,
+     "rx"         : 7,
+    "ry"         : 0.9,
     "z"          : youniverse.z.nexus,
+   "travelTime" : 2000,
+    "restTime"   : 2000,
+    "message"    : '“Expand ME to other Domains and Devices…”'  
+    
+},
+{
+     "rx"         : 7,
+    "ry"         : 0.9,
+    "z"          : youniverse.z.galaxy*.15,
+
     "travelTime" : 1000,
     "restTime"   : 2000,
-    "message"    : '“Be a part of that ‘Nex-Us’ Best Thing…”'
+    "message"    : '"…multiply ME to PLAY with Everyone!”'  
+    
 },
 {
     "rx"         : youniverse.x.nexus,
     "ry"         : youniverse.y.nexus,
-    "z"          : youniverse.z.galaxy*.15,
-    "travelTime" : 3000,
+    "z"          : youniverse.z.galaxy*.55,
+
+     "travelTime" : 3000,
     "restTime"   : 3000,
-    "message"    : '“…an O.pen S.ource YOU, Me, O.S. is only the Beginning!”'   
-},
-{
-    "rx"         : youniverse.x.nexus,
-    "ry"         : youniverse.y.nexus,
-    "z"          : youniverse.z.galaxy*.25,
-    "travelTime" : 2000,
-    "restTime"   : 4000,
-    "message"    : '“Expand ME to other Domains, Touch Screens, and USB Drives…”'    
+    "message"    : '“An O.pen S.ource YOU, Me, O.S. is only the Beginning!”'  
 },
   
 {
     "rx"         : youniverse.x.nexus,
     "ry"         : youniverse.y.nexus,
-    "z"          : youniverse.z.galaxy*.5,
-    "travelTime" : 1000,
+    "z"          : youniverse.z.nexus*.5,
+    
+    "travelTime" : 2000,
     "restTime"   : 2000,
-    "message"    : '"…multiply ME to PLAY with Everyone!”'
+    "message"    : '“Be a part of that ‘Nex-Us’ Best Thing!”'
 },
 {
-   "rx"         : youniverse.x.nexus,
-    "ry"         : youniverse.y.nexus,
+    "rx"         : 7,
+    "ry"         : 0.9,
     "z"          : youniverse.z.galaxy*.75,
-    "travelTime" : 250,
+    
+    "travelTime" : 1200,
     "restTime"   : 2000,
     "message"    : '“Do YOU want to PLAY?”'
 },
 
 {   
-   "rx"         : youniverse.x.nexus,
-    "ry"         : youniverse.y.nexus,
+    "rx"         : 7,
+    "ry"         : 0.9,
     "z"          : youniverse.z.galaxy,
     "travelTime" : 500,
     "restTime"   : 2000,

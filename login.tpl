@@ -65,7 +65,7 @@
                     {$L.tour}</button>
                 <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a>
                 <br/><br/>
-                Copyright &copy; 2014 <br/>
+                Copyright &copy; 2015 <br/>
                 Hall of the Gods, Inc.
             </form>
 
