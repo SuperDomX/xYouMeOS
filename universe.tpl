@@ -261,6 +261,9 @@
 
 		{include "~widgets/messenger.tpl"}
 		
+
+		
+
 		<script type="text/javascript">
 
 

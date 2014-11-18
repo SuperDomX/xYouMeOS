@@ -223,12 +223,12 @@
                             // $('#ex-out').click();
                             // $('#about').click();
                                 
-                            var go = "/youMeOS/I";
+                            var go = "/youMeOS/campaign/";
 
                             // window.location.hash = "#"+go;
 
                             $('#detailBody').load('/html'+go,function(){
-                                
+                                $('#detailContainer').show();                                
                             }); 
 
                             // $(window).on('hashchange', function() {  
