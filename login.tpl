@@ -87,7 +87,8 @@
                     <small>™</small>
                     </h1>
                     <h2>Welcome to the Future</h2>
-                </header>
+                 
+                </header>   
                 <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a>
                  
                 <br/><br/>

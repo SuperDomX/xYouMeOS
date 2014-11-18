@@ -13,7 +13,8 @@
                   <div class="row countdown"><!-- start of row countdown -->
       
                     <div class="col-md-12"><!-- Line Separator -->
-                      
+                      <div id="DateCountdown" data-date="2015-01-17 18:02:00"></div>
+                      <!-- 
                       <div class="progress">
                     <div class="progress-bar progress-bar-primary" style="width: 20%">
                     Hackathon West Coast $88,888
@@ -45,12 +46,42 @@
                     <div class="progress-bar progress-bar-danger" style="width: 30%">
                     December 2015
                     <span class="sr-only">10% Complete (danger)</span></div>
-                      </div>
+                  </div> -->
                       <div class="line"><h3>Jan 17th 2015</h3></div>
-                      <div id="DateCountdown" data-date="2015-01-17 18:02:00"></div>
                       <!-- Circle Countdown here you can set up time to countdown just simply change atribute data-date="yyyy-mm-dd time" -->
-
-
+                      <link href="/campaign/plugins/time-circles/TimeCircles.css" rel="stylesheet" type="text/css">
+                      <script src="/campaign/plugins/time-circles/TimeCircles.js" type="text/javascript"></script>
+                  
+                        <script type="text/javascript"> 
+                            $("#DateCountdown").TimeCircles({
+                            "animation": "ticks",
+                            "bg_width": 0.2,
+                            "fg_width": 0.016666666666666666,
+                            "circle_bg_color": "#F5F5F5",
+                            "time": {
+                                "Days": {
+                                    "text": "Days",
+                                    "color": "#FFF",
+                                    "show": true
+                                },
+                                "Hours": {
+                                    "text": "Hours",
+                                    "color": "#FFF",
+                                    "show": true
+                                },
+                                "Minutes": {
+                                    "text": "Minutes",
+                                    "color": "#FFF",
+                                    "show": true
+                                },
+                                "Seconds": {
+                                    "text": "Seconds",
+                                    "color": "#FFF",
+                                    "show": true
+                                }
+                            }
+                        }); 
+                    </script>
 
                   
                     </div> 
