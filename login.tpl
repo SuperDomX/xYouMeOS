@@ -28,12 +28,9 @@
                 
 
 
-             <header>
-                    <br/><br/><br/><br/>
-                    <!-- <h1 class="fa-5x">U Me O.S.</h1>     -->
-                    <br/><br/>
-
-                </header>
+             <header>   
+                <br/> 
+            </header>
             <div class="clearfix"></div>
             
             <!-- Login -->
@@ -56,18 +53,22 @@
                     <h2>Welcome to the Future</h2>
                 </header>
 
-                <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a>
+                <div id="DateCountdown" data-date="2015-01-17 18:02:00"></div>
+
+                <!-- <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a> -->
                  
                 <br/><br/>
                 
                <button id="tour-btn" class="btn m-r-5  " data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
 
                     {$L.tour}</button>
-                <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a>
+                <!-- <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a> -->
                 <br/><br/>
                 Copyright &copy; 2015 <br/>
                 Hall of the Gods, Inc.
             </form>
+
+
 
             <!-- Login -->
             <form class="box  animated  " id="box-tour" action="/.json" onsubmit="event.preventDefault(); tour.start();" >
@@ -292,6 +293,7 @@
             $('#about').hide();
             $('#minimap').hide();
             
+            
         </script>
         <!-- Javascript Libraries -->
         <!-- jQuery -->
@@ -329,6 +331,41 @@
         <script src="{$umeos_bin}js/validation/validate.min.js"></script> <!-- jQuery Form Validation Library -->
         <script src="{$umeos_bin}js/validation/validationEngine.min.js"></script> <!-- jQuery Form Validation Library - requirred with above js -->
 
+
+        <script src="{$umeos_bin}campaign/plugins/time-circles/TimeCircles.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            setTimeout(function  () {
+                $("#DateCountdown").TimeCircles({
+                    "animation"       : "ticks",
+                    "bg_width"        : 0.2,
+                    "fg_width"        : 0.016666666666666666,
+                    "circle_bg_color" : "#F5F5F5",
+                    "time": {
+                        "Days": {
+                            "text": "Days",
+                            "color": "#FFF",
+                            "show": true
+                        },
+                        "Hours": {
+                            "text": "Hours",
+                            "color": "#FFF",
+                            "show": true
+                        },
+                        "Minutes": {
+                            "text": "Minutes",
+                            "color": "#FFF",
+                            "show": true
+                        },
+                        "Seconds": {
+                            "text": "Seconds",
+                            "color": "#FFF",
+                            "show": true
+                        }
+                    }
+                });
+            },2000); 
+        </script>
     </body>
 </html>
 

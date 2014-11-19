@@ -26,7 +26,7 @@
         <link href="/css/icons.css" rel="stylesheet">
         <link href="/css/generics.css" rel="stylesheet">
         
-        
+		<link href="/campaign/plugins/time-circles/TimeCircles.css" rel="stylesheet" type="text/css">        
 
 		<style type="text/css">
 
@@ -259,6 +259,9 @@
 		
 		<script type="text/javascript" src="{$_DIR}js/minimap.js" ></script>
 
+		
+            
+        
 		{include "~widgets/messenger.tpl"}
 		
 

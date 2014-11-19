@@ -13,7 +13,7 @@
                   <div class="row countdown"><!-- start of row countdown -->
       
                     <div class="col-md-12"><!-- Line Separator -->
-                      <div id="DateCountdown" data-date="2015-01-17 18:02:00"></div>
+                      
                       <!-- 
                       <div class="progress">
                     <div class="progress-bar progress-bar-primary" style="width: 20%">
