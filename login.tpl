@@ -22,6 +22,9 @@
         <small class="label tile label-sm " style="position: absolute; bottom: 0; right: 0; margin: 0 50px 10px 0;">super powered by<br/>  
             <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>™
         </small><br/>
+        <small class="label tile label-sm " style="position: absolute; bottom: 0; left: 0; margin: 0 50px 10px 0;"> 
+            <a href="http://google.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/google-trans.png"/>™
+        </small><br/>
 
         <center>
             <section id="login" class="block-area">
@@ -53,7 +56,7 @@
                     <h2>Welcome to the Future</h2>
                 </header>
 
-                <div id="DateCountdown" data-date="2015-01-17 18:02:00"></div>
+                <div id="DateCountdown" data-date="2015-01-17 18:12:00"></div>
 
                 <!-- <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a> -->
                  
