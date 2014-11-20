@@ -19,12 +19,13 @@
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/generics.css" rel="stylesheet"> 
 
-        <small class="label tile label-sm " style="position: absolute; bottom: 0; right: 0; margin: 0 50px 10px 0;">super powered by<br/>  
-            <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>™
-        </small><br/>
+        <small class="label tile label-sm " style="position: absolute; bottom: 0; right: 0; margin: 0 50px 10px 0;">
+        </small>
+        <br/>
         <small class="label tile label-sm " style="position: absolute; bottom: 0; left: 0; margin: 0 50px 10px 0;"> 
-            <a href="http://google.com/" target="_blank"></a><img src="/bin/images/logos/google-trans.png"/>™
-        </small><br/>
+            
+        </small>
+        <br/>
 
         <center>
             <section id="login" class="block-area">
@@ -49,24 +50,32 @@
                 </div> --> 
                 
                 <header>
-                    <br/><br/>
                     <h1 class="fa-5x">UMeOS
                     <small>™</small>
                     </h1>
                     <h2>Welcome to the Future</h2>
                 </header>
-
+                <button id="tour-btn" class="btn m-r-5  " data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
+                    {$L.tour}
+                </button>
+                <br/>
+                    <h4><a href="https://www.kickstarter.com/projects/xopherdeep/umeos-the-21st-century-you-me-os-welcome-to-the-fu">Pledge to our Kickstarter!</a></h4>
                 <div id="DateCountdown" data-date="2015-01-17 18:12:00"></div>
 
                 <!-- <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a> -->
-                 
-                <br/><br/>
-                
-               <button id="tour-btn" class="btn m-r-5  " data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
-
-                    {$L.tour}</button>
                 <!-- <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a> -->
+
+                <!-- <img src="/bin/images/logos/HTML5_CSS3_jQuery_Logo.png" width="75" />
+
+                <a href="http://google.com/" onclick="$('#detailBody').load('/mmxv.html'); return false; " target="_blank">
+                    <img src="/bin/images/logos/google-trans.png" width="75" />
+                </a> -->
+
                 <br/><br/>
+                super powered by<br/>  
+            <a href="http://superdomx.com/" onclick="$('#detailBody').load('/mmxv.html'); return false; " target="_blank">
+                <img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>™
+            </a><br/>
                 Copyright &copy; 2015 <br/>
                 Hall of the Gods, Inc.
             </form>
