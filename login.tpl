@@ -23,7 +23,7 @@
             <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>™
         </small><br/>
         <small class="label tile label-sm " style="position: absolute; bottom: 0; left: 0; margin: 0 50px 10px 0;"> 
-            <a href="http://google.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/google-trans.png"/>™
+            <a href="http://google.com/" target="_blank"></a><img src="/bin/images/logos/google-trans.png"/>™
         </small><br/>
 
         <center>
