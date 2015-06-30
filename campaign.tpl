@@ -8,7 +8,7 @@
                  For the next 60 days we are bringing attention to our Kickstarter Campaign! Help us reach our goal by becoming a backer and you'll be rewarded with an instant beta key. 
                  </p>
                  <p><a href="" class="btn btn-alt btn-lg">Visit the Kickstarter Campaign</a> <a href="http://localhost/campaign/index.html" target="_blank" class="btn btn-alt btn-lg">View the Backer Rewards</a></p>
-                 <p><a class="btn btn-alt btn-lg disabled">Enter Key</a></p>
+                 <p><a class="btn btn-alt btn-lg" onclick="$('#detailBody').load('/html/youMeOS/I',function(){});">Enter Key</a></p>
 
                   <div class="row countdown"><!-- start of row countdown -->
       

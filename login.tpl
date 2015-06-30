@@ -58,26 +58,43 @@
                 <button id="tour-btn" class="btn m-r-5  " data-trigger="hover" data-toggle="popover" data-placement="right"  title="" data-original-title="Take Tour" >
                     {$L.tour}
                 </button>
+                <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a>
                 <br/>
-                    <h4><a href="https://www.kickstarter.com/projects/xopherdeep/umeos-the-21st-century-you-me-os-welcome-to-the-fu">Pledge to our Kickstarter!</a></h4>
-                <div id="DateCountdown" data-date="2015-01-17 18:12:00"></div>
+                
+                <h4>
+                    <!-- <a href="https://www.kickstarter.com/projects/xopherdeep/umeos-the-21st-century-you-me-os-welcome-to-the-fu" target="_blank">Enter Beta, Join our Kickstarter!</a> -->
+                    <a href="https://www.facebook.com/youmeos" target="_blank"><img src="/bin/images/logos/fb.png"/></a>
+                </h4>    
+                <!-- <div id="DateCountdown" data-date="2015-01-17 18:12:00"></div> -->
+                
+                <div style="position: absolute; left: 10px; bottom: 0px;">
+                    <a href="http://superdomx.com/" target="_blank">
+                        <img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>™
+                    </a>
+                    super powered by<br/>  
+                    <img src="/bin/images/logos/HTML5_CSS3_jQuery_Logo.png" width="75" />
+                    
+                    <!-- <a href="http://superdomx.com/" onclick="$('#detailBody').load('/mmxv.html'); return false; " target="_blank"> -->
+                    
 
-                <!-- <a class="box-switcher btn btn-lg m-r-5   input-focused btn-lg " data-switch="box-login" href="">{$L.login}</a> -->
-                <!-- <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a> -->
+                </div>
+                <div style="position: abosolute; right: 10px; bottom: 10px">
+                    <a href="http://google.com/" onclick="$('#detailBody').load('/mmxv.html'); return false; " target="_blank">
+                        <img src="/bin/images/logos/google-trans.png" width="75" />
+                    </a>
+                </div>
 
-                <!-- <img src="/bin/images/logos/HTML5_CSS3_jQuery_Logo.png" width="75" />
+                <a class="box-switcher btn  m-r-5    " data-switch="box-register" href="">{$L.newlogin}</a>
 
-                <a href="http://google.com/" onclick="$('#detailBody').load('/mmxv.html'); return false; " target="_blank">
-                    <img src="/bin/images/logos/google-trans.png" width="75" />
-                </a> -->
 
-                <br/><br/>
-                super powered by<br/>  
-            <a href="http://superdomx.com/" onclick="$('#detailBody').load('/mmxv.html'); return false; " target="_blank">
-                <img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>™
-            </a><br/>
+ 
+                <br/>
+                    
+                <br/>
+
+                <br/>
                 Copyright &copy; 2015 <br/>
-                Hall of the Gods, Inc.
+                <a href="http://www.hallofthegods.com">Hall of the Gods, Inc.</a>
             </form>
 
 
@@ -119,7 +136,7 @@
                 
                 <h2 class="m-t-0 m-b-15">{$L.login}</h2>
                 
-                <input type="text" class="login-control m-b-10 input-lg" placeholder="Universe or Email" name="login[username]">
+                <input type="text" class="login-control m-b-10 input-lg" placeholder="Username or Email" name="login[username]">
                 <input type="password" class="login-control input-lg" placeholder="Key" name="login[password]">
                 <!-- <div class="checkbox m-b-20">
                     <label>
@@ -134,9 +151,10 @@
                 <br/><br/>
 
                 <small>
-                    <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> |
-                    <a class="box-switcher" data-switch="box-register" href="">Weave OS</a> |
-                    <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a>
+                    <a class="box-switcher" data-switch="box-tour" href="">Welcome</a> 
+                    <!-- | -->
+                    <!-- <a class="box-switcher" data-switch="box-register" href="">Weave OS</a> | -->
+                    <!-- <a class="box-switcher" data-switch="box-reset" href="">Forgot Key</a> -->
 
                     <br/>
                     
@@ -300,6 +318,7 @@
             }
             $('#box-login').submit(window.login);
             $('#box-register').submit(window.login);
+             $('#box-reset').submit(window.login);
 
             $('#closeDetail').show();
             $('#about').hide();

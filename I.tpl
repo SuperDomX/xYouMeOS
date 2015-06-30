@@ -521,74 +521,7 @@
                             {include "~blox/ume.col.tpl" tpl=$c}
                         {/foreach}
 
-                        <div class="col-md-12">
-                            
-                            <div class="tile-light p-5 m-b-15">
-
-                                <div class="cover p-relative">
-                                    <h4 class="page-title" style="position: absolute;">
-                                        
-                                        <span class="dropcap">B</span>ulletin Board 
-                                        <i class="n-count animated pull-right">0</i>
-                                        <!-- <span class="dropcap">{$user.username|substr:0:1}</span>{$user.username|substr:1} -->
-                                    </h4>
-                                    <img src="img/cover-bg.jpg" class="w-100 " alt="">
-
-                                    
-                                    
-                                    <div class="profile-btn pull-left" > 
-                                        <div class="btn-group tile input-focused"   > 
-
-                                            <!-- <button type="button" class="btn btn-sm  btn-alt active disabled "><i class="fa fa-dashboard"></i> All-Seeing "I"</button> -->
-                                            <!-- <button type="button" class="btn btn-sm btn-alt"><i class="fa fa-cog"></i> Settings</button> -->
-                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-bubble"></i> <span>Message</span></button> -->
-                                            <!-- <button class="btn btn-alt btn-sm "><i class="icon-user-2"></i> <span>Connect</span></button> --> 
-                                            <a class="btn btn-alt btn-sm hidden-xs"> 
-                                                <i class=" animated pull-left">0</i>
-                                                Thanks
-                                            </a>
-                                            <a href="#/youMeOS/kinnexus" class="btn btn-alt btn-sm"> 
-                                                <i class="animated pull-left">0</i>
-                                                No Thanks
-                                            </a>
-                                            <!-- <button class="btn btn-sm hidden-xs">0 Interests</button> --> 
-                                        </div> 
-                                    </div>
-                                </div>
-                               
-                                <style type="text/css">
-                                    .user-stat .percent {
-                                    position     : absolute;
-                                    text-align   : center;
-                                    width        : 100%;
-                                    margin-top   : 27px;
-                                    font-size    : 12px;
-                                    color        : rgba(255, 255, 255, 0.68);
-                                    text-shadow  : none;
-                                    padding-left : 2px;
-                                    }
-                                </style>
-
-                                
-                               
-                                
-<!-- 
-
-                                <div class="p-5 m-t-15">
-                                    <div class="m-b-25 text-center profile-summary">
-                                        <button class="btn btn-xs hidden-xs">0 Comments</button>
-                                        <button class="btn btn-xs">0 Connections</button>
-                                        <button class="btn btn-xs hidden-xs">0 Interests</button>
-                                    </div>
-                                    <h1><i class="fa fa-4x fa-space-shuttle pull-right fa-rotate-270"></i>Hello {$user.name}</h1>
-                                    <p>Make yourself at home! There is a lot of ground to cover. Well, infinite space really...</p>
-                                      
-                                     
-
-                                     This is your dashboard, no one else can see this but You. Here you can manage a variety of different widgets that give you complete control over your data. Use this as your main hub where all important information is in an easy to access area. You can also edit this description in your profile page in your settings. 
-                                </div> -->
-                            </div> 
-                        </div>
+                        
                         <div class="col-md-9">
                             
 
