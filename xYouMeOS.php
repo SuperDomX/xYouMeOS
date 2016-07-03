@@ -1,12 +1,12 @@
 <?php
 /**
  * @author heylisten@xtiv.net
- * @name UMeOS
+ * @name U Me Verse 
  * @desc A 4D Interactive Orbital System
  * @version v0(5.9)
  * @icon  sun-o
  * @link youMeOS
- * @see radius
+ * @see navigate 
  * @mini sun-o
  * @release beta
  * @alpha true
