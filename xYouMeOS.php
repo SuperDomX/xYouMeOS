@@ -1,16 +1,17 @@
 <?php
-/**
- * @author  @xopherdeep
- * @name    The UMeverse
- * @desc    A 4D Interactive Orbital System
- * @version v0(5.9)
- * @icon    sun-o
- * @link    youMeOS
- * @see     navigate 
- * @mini    sun-o
- * @release beta
- * @alpha   true
- */
+  /**
+    * @author  @xopherdeep
+    * @name    The UMeverse
+    * @desc    A 4D Interactive Orbital System
+    * @version v0.1(160710)
+    * @author  @xopherdeep
+    * @icon    sun-o
+    * @link    youMeOS
+    * @see     navigate 
+    * @mini    sun-o
+    * @release beta
+    * @alpha   true
+  */
   class xYouMeOS extends Xengine {
     public function version($feed=false)          
     {
